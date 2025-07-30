@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Fundamentals MCQ for practice interviews</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .quiz-container {
+        max-width: 800px;
+        width: 100%;
+      }
+      .option-btn {
+        transition: all 0.2s ease-in-out;
+      }
+      .option-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .correct {
+        background-color: #10b981 !important;
+        color: white !important;
+        border-color: #059669 !important;
+      }
+      .incorrect {
+        background-color: #ef4444 !important;
+        color: white !important;
+        border-color: #dc2626 !important;
+      }
+      .explanation {
+        border-left: 4px solid #3b82f6;
+      }
+      .sidebar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .sidebar::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      .sidebar::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 10px;
+      }
+      .sidebar::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="flex h-screen bg-gray-100">
+      <!-- Sidebar -->
+      <aside
+        class="sidebar w-64 bg-white shadow-md flex-shrink-0 overflow-y-auto"
+      >
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">
+            Java top
+          </h2>
+          <ul id="topic-list" class="space-y-2"></ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex items-center justify-center p-4 overflow-y-auto">
+        <div
+          id="quiz"
+          class="quiz-container bg-white p-6 sm:p-8 rounded-2xl shadow-lg hidden"
+        >
+          <div class="flex justify-between items-center mb-6 border-b pb-4">
+            <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">
+              Java MCQ Test
+            </h1>
+            <div class="text-lg font-semibold text-gray-700">
+              <span>Score: </span><span id="score">0</span>
+              <!-- <span>Topic:</span><span id="score"></span> -->
+            </div>
+          </div>
+
+          <div id="question-area">
+            <div class="flex items-start mb-4">
+              <span
+                id="question-number"
+                class="text-xl font-bold text-indigo-600 mr-3"
+              ></span>
+              <p
+                id="question-text"
+                class="text-lg text-gray-800 font-medium"
+              ></p>
+            </div>
+            <div
+              id="options-container"
+              class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6"
+            ></div>
+          </div>
+
+          <div id="feedback-area" class="hidden mt-6">
+            <div id="explanation" class="explanation bg-blue-50 p-4 rounded-lg">
+              <h3 id="feedback-title" class="font-bold text-lg mb-2"></h3>
+              <p id="explanation-text" class="text-gray-700"></p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t flex justify-end">
+            <button
+              id="next-btn"
+              class="bg-indigo-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md hidden"
+            >
+              Next Question
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="results-screen"
+          class="hidden quiz-container bg-white p-8 rounded-2xl shadow-lg text-center"
+        >
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Quiz Complete!</h2>
+          <p class="text-xl text-gray-600 mb-6">Your final score is:</p>
+          <div
+            class="text-6xl font-bold text-indigo-600 mb-8"
+            id="final-score"
+          ></div>
+          <button
+            id="restart-btn"
+            class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md"
+          >
+            Restart Quiz
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Main Script -->
+    <script type="module">
+      import { topics } from "./topics.js";
+      import { questions } from "./questions.js";
+
+      let currentSubtopicId = null;
+      let filteredQuestions = [];
+      let currentQuestionIndex = 0;
+      let score = 0;
+
+      const scoreEl = document.getElementById("score");
+      const questionNumberEl = document.getElementById("question-number");
+      const questionTextEl = document.getElementById("question-text");
+      const optionsContainerEl = document.getElementById("options-container");
+      const feedbackAreaEl = document.getElementById("feedback-area");
+      const feedbackTitleEl = document.getElementById("feedback-title");
+      const explanationTextEl = document.getElementById("explanation-text");
+      const nextBtn = document.getElementById("next-btn");
+      const quizEl = document.getElementById("quiz");
+      const resultsScreenEl = document.getElementById("results-screen");
+      const finalScoreEl = document.getElementById("final-score");
+      const restartBtn = document.getElementById("restart-btn");
+      const topicListEl = document.getElementById("topic-list");
+
+      // 🆕 Shuffle helper
+      function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+
+      function populateTopics() {
+        topicListEl.innerHTML = "";
+
+        topics.forEach((topic, topicIndex) => {
+          const topicItem = document.createElement("li");
+          topicItem.className = "mb-2";
+
+          const titleButton = document.createElement("button");
+          titleButton.className =
+            "w-full text-left font-semibold text-gray-800 hover:text-indigo-600 focus:outline-none";
+          titleButton.textContent = `${topicIndex + 1}. ${topic.title}`;
+          titleButton.dataset.index = topicIndex;
+
+          const subList = document.createElement("ul");
+          subList.className =
+            "ml-4 mt-2 pl-2 border-l border-gray-300 list-disc text-sm text-gray-600 space-y-1 hidden";
+          subList.id = `subtopics-${topicIndex}`;
+
+          topic.subtopics.forEach((subtopic) => {
+            const subLi = document.createElement("li");
+            const subBtn = document.createElement("button");
+            subBtn.className = "hover:underline text-left w-full";
+            subBtn.textContent = subtopic.name;
+            subBtn.dataset.subtopicId = subtopic.id;
+
+            subBtn.addEventListener("click", () => {
+              currentSubtopicId = subtopic.id;
+              currentQuestionIndex = 0;
+              score = 0;
+              scoreEl.textContent = score;
+
+              // 🆕 Shuffle the entire question set for this subtopic
+              const allQuestions = questions[currentSubtopicId] || [];
+              if (allQuestions.length === 0) {
+                alert("No questions available for this subtopic.");
+                return;
+              }
+
+              filteredQuestions = shuffleArray(allQuestions);
+
+              quizEl.classList.remove("hidden");
+              resultsScreenEl.classList.add("hidden");
+              loadQuestion();
+            });
+
+            subLi.appendChild(subBtn);
+            subList.appendChild(subLi);
+          });
+
+          titleButton.addEventListener("click", () => {
+            subList.classList.toggle("hidden");
+          });
+
+          topicItem.appendChild(titleButton);
+          topicItem.appendChild(subList);
+          topicListEl.appendChild(topicItem);
+        });
+      }
+
+      function loadQuestion() {
+        feedbackAreaEl.classList.add("hidden");
+        nextBtn.classList.add("hidden");
+
+        const currentQuestion = filteredQuestions[currentQuestionIndex];
+        questionNumberEl.textContent = `Q${currentQuestionIndex + 1}.`;
+        questionTextEl.innerHTML = currentQuestion.question;
+
+        optionsContainerEl.innerHTML = "";
+        currentQuestion.options.forEach((option, index) => {
+          const button = document.createElement("button");
+          button.innerHTML = option;
+          button.dataset.index = index;
+          button.classList.add(
+            "option-btn",
+            "w-full",
+            "text-left",
+            "p-4",
+            "border-2",
+            "rounded-lg",
+            "bg-gray-50",
+            "hover:bg-gray-100",
+            "hover:border-indigo-400",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-indigo-500"
+          );
+          button.addEventListener("click", selectAnswer);
+          optionsContainerEl.appendChild(button);
+        });
+      }
+
+      function selectAnswer(e) {
+        const selectedButton = e.target;
+        const selectedIndex = parseInt(selectedButton.dataset.index);
+        const correctIndex = filteredQuestions[currentQuestionIndex].correct;
+
+        Array.from(optionsContainerEl.children).forEach((btn) => {
+          btn.disabled = true;
+          btn.removeEventListener("click", selectAnswer);
+        });
+
+        if (selectedIndex === correctIndex) {
+          score++;
+          scoreEl.textContent = score;
+          selectedButton.classList.add("correct");
+          feedbackTitleEl.textContent = "Correct!";
+          feedbackTitleEl.className = "font-bold text-lg mb-2 text-green-600";
+        } else {
+          selectedButton.classList.add("incorrect");
+          optionsContainerEl.children[correctIndex].classList.add("correct");
+          feedbackTitleEl.textContent = "Incorrect!";
+          feedbackTitleEl.className = "font-bold text-lg mb-2 text-red-600";
+        }
+
+        explanationTextEl.textContent =
+          filteredQuestions[currentQuestionIndex].explanation;
+        feedbackAreaEl.classList.remove("hidden");
+        nextBtn.classList.remove("hidden");
+      }
+
+      function showResults() {
+        quizEl.classList.add("hidden");
+        resultsScreenEl.classList.remove("hidden");
+        finalScoreEl.textContent = `${score} / ${filteredQuestions.length}`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < filteredQuestions.length) {
+          loadQuestion();
+        } else {
+          showResults();
+        }
+      });
+
+      restartBtn.addEventListener("click", () => {
+        currentQuestionIndex = 0;
+        score = 0;
+        scoreEl.textContent = "0";
+
+        // 🆕 Re-shuffle again on restart
+        filteredQuestions = shuffleArray(questions[currentSubtopicId]);
+        resultsScreenEl.classList.add("hidden");
+        quizEl.classList.remove("hidden");
+        loadQuestion();
+      });
+
+      populateTopics();
+    </script>
+  </body>
+</html>
