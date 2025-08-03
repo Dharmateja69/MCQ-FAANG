@@ -26210,6 +26210,14487 @@ export const questions = {
         }
     ],
     //Servlets and JSP
+    "servlets-intro": [
+        {
+            "id": "q1",
+            "question": "Which of the following interfaces must a servlet class implement directly or indirectly?",
+            "options": [
+                "Servlet",
+                "HttpServlet",
+                "ServletContext",
+                "ServletConfig"
+            ],
+            "correct": 0,
+            "explanation": "All servlets must implement the Servlet interface, either directly or through inheriting from a class like HttpServlet."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary responsibility of the `ServletContext` object?",
+            "options": [
+                "Handling HTTP requests",
+                "Managing servlet initialization parameters",
+                "Providing information about the web application",
+                "Managing session data"
+            ],
+            "correct": 2,
+            "explanation": "`ServletContext` provides a way for servlets to access global information and resources related to the web application in which they are deployed."
+        },
+        {
+            "id": "q3",
+            "question": "Which method of the `HttpServlet` class is typically overridden to handle HTTP GET requests?",
+            "options": [
+                "`service()`",
+                "`doPost()`",
+                "`doGet()`",
+                "`init()`"
+            ],
+            "correct": 2,
+            "explanation": "The `doGet()` method handles GET requests and is typically overridden to provide the logic for those requests."
+        },
+        {
+            "id": "q4",
+            "question": "What is the purpose of the `init()` method in a servlet?",
+            "options": [
+                "To handle HTTP POST requests",
+                "To initialize the servlet and load resources",
+                "To handle servlet destruction",
+                "To process user input"
+            ],
+            "correct": 1,
+            "explanation": "`init()` is called once when the servlet is loaded, allowing for initialization tasks such as loading configuration data or establishing database connections."
+        },
+        {
+            "id": "q5",
+            "question": "What is the typical lifecycle of a servlet in a web container?",
+            "options": [
+                "init() -> service() -> destroy()",
+                "service() -> init() -> destroy()",
+                "init() -> destroy() -> service()",
+                "destroy() -> init() -> service()"
+            ],
+            "correct": 0,
+            "explanation": "The servlet's lifecycle typically follows: initialization (init), handling requests (service), and then cleanup (destroy)."
+        },
+        {
+            "id": "q6",
+            "question": "What is the role of the `ServletConfig` object?",
+            "options": [
+                "Provides access to servlet initialization parameters",
+                "Manages session state",
+                "Handles HTTP requests",
+                "Manages the servlet context"
+            ],
+            "correct": 0,
+            "explanation": "`ServletConfig` provides access to configuration information for a specific servlet, such as initialization parameters specified in the deployment descriptor."
+        },
+        {
+            "id": "q7",
+            "question": "Which method of the `HttpServlet` class is typically overridden to handle HTTP POST requests?",
+            "options": [
+                "`doGet()`",
+                "`service()`",
+                "`init()`",
+                "`doPost()`"
+            ],
+            "correct": 3,
+            "explanation": "`doPost()` handles HTTP POST requests."
+        },
+        {
+            "id": "q8",
+            "question": "What is the main function of the `destroy()` method in a servlet?",
+            "options": [
+                "To initialize the servlet",
+                "To handle HTTP requests",
+                "To release resources held by the servlet",
+                "To handle user input"
+            ],
+            "correct": 2,
+            "explanation": "`destroy()` is called when the servlet is being removed from service, providing an opportunity to release resources."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the `service()` method in a servlet?",
+            "options": [
+                "To initialize the servlet",
+                "To handle all incoming requests",
+                "To destroy the servlet",
+                "To manage sessions"
+            ],
+            "correct": 1,
+            "explanation": "The `service()` method is the entry point for handling all incoming requests. It dispatches requests to appropriate `doXXX()` methods based on the HTTP method."
+        },
+        {
+            "id": "q10",
+            "question": "Which interface provides methods for retrieving data from an HTTP request?",
+            "options": [
+                "HttpServletResponse",
+                "HttpServletRequest",
+                "ServletConfig",
+                "ServletContext"
+            ],
+            "correct": 1,
+            "explanation": "`HttpServletRequest` provides methods for retrieving parameters, headers, and other information from an HTTP request."
+        },
+        {
+            "id": "q11",
+            "question": "What is the role of `web.xml` (or `web.xml.bak`) in a web application?",
+            "options": [
+                "To store servlet class files",
+                "To define web application configuration, including servlet mappings",
+                "To store user session data",
+                "To handle HTTP responses"
+            ],
+            "correct": 1,
+            "explanation": "`web.xml` is a deployment descriptor that configures the web application, including servlets, filters, and their mappings."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following is NOT a valid scope for a servlet attribute?",
+            "options": [
+                "Application",
+                "Session",
+                "Request",
+                "Global"
+            ],
+            "correct": 3,
+            "explanation": "Servlet attributes are typically scoped at the application, session, and request levels.  'Global' isn't a valid scope."
+        },
+        {
+            "id": "q13",
+            "question": "What is the primary purpose of a servlet filter?",
+            "options": [
+                "To handle user input",
+                "To intercept and process requests and responses",
+                "To store session data",
+                "To initialize the servlet"
+            ],
+            "correct": 1,
+            "explanation": "Filters intercept requests and responses, allowing for tasks like authentication, logging, and compression before the servlet processes the request."
+        },
+        {
+            "id": "q14",
+            "question": "What is the difference between `getRequestDispatcher().forward()` and `getRequestDispatcher().include()`?",
+            "options": [
+                "`forward()` includes content, `include()` forwards control",
+                "Both do the same thing",
+                "`forward()` forwards control, `include()` includes content",
+                "They are unrelated"
+            ],
+            "correct": 2,
+            "explanation": "`forward()` forwards the request to another resource, while `include()` includes the content of another resource in the response."
+        },
+        {
+            "id": "q15",
+            "question": "Which method is used to set an attribute in the `HttpServletRequest` object?",
+            "options": [
+                "`getAttribute()`",
+                "`removeAttribute()`",
+                "`setAttribute()`",
+                "`getAttributeNames()`"
+            ],
+            "correct": 2,
+            "explanation": "`setAttribute()` is used to set attributes in the `HttpServletRequest` object."
+        },
+        {
+            "id": "q16",
+            "question": "What is the correct order of servlet container invoking methods?",
+            "options": [
+                "`init()` -> `service()` -> `destroy()`",
+                "`service()` -> `init()` -> `destroy()`",
+                "`destroy()` -> `init()` -> `service()`",
+                "`init()` -> `destroy()` -> `service()`"
+            ],
+            "correct": 0,
+            "explanation": "The correct lifecycle order is initialization (init), service requests (service), and then destruction (destroy)."
+        },
+        {
+            "id": "q17",
+            "question": "Which annotation can be used to map a servlet to a specific URL pattern?",
+            "options": [
+                "@WebServlet",
+                "@ServletConfig",
+                "@HttpRequest",
+                "@WebInitParam"
+            ],
+            "correct": 0,
+            "explanation": "`@WebServlet` is used to map a servlet to a specific URL pattern in newer servlet versions."
+        },
+        {
+            "id": "q18",
+            "question": "What is the purpose of the `getInitParameter()` method in `ServletConfig`?",
+            "options": [
+                "To get the HTTP request method",
+                "To get the servlet's initialization parameters",
+                "To get the session ID",
+                "To get the servlet's context path"
+            ],
+            "correct": 1,
+            "explanation": "`getInitParameter()` retrieves initialization parameters specified for the servlet in the deployment descriptor or via annotations."
+        },
+        {
+            "id": "q19",
+            "question": "If a servlet's `service()` method throws an exception, what is the default behavior of the web container?",
+            "options": [
+                "The web container crashes",
+                "The web container calls `destroy()`",
+                "The web container logs the exception and potentially sends an error response to the client",
+                "The servlet restarts itself"
+            ],
+            "correct": 2,
+            "explanation": "The container typically logs the exception and may send an error page to the client, or the container may handle it based on the configurations set."
+        },
+        {
+            "id": "q20",
+            "question": "Which HTTP method is typically used when sending data in the body of the request?",
+            "options": [
+                "GET",
+                "HEAD",
+                "POST",
+                "PUT"
+            ],
+            "correct": 2,
+            "explanation": "POST method is used to send data in the body."
+        },
+        {
+            "id": "q21",
+            "question": "What is the purpose of the `response.sendRedirect()` method?",
+            "options": [
+                "To include content from another resource",
+                "To forward the request to another resource on the same server",
+                "To redirect the client to a different URL",
+                "To set an attribute in the request"
+            ],
+            "correct": 2,
+            "explanation": "`sendRedirect()` sends an HTTP response to the client, instructing the browser to navigate to a different URL."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following is not a benefit of using Servlets?",
+            "options": [
+                "Platform independence",
+                "Efficiency in handling requests",
+                "Dynamic content generation",
+                "Direct access to hardware resources"
+            ],
+            "correct": 3,
+            "explanation": "Servlets do not provide direct access to hardware resources; they are designed to work within a web container and rely on the underlying operating system for hardware access."
+        },
+        {
+            "id": "q23",
+            "question": "What is the purpose of the `doPut()` method in a servlet?",
+            "options": [
+                "To handle GET requests",
+                "To handle POST requests",
+                "To handle PUT requests",
+                "To handle DELETE requests"
+            ],
+            "correct": 2,
+            "explanation": "`doPut()` handles PUT requests, which are used to update existing resources on the server."
+        },
+        {
+            "id": "q24",
+            "question": "What is the purpose of the `doDelete()` method in a servlet?",
+            "options": [
+                "To handle GET requests",
+                "To handle POST requests",
+                "To handle PUT requests",
+                "To handle DELETE requests"
+            ],
+            "correct": 3,
+            "explanation": "`doDelete()` handles DELETE requests, which are used to delete a resource on the server."
+        },
+        {
+            "id": "q25",
+            "question": "What is the primary advantage of using a servlet container?",
+            "options": [
+                "Direct hardware access",
+                "Managing the servlet lifecycle",
+                "Efficient session management using browser cookies",
+                "Implementing business logic"
+            ],
+            "correct": 1,
+            "explanation": "The servlet container manages the lifecycle of servlets, handles requests, and provides other essential services."
+        },
+        {
+            "id": "q26",
+            "question": "Which interface is used to write a file to the client?",
+            "options": [
+                "`HttpServletRequest`",
+                "`HttpServletResponse`",
+                "`ServletConfig`",
+                "`ServletContext`"
+            ],
+            "correct": 1,
+            "explanation": "`HttpServletResponse` is used to write data back to the client in the response."
+        },
+        {
+            "id": "q27",
+            "question": "What is the purpose of the `setContentType()` method in `HttpServletResponse`?",
+            "options": [
+                "To specify the type of content being sent in the response",
+                "To set cookies",
+                "To redirect the client",
+                "To set the HTTP status code"
+            ],
+            "correct": 0,
+            "explanation": "`setContentType()` sets the MIME type of the content being sent in the HTTP response, such as 'text/html' or 'application/json'."
+        },
+        {
+            "id": "q28",
+            "question": "What is the purpose of a `Cookie` object in the context of Servlets?",
+            "options": [
+                "To store session data on the server",
+                "To store session data on the client's browser",
+                "To send data to the server",
+                "To handle HTTP requests"
+            ],
+            "correct": 1,
+            "explanation": "Cookies store small pieces of data on the client's browser, enabling state management and tracking user sessions."
+        },
+        {
+            "id": "q29",
+            "question": "Which of the following is a potential drawback of using cookies for session management?",
+            "options": [
+                "Cookies can store large amounts of data",
+                "Cookies can only store data for a single user",
+                "Cookies can be disabled by the user",
+                "Cookies are always secure"
+            ],
+            "correct": 2,
+            "explanation": "Users can disable cookies in their browser settings, which can break session management functionality."
+        },
+        {
+            "id": "q30",
+            "question": "In the context of Servlets, what does the term 'stateless' refer to?",
+            "options": [
+                "Servlets do not store any state information",
+                "Servlets store state information on the server",
+                "Servlets can only handle a single request at a time",
+                "Servlets are always deployed in a stateful environment"
+            ],
+            "correct": 0,
+            "explanation": "HTTP itself is stateless; servlets, by default, don't store state between requests unless specifically designed to do so using techniques like session management or cookies."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following statements about Servlets is true?",
+            "options": [
+                "Servlets are executed on the client-side.",
+                "Servlets can only generate static content.",
+                "Servlets are designed to handle client requests and generate dynamic responses.",
+                "Servlets are not used for web applications."
+            ],
+            "correct": 2,
+            "explanation": "Servlets are server-side components that generate dynamic content based on client requests."
+        },
+        {
+            "id": "q32",
+            "question": "What happens if a servlet's `doGet()` method is not defined for a specific request?",
+            "options": [
+                "The server will automatically handle the request.",
+                "An error will be thrown.",
+                "The server will return a 404 error.",
+                "The `service()` method will handle the request."
+            ],
+            "correct": 3,
+            "explanation": "If `doGet()` isn't defined, the `service()` method of the `HttpServlet` class, which calls the `doXXX()` methods based on the HTTP request method, handles the situation."
+        },
+        {
+            "id": "q33",
+            "question": "If a servlet needs to access a resource from the classpath, how can it be done?",
+            "options": [
+                "Using `ServletContext.getResourceAsStream()`",
+                "Using `File.open()`",
+                "Using `HttpServletRequest.getParameter()`",
+                "Using `response.getWriter()`"
+            ],
+            "correct": 0,
+            "explanation": "`ServletContext.getResourceAsStream()` allows access to resources available in the classpath, such as configuration files or images."
+        },
+        {
+            "id": "q34",
+            "question": "What is the purpose of the `getServletContext()` method in a servlet?",
+            "options": [
+                "To obtain a reference to the `ServletConfig` object",
+                "To obtain a reference to the `HttpServletRequest` object",
+                "To obtain a reference to the `ServletContext` object",
+                "To obtain a reference to the `HttpSession` object"
+            ],
+            "correct": 2,
+            "explanation": "`getServletContext()` returns the `ServletContext` object, providing access to application-wide information and resources."
+        },
+        {
+            "id": "q35",
+            "question": "Which method is used to retrieve all the init parameters in a servlet?",
+            "options": [
+                "`getInitParameter()`",
+                "`getInitParameters()`",
+                "`getInitParameterNames()`",
+                "`getParameterNames()`"
+            ],
+            "correct": 2,
+            "explanation": "`getInitParameterNames()` returns an enumeration of all the init parameter names defined for the servlet."
+        }
+    ],
+    "servlet-lifecycle": [
+        {
+            "id": "q1",
+            "question": "Which method in the Servlet lifecycle is guaranteed to be called only once during the servlet's lifetime?",
+            "options": [
+                "init()",
+                "service()",
+                "doGet()",
+                "destroy()"
+            ],
+            "correct": 0,
+            "explanation": "The init() method is called by the servlet container to initialize the servlet. It's called only once, immediately after the servlet is loaded."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary responsibility of the `destroy()` method in a Servlet?",
+            "options": [
+                "Handling client requests",
+                "Initializing servlet resources",
+                "Releasing resources held by the servlet",
+                "Authenticating users"
+            ],
+            "correct": 2,
+            "explanation": "The destroy() method is called by the servlet container to allow the servlet to release any resources it is using, such as database connections or file handles."
+        },
+        {
+            "id": "q3",
+            "question": "In which order are the following methods typically called during a servlet's lifecycle (assuming a single request)?",
+            "options": [
+                "init() -> service() -> destroy()",
+                "service() -> init() -> destroy()",
+                "init() -> destroy() -> service()",
+                "destroy() -> init() -> service()"
+            ],
+            "correct": 0,
+            "explanation": "The init() method is called once to initialize the servlet, then the service() method is called for each request, and finally, destroy() is called when the servlet is taken out of service."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following statements is TRUE regarding the `service()` method in a Servlet?",
+            "options": [
+                "It is called only once per servlet instance.",
+                "It is responsible for initializing the servlet.",
+                "It handles the actual client requests.",
+                "It is called before the `init()` method."
+            ],
+            "correct": 2,
+            "explanation": "The service() method is the core method that handles client requests. It receives an HttpServletRequest and an HttpServletResponse object."
+        },
+        {
+            "id": "q5",
+            "question": "A servlet's `init()` method throws an `ServletException`. What will the container likely do?",
+            "options": [
+                "Call the destroy() method immediately.",
+                "Load the servlet and continue execution.",
+                "Prevent the servlet from being loaded and throw an error.",
+                "Ignore the exception and proceed."
+            ],
+            "correct": 2,
+            "explanation": "If the init() method fails (throws an exception), the servlet container will typically prevent the servlet from being loaded because it means the servlet could not be initialized correctly."
+        },
+        {
+            "id": "q6",
+            "question": "Which method in the `Servlet` interface does the servlet container call to handle HTTP requests?",
+            "options": [
+                "init()",
+                "destroy()",
+                "service()",
+                "doGet()"
+            ],
+            "correct": 2,
+            "explanation": "The `service()` method from `javax.servlet.Servlet` interface handles HTTP requests"
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `ServletConfig` object passed to the `init()` method?",
+            "options": [
+                "To handle client requests.",
+                "To provide initialization parameters.",
+                "To release resources.",
+                "To serialize the servlet's state."
+            ],
+            "correct": 1,
+            "explanation": "The ServletConfig object provides access to initialization parameters declared in the deployment descriptor (web.xml)."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following can potentially impact the performance of a servlet?",
+            "options": [
+                "Efficient use of the `init()` method.",
+                "Resource management in `destroy()` method.",
+                "Proper handling of concurrent requests in `service()`.",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All three aspects (init, destroy, and service) have the potential to impact performance."
+        },
+        {
+            "id": "q9",
+            "question": "What happens if `destroy()` is NOT called before the servlet container shuts down?",
+            "options": [
+                "The servlet is automatically destroyed by the JVM.",
+                "Resources held by the servlet, such as database connections, may not be released.",
+                "The servlet's init() method is called again.",
+                "It has no consequence, the container handles everything."
+            ],
+            "correct": 1,
+            "explanation": "If destroy() is not called, resources might not be released, potentially leading to resource leaks."
+        },
+        {
+            "id": "q10",
+            "question": "Is it possible to have multiple instances of a servlet running concurrently?",
+            "options": [
+                "Yes, the servlet container creates multiple instances to handle concurrent requests.",
+                "No, the servlet container always uses a single instance of each servlet.",
+                "It depends on the servlet implementation; only if it's thread-safe.",
+                "No, only a maximum of 2 instances can be created."
+            ],
+            "correct": 0,
+            "explanation": "Servlet containers typically use a single instance of the servlet but handle concurrency via multithreading; however, to scale, containers may deploy more instances of a servlet."
+        },
+        {
+            "id": "q11",
+            "question": "Consider the following code snippet:\n```java\npublic class MyServlet extends HttpServlet {\n    public void init() throws ServletException {\n        System.out.println(",
+            "options": [
+                "init() called\nservice() called\nservice() called\nservice() called\ndestroy() called",
+                "init() called\nservice() called\ndestroy() called",
+                "service() called\nservice() called\nservice() called",
+                "init() called\nservice() called\nservice() called\nservice() called"
+            ],
+            "correct": 0,
+            "explanation": "The init() method is called once. service() is called for each of the three requests. destroy() is called when the container shuts down."
+        },
+        {
+            "id": "q12",
+            "question": "What is the best practice for resource acquisition in the context of a servlet's lifecycle?",
+            "options": [
+                "Acquire resources in the `service()` method and release them at the end of each request.",
+                "Acquire resources in the `init()` method and release them in the `destroy()` method.",
+                "Acquire resources in the `doGet()` or `doPost()` methods and release them at the end.",
+                "Acquire resources in the `init()` method, and release in `service()`."
+            ],
+            "correct": 1,
+            "explanation": "Resources that are used by the servlet throughout its lifetime should be acquired in init() and released in destroy()."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following interfaces or classes are directly involved in the servlet lifecycle?",
+            "options": [
+                "javax.servlet.Servlet",
+                "javax.servlet.http.HttpServlet",
+                "javax.servlet.ServletConfig",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All mentioned elements are directly related to the servlet lifecycle"
+        },
+        {
+            "id": "q14",
+            "question": "A servlet is configured in web.xml to load at server startup. What does this imply about the `init()` method?",
+            "options": [
+                "The `init()` method will be called when the first request arrives.",
+                "The `init()` method will be called as soon as the server starts.",
+                "The `init()` method will never be called.",
+                "The `init()` method will be called when the servlet's `destroy()` method is called."
+            ],
+            "correct": 1,
+            "explanation": "If a servlet is configured to load on startup, its init() method is called during server initialization."
+        },
+        {
+            "id": "q15",
+            "question": "Which method is responsible for handling GET requests in a standard HttpServlet?",
+            "options": [
+                "service()",
+                "init()",
+                "doGet()",
+                "destroy()"
+            ],
+            "correct": 2,
+            "explanation": "doGet() handles GET requests."
+        },
+        {
+            "id": "q16",
+            "question": "What is the potential issue with placing computationally intensive initialization logic in the `init()` method?",
+            "options": [
+                "It can make the server unresponsive during the servlet initialization.",
+                "It has no performance impact.",
+                "It speeds up the servlet's response time.",
+                "It causes the `destroy()` method to execute sooner."
+            ],
+            "correct": 0,
+            "explanation": "Long initialization can delay the servlet's readiness."
+        },
+        {
+            "id": "q17",
+            "question": "What happens if a servlet throws an exception in the `service()` method?",
+            "options": [
+                "The servlet container ignores the exception.",
+                "The servlet container calls the `destroy()` method.",
+                "The servlet container typically handles the exception (e.g., by sending an error response).",
+                "The `init()` method is called again."
+            ],
+            "correct": 2,
+            "explanation": "The servlet container handles the exception in service() using its default error handling or configured custom error pages."
+        },
+        {
+            "id": "q18",
+            "question": "If a servlet's `init()` method needs to read a configuration file, where is the recommended place to specify the file path?",
+            "options": [
+                "Hardcode the file path directly in the `init()` method.",
+                "In the `web.xml` file as an initialization parameter.",
+                "In a system property.",
+                "All of the above are equally good choices."
+            ],
+            "correct": 1,
+            "explanation": "Initialization parameters in web.xml make the application configurable without code changes."
+        },
+        {
+            "id": "q19",
+            "question": "Consider a scenario where you need to establish a database connection for a servlet. Which method is the most appropriate place to do this?",
+            "options": [
+                "In the `service()` method, and close it after each request.",
+                "In the `init()` method, and close it in the `destroy()` method.",
+                "In the `doGet()` method.",
+                "In the constructor of the servlet."
+            ],
+            "correct": 1,
+            "explanation": "Establishing a database connection in the init() method and closing it in destroy() is the best practice."
+        },
+        {
+            "id": "q20",
+            "question": "True or False: The `destroy()` method guarantees that the servlet instance will be garbage collected immediately after it's called.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "The destroy() method releases resources, but the garbage collector decides when the servlet object is actually collected. The object remains until garbage collection occurs."
+        },
+        {
+            "id": "q21",
+            "question": "What is the significance of the `HttpServlet` class in relation to the servlet lifecycle?",
+            "options": [
+                "It provides default implementations for the init() and destroy() methods.",
+                "It's the core interface that defines the servlet lifecycle.",
+                "It extends the Servlet interface and handles HTTP-specific functionality, including the service() method.",
+                "It's responsible for creating servlet instances."
+            ],
+            "correct": 2,
+            "explanation": "HttpServlet extends Servlet and offers specialized methods for handling HTTP requests and responses."
+        },
+        {
+            "id": "q22",
+            "question": "How can you access initialization parameters defined in web.xml within the `init()` method?",
+            "options": [
+                "Through the HttpServletRequest object.",
+                "Through the ServletContext object.",
+                "Through the ServletConfig object.",
+                "Directly, using hardcoded values."
+            ],
+            "correct": 2,
+            "explanation": "The ServletConfig object is passed to the init() method and is used to access init parameters."
+        },
+        {
+            "id": "q23",
+            "question": "Which of the following statements about the `service()` method is correct regarding its parameters?",
+            "options": [
+                "It takes no parameters.",
+                "It takes only an `HttpServletRequest` object.",
+                "It takes both an `HttpServletRequest` and an `HttpServletResponse` object.",
+                "It takes a `ServletConfig` object."
+            ],
+            "correct": 2,
+            "explanation": "The `service()` method receives both `HttpServletRequest` and `HttpServletResponse` objects as parameters."
+        },
+        {
+            "id": "q24",
+            "question": "What is the purpose of the `ServletContext` object?",
+            "options": [
+                "To provide access to servlet initialization parameters.",
+                "To provide information about the servlet container and its environment.",
+                "To handle client requests.",
+                "To release resources held by the servlet."
+            ],
+            "correct": 1,
+            "explanation": "The ServletContext provides access to the servlet container's environment."
+        },
+        {
+            "id": "q25",
+            "question": "A servlet has a long-running `init()` method. How might this impact the user experience?",
+            "options": [
+                "Users will experience delays when accessing the servlet for the first time.",
+                "The servlet will always respond slowly.",
+                "Users will not be able to access the servlet.",
+                "The destroy method will be called immediately."
+            ],
+            "correct": 0,
+            "explanation": "The long initialization time can block requests until the servlet is initialized."
+        },
+        {
+            "id": "q26",
+            "question": "What is the role of the `doPost()` method in the context of the servlet lifecycle?",
+            "options": [
+                "It is responsible for initializing the servlet.",
+                "It handles HTTP POST requests.",
+                "It is used to release resources held by the servlet.",
+                "It handles HTTP GET requests."
+            ],
+            "correct": 1,
+            "explanation": "The `doPost()` method specifically handles HTTP POST requests."
+        },
+        {
+            "id": "q27",
+            "question": "True or False: The `service()` method is thread-safe by default.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "The service() method is not inherently thread-safe. Developers must ensure thread-safety if the servlet accesses shared resources."
+        },
+        {
+            "id": "q28",
+            "question": "What happens if you override the `service()` method in your servlet?",
+            "options": [
+                "The `doGet()` and `doPost()` methods are no longer called.",
+                "The `init()` and `destroy()` methods are no longer called.",
+                "You must manually handle all HTTP methods.",
+                "All of the above."
+            ],
+            "correct": 2,
+            "explanation": "Overriding the `service()` method means you must manually handle all HTTP methods. If you don't, the behavior will be undefined."
+        },
+        {
+            "id": "q29",
+            "question": "Which method in the `HttpServlet` class is responsible for dispatching the request to the appropriate `doXXX` method (e.g., `doGet`, `doPost`)?",
+            "options": [
+                "init()",
+                "destroy()",
+                "service()",
+                "None of the above"
+            ],
+            "correct": 2,
+            "explanation": "The `service()` method in `HttpServlet` handles dispatching requests."
+        },
+        {
+            "id": "q30",
+            "question": "What does the `load-on-startup` tag in web.xml do?",
+            "options": [
+                "It loads the servlet when the first request arrives.",
+                "It forces the servlet container to load the servlet during application startup.",
+                "It prevents the servlet from being loaded.",
+                "It unloads the servlet after the server starts."
+            ],
+            "correct": 1,
+            "explanation": "The load-on-startup tag causes the container to load the servlet during server startup."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following best describes the typical execution order of a servlet's methods for a single request?",
+            "options": [
+                "init() -> doGet() -> destroy()",
+                "service() -> init() -> destroy()",
+                "init() -> service() -> destroy()",
+                "init() -> service() -> doGet() -> destroy()"
+            ],
+            "correct": 3,
+            "explanation": "The init() is called once, then service() is called for each request. service() handles the HTTP method and calls the corresponding doXXX method (e.g. doGet())"
+        },
+        {
+            "id": "q32",
+            "question": "If a servlet uses a shared resource, such as a database connection, what approach would best ensure thread-safety?",
+            "options": [
+                "Avoid using shared resources.",
+                "Synchronize access to the shared resource.",
+                "Create a separate instance of the resource for each request.",
+                "All of the above"
+            ],
+            "correct": 1,
+            "explanation": "Synchronizing access helps prevent data corruption when multiple threads access the shared resource simultaneously."
+        },
+        {
+            "id": "q33",
+            "question": "What is the consequence if `destroy()` method is not implemented in the servlet class?",
+            "options": [
+                "The servlet container calls `finalize()` method.",
+                "The resources used by the servlet won't get released.",
+                "The servlet will not be able to handle any requests.",
+                "The application server will crash."
+            ],
+            "correct": 1,
+            "explanation": "If destroy() is not implemented, the servlet's resources (like database connections) won't be explicitly released, which can lead to resource leaks."
+        },
+        {
+            "id": "q34",
+            "question": "Consider a servlet that reads a configuration file. Where is the most appropriate place to read the file if the file path is defined as an init parameter in web.xml?",
+            "options": [
+                "In the `service()` method.",
+                "In the `destroy()` method.",
+                "In the `init()` method.",
+                "In the constructor of the servlet."
+            ],
+            "correct": 2,
+            "explanation": "The init() method is the correct place as the config file path is readily available."
+        },
+        {
+            "id": "q35",
+            "question": "If you're using a servlet and experience performance issues, which part of the lifecycle would you most likely investigate first for potential bottlenecks?",
+            "options": [
+                "The `destroy()` method.",
+                "The `init()` method, for long initialization.",
+                "The `service()` method, for inefficient request handling or resource contention.",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All methods can be areas of contention. init() because of long initialization, service() because of request handling or resource contention, and destroy() because of long resource releases."
+        }
+    ],
+    "servlet-req-res": [
+        {
+            "id": "q1",
+            "question": "Which method in `ServletRequest` is used to obtain the HTTP method used by the client?",
+            "options": [
+                "getMethod()",
+                "getRequestURI()",
+                "getQueryString()",
+                "getProtocol()"
+            ],
+            "correct": 0,
+            "explanation": "The `getMethod()` method retrieves the HTTP method (GET, POST, etc.) used in the request."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of the `setAttribute()` method in `ServletRequest`?",
+            "options": [
+                "To set HTTP headers",
+                "To store request parameters",
+                "To store objects accessible to the servlet and other components",
+                "To redirect the request"
+            ],
+            "correct": 2,
+            "explanation": "`setAttribute()` stores objects within the request's scope, allowing data sharing among servlet components during the request processing."
+        },
+        {
+            "id": "q3",
+            "question": "Which interface does a `HttpServletRequest` implement?",
+            "options": [
+                "Servlet",
+                "GenericServlet",
+                "ServletRequest",
+                "ServletResponse"
+            ],
+            "correct": 2,
+            "explanation": "`HttpServletRequest` extends `ServletRequest` to provide HTTP-specific functionalities."
+        },
+        {
+            "id": "q4",
+            "question": "What is the difference between `getRequestURI()` and `getContextPath()`?",
+            "options": [
+                "`getRequestURI()` includes the context path, while `getContextPath()` does not.",
+                "`getContextPath()` includes the context path, while `getRequestURI()` does not.",
+                "Both are equivalent.",
+                "They are used for setting headers."
+            ],
+            "correct": 1,
+            "explanation": "`getContextPath()` gives the application's root, while `getRequestURI()` gives the full URI, including the context path."
+        },
+        {
+            "id": "q5",
+            "question": "Which method should be used to get the IP address of the client?",
+            "options": [
+                "getRemoteHost()",
+                "getLocalAddr()",
+                "getRemoteAddr()",
+                "getRemotePort()"
+            ],
+            "correct": 2,
+            "explanation": "`getRemoteAddr()` retrieves the IP address of the client that sent the request."
+        },
+        {
+            "id": "q6",
+            "question": "When a servlet processes a POST request, where are the parameters typically found?",
+            "options": [
+                "In the URL query string",
+                "In the request headers",
+                "In the request body",
+                "In the context path"
+            ],
+            "correct": 2,
+            "explanation": "POST requests generally send parameters in the request body, which is then parsed and accessible via `getParameter()` or `getParameterMap()`."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of `ServletContext` in the context of `ServletRequest` and `ServletResponse`?",
+            "options": [
+                "To provide application-level information and resources",
+                "To handle individual request processing",
+                "To send responses to clients",
+                "To manage session data"
+            ],
+            "correct": 0,
+            "explanation": "`ServletContext` provides access to global application resources and configuration, shared by all servlets within an application."
+        },
+        {
+            "id": "q8",
+            "question": "Which method is used to write data directly to the output stream of the response?",
+            "options": [
+                "getWriter()",
+                "getOutputStream()",
+                "sendRedirect()",
+                "setContentType()"
+            ],
+            "correct": 1,
+            "explanation": "`getOutputStream()` returns a `ServletOutputStream` used for writing binary data directly to the response."
+        },
+        {
+            "id": "q9",
+            "question": "What is the correct way to set the HTTP status code to 404 (Not Found)?",
+            "options": [
+                "response.sendRedirect(404);",
+                "response.setStatus(404);",
+                "response.getWriter().write(",
+                ");",
+                "response.setStatusCode(404);"
+            ],
+            "correct": 1,
+            "explanation": "`setStatus(404)` sets the HTTP status code.  `sendRedirect()` is for redirecting to a different URL."
+        },
+        {
+            "id": "q10",
+            "question": "Which method is used to set a cookie in the HTTP response?",
+            "options": [
+                "setHeader()",
+                "addCookie()",
+                "setContentType()",
+                "setCookie()"
+            ],
+            "correct": 1,
+            "explanation": "`addCookie()` is used to add a cookie to the response, which the browser will then store."
+        },
+        {
+            "id": "q11",
+            "question": "What happens if you try to use both `getWriter()` and `getOutputStream()` in the same servlet `service()` method?",
+            "options": [
+                "The servlet will throw an exception.",
+                "The output will be undefined.",
+                "The last called method will be effective.",
+                "The server will ignore the request."
+            ],
+            "correct": 0,
+            "explanation": "Using both `getWriter()` and `getOutputStream()` in the same response will throw an `IllegalStateException` as they both write to the same underlying stream in mutually exclusive manner."
+        },
+        {
+            "id": "q12",
+            "question": "Which method in `HttpServletResponse` is used to redirect the client to another URL?",
+            "options": [
+                "setStatus()",
+                "sendRedirect()",
+                "getOutputStream()",
+                "getWriter()"
+            ],
+            "correct": 1,
+            "explanation": "`sendRedirect()` instructs the client's browser to request a different URL."
+        },
+        {
+            "id": "q13",
+            "question": "What is the primary purpose of `setContentType()` in `HttpServletResponse`?",
+            "options": [
+                "To set the HTTP status code",
+                "To specify the content type of the response (e.g., text/html)",
+                "To add a cookie to the response",
+                "To redirect the client"
+            ],
+            "correct": 1,
+            "explanation": "`setContentType()` sets the `Content-Type` header, informing the browser how to interpret the response body."
+        },
+        {
+            "id": "q14",
+            "question": "What is the difference between `getRequestDispatcher()` and `sendRedirect()`?",
+            "options": [
+                "`getRequestDispatcher()` forwards within the server; `sendRedirect()` redirects the client.",
+                "`sendRedirect()` forwards within the server; `getRequestDispatcher()` redirects the client.",
+                "Both forward the request to another resource within the server.",
+                "Both redirect the client to another URL."
+            ],
+            "correct": 0,
+            "explanation": "`getRequestDispatcher()` is a server-side forward, while `sendRedirect()` is a client-side redirect."
+        },
+        {
+            "id": "q15",
+            "question": "When should you typically use `sendError()` in `HttpServletResponse`?",
+            "options": [
+                "To set the content type.",
+                "To send an HTML response with a custom error page.",
+                "To set the HTTP status code to an error status, and optionally include a message.",
+                "To redirect to a different error page."
+            ],
+            "correct": 2,
+            "explanation": "`sendError()` sets an appropriate HTTP status code (like 404 or 500) and, optionally, includes a message to be displayed by the client."
+        },
+        {
+            "id": "q16",
+            "question": "What is the role of `getRealPath()` in `ServletContext`?",
+            "options": [
+                "To get the real path of a resource deployed in the application.",
+                "To get the request parameters.",
+                "To set response headers.",
+                "To redirect the request."
+            ],
+            "correct": 0,
+            "explanation": "`getRealPath()` provides the absolute file system path for a web application resource, which is useful to load files from the server."
+        },
+        {
+            "id": "q17",
+            "question": "If you want to allow caching of a response for 1 hour, how should you configure the `HttpServletResponse`?",
+            "options": [
+                "response.setHeader(",
+                ",",
+                ");",
+                "response.setHeader(",
+                ",",
+                ");",
+                "response.setHeader(",
+                ",",
+                ");",
+                "response.setDateHeader(",
+                ", System.currentTimeMillis() + 3600000);"
+            ],
+            "correct": 1,
+            "explanation": "Setting `Cache-Control: max-age=3600` (seconds) tells the browser to cache the response for one hour."
+        },
+        {
+            "id": "q18",
+            "question": "Which method in `HttpServletRequest` is used to retrieve all request header names?",
+            "options": [
+                "getHeader()",
+                "getHeaderNames()",
+                "getHeaders()",
+                "getHeadersNames()"
+            ],
+            "correct": 1,
+            "explanation": "`getHeaderNames()` returns an `Enumeration` of all header names sent by the client."
+        },
+        {
+            "id": "q19",
+            "question": "What does the `isRequestedSessionIdValid()` method in `HttpServletRequest` do?",
+            "options": [
+                "Checks if the session ID in the request is valid for the current session.",
+                "Checks if the session ID in the request is a valid UUID.",
+                "Checks if the session ID in the request is in the correct format.",
+                "Returns the session ID from the request."
+            ],
+            "correct": 0,
+            "explanation": "This method verifies whether the session ID provided by the client is valid within the context of the current session management."
+        },
+        {
+            "id": "q20",
+            "question": "How do you retrieve the parameters from a URL encoded in the request body?",
+            "options": [
+                "Use `getParameter()`.",
+                "Use `getQueryString()`.",
+                "Use `getInputStream()` and parse manually.",
+                "Use `getHeader()` to retrieve the parameters."
+            ],
+            "correct": 0,
+            "explanation": "For parameters encoded in the request body (e.g., POST with content type `application/x-www-form-urlencoded`), use `getParameter()`."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following is true about request scope?",
+            "options": [
+                "Data stored in request scope is accessible to the entire application.",
+                "Data stored in request scope is accessible only during the current request.",
+                "Request scope is managed by the session.",
+                "Request scope persists across multiple requests from the same client."
+            ],
+            "correct": 1,
+            "explanation": "Request scope ensures data is accessible only during the duration of a single request."
+        },
+        {
+            "id": "q22",
+            "question": "What is the significance of `getContentLength()` in `HttpServletRequest`?",
+            "options": [
+                "Provides the content type of the request.",
+                "Specifies the size of the request body in bytes.",
+                "Indicates the HTTP method used.",
+                "Indicates the character encoding of the request."
+            ],
+            "correct": 1,
+            "explanation": "`getContentLength()` provides the length of the request body in bytes."
+        },
+        {
+            "id": "q23",
+            "question": "What is the impact of using `response.reset()` in a servlet?",
+            "options": [
+                "It clears the response's content and headers.",
+                "It clears the request's attributes.",
+                "It ends the current session.",
+                "It redirects the client to a default page."
+            ],
+            "correct": 0,
+            "explanation": "`reset()` clears the response's buffer, status code, and any set headers before any data is written."
+        },
+        {
+            "id": "q24",
+            "question": "Which method in `ServletRequest` can be used to obtain the character encoding of the request body?",
+            "options": [
+                "getCharacterEncoding()",
+                "getContentType()",
+                "getEncoding()",
+                "getProtocol()"
+            ],
+            "correct": 0,
+            "explanation": "`getCharacterEncoding()` retrieves the character encoding used by the client in the request body."
+        },
+        {
+            "id": "q25",
+            "question": "How can you prevent caching of the response?",
+            "options": [
+                "response.setHeader(",
+                ",",
+                ");  response.setHeader(",
+                ",",
+                "); response.setHeader(",
+                ",",
+                ");",
+                "response.setHeader(",
+                ",",
+                ");",
+                "response.setHeader(",
+                ",",
+                ");",
+                "response.setHeader(",
+                ",",
+                ");"
+            ],
+            "correct": 0,
+            "explanation": "Setting `Cache-Control` to `no-cache`, `Pragma` to `no-cache`, and `Expires` to a past date prevents caching."
+        },
+        {
+            "id": "q26",
+            "question": "What is the function of the `getParameterMap()` method in `ServletRequest`?",
+            "options": [
+                "Returns a map of all the request parameters and their values.",
+                "Returns the context path of the request.",
+                "Returns the HTTP method used for the request.",
+                "Returns the query string of the request."
+            ],
+            "correct": 0,
+            "explanation": "`getParameterMap()` retrieves a map of all parameters, mapping parameter names to arrays of their values."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following statements about `getRequestDispatcher` are true?",
+            "options": [
+                "It can only be used to forward requests within the same web application.",
+                "It can be used to forward requests to external websites.",
+                "It involves a client-side redirect.",
+                "It always generates a new request object for the forwarded resource."
+            ],
+            "correct": 0,
+            "explanation": "`getRequestDispatcher` is used for server-side forwarding, thus only works within the same web application and doesn't involve any client-side redirection or a new request object."
+        },
+        {
+            "id": "q28",
+            "question": "What is the significance of the `isSecure()` method in `HttpServletRequest`?",
+            "options": [
+                "Checks if the request is an HTTP request.",
+                "Checks if the request was made using a secure channel (e.g., HTTPS).",
+                "Checks the content length of the request.",
+                "Checks for the presence of cookies."
+            ],
+            "correct": 1,
+            "explanation": "`isSecure()` determines whether the request was received over a secure channel (HTTPS)."
+        },
+        {
+            "id": "q29",
+            "question": "How can a servlet determine the hostname used by the client in the request?",
+            "options": [
+                "getRequestURI()",
+                "getServerName()",
+                "getRemoteHost()",
+                "getProtocol()"
+            ],
+            "correct": 1,
+            "explanation": "`getServerName()` returns the name of the server to which the request was sent."
+        },
+        {
+            "id": "q30",
+            "question": "What are the possible advantages of using `PrintWriter` (via `getWriter()`) instead of `ServletOutputStream`?",
+            "options": [
+                "Automatic character encoding handling.",
+                "Ability to handle binary data.",
+                "Direct control over output stream without character encoding concerns.",
+                "Better performance for binary data."
+            ],
+            "correct": 0,
+            "explanation": "PrintWriter automatically handles character encoding and is suitable for text-based output."
+        },
+        {
+            "id": "q31",
+            "question": "Suppose a servlet is deployed at context path `/myapp`. What will `getRequestURI()` and `getContextPath()` return when a request is made to `/myapp/page.jsp`?",
+            "options": [
+                "getRequestURI() returns",
+                ", getContextPath() returns",
+                "",
+                "getRequestURI() returns",
+                ", getContextPath() returns",
+                "",
+                "getRequestURI() returns",
+                ", getContextPath() returns",
+                "",
+                "getRequestURI() returns",
+                ", getContextPath() returns",
+                ""
+            ],
+            "correct": 1,
+            "explanation": "`getRequestURI()` returns the complete path and `getContextPath()` returns the application context's root path."
+        },
+        {
+            "id": "q32",
+            "question": "If a servlet needs to access a resource from the server's file system, what method should be used on the `ServletContext` object?",
+            "options": [
+                "getRealPath()",
+                "getServletConfig()",
+                "getRequestDispatcher()",
+                "getInitParameter()"
+            ],
+            "correct": 0,
+            "explanation": "`getRealPath()` is used to obtain the file system path of a resource on the server."
+        },
+        {
+            "id": "q33",
+            "question": "Consider the scenario: A servlet receives a request, retrieves a parameter, and then stores this parameter as a request attribute. Subsequently, it forwards the request to a JSP. What is the correct way to access the request attribute in the JSP?",
+            "options": [
+                "Using `request.getParameter()`",
+                "Using `request.getAttribute()`",
+                "Using `session.getAttribute()`",
+                "Using `application.getAttribute()`"
+            ],
+            "correct": 1,
+            "explanation": "Request attributes are set using `setAttribute()` and are retrieved using `getAttribute()`. The context is request scoped."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following accurately describes the behavior of `setHeader()` in `HttpServletResponse`?",
+            "options": [
+                "Adds a new header or replaces an existing header with the same name.",
+                "Only adds a new header if one with the same name doesn't exist.",
+                "Sets the content type of the response.",
+                "Redirects to a new URL."
+            ],
+            "correct": 0,
+            "explanation": "`setHeader()` adds a new header, or, if a header with the same name already exists, replaces its value."
+        },
+        {
+            "id": "q35",
+            "question": "A servlet is processing a request with a large amount of data. For efficient handling of the request body, which method is generally recommended and why?",
+            "options": [
+                "Use `getParameter()` for all data.",
+                "Use `getInputStream()` to read the data in chunks.",
+                "Use `getParameterMap()` to parse the data.",
+                "Use `sendRedirect()` to process the request in another servlet."
+            ],
+            "correct": 1,
+            "explanation": "For large data, using `getInputStream()` to read the request body in chunks is the most efficient approach to prevent potential memory issues."
+        }
+    ],
+    "dispatcher-redirect": [
+        {
+            "id": "q1",
+            "question": "Which method of the `RequestDispatcher` interface is used to forward a request to another resource within the same server?",
+            "options": [
+                "sendRedirect()",
+                "include()",
+                "forward()",
+                "redirect()"
+            ],
+            "correct": 2,
+            "explanation": "The `forward()` method is specifically for forwarding requests internally within the server."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary difference between `RequestDispatcher.forward()` and `response.sendRedirect()`?",
+            "options": [
+                "`forward()` is client-side, `sendRedirect()` is server-side.",
+                "`forward()` is server-side, `sendRedirect()` is client-side.",
+                "Both are client-side.",
+                "Both are server-side."
+            ],
+            "correct": 1,
+            "explanation": "`forward()` happens entirely on the server. `sendRedirect()` sends a redirect response to the client, which then makes a new request."
+        },
+        {
+            "id": "q3",
+            "question": "When should you typically use `RequestDispatcher.include()`?",
+            "options": [
+                "To redirect the client to a new page.",
+                "To include the output of another resource within the current response.",
+                "To handle exceptions.",
+                "To invalidate the session."
+            ],
+            "correct": 1,
+            "explanation": "`include()` allows the output of another resource to be incorporated into the current response, useful for modularizing the view."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following statements about `response.sendRedirect()` is true?",
+            "options": [
+                "It preserves request attributes.",
+                "It always uses the HTTP status code 302.",
+                "It is faster than `RequestDispatcher.forward()`.",
+                "It is only used within the same web application."
+            ],
+            "correct": 1,
+            "explanation": "`sendRedirect()` uses 302 Found (or similar) to tell the browser to make a new request. Request attributes are lost."
+        },
+        {
+            "id": "q5",
+            "question": "What is the main advantage of using `RequestDispatcher.forward()` over `response.sendRedirect()` when handling requests within a web application?",
+            "options": [
+                "Better performance.",
+                "Ability to retain request attributes.",
+                "Simpler coding.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Forwarding keeps the request within the server, preserving attributes and is usually faster."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following HTTP status codes is typically used by `response.sendRedirect()`?",
+            "options": [
+                "200 OK",
+                "301 Moved Permanently",
+                "302 Found",
+                "404 Not Found"
+            ],
+            "correct": 2,
+            "explanation": "302 Found indicates a temporary redirect."
+        },
+        {
+            "id": "q7",
+            "question": "Consider a scenario where you forward a request from a servlet to a JSP. Which object is typically shared between the servlet and the JSP during this process?",
+            "options": [
+                "Only the `HttpServletRequest` object.",
+                "Only the `HttpServletResponse` object.",
+                "Both `HttpServletRequest` and `HttpServletResponse` objects.",
+                "Neither the request nor the response objects are shared."
+            ],
+            "correct": 2,
+            "explanation": "Both request and response objects are shared, allowing the JSP to access request data and write to the response."
+        },
+        {
+            "id": "q8",
+            "question": "What happens to the URL in the browser's address bar when using `RequestDispatcher.forward()`?",
+            "options": [
+                "It changes to the URL of the forwarded resource.",
+                "It remains the same.",
+                "It changes only if the forwarded resource is outside the web application.",
+                "It becomes invalid."
+            ],
+            "correct": 1,
+            "explanation": "The URL in the browser does not change; the forwarding happens internally."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following methods can be used to get a `RequestDispatcher` object?",
+            "options": [
+                "`response.getRequestDispatcher(",
+                ")`",
+                "`request.getRequestDispatcher(",
+                ")`",
+                "`session.getRequestDispatcher(",
+                ")`",
+                "`servletContext.getRequestDispatcher(",
+                ")`"
+            ],
+            "correct": 3,
+            "explanation": "The `ServletContext` is used to obtain a `RequestDispatcher` to resources within the web application."
+        },
+        {
+            "id": "q10",
+            "question": "If you forward a request to a resource that throws an exception, what happens to the original servlet's execution?",
+            "options": [
+                "The original servlet continues execution after the forwarded resource.",
+                "The original servlet's execution is terminated, and the exception is propagated to the client.",
+                "The original servlet's execution is terminated, but the exception is handled internally.",
+                "The outcome depends on the exception handling mechanism in place."
+            ],
+            "correct": 3,
+            "explanation": "If an exception occurs during the forward, and if the exception is not caught by a filter, the control is not returned to the original servlet."
+        },
+        {
+            "id": "q11",
+            "question": "In which scenario would you most likely choose `response.sendRedirect()`?",
+            "options": [
+                "When you need to access the response attributes.",
+                "When you want to perform an internal jump between resources.",
+                "When you want the URL in the browser to reflect the target resource.",
+                "When preserving request attributes is crucial."
+            ],
+            "correct": 2,
+            "explanation": "Redirect is used when the browser needs to load a new resource, therefore URL must reflect the change."
+        },
+        {
+            "id": "q12",
+            "question": "What is the role of the `ServletContext` in obtaining a `RequestDispatcher`?",
+            "options": [
+                "It provides access to the session attributes.",
+                "It manages the request attributes.",
+                "It provides access to the web application's resources.",
+                "It handles the HTTP response."
+            ],
+            "correct": 2,
+            "explanation": "The `ServletContext` is used to access resources, including other servlets and JSPs, within the same web application."
+        },
+        {
+            "id": "q13",
+            "question": "True or False: `RequestDispatcher.forward()` can be used to forward a request to a resource outside the current web application.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "False. It can only forward to resources within the same web application."
+        }
+    ],
+    "session": [
+        {
+            "id": "q1",
+            "question": "Which of the following statements best describes the primary purpose of cookies in web applications?",
+            "options": [
+                "To store large amounts of data on the server.",
+                "To maintain state across HTTP requests.",
+                "To cache static content in the browser.",
+                "To encrypt sensitive information transmitted over the network."
+            ],
+            "correct": 1,
+            "explanation": "Cookies are designed to store small pieces of data on the client-side (browser) to preserve user state across multiple HTTP requests."
+        },
+        {
+            "id": "q2",
+            "question": "What is the role of `HttpSession` in managing user sessions in a servlet-based web application?",
+            "options": [
+                "To store information about a specific user across multiple requests.",
+                "To handle all incoming HTTP requests to the servlet.",
+                "To manage the connection pool for database interactions.",
+                "To render dynamic web pages on the server-side."
+            ],
+            "correct": 0,
+            "explanation": "`HttpSession` provides a way to store and retrieve user-specific data, maintaining the state of a user's session across multiple interactions."
+        },
+        {
+            "id": "q3",
+            "question": "Consider a scenario where cookies are disabled in a user's browser. Which session management technique would be most suitable?",
+            "options": [
+                "Using cookies exclusively.",
+                "Relying on URL rewriting.",
+                "Ignoring session management.",
+                "Using HTTP redirects."
+            ],
+            "correct": 1,
+            "explanation": "URL rewriting is a common workaround when cookies are unavailable, encoding session information directly within the URL."
+        },
+        {
+            "id": "q4",
+            "question": "What is the primary challenge when using URL rewriting for session management?",
+            "options": [
+                "Increased server-side resource consumption.",
+                "Exposure of session IDs in the URL.",
+                "Difficulty in handling form submissions.",
+                "Compatibility issues with modern browsers."
+            ],
+            "correct": 1,
+            "explanation": "Session IDs in URLs are visible, potentially exposing them to users or other parties."
+        },
+        {
+            "id": "q5",
+            "question": "Which method is typically used to retrieve a `HttpSession` object in a servlet?",
+            "options": [
+                "`request.getSession()`",
+                "`response.getSession()`",
+                "`session.getRequest()`",
+                "`servlet.getSession()`"
+            ],
+            "correct": 0,
+            "explanation": "`request.getSession()` retrieves the existing `HttpSession` or creates a new one if none exists."
+        },
+        {
+            "id": "q6",
+            "question": "What is the purpose of the `setMaxInactiveInterval()` method in `HttpSession`?",
+            "options": [
+                "To set the maximum number of active sessions.",
+                "To define the session timeout period.",
+                "To encrypt the session data.",
+                "To store session attributes persistently."
+            ],
+            "correct": 1,
+            "explanation": "`setMaxInactiveInterval()` sets the time (in seconds) after which a session becomes invalidated if no client request is received."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following is NOT a common use case for cookies?",
+            "options": [
+                "Storing user preferences.",
+                "Tracking user behavior on a website.",
+                "Storing sensitive financial data.",
+                "Implementing shopping carts."
+            ],
+            "correct": 2,
+            "explanation": "Cookies are generally not suitable for storing highly sensitive information like financial data due to security risks."
+        },
+        {
+            "id": "q8",
+            "question": "What happens when you call `invalidate()` on a `HttpSession` object?",
+            "options": [
+                "The session is immediately terminated, and all associated data is removed.",
+                "The session is only terminated after the specified timeout.",
+                "Only the session ID is invalidated, but the data remains.",
+                "The session is paused, and can be resumed later."
+            ],
+            "correct": 0,
+            "explanation": "`invalidate()` completely invalidates the session, removing all data associated with it and releasing server resources."
+        },
+        {
+            "id": "q9",
+            "question": "What is the primary advantage of using `HttpSession` over manually managing sessions with cookies and URL rewriting?",
+            "options": [
+                "Improved performance.",
+                "Simplified session management logic.",
+                "Reduced network overhead.",
+                "Increased security."
+            ],
+            "correct": 1,
+            "explanation": "`HttpSession` abstracts away many of the complexities of session management, making development easier and cleaner."
+        },
+        {
+            "id": "q10",
+            "question": "Consider the following code snippet: `session.setAttribute(",
+            "options": [
+                "It returns null.",
+                "It throws an exception.",
+                "It returns",
+                ".",
+                "It creates a new session."
+            ],
+            "correct": 2,
+            "explanation": "`session.setAttribute()` stores data, and `session.getAttribute()` retrieves data associated with the given key."
+        },
+        {
+            "id": "q11",
+            "question": "Which interface is used to write cookies to the client?",
+            "options": [
+                "`HttpServletRequest`",
+                "`HttpServletResponse`",
+                "`HttpSession`",
+                "`ServletContext`"
+            ],
+            "correct": 1,
+            "explanation": "`HttpServletResponse` is used to send cookies to the client through the HTTP headers."
+        },
+        {
+            "id": "q12",
+            "question": "What is the default session timeout in most servlet containers (e.g., Tomcat)?",
+            "options": [
+                "5 minutes",
+                "15 minutes",
+                "30 minutes",
+                "1 hour"
+            ],
+            "correct": 2,
+            "explanation": "The default session timeout is typically 30 minutes, but can be configured."
+        },
+        {
+            "id": "q13",
+            "question": "If a user closes their browser, what typically happens to the session?",
+            "options": [
+                "The session remains active indefinitely.",
+                "The session times out after the configured interval.",
+                "The session is immediately invalidated.",
+                "The session is saved to disk for later retrieval."
+            ],
+            "correct": 1,
+            "explanation": "Closing the browser typically does not immediately invalidate the session; it times out after the inactivity period."
+        },
+        {
+            "id": "q14",
+            "question": "How can you delete a cookie from the client's browser using servlets?",
+            "options": [
+                "By setting the cookie's value to null and the max age to 0.",
+                "By calling `cookie.delete()` method.",
+                "By setting the cookie's value to an empty string.",
+                "By calling `response.deleteCookie(cookie)`."
+            ],
+            "correct": 0,
+            "explanation": "To delete a cookie, set its max age to 0 and send it back to the client. The browser will then remove it."
+        },
+        {
+            "id": "q15",
+            "question": "What is the purpose of a session ID?",
+            "options": [
+                "To identify the user's session uniquely.",
+                "To encrypt the session data.",
+                "To store user preferences.",
+                "To manage the server's connection pool."
+            ],
+            "correct": 0,
+            "explanation": "The session ID uniquely identifies a user's session, enabling the server to retrieve the correct session data."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is a potential security risk associated with cookie-based session management?",
+            "options": [
+                "Session fixation attacks",
+                "Cross-site scripting (XSS)",
+                "SQL injection",
+                "Buffer overflow"
+            ],
+            "correct": 0,
+            "explanation": "Session fixation attacks can occur if an attacker sets a user's session ID before they authenticate."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the `isRequestedSessionIdValid()` method of the `HttpServletRequest`?",
+            "options": [
+                "To check if the current session ID is valid.",
+                "To create a new session.",
+                "To invalidate an existing session.",
+                "To get the session ID from the request."
+            ],
+            "correct": 0,
+            "explanation": "This method checks if the session ID included in the request is valid and active."
+        },
+        {
+            "id": "q18",
+            "question": "What is the difference between a persistent cookie and a session cookie?",
+            "options": [
+                "Persistent cookies are stored on the server, while session cookies are stored on the client.",
+                "Persistent cookies expire after a specified time, while session cookies expire when the browser is closed.",
+                "Persistent cookies can only be used for shopping carts, while session cookies are used for user authentication.",
+                "There is no difference; the terms are interchangeable."
+            ],
+            "correct": 1,
+            "explanation": "Persistent cookies have an expiry date and are saved to the disk. Session cookies are removed when the browser is closed."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following methods can be used to encode a URL for URL rewriting?",
+            "options": [
+                "`request.encodeURL()`",
+                "`response.encodeURL()`",
+                "`session.encodeURL()`",
+                "`servletContext.encodeURL()`"
+            ],
+            "correct": 1,
+            "explanation": "`response.encodeURL()` is used to ensure URLs are properly encoded for session tracking if cookies are disabled."
+        },
+        {
+            "id": "q20",
+            "question": "What is the impact on session management if the user disables JavaScript in their browser?",
+            "options": [
+                "Session management becomes impossible.",
+                "Session management with cookies remains unaffected.",
+                "URL rewriting becomes the only viable option (if cookies are also disabled).",
+                "The session times out immediately."
+            ],
+            "correct": 2,
+            "explanation": "Without JavaScript, URL rewriting is the main method to maintain session state if cookies are disabled."
+        },
+        {
+            "id": "q21",
+            "question": "How can you prevent session fixation attacks in your servlet application?",
+            "options": [
+                "Always use cookies for session management.",
+                "Regenerate the session ID after successful authentication.",
+                "Rely solely on URL rewriting.",
+                "Never use session management."
+            ],
+            "correct": 1,
+            "explanation": "Regenerating the session ID after authentication mitigates the risk of attackers setting a known session ID."
+        },
+        {
+            "id": "q22",
+            "question": "True or False: `session.setAttribute()` can store objects of any class type.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Yes, `session.setAttribute()` accepts objects of any class type as long as those classes are properly serialized if the session is to be persisted."
+        },
+        {
+            "id": "q23",
+            "question": "What is the role of `path` attribute in a cookie?",
+            "options": [
+                "Specifies the domain to which the cookie applies.",
+                "Specifies the URL path to which the cookie applies.",
+                "Sets the cookie's expiration date.",
+                "Encrypts the cookie's value."
+            ],
+            "correct": 1,
+            "explanation": "The `path` attribute restricts the URLs to which the cookie will be sent. Cookies are only sent if the request path matches this path or is a subdirectory of this path."
+        },
+        {
+            "id": "q24",
+            "question": "What is the impact of setting the `HttpOnly` flag on a cookie?",
+            "options": [
+                "The cookie can only be accessed through HTTP requests, preventing client-side JavaScript access.",
+                "The cookie is encrypted.",
+                "The cookie is only valid for the current session.",
+                "The cookie can only be accessed from the same domain."
+            ],
+            "correct": 0,
+            "explanation": "`HttpOnly` prevents the cookie from being accessed by client-side scripts, mitigating the risk of XSS attacks."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of the `secure` flag in a cookie?",
+            "options": [
+                "To encrypt the cookie's value.",
+                "To restrict the cookie to be sent only over HTTPS connections.",
+                "To specify the cookie's domain.",
+                "To set the cookie's expiration date."
+            ],
+            "correct": 1,
+            "explanation": "`secure` flag ensures the cookie is only transmitted over secure HTTPS connections, improving security."
+        },
+        {
+            "id": "q26",
+            "question": "What is the difference between `getSession()` and `getSession(true)`?",
+            "options": [
+                "There is no difference.",
+                "`getSession()` creates a new session if one does not exist, while `getSession(true)` returns null if no session exists.",
+                "`getSession()` returns null if no session exists, while `getSession(true)` creates a new session if one does not exist.",
+                "`getSession()` uses cookies and `getSession(true)` uses URL rewriting."
+            ],
+            "correct": 2,
+            "explanation": "Both `getSession()` and `getSession(true)` behave the same. If a session exists, it's returned; otherwise, a new session is created. `getSession(false)` returns null if no session exists."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following is NOT a typical method for session persistence (e.g., across server restarts)?",
+            "options": [
+                "Storing session data in a database.",
+                "Serializing session data to files.",
+                "Using a distributed cache (e.g., Memcached, Redis).",
+                "Relying only on browser cookies."
+            ],
+            "correct": 3,
+            "explanation": "Relying solely on browser cookies means session data will be lost if the server restarts, or the user clears the browser data."
+        },
+        {
+            "id": "q28",
+            "question": "Consider the following code: `session.invalidate(); session = request.getSession();`. What is the purpose of this sequence of operations?",
+            "options": [
+                "To refresh the existing session.",
+                "To create a new session ID while retaining the previous session data.",
+                "To remove the session and create a completely new one.",
+                "To copy session data to a new session."
+            ],
+            "correct": 2,
+            "explanation": "`invalidate()` destroys the existing session, and the subsequent `getSession()` creates a completely new session."
+        },
+        {
+            "id": "q29",
+            "question": "How does a web server typically determine if a request belongs to an existing session?",
+            "options": [
+                "By examining the user's IP address.",
+                "By using a unique identifier stored in a cookie or the URL.",
+                "By analyzing the request headers for user agent information.",
+                "By checking the browser's history."
+            ],
+            "correct": 1,
+            "explanation": "The server uses the session ID (typically passed via a cookie or URL) to identify the session."
+        },
+        {
+            "id": "q30",
+            "question": "What is the relationship between `Cookie` and `HttpSession`?",
+            "options": [
+                "Cookies are used to store `HttpSession` objects on the server.",
+                "`HttpSession` uses cookies (or URL rewriting) to track the user's session.",
+                "Cookies and `HttpSession` are entirely independent of each other.",
+                "`HttpSession` stores cookies."
+            ],
+            "correct": 1,
+            "explanation": "`HttpSession` relies on cookies (or URL rewriting if cookies are disabled) to identify and maintain the user's session across requests."
+        },
+        {
+            "id": "q31",
+            "question": "What are the potential drawbacks of using URL rewriting for session management compared to cookies?",
+            "options": [
+                "Increased server load",
+                "Decreased security",
+                "Difficulty with back button",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "URL rewriting can cause usability issues, is less secure (exposing session IDs), and may cause performance problems because of URL length limits."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following is a responsibility of the servlet container concerning `HttpSession`?",
+            "options": [
+                "To handle URL rewriting.",
+                "To manage the session timeout.",
+                "To encrypt the session data.",
+                "All of the above"
+            ],
+            "correct": 1,
+            "explanation": "The servlet container handles session management, including creation, tracking, and invalidation, including the session timeout period."
+        },
+        {
+            "id": "q33",
+            "question": "In a clustered environment, how is session persistence typically achieved?",
+            "options": [
+                "By storing session data locally on each server.",
+                "By using sticky sessions.",
+                "By replicating session data across servers.",
+                "By disabling session management."
+            ],
+            "correct": 2,
+            "explanation": "Replication or a shared session store are typically used to maintain sessions across multiple servers in a cluster."
+        },
+        {
+            "id": "q34",
+            "question": "What happens if a user disables cookies and URL rewriting is not implemented in a web application?",
+            "options": [
+                "The application functions normally.",
+                "The user's session cannot be tracked, and they effectively browse anonymously.",
+                "The server generates a new session ID for each request.",
+                "The application uses local storage instead of sessions."
+            ],
+            "correct": 1,
+            "explanation": "Without either cookies or URL rewriting, the server has no way to track the user's session, resulting in a new session for each request."
+        },
+        {
+            "id": "q35",
+            "question": "Which method is used to check whether the session is new?",
+            "options": [
+                "`session.isNew()`",
+                "`request.isNewSession()`",
+                "`session.isValid()`",
+                "`request.getSession().isNewSession()`"
+            ],
+            "correct": 0,
+            "explanation": "`session.isNew()` returns `true` if the session is new, i.e., has just been created."
+        }
+    ],
+    "jsp-intro": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using JSP over servlets for web application development?",
+            "options": [
+                "Easier HTML integration",
+                "Better performance",
+                "More efficient resource management",
+                "Simpler debugging"
+            ],
+            "correct": 0,
+            "explanation": "JSP allows developers to embed Java code within HTML, making the presentation layer easier to create and maintain."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following is NOT a valid JSP lifecycle phase?",
+            "options": [
+                "Translation",
+                "Initialization",
+                "Compilation",
+                "Request processing"
+            ],
+            "correct": 2,
+            "explanation": "Compilation is part of the translation phase. The core phases are translation, compilation (part of translation), initialization, request processing, and destruction."
+        },
+        {
+            "id": "q3",
+            "question": "What is the purpose of a JSP directive?",
+            "options": [
+                "To define variables used in the JSP page",
+                "To control the overall structure and behavior of the JSP page",
+                "To display output to the client",
+                "To handle user input"
+            ],
+            "correct": 1,
+            "explanation": "Directives like `page`, `include`, and `taglib` provide instructions to the JSP container."
+        },
+        {
+            "id": "q4",
+            "question": "Which directive is used to include another file (e.g., HTML, JSP) into the current JSP page?",
+            "options": [
+                "`<%@ page %>`",
+                "`<%@ include %>`",
+                "`<%@ taglib %>`",
+                "`<%! %>`"
+            ],
+            "correct": 1,
+            "explanation": "`<%@ include %>` is specifically for including other files, while `<%@ page %>` configures the JSP page itself, and `<%@ taglib %>` incorporates custom tags."
+        },
+        {
+            "id": "q5",
+            "question": "What is the role of the JSP container?",
+            "options": [
+                "To translate JSP pages into servlets",
+                "To execute Java code embedded in JSP pages",
+                "To manage the lifecycle of JSP pages",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "The JSP container manages the translation, compilation, deployment, and runtime execution of JSP pages, including the management of the servlet lifecycle."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following is a valid way to declare a variable in JSP?",
+            "options": [
+                "`<% String myVar =",
+                "; %>`",
+                "`<%! String myVar =",
+                "; %>`",
+                "`<%= String myVar =",
+                "; %>`",
+                "Both a and b"
+            ],
+            "correct": 3,
+            "explanation": "Both scriptlets (`<% ... %>`) and declarations (`<%! ... %>`) can be used for variable declaration. Scriptlets are for inline code, declarations for class-level declarations."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `page` directive's `import` attribute?",
+            "options": [
+                "To import other JSP pages",
+                "To import Java packages and classes",
+                "To define the character encoding",
+                "To set the content type"
+            ],
+            "correct": 1,
+            "explanation": "The `import` attribute is analogous to Java's `import` statement, allowing you to use classes from specific packages within your JSP page."
+        },
+        {
+            "id": "q8",
+            "question": "What is the primary difference between a scriptlet and an expression in JSP?",
+            "options": [
+                "Scriptlets are for output, expressions are for logic.",
+                "Scriptlets contain Java code, expressions evaluate and output values.",
+                "Scriptlets are deprecated, expressions are the preferred method.",
+                "Scriptlets are for declarations, expressions for execution."
+            ],
+            "correct": 1,
+            "explanation": "Scriptlets (`<% ... %>`) contain Java code, while expressions (`<%= ... %>`) evaluate an expression and output its value."
+        },
+        {
+            "id": "q9",
+            "question": "What is the role of the `out` implicit object in JSP?",
+            "options": [
+                "To handle user input",
+                "To write output to the response stream",
+                "To store session data",
+                "To access request parameters"
+            ],
+            "correct": 1,
+            "explanation": "The `out` object (instance of `JspWriter`) is used to send output to the client's browser."
+        },
+        {
+            "id": "q10",
+            "question": "Which implicit object is used to access request parameters?",
+            "options": [
+                "`out`",
+                "`request`",
+                "`response`",
+                "`session`"
+            ],
+            "correct": 1,
+            "explanation": "The `request` object provides access to request parameters, headers, and other request-related information."
+        },
+        {
+            "id": "q11",
+            "question": "What is the purpose of the `session` implicit object in JSP?",
+            "options": [
+                "To store application-wide data",
+                "To store user-specific data across multiple requests",
+                "To access request headers",
+                "To write data to the response"
+            ],
+            "correct": 1,
+            "explanation": "The `session` object is used to maintain user-specific data during a user's session with the web application."
+        },
+        {
+            "id": "q12",
+            "question": "What does the `pageEncoding` attribute in the `page` directive specify?",
+            "options": [
+                "The content type of the page",
+                "The character encoding of the JSP page",
+                "The HTTP method",
+                "The session timeout"
+            ],
+            "correct": 1,
+            "explanation": "It specifies the character encoding used to parse the JSP page (e.g., UTF-8, ISO-8859-1)."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following is NOT a benefit of using JSP?",
+            "options": [
+                "Separation of concerns (presentation from business logic)",
+                "Easier maintenance of the presentation layer",
+                "Improved performance over servlets",
+                "Rapid prototyping and development"
+            ],
+            "correct": 2,
+            "explanation": "Servlets generally have better performance, as they're compiled once, and JSP pages are translated into servlets."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of the `isELIgnored` attribute in the `page` directive?",
+            "options": [
+                "To disable the use of Expression Language (EL) in the JSP page",
+                "To enable the use of Expression Language (EL) in the JSP page",
+                "To specify the EL implementation",
+                "To set the content type"
+            ],
+            "correct": 0,
+            "explanation": "It determines whether the JSP container should process EL expressions. If set to `true`, EL is ignored."
+        },
+        {
+            "id": "q15",
+            "question": "Consider the following JSP snippet: `<%= 5 + 3 %>`. What will be displayed in the browser?",
+            "options": [
+                "5 + 3",
+                "8",
+                "The literal string",
+                "",
+                "An error message"
+            ],
+            "correct": 1,
+            "explanation": "The expression will be evaluated, and the result (8) will be outputted."
+        },
+        {
+            "id": "q16",
+            "question": "Which tag is used for comments in JSP that are NOT visible in the output sent to the browser?",
+            "options": [
+                "`<!-- ... -->`",
+                "`<%-- ... --%>`",
+                "`<%/* ... */%>`",
+                "`// ...`"
+            ],
+            "correct": 1,
+            "explanation": "`<%-- ... --%>` is the JSP comment tag. The other options represent HTML or Java comments and might be visible depending on how the server processes them."
+        },
+        {
+            "id": "q17",
+            "question": "What is the role of the `config` implicit object in JSP?",
+            "options": [
+                "To access web application configuration parameters",
+                "To store user session data",
+                "To handle request parameters",
+                "To write output to the response"
+            ],
+            "correct": 0,
+            "explanation": "The `config` object (instance of `ServletConfig`) allows access to web application configuration information (e.g., initialization parameters defined in `web.xml`)."
+        },
+        {
+            "id": "q18",
+            "question": "What will be the output of the following JSP code segment?  `<% int i = 5; out.println(i++); out.println(i); %>`",
+            "options": [
+                "5 6",
+                "6 6",
+                "5 5",
+                "6 5"
+            ],
+            "correct": 0,
+            "explanation": "The `i++` uses the current value of `i` (5) for output and then increments it. The next output then uses the incremented value(6)."
+        },
+        {
+            "id": "q19",
+            "question": "What is the purpose of the `ServletContext` implicit object in JSP?",
+            "options": [
+                "To store session attributes",
+                "To access application-wide resources and information",
+                "To handle request parameters",
+                "To manage user authentication"
+            ],
+            "correct": 1,
+            "explanation": "The `ServletContext` provides access to application-wide resources and configuration information and is shared among all users."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following statements about JSP is FALSE?",
+            "options": [
+                "JSP pages are translated into servlets.",
+                "JSP pages can contain HTML, CSS, JavaScript, and Java code.",
+                "JSP is a server-side technology.",
+                "JSP is designed to be faster than Servlets for handling client requests."
+            ],
+            "correct": 3,
+            "explanation": "JSP pages are generally not faster than servlets, as they're translated into servlets, which are then executed."
+        },
+        {
+            "id": "q21",
+            "question": "What is the difference between `page` scope and `request` scope for storing variables in JSP?",
+            "options": [
+                "`page` scope is accessible only within the current page, while `request` scope is accessible across multiple pages.",
+                "`request` scope is accessible only within the current page, while `page` scope is accessible across multiple pages.",
+                "Both have the same scope.",
+                "Both are not valid scopes."
+            ],
+            "correct": 0,
+            "explanation": "Variables with `page` scope are available only within the JSP page where they are defined, whereas `request` scope is accessible throughout the request lifecycle (across multiple pages if you use the `RequestDispatcher`)."
+        },
+        {
+            "id": "q22",
+            "question": "What is the purpose of the `contentType` attribute in the `page` directive?",
+            "options": [
+                "To specify the content type and character encoding of the response.",
+                "To define the HTML version used.",
+                "To import external CSS files.",
+                "To set the session timeout."
+            ],
+            "correct": 0,
+            "explanation": "It sets the `Content-Type` HTTP header, typically defining the content type (e.g., `text/html`) and character encoding (e.g., `UTF-8`) of the response."
+        },
+        {
+            "id": "q23",
+            "question": "How does JSP handle exceptions?",
+            "options": [
+                "Using try-catch blocks within scriptlets.",
+                "Using the `errorPage` attribute in the `page` directive.",
+                "By throwing exceptions.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "JSP uses standard Java exception handling (try-catch blocks) within scriptlets, and the `errorPage` attribute in the `page` directive allows you to specify a JSP page to handle exceptions gracefully."
+        },
+        {
+            "id": "q24",
+            "question": "Which of the following is a valid way to forward a request to another JSP page?",
+            "options": [
+                "`response.sendRedirect(",
+                ");`",
+                "`RequestDispatcher rd = request.getRequestDispatcher(",
+                "); rd.forward(request, response);`",
+                "`out.print(",
+                ");`",
+                "Both a and b"
+            ],
+            "correct": 1,
+            "explanation": "`sendRedirect` performs a client-side redirect (changes the URL in the browser), whereas `RequestDispatcher.forward()` performs a server-side forward (doesn't change the URL).`jsp:include` is for including the content, not forwarding the request."
+        },
+        {
+            "id": "q25",
+            "question": "What is the function of a `taglib` directive in a JSP page?",
+            "options": [
+                "To include another JSP page.",
+                "To import Java packages.",
+                "To use custom tags (tag libraries).",
+                "To set the content type."
+            ],
+            "correct": 2,
+            "explanation": "The `taglib` directive allows you to use custom tag libraries to extend the functionality of your JSP pages, promoting code reuse and separation of concerns."
+        },
+        {
+            "id": "q26",
+            "question": "What is the output of the following code snippet?  `<% int i = 10; if(i > 5) { %> Hello <% } %>`",
+            "options": [
+                "Hello",
+                "An error",
+                "Nothing",
+                "Hello and then an error"
+            ],
+            "correct": 0,
+            "explanation": "The condition is true (10 > 5), so the text"
+        },
+        {
+            "id": "q27",
+            "question": "What is a scriptlet used for in JSP?",
+            "options": [
+                "To declare global variables within the JSP file.",
+                "To execute Java code within the JSP page.",
+                "To declare HTML tags.",
+                "To include files in the JSP page."
+            ],
+            "correct": 1,
+            "explanation": "Scriptlets, denoted by `<% ... %>`, allow you to embed Java code for logic, calculations, and other operations within the JSP page."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following is a drawback of using JSP?",
+            "options": [
+                "Difficult to write HTML",
+                "More complex than servlets",
+                "Compilation time overhead",
+                "Limited functionality"
+            ],
+            "correct": 2,
+            "explanation": "JSP pages need to be translated and compiled into servlets, which can add some initial overhead, especially on the first request. "
+        },
+        {
+            "id": "q29",
+            "question": "Which of the following statements is true regarding JSP and MVC architecture?",
+            "options": [
+                "JSP acts as the Controller in MVC.",
+                "JSP acts as the Model in MVC.",
+                "JSP acts as the View in MVC.",
+                "JSP is not relevant to the MVC architecture."
+            ],
+            "correct": 2,
+            "explanation": "In the Model-View-Controller (MVC) architecture, JSP pages are primarily used as the View, responsible for presenting data to the user."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of the `autoFlush` attribute in the `page` directive?",
+            "options": [
+                "Controls whether the output buffer is automatically flushed.",
+                "Specifies the buffer size.",
+                "Sets the content type of the response.",
+                "Determines whether the page is cached."
+            ],
+            "correct": 0,
+            "explanation": "If `autoFlush` is true (the default), the buffer will be flushed automatically when it is full. If `false`, an exception will be thrown when the buffer is full, and you must handle the flushing manually."
+        },
+        {
+            "id": "q31",
+            "question": "Which interface must a custom tag handler class implement?",
+            "options": [
+                "`HttpServlet`",
+                "`JspPage`",
+                "`Tag`",
+                "`Servlet`"
+            ],
+            "correct": 2,
+            "explanation": "Custom tag handler classes implement the `Tag` interface (or one of its sub-interfaces like `SimpleTag`, `BodyTag`) to define the behavior of custom tags in JSP pages."
+        },
+        {
+            "id": "q32",
+            "question": "What is the function of the `errorPage` attribute in the `page` directive?",
+            "options": [
+                "Specifies an error message to be displayed.",
+                "Designates a JSP page to handle exceptions.",
+                "Redirects to the homepage upon error.",
+                "Logs errors to a file."
+            ],
+            "correct": 1,
+            "explanation": "The `errorPage` attribute specifies a JSP page that will be displayed if an unhandled exception occurs in the current JSP page. This provides a more graceful way to handle errors."
+        },
+        {
+            "id": "q33",
+            "question": "What is the role of the `isThreadSafe` attribute in the `page` directive?",
+            "options": [
+                "Determines whether the JSP page can handle concurrent requests.",
+                "Specifies the number of threads.",
+                "Sets the session timeout.",
+                "Enables the use of threads in the JSP page."
+            ],
+            "correct": 0,
+            "explanation": "The `isThreadSafe` attribute, though deprecated, indicated if the page was thread-safe. The default is `true`. In modern JSP, developers should ensure thread-safety by designing the JSP (or the underlying servlets) to be thread-safe (e.g., synchronizing access to shared resources)."
+        },
+        {
+            "id": "q34",
+            "question": "What is the difference between `response.sendRedirect()` and `RequestDispatcher.forward()` in JSP?",
+            "options": [
+                "`sendRedirect()` is server-side, `forward()` is client-side.",
+                "`sendRedirect()` is client-side, `forward()` is server-side.",
+                "Both are server-side.",
+                "Both are client-side."
+            ],
+            "correct": 1,
+            "explanation": "`response.sendRedirect()` initiates a client-side redirect by sending an HTTP response with a `302 Found` (or similar) status code and a `Location` header. The browser then makes a new request to the specified URL. `RequestDispatcher.forward()` is a server-side operation. It forwards the same request to another resource (like another JSP or a servlet) without the browser being aware of the change in resource."
+        },
+        {
+            "id": "q35",
+            "question": "Consider a JSP page with the following code snippet:  `<% int count = (Integer)application.getAttribute(",
+            "options": [
+                "`count` is page-scoped and tracks the number of visits to the current page.",
+                "`count` is session-scoped and tracks the number of visits in the current session.",
+                "`count` is application-scoped and tracks the total number of visits to the web application.",
+                "An error will occur because `count` is not initialized."
+            ],
+            "correct": 2,
+            "explanation": "The `application` object represents the application scope (ServletContext). The code retrieves a visit count from the application scope, increments it, stores it back in the application scope, and displays it. Therefore, the variable is effectively application-scoped, as it's associated with all instances of the app."
+        }
+    ],
+    "jsp-Directives": [
+        {
+            "id": "q1",
+            "question": "Which JSP directive is used to import packages or classes into a JSP page?",
+            "options": [
+                "&lt;%@ include %&gt;",
+                "&lt;%@ page %&gt;",
+                "&lt;%@ taglib %&gt;",
+                "&lt;%@ import %&gt;"
+            ],
+            "correct": 1,
+            "explanation": "&lt;%@ page %&gt; directive with the `import` attribute is used to import packages or classes. &lt;%@ include %&gt; is for including files, &lt;%@ taglib %&gt; for custom tag libraries."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of the `isThreadSafe` attribute within the `page` directive?",
+            "options": [
+                "To control the session timeout.",
+                "To indicate whether the JSP page can handle multiple requests concurrently.",
+                "To specify the character encoding.",
+                "To define the page's content type."
+            ],
+            "correct": 1,
+            "explanation": "`isThreadSafe="
+        },
+        {
+            "id": "q3",
+            "question": "Consider this code: &lt;%@ page language=",
+            "options": [
+                "`contentType` defines the content type and character encoding, while `pageEncoding` only defines the character encoding of the JSP file itself.",
+                "`pageEncoding` defines the content type, and `contentType` only defines the character encoding of the JSP file itself.",
+                "Both define content type.",
+                "They are interchangeable."
+            ],
+            "correct": 0,
+            "explanation": "`contentType` sets both the content type (e.g., text/html) and character encoding for the response. `pageEncoding` specifies the character encoding of the JSP file, ensuring correct parsing of special characters in the JSP itself."
+        },
+        {
+            "id": "q4",
+            "question": "Which directive is crucial for including the content of another file into a JSP page during the translation phase?",
+            "options": [
+                "&lt;%@ taglib %&gt;",
+                "&lt;%@ include %&gt;",
+                "&lt;%@ page %&gt;",
+                "&lt;% response.include() %&gt;"
+            ],
+            "correct": 1,
+            "explanation": "&lt;%@ include %&gt; is used to include files (e.g., HTML, other JSPs) at translation time. `response.include()` includes content dynamically at request time in Servlets."
+        },
+        {
+            "id": "q5",
+            "question": "What is the effect of the `errorPage` attribute in the `page` directive?",
+            "options": [
+                "It specifies a page to be displayed when an unhandled exception occurs.",
+                "It sets the title of the error page.",
+                "It defines the error codes the page handles.",
+                "It logs all errors to a specific file."
+            ],
+            "correct": 0,
+            "explanation": "`errorPage` points to another JSP or HTML page to handle exceptions if they are not caught in the current page."
+        },
+        {
+            "id": "q6",
+            "question": "What is the purpose of the `taglib` directive?",
+            "options": [
+                "To import Java packages.",
+                "To include a file at runtime.",
+                "To declare and use custom tag libraries.",
+                "To define error pages."
+            ],
+            "correct": 2,
+            "explanation": "The `taglib` directive enables the use of custom tag libraries (TLDs), which encapsulate reusable code."
+        },
+        {
+            "id": "q7",
+            "question": "What is the significance of the `buffer` attribute in the `page` directive?",
+            "options": [
+                "It defines the size of the output buffer.",
+                "It specifies the content type of the page.",
+                "It indicates whether the page is thread-safe.",
+                "It imports Java packages."
+            ],
+            "correct": 0,
+            "explanation": "`buffer` controls the size of the output buffer. If set to `none`, buffering is disabled.  Larger buffers improve performance, but smaller values may be needed if the size is unknown."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following attributes is NOT found within the `page` directive?",
+            "options": [
+                "`language`",
+                "`import`",
+                "`isThreadSafe`",
+                "`uri`"
+            ],
+            "correct": 3,
+            "explanation": "`uri` is used within the `taglib` directive for identifying the tag library's location."
+        },
+        {
+            "id": "q9",
+            "question": "If `isErrorPage=",
+            "options": [
+                "`request` object, `response` object, `out` object",
+                "The `exception` object.",
+                "The `session` object.",
+                "All of the above, plus the `application` context."
+            ],
+            "correct": 3,
+            "explanation": "An error page has access to all the standard implicit objects, including the `exception` object, which holds the exception that caused the error."
+        },
+        {
+            "id": "q10",
+            "question": "What happens if you include a file using the `include` directive, and the included file contains an error?",
+            "options": [
+                "The JSP page compilation will fail.",
+                "The server will throw a 500 Internal Server Error.",
+                "Only the included file's content won't be included.",
+                "Both 1 and 2."
+            ],
+            "correct": 3,
+            "explanation": "Errors in included files will prevent compilation (translation time) and also cause a server error at runtime if the included file can't be parsed or interpreted by the JSP engine."
+        },
+        {
+            "id": "q11",
+            "question": "How does the `pageEncoding` attribute affect the compilation process?",
+            "options": [
+                "It determines the character encoding used by the web server to send the response.",
+                "It tells the JSP container which character encoding to use when reading and parsing the JSP file itself.",
+                "It affects both the request and response character encodings.",
+                "It has no effect on compilation, it's handled at runtime."
+            ],
+            "correct": 1,
+            "explanation": "`pageEncoding` is critical for the JSP compiler to correctly interpret special characters in the JSP file's source code during the translation phase."
+        },
+        {
+            "id": "q12",
+            "question": "Which directive is used to define a custom tag library in a JSP?",
+            "options": [
+                "&lt;%@ include %&gt;",
+                "&lt;%@ taglib %&gt;",
+                "&lt;%@ page %&gt;",
+                "&lt;%@ attribute %&gt;"
+            ],
+            "correct": 1,
+            "explanation": "`taglib` enables using custom tags defined in a TLD."
+        },
+        {
+            "id": "q13",
+            "question": "What is the default value of `isThreadSafe` in the `page` directive?",
+            "options": [
+                "`true`",
+                "`false`",
+                "`null`",
+                "Depends on the web server configuration"
+            ],
+            "correct": 0,
+            "explanation": "By default, JSP pages are assumed to be thread-safe."
+        },
+        {
+            "id": "q14",
+            "question": "What happens if you set the `buffer` attribute to `none` in a JSP page?",
+            "options": [
+                "Buffering is disabled, and output is written directly to the response stream.",
+                "The buffer size is set to the default value.",
+                "An exception is thrown.",
+                "The output is cached in the server."
+            ],
+            "correct": 0,
+            "explanation": "`none` disables output buffering."
+        },
+        {
+            "id": "q15",
+            "question": "Consider the following: &lt;%@ page errorPage=",
+            "options": [
+                "The same directory.",
+                "In a subdirectory called 'errors'.",
+                "Anywhere on the server, specified by the relative path.",
+                "The WEB-INF folder."
+            ],
+            "correct": 2,
+            "explanation": "The path is relative to the web application's root."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is NOT a valid attribute within the `taglib` directive?",
+            "options": [
+                "`uri`",
+                "`prefix`",
+                "`pageEncoding`",
+                "`language`"
+            ],
+            "correct": 3,
+            "explanation": "`language` belongs to the `page` directive, not `taglib`."
+        },
+        {
+            "id": "q17",
+            "question": "What is the order in which directives are processed by the JSP container?",
+            "options": [
+                "`page`, `taglib`, `include`",
+                "`include`, `page`, `taglib`",
+                "`taglib`, `page`, `include`",
+                "The order doesn't matter."
+            ],
+            "correct": 0,
+            "explanation": "Generally, the order is `page`, then `taglib`, and finally `include`, though the container is flexible.  `page` is often first due to its global settings."
+        },
+        {
+            "id": "q18",
+            "question": "If you want to reuse a common header across multiple JSP pages, which directive is the most appropriate?",
+            "options": [
+                "`taglib`",
+                "`page`",
+                "`include`",
+                "None of the above"
+            ],
+            "correct": 2,
+            "explanation": "`include` is designed for code reuse by incorporating other files, such as headers or footers."
+        },
+        {
+            "id": "q19",
+            "question": "True or False: The `import` attribute in the `page` directive can be used multiple times within a single JSP page.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "While the `import` attribute can be used multiple times, it is best practice to use one `page` directive with comma-separated imports."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following is the correct syntax for including a file using the `include` directive?",
+            "options": [
+                "&lt;%@ include file=",
+                "%&gt;",
+                "&lt;%@ include href=",
+                "%&gt;",
+                "&lt;%@ include src=",
+                "%&gt;",
+                "&lt;include file=",
+                "%&gt;"
+            ],
+            "correct": 0,
+            "explanation": "Correct syntax is `file="
+        },
+        {
+            "id": "q21",
+            "question": "What happens if a JSP page sets `isELIgnored=",
+            "options": [
+                "Expression Language is disabled for the entire page.",
+                "Only the EL expressions inside the page is ignored.",
+                "The JSP page throws an error.",
+                "The JSP page does not use EL expressions."
+            ],
+            "correct": 0,
+            "explanation": "This disables EL (Expression Language) in the entire JSP."
+        },
+        {
+            "id": "q22",
+            "question": "Which directive is used to specify the scripting language used in a JSP page?",
+            "options": [
+                "&lt;%@ include %&gt;",
+                "&lt;%@ taglib %&gt;",
+                "&lt;%@ page %&gt;",
+                "None of the above"
+            ],
+            "correct": 2,
+            "explanation": "The `language` attribute of the `page` directive, defaults to Java."
+        },
+        {
+            "id": "q23",
+            "question": "Consider the following line in a JSP: &lt;%@ page import=",
+            "options": [
+                "&lt;%@ page import=",
+                "%&gt;",
+                "&lt;%@ page import=",
+                "%&gt;",
+                "Both are equally efficient.",
+                "There is no way to improve performance through importing classes."
+            ],
+            "correct": 1,
+            "explanation": "Importing only the required classes can slightly improve performance by reducing unnecessary class loading. Importing the entire package imports all the classes even if they aren't used."
+        },
+        {
+            "id": "q24",
+            "question": "What is the benefit of using the `prefix` attribute in the `taglib` directive?",
+            "options": [
+                "It specifies the file to be included.",
+                "It provides a short, unique name for the tag library to be used in the JSP.",
+                "It defines the scripting language.",
+                "It declares the error page."
+            ],
+            "correct": 1,
+            "explanation": "The prefix is used to reference tags from the tag library within the JSP, e.g., &lt;prefix:tagName&gt;."
+        },
+        {
+            "id": "q25",
+            "question": "Which statement is correct about `autoFlush` attribute within `page` directive?",
+            "options": [
+                "It determines whether the output stream is automatically flushed when the buffer is full.",
+                "It specifies the buffer size.",
+                "It determines whether the page is cached by the browser.",
+                "It determines the size of the buffer"
+            ],
+            "correct": 0,
+            "explanation": "`autoFlush` defaults to true which causes the buffer to flush automatically when full. If it is set to false, a `java.io.IOException` is thrown when the buffer overflows."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is an invalid value for the `language` attribute in the `page` directive?",
+            "options": [
+                "java",
+                "groovy",
+                "javascript",
+                "JSP"
+            ],
+            "correct": 2,
+            "explanation": "`javascript` is not a valid scripting language within a JSP context; the language attribute refers to the language used for server-side scripting (usually Java)."
+        },
+        {
+            "id": "q27",
+            "question": "What happens when the `isELIgnored` attribute is set to `true` and you include an EL expression?",
+            "options": [
+                "The expression is evaluated normally.",
+                "The expression is treated as plain text.",
+                "A compilation error occurs.",
+                "The server crashes."
+            ],
+            "correct": 1,
+            "explanation": "The EL expression is treated as literal characters."
+        },
+        {
+            "id": "q28",
+            "question": "In a JSP, which directive is responsible for setting the character set used by the web server to render the response?",
+            "options": [
+                "`&lt;%@ include %&gt;`",
+                "`&lt;%@ page %&gt;`",
+                "`&lt;%@ taglib %&gt;`",
+                "None of the above"
+            ],
+            "correct": 1,
+            "explanation": "The `contentType` attribute of the `page` directive is used for setting the content type and character set. Specifically, `contentType="
+        },
+        {
+            "id": "q29",
+            "question": "What is the purpose of the `trimDirectiveWhitespaces` attribute in a JSP page?",
+            "options": [
+                "To remove extra whitespace characters from the beginning and end of the JSP page.",
+                "To remove extra whitespace characters between JSP directives.",
+                "To remove whitespace characters from the generated HTML output.",
+                "To ignore extra whitespace characters."
+            ],
+            "correct": 2,
+            "explanation": "`trimDirectiveWhitespaces` removes extra whitespace in generated HTML that can lead to layout problems. It is a deployment descriptor configuration property in most containers."
+        },
+        {
+            "id": "q30",
+            "question": "If you are using a custom tag library, where does the web container find the TLD file by default?",
+            "options": [
+                "In the same directory as the JSP page.",
+                "In the WEB-INF directory.",
+                "In the WEB-INF/lib directory.",
+                "In the WEB-INF/tags directory."
+            ],
+            "correct": 1,
+            "explanation": "TLDs are conventionally located in the WEB-INF directory (or a subdirectory of it)."
+        },
+        {
+            "id": "q31",
+            "question": "Which of the following is NOT a common usage of the `include` directive?",
+            "options": [
+                "Including a navigation menu.",
+                "Including a copyright notice in the footer.",
+                "Including Java code for business logic.",
+                "Including a CSS file (though indirect)."
+            ],
+            "correct": 2,
+            "explanation": "While you can use include to include code it's much more common to put your code in the scriptlets, declarations, expressions or EL expressions, or in a separate Java class and call it from the JSP. However, using include for business logic is generally considered bad practice. This is why it is best to separate HTML presentation from the business logic."
+        },
+        {
+            "id": "q32",
+            "question": "If `session=",
+            "options": [
+                "The JSP page will not participate in HTTP sessions.",
+                "The JSP page is not thread-safe.",
+                "The session object is not available to the JSP page.",
+                "Both 1 and 3."
+            ],
+            "correct": 3,
+            "explanation": "If a JSP page does not need to use the session, setting `session="
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following is the most efficient way to import multiple classes from the same package?",
+            "options": [
+                "Using multiple &lt;%@ page import=",
+                "%&gt; directives.",
+                "Using &lt;%@ page import=",
+                "%&gt; directive.",
+                "Using a single &lt;%@ page import=",
+                "%&gt; directive.",
+                "It doesn't matter, the container optimizes it."
+            ],
+            "correct": 1,
+            "explanation": "Importing the entire package generally has a slight performance improvement over importing each class individually. The container optimizes the import, and is usually very fast."
+        },
+        {
+            "id": "q34",
+            "question": "What's the primary benefit of using custom tag libraries over scriptlets in a JSP?",
+            "options": [
+                "Improved code reusability and maintainability.",
+                "Better performance.",
+                "Easier access to implicit objects.",
+                "More flexibility in the scripting language used."
+            ],
+            "correct": 0,
+            "explanation": "Tag libraries encapsulate complex logic, making JSP pages cleaner, more readable, and easier to maintain."
+        },
+        {
+            "id": "q35",
+            "question": "What is the effect of &lt;%@ page isELIgnored=",
+            "options": [
+                "The expression will be evaluated and the result (4) will be displayed.",
+                "The expression will be treated as a string, and",
+                "will be displayed.",
+                "A compilation error will occur.",
+                "The server will throw an exception."
+            ],
+            "correct": 1,
+            "explanation": "When isELIgnored is true, EL is disabled, and the EL and scriptlets/expressions are treated as plain text, resulting in the literal expression being printed."
+        }
+    ],
+    "jsp-Scriptlets": [
+        {
+            "id": "q1",
+            "question": "Which of the following is NOT a valid scriptlet syntax in JSP?",
+            "options": [
+                "<% out.println(); %>",
+                "<%=%>",
+                "<%@ include file=%>",
+                "<%! int i = 0; %>"
+            ],
+            "correct": 2,
+            "explanation": "<%@ include %> is a directive, not a scriptlet. It's used for including other files."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of using scriptlets in JSP pages?",
+            "options": [
+                "To define HTML elements directly",
+                "To write Java code within the HTML page",
+                "To handle user authentication",
+                "To declare static resources"
+            ],
+            "correct": 1,
+            "explanation": "Scriptlets allow embedding Java code to handle dynamic content generation and logic within a JSP page."
+        }
+    ],
+    "jsp-Expressions": [
+        {
+            "id": "q1",
+            "question": "In a JSP expression, what is the primary purpose of the expression's output?",
+            "options": [
+                "To define variables",
+                "To directly insert the result into the output stream",
+                "To conditionally execute code blocks",
+                "To handle user input"
+            ],
+            "correct": 1,
+            "explanation": "JSP expressions are designed to evaluate an expression and directly print its value to the response."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following is a valid JSP expression?",
+            "options": [
+                "<%= int x = 5; %>",
+                "<%= out.println(); %>",
+                "<%= 2 + 2 %>",
+                "<% if (true) {} %>"
+            ],
+            "correct": 2,
+            "explanation": "JSP expressions should contain a valid Java expression that returns a value."
+        },
+        {
+            "id": "q3",
+            "question": "What is the default behavior of JSP expressions regarding HTML escaping?",
+            "options": [
+                "Always escape HTML characters",
+                "Never escape HTML characters",
+                "Escaping depends on the JSP container configuration",
+                "Escaping is disabled by default but can be enabled programmatically"
+            ],
+            "correct": 1,
+            "explanation": "JSP expressions, by default, do not perform HTML escaping; the output is inserted as-is.  Developers need to handle escaping if required to prevent XSS vulnerabilities."
+        },
+        {
+            "id": "q4",
+            "question": "Consider the following JSP snippet: `<% String name =",
+            "options": [
+                "null; %> <%= name + \" World!\" %>",
+                "Compilation error",
+                "Runtime NullPointerException",
+                "An empty string"
+            ],
+            "correct": 0,
+            "explanation": "String concatenation with null results in"
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following cannot be used within a JSP expression?",
+            "options": [
+                "Variable declaration",
+                "Method call",
+                "Arithmetic operations",
+                "Ternary operator"
+            ],
+            "correct": 0,
+            "explanation": "JSP expressions can include method calls, arithmetic operations, and ternary operators but not variable declarations."
+        },
+        {
+            "id": "q6",
+            "question": "Given the following JSP code:  `<p>The value is: <%= request.getParameter(paramName) %></p>",
+            "options": [
+                "",
+                "Compilation Error",
+                "An empty string",
+                "Runtime Error"
+            ],
+            "correct": 0,
+            "explanation": "If the parameter does not exist, request.getParameter() returns null."
+        },
+        {
+            "id": "q7",
+            "question": "What's the primary advantage of using JSP expressions over scriptlets for simple output?",
+            "options": [
+                "Increased code readability",
+                "Better control flow",
+                "Ability to handle exceptions",
+                "More complex logic implementation"
+            ],
+            "correct": 0,
+            "explanation": "Expressions are cleaner for direct output, improving code readability compared to scriptlets which could include more code."
+        },
+        {
+            "id": "q8",
+            "question": "Which built-in implicit object is *not* directly accessible within a JSP expression?",
+            "options": [
+                "out",
+                "request",
+                "response",
+                "session"
+            ],
+            "correct": 0,
+            "explanation": "The 'out' object is used for writing to the output stream, but it's implicitly used by the expression tag itself.  You don't need to explicitly call 'out.print' within it."
+        },
+        {
+            "id": "q9",
+            "question": "What will be the output of `<%=",
+            "options": [
+                "Hello",
+                "5",
+                "Compilation error",
+                "Runtime error"
+            ],
+            "correct": 1,
+            "explanation": "The .length() method returns the length of the string, which is 5."
+        },
+        {
+            "id": "q10",
+            "question": "Is the following valid JSP code?  `<%= if (true) {",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "correct": 1,
+            "explanation": "Conditional statements are not permitted directly within JSP expressions. Control flow statements must be inside scriptlets."
+        },
+        {
+            "id": "q11",
+            "question": "What happens if you try to use a variable that is *not* declared in the current scope within a JSP expression?",
+            "options": [
+                "The JSP will throw a compilation error.",
+                "The JSP will throw a runtime error.",
+                "The variable's default value is used.",
+                "The code will execute without issue."
+            ],
+            "correct": 0,
+            "explanation": "The JSP compiler will not find the variable and throw an error during compilation."
+        },
+        {
+            "id": "q12",
+            "question": "How can you display the current date and time in a JSP using an expression?",
+            "options": [
+                "<%= Date.now() %>",
+                "<%= System.currentTimeMillis() %>",
+                "<%= new java.util.Date() %>",
+                "<% new Date() %>"
+            ],
+            "correct": 2,
+            "explanation": "Java code can be used within expressions. New java.util.Date() instantiates and returns the current date and time which gets printed."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following statements is true regarding JSP expressions and exception handling?",
+            "options": [
+                "You can use try-catch blocks directly inside JSP expressions.",
+                "JSP expressions implicitly handle exceptions.",
+                "Exceptions thrown in JSP expressions can propagate to the calling code.",
+                "You cannot handle exceptions thrown by expression evaluation."
+            ],
+            "correct": 2,
+            "explanation": "Exceptions that occur within expressions will propagate outwards unless explicitly handled in a scriptlet or via a page directive for error pages."
+        },
+        {
+            "id": "q14",
+            "question": "What is the output of the following JSP snippet:  `<%= 5 / 0 %>`?",
+            "options": [
+                "0",
+                "Infinity",
+                "Compilation error",
+                "java.lang.ArithmeticException"
+            ],
+            "correct": 3,
+            "explanation": "Division by zero in Java throws an ArithmeticException."
+        },
+        {
+            "id": "q15",
+            "question": "Consider this JSP fragment: `<%=  (10 > 5) ?",
+            "options": [
+                "True",
+                "False",
+                "Compilation Error",
+                "Runtime Error"
+            ],
+            "correct": 0,
+            "explanation": "The ternary operator is a valid expression and evaluates to"
+        },
+        {
+            "id": "q16",
+            "question": "Can you nest JSP expressions?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "correct": 1,
+            "explanation": "JSP expressions cannot be nested.  You'd need to perform calculations/logic within a scriptlet and output the result with an expression."
+        },
+        {
+            "id": "q17",
+            "question": "What would be the output of `<%= String.valueOf(123) %>`?",
+            "options": [
+                "123",
+                "",
+                "",
+                "Compilation Error",
+                "Runtime Error"
+            ],
+            "correct": 1,
+            "explanation": "String.valueOf(123) returns a String representation of the integer 123, which is then inserted into the output stream."
+        },
+        {
+            "id": "q18",
+            "question": "Which character separates the start and end delimiters of a JSP expression?",
+            "options": [
+                "< and >",
+                "<% and %>",
+                "<%= and %>",
+                "<$ and $>"
+            ],
+            "correct": 2,
+            "explanation": "The standard format for a JSP expression is: `<%= expression %>`."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following is *not* a benefit of using JSP expressions?",
+            "options": [
+                "Reduced code complexity",
+                "Improved readability",
+                "Better separation of concerns",
+                "More flexibility in complex logic"
+            ],
+            "correct": 3,
+            "explanation": "Expressions are designed for simple output and are less suitable for complex logic which belongs in scriptlets or custom tags."
+        },
+        {
+            "id": "q20",
+            "question": "In a JSP, how can you access a request parameter named",
+            "options": [
+                "<%= getParameter(",
+                ") %>",
+                "<%= request.getParameter(",
+                ") %>",
+                "<%= username %>",
+                "<%= request.getUsername() %>"
+            ],
+            "correct": 1,
+            "explanation": "You utilize the implicit request object and its getParameter() method."
+        },
+        {
+            "id": "q21",
+            "question": "What is the outcome of this code snippet: `<%= (1==1) ?",
+            "options": [
+                "A",
+                "B",
+                "C",
+                "Compilation error"
+            ],
+            "correct": 0,
+            "explanation": "Nested ternary operator results in 'A' because the first condition (1==1) is true, and thus the first value after '?' is returned."
+        },
+        {
+            "id": "q22",
+            "question": "If `pageContext.getAttribute(",
+            "options": [
+                "null",
+                "Compilation Error",
+                "Runtime Error",
+                "An empty string"
+            ],
+            "correct": 0,
+            "explanation": "The expression will directly output the value which is null."
+        },
+        {
+            "id": "q23",
+            "question": "What's the scope of variables declared *within* a scriptlet that are then referenced within an expression in the same JSP?",
+            "options": [
+                "Page scope",
+                "Request scope",
+                "Session scope",
+                "Application scope"
+            ],
+            "correct": 0,
+            "explanation": "Variables declared in a scriptlet are available within the entire JSP page, effectively in the page scope."
+        },
+        {
+            "id": "q24",
+            "question": "What is the correct way to include a comment within a JSP expression to prevent it from being displayed in the output?",
+            "options": [
+                "// This is a comment",
+                "/* This is a comment */",
+                "<%-- This is a comment --%>",
+                "<%= // This is a comment %>"
+            ],
+            "correct": 2,
+            "explanation": "JSP comments are enclosed within `<%-- --%>` tags and are not processed by the JSP engine."
+        },
+        {
+            "id": "q25",
+            "question": "What is the effect of `<%=",
+            "options": [
+                "Inserts the script tag into the output",
+                "Triggers an XSS attack",
+                "Causes a compilation error",
+                "The alert does not run because it's just a string literal"
+            ],
+            "correct": 1,
+            "explanation": "This is a classic XSS vulnerability.  The script tag is inserted and when the browser renders the HTML, it executes the JavaScript alert."
+        },
+        {
+            "id": "q26",
+            "question": "How does a JSP expression handle character encoding?",
+            "options": [
+                "Automatically uses UTF-8",
+                "Uses the encoding specified in the page directive",
+                "Always uses the default system encoding",
+                "Encoding is not relevant in expressions"
+            ],
+            "correct": 1,
+            "explanation": "JSP expressions output is encoded based on the encoding specified in the page directive. The `pageEncoding` attribute is very important."
+        },
+        {
+            "id": "q27",
+            "question": "In the following snippet, what will be displayed: `<% int i = 10; %> <%= i++ + ++i %>`?",
+            "options": [
+                "20",
+                "21",
+                "22",
+                "Compilation error"
+            ],
+            "correct": 2,
+            "explanation": "i++ uses the current value (10), then increments. ++i increments first and then uses the value (12). 10 + 12 = 22."
+        },
+        {
+            "id": "q28",
+            "question": "What will be the output of `<%= new String(",
+            "options": [
+                "true",
+                "false",
+                "Compilation Error",
+                "Runtime Error"
+            ],
+            "correct": 1,
+            "explanation": "== compares object references.  Two different String objects are created, hence 'false'. Use .equals() for content comparison."
+        },
+        {
+            "id": "q29",
+            "question": "Given `<%= session.getAttribute(",
+            "options": [
+                "It displays",
+                "",
+                "It displays null",
+                "It throws a NullPointerException",
+                "Compilation error"
+            ],
+            "correct": 0,
+            "explanation": "The ternary operator will evaluate to"
+        },
+        {
+            "id": "q30",
+            "question": "If you're displaying user-submitted data using an expression, which is the *most critical* aspect to consider to prevent Cross-Site Scripting (XSS) vulnerabilities?",
+            "options": [
+                "Input validation",
+                "Output encoding/escaping",
+                "Using prepared statements",
+                "Sanitizing input data"
+            ],
+            "correct": 1,
+            "explanation": "Output encoding is the most direct defense against XSS. This ensures that user-provided HTML is treated as data and not as executable code."
+        },
+        {
+            "id": "q31",
+            "question": "What is the difference between `<%= ... %>` and `<jsp:expression>...</jsp:expression>`?",
+            "options": [
+                "There is no functional difference",
+                "The jsp:expression tag is deprecated",
+                "jsp:expression offers better error handling",
+                "jsp:expression is more readable"
+            ],
+            "correct": 0,
+            "explanation": "Both do the same thing but `<%= ... %>` is the shorthand notation and is preferred for brevity.  `jsp:expression` exists but is functionally identical and less common."
+        },
+        {
+            "id": "q32",
+            "question": "What is the correct way to conditionally output text using expressions in a JSP if a boolean variable `isTrue` is true?",
+            "options": [
+                "<%= if(isTrue) {",
+                "} %>",
+                "<% if(isTrue) { out.print(",
+                "); } %>",
+                "<%= isTrue ?",
+                ":",
+                "%>",
+                "<% if(isTrue) {",
+                "; } %>"
+            ],
+            "correct": 2,
+            "explanation": "The ternary operator provides a concise way to achieve conditional output with an expression."
+        },
+        {
+            "id": "q33",
+            "question": "What is the output if the following code is executed, `<%=",
+            "options": [
+                "S",
+                "tri",
+                "r",
+                "tring"
+            ],
+            "correct": 2,
+            "explanation": "Substring(2,3) starts at index 2 (inclusive) and goes up to, but *not including*, index 3. The result will be the character at index 2 which is 'r'."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following will *not* directly compile in a JSP expression?",
+            "options": [
+                "Arithmetic operations",
+                "Method calls",
+                "Variable assignment",
+                "Ternary operators"
+            ],
+            "correct": 2,
+            "explanation": "Variable assignment such as `x = 5` is not allowed within a JSP expression because expressions must return a value suitable for output."
+        },
+        {
+            "id": "q35",
+            "question": "In a JSP, what will be printed by `<%=",
+            "options": [
+                "W",
+                "e",
+                "l",
+                "Compilation error"
+            ],
+            "correct": 0,
+            "explanation": "charAt(0) accesses the character at index 0, which is 'W'."
+        }
+    ],
+    "jsp-objects": [
+        {
+            "id": "q1",
+            "question": "Which implicit object is used to read HTTP request parameters in a JSP page?",
+            "options": [
+                "request",
+                "response",
+                "session",
+                "application"
+            ],
+            "correct": 0,
+            "explanation": "The `request` object provides access to all the parameters sent by the client."
+        },
+        {
+            "id": "q2",
+            "question": "The `response` object is used to:",
+            "options": [
+                "Read client data",
+                "Write data back to the client",
+                "Manage session data",
+                "Access application scope"
+            ],
+            "correct": 1,
+            "explanation": "The `response` object is primarily for sending data (HTML, etc.) back to the client."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary use of the `session` implicit object?",
+            "options": [
+                "Storing application-wide data",
+                "Tracking individual user sessions",
+                "Managing request parameters",
+                "Handling server-side events"
+            ],
+            "correct": 1,
+            "explanation": "The `session` object is designed to maintain state specific to a user across multiple requests."
+        },
+        {
+            "id": "q4",
+            "question": "Which implicit object allows you to share data across all users and pages within a web application?",
+            "options": [
+                "request",
+                "response",
+                "session",
+                "application"
+            ],
+            "correct": 3,
+            "explanation": "The `application` object represents the entire web application and its scope."
+        },
+        {
+            "id": "q5",
+            "question": "What is the purpose of the `out` implicit object in JSP?",
+            "options": [
+                "To access request headers",
+                "To write output to the client",
+                "To manage session attributes",
+                "To control application lifecycle"
+            ],
+            "correct": 1,
+            "explanation": "The `out` object is used to write content to the response stream."
+        },
+        {
+            "id": "q6",
+            "question": "How do you get the context path using an implicit object?",
+            "options": [
+                "request.getContextPath()",
+                "response.getContextPath()",
+                "session.getContextPath()",
+                "application.getContextPath()"
+            ],
+            "correct": 0,
+            "explanation": "The `request` object provides the getContextPath() method to retrieve the application's context path."
+        },
+        {
+            "id": "q7",
+            "question": "What does the `pageContext` implicit object provide?",
+            "options": [
+                "Information about the current page only",
+                "Access to all other implicit objects and page scope",
+                "Global application data",
+                "Response headers only"
+            ],
+            "correct": 1,
+            "explanation": "The `pageContext` object provides access to all other implicit objects and the page scope. It's a central hub for page-related information."
+        },
+        {
+            "id": "q8",
+            "question": "Which implicit object is used to handle and report errors that occur during the processing of a JSP page?",
+            "options": [
+                "out",
+                "page",
+                "exception",
+                "config"
+            ],
+            "correct": 2,
+            "explanation": "The `exception` object is available in error pages and provides information about the exception that occurred."
+        },
+        {
+            "id": "q9",
+            "question": "How can you set a session attribute using implicit objects?",
+            "options": [
+                "session.setAttribute(",
+                ", value);",
+                "request.setAttribute(",
+                ", value);",
+                "application.setAttribute(",
+                ", value);",
+                "response.setAttribute(",
+                ", value);"
+            ],
+            "correct": 0,
+            "explanation": "The `session` object's `setAttribute()` method is used to store data in the session scope."
+        },
+        {
+            "id": "q10",
+            "question": "Which method is typically used to invalidate a session?",
+            "options": [
+                "session.destroy()",
+                "session.invalidate()",
+                "session.remove()",
+                "session.close()"
+            ],
+            "correct": 1,
+            "explanation": "The `invalidate()` method terminates the session and removes all session attributes."
+        },
+        {
+            "id": "q11",
+            "question": "What is the role of the `config` implicit object?",
+            "options": [
+                "To manage request parameters",
+                "To access deployment configuration information",
+                "To write output to the client",
+                "To handle session state"
+            ],
+            "correct": 1,
+            "explanation": "The `config` object provides access to configuration information for the current web component, such as initialization parameters defined in web.xml."
+        },
+        {
+            "id": "q12",
+            "question": "How is the `application` object different from the `session` object?",
+            "options": [
+                "`application` is for a single user, `session` is for all users.",
+                "`session` is application-wide, `application` is per user.",
+                "`application` is application-wide, `session` is per user.",
+                "Both have same scope and usage."
+            ],
+            "correct": 2,
+            "explanation": "The `application` object holds data shared across the entire web application and all users, while `session` stores data specific to a single user's session."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following is NOT an implicit object in JSP?",
+            "options": [
+                "request",
+                "response",
+                "servletContext",
+                "servletRequest"
+            ],
+            "correct": 2,
+            "explanation": "The `servletContext` can be accessed via `application` object."
+        },
+        {
+            "id": "q14",
+            "question": "In a JSP page, which object can be used to forward a request to another resource (e.g., another JSP, a Servlet)?",
+            "options": [
+                "request",
+                "response",
+                "session",
+                "pageContext"
+            ],
+            "correct": 3,
+            "explanation": "The `pageContext` object provides access to the `forward()` method."
+        },
+        {
+            "id": "q15",
+            "question": "What is the purpose of `getRequestDispatcher()` method, which is accessed using `request` object?",
+            "options": [
+                "To set HTTP headers",
+                "To redirect to another page",
+                "To forward the request to another resource",
+                "To get session information"
+            ],
+            "correct": 2,
+            "explanation": "The `getRequestDispatcher()` method on the `request` object allows to forward the request to another resource (JSP, Servlet)."
+        },
+        {
+            "id": "q16",
+            "question": "What is the default scope of variables declared within a JSP page?",
+            "options": [
+                "application",
+                "session",
+                "request",
+                "page"
+            ],
+            "correct": 3,
+            "explanation": "Variables declared inside a JSP page (outside any scriptlet) have page scope; they are available only within that JSP's execution context."
+        },
+        {
+            "id": "q17",
+            "question": "Consider this JSP code:  `<jsp:include page=",
+            "options": [
+                "out",
+                "request",
+                "response",
+                "All of them"
+            ],
+            "correct": 0,
+            "explanation": "The `out` object, which writes to the response, is shared across both JSP pages when using `<jsp:include>`. Included pages write directly to same output stream."
+        },
+        {
+            "id": "q18",
+            "question": "What does the `isELIgnored` attribute in `web.xml` primarily affect?",
+            "options": [
+                "Whether scriptlets can be used",
+                "Whether Expression Language (EL) expressions are evaluated",
+                "Session timeout",
+                "Context path"
+            ],
+            "correct": 1,
+            "explanation": "The `isELIgnored` attribute controls whether EL expressions are processed by the container. If set to true, EL is ignored. This affects how implicit objects behave in the context of EL expressions."
+        },
+        {
+            "id": "q19",
+            "question": "Which implicit object offers methods like `getRealPath()`?",
+            "options": [
+                "request",
+                "response",
+                "application",
+                "session"
+            ],
+            "correct": 2,
+            "explanation": "The `application` object provides methods to access the server's resources."
+        },
+        {
+            "id": "q20",
+            "question": "What happens if you try to access the `exception` object in a regular JSP page (not an error page)?",
+            "options": [
+                "It throws an exception",
+                "It returns null",
+                "It works fine, but the value is null",
+                "It provides an empty object"
+            ],
+            "correct": 1,
+            "explanation": "The `exception` object is available only in error pages. In a regular JSP, it's `null`."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following is a benefit of using implicit objects over explicit object creation in a JSP?",
+            "options": [
+                "Increased code readability",
+                "Reduced code verbosity",
+                "Improved performance",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Implicit objects simplify JSP development by providing readily available access to common objects, leading to more concise, readable, and efficient code."
+        },
+        {
+            "id": "q22",
+            "question": "In which scope are the implicit objects available?",
+            "options": [
+                "Only in the page scope",
+                "Globally within the web application",
+                "They are available within a predefined scope related to their purpose.",
+                "Only within a session"
+            ],
+            "correct": 2,
+            "explanation": "Implicit objects are available within a specific scope. For example, `request` is within the request scope, `session` is within the session scope, and so on."
+        },
+        {
+            "id": "q23",
+            "question": "Which method can be used to set a cookie using the `response` implicit object?",
+            "options": [
+                "response.addHeader()",
+                "response.getWriter()",
+                "response.addCookie()",
+                "response.setContentType()"
+            ],
+            "correct": 2,
+            "explanation": "The `addCookie()` method is specifically designed to set cookies in the client's browser."
+        },
+        {
+            "id": "q24",
+            "question": "What is the main difference between `sendRedirect()` and `forward()` in the context of implicit objects?",
+            "options": [
+                "`sendRedirect()` is for internal redirects, `forward()` is for external.",
+                "`sendRedirect()` sends a new request to the client, `forward()` uses the same request.",
+                "`forward()` sends a new request, `sendRedirect()` uses the same request.",
+                "Both are interchangeable and achieve same results."
+            ],
+            "correct": 1,
+            "explanation": "`sendRedirect()` sends a redirect instruction to the client, leading to a new request, while `forward()` is an internal redirection within the server."
+        },
+        {
+            "id": "q25",
+            "question": "How can you get the HTTP method (GET, POST, etc.) of a request using an implicit object?",
+            "options": [
+                "response.getMethod()",
+                "request.getMethod()",
+                "session.getMethod()",
+                "application.getMethod()"
+            ],
+            "correct": 1,
+            "explanation": "The `request` object has `getMethod()` method to retrieve the HTTP method used for the request."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is not directly accessible through the `application` implicit object?",
+            "options": [
+                "Getting a real path",
+                "Setting application attributes",
+                "Getting Servlet context",
+                "Accessing session information"
+            ],
+            "correct": 3,
+            "explanation": "Session information is accessed via the `session` object, not `application`."
+        },
+        {
+            "id": "q27",
+            "question": "If a session times out, what happens to the `session` implicit object in a JSP?",
+            "options": [
+                "It is automatically invalidated and becomes unusable.",
+                "It continues to function as before.",
+                "It throws an exception when accessed.",
+                "It is automatically recreated with default values."
+            ],
+            "correct": 0,
+            "explanation": "When a session times out, the session object is invalidated, and all session attributes are lost."
+        },
+        {
+            "id": "q28",
+            "question": "What is the default content type for a JSP response?",
+            "options": [
+                "text/plain",
+                "text/html",
+                "application/json",
+                "application/xml"
+            ],
+            "correct": 1,
+            "explanation": "The default content type is `text/html`.  You can change this using `response.setContentType()`."
+        },
+        {
+            "id": "q29",
+            "question": "What happens when `response.sendError(HttpServletResponse.SC_NOT_FOUND)` is called?",
+            "options": [
+                "The page is automatically redirected to 404.jsp",
+                "A 404 error is sent to the client, and the current page stops processing.",
+                "A custom error page is displayed.",
+                "The `response` object becomes unavailable."
+            ],
+            "correct": 1,
+            "explanation": "This sends a 404 status code and prevents further processing of the JSP; the client will typically see an error page."
+        },
+        {
+            "id": "q30",
+            "question": "Which of the following is NOT related to the lifecycle of a JSP page and its use of implicit objects?",
+            "options": [
+                "_jspInit()",
+                "_jspDestroy()",
+                "_jspService()",
+                "_jspPreprocess()"
+            ],
+            "correct": 3,
+            "explanation": "The `_jspPreprocess()` is not standard JSP lifecycle method. `_jspInit()`, `_jspDestroy()`, and `_jspService()` are relevant."
+        },
+        {
+            "id": "q31",
+            "question": "If you want to get the IP address of the client using the request object, which method should you use?",
+            "options": [
+                "request.getClientIP()",
+                "request.getRemoteAddress()",
+                "request.getLocalAddr()",
+                "request.getUserIP()"
+            ],
+            "correct": 1,
+            "explanation": "The `getRemoteAddress()` method is used to get the IP address of the client making the request."
+        },
+        {
+            "id": "q32",
+            "question": "What is the purpose of `response.setHeader()` in a JSP?",
+            "options": [
+                "To set the content type of the response",
+                "To set HTTP response headers",
+                "To write data to the client's output stream",
+                "To manage session attributes"
+            ],
+            "correct": 1,
+            "explanation": "The `setHeader()` method is used to set HTTP response headers, allowing you to add metadata like caching directives."
+        },
+        {
+            "id": "q33",
+            "question": "True or False: The `config` object can be used to access request parameters.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "The `config` object is used to access configuration information of a servlet/JSP (initialization parameters), not request parameters. Request parameters are accessed via the `request` object."
+        },
+        {
+            "id": "q34",
+            "question": "What is the difference between `response.getWriter()` and `out` implicit object?",
+            "options": [
+                "`response.getWriter()` is for binary data; `out` is for text.",
+                "`out` is for binary data; `response.getWriter()` is for text.",
+                "Both can be used for writing text, but `out` is buffered and more efficient.",
+                "There's no difference they are same."
+            ],
+            "correct": 2,
+            "explanation": "`out` is buffered and preferred for general text output. `response.getWriter()` is also for text, but less convenient in JSP and is generally used with `response.setContentType()`"
+        },
+        {
+            "id": "q35",
+            "question": "What happens if you try to set a header after the response has already been committed?",
+            "options": [
+                "The header is set correctly.",
+                "An IllegalStateException is thrown.",
+                "The header is ignored.",
+                "The JSP page execution stops."
+            ],
+            "correct": 1,
+            "explanation": "After the response is committed (the headers and status code have been sent), you cannot modify headers. An IllegalStateException will be thrown."
+        }
+    ],
+    "jsp-lifecycle": [
+        {
+            "id": "q1",
+            "question": "Which method is invoked first during the JSP lifecycle, after the request reaches the server?",
+            "options": [
+                "jspInit()",
+                "_jspService()",
+                "jspDestroy()",
+                "doGet()"
+            ],
+            "correct": 1,
+            "explanation": "_jspService() is the primary entry point for handling client requests in a JSP page."
+        },
+        {
+            "id": "q2",
+            "question": "In the JSP lifecycle, what happens during the 'Translation' phase?",
+            "options": [
+                "The JSP page is converted into a servlet class.",
+                "The servlet is compiled and deployed.",
+                "The servlet handles the client's request.",
+                "The servlet is initialized and destroyed."
+            ],
+            "correct": 0,
+            "explanation": "During the translation phase, the JSP page is converted into a servlet class by the JSP container."
+        },
+        {
+            "id": "q3",
+            "question": "What is the purpose of the jspInit() method in the JSP lifecycle?",
+            "options": [
+                "To handle client requests.",
+                "To initialize resources when the JSP page is loaded.",
+                "To destroy resources when the JSP page is unloaded.",
+                "To translate the JSP page into a servlet."
+            ],
+            "correct": 1,
+            "explanation": "The jspInit() method is called only once during the lifecycle of a JSP page, when the JSP is initialized. It's used to initialize any resources that the JSP page will use."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a phase in the JSP lifecycle?",
+            "options": [
+                "Translation",
+                "Initialization",
+                "Compilation",
+                "Deployment"
+            ],
+            "correct": 3,
+            "explanation": "Deployment is related to the application server; the other three are core JSP lifecycle phases."
+        },
+        {
+            "id": "q5",
+            "question": "Where does the JSP container store the generated servlet code by default?",
+            "options": [
+                "In the WEB-INF directory",
+                "In the application's root directory",
+                "In a temporary directory managed by the container",
+                "In the lib directory"
+            ],
+            "correct": 2,
+            "explanation": "The generated servlet code is typically stored in a temporary directory managed by the application server, such as Tomcat."
+        },
+        {
+            "id": "q6",
+            "question": "What is the primary responsibility of the _jspService() method?",
+            "options": [
+                "To translate the JSP.",
+                "To initialize the JSP page.",
+                "To process client requests and generate the response.",
+                "To destroy the JSP page."
+            ],
+            "correct": 2,
+            "explanation": "_jspService() is responsible for handling the incoming client requests and generating the output (typically HTML) that is sent back to the client."
+        },
+        {
+            "id": "q7",
+            "question": "Which method is called to clean up resources held by a JSP page?",
+            "options": [
+                "jspInit()",
+                "_jspService()",
+                "jspDestroy()",
+                "doGet()"
+            ],
+            "correct": 2,
+            "explanation": "jspDestroy() is called when the JSP page is being removed from service, allowing it to release resources it holds, such as database connections."
+        },
+        {
+            "id": "q8",
+            "question": "When is the jspInit() method called in the JSP lifecycle?",
+            "options": [
+                "Each time a request is made to the JSP.",
+                "Only once, when the JSP is loaded.",
+                "Before the JSP is translated.",
+                "After the jspDestroy() method is called."
+            ],
+            "correct": 1,
+            "explanation": "jspInit() is invoked only once when the JSP page is initially loaded and initialized by the container."
+        },
+        {
+            "id": "q9",
+            "question": "What is the role of the JSP container?",
+            "options": [
+                "To execute JavaScript code.",
+                "To translate and manage the lifecycle of JSP pages.",
+                "To handle database connections.",
+                "To provide CSS styles."
+            ],
+            "correct": 1,
+            "explanation": "The JSP container, typically part of a web server, manages the entire lifecycle of a JSP page from translation to destruction."
+        },
+        {
+            "id": "q10",
+            "question": "Can you override the _jspService() method directly in your JSP?",
+            "options": [
+                "Yes",
+                "No",
+                "It depends on the server.",
+                "Only if you extend a specific JSP class."
+            ],
+            "correct": 1,
+            "explanation": "You cannot directly override the _jspService() method. It's generated by the container and is not intended for direct manipulation."
+        },
+        {
+            "id": "q11",
+            "question": "What happens during the 'Compilation' phase of the JSP lifecycle?",
+            "options": [
+                "The JSP is translated into a .java file.",
+                "The .java file is compiled into a .class file.",
+                "The JSP is deployed to the server.",
+                "The jspInit() method is called."
+            ],
+            "correct": 1,
+            "explanation": "During compilation, the generated servlet's .java file is compiled into a .class file by the Java compiler."
+        },
+        {
+            "id": "q12",
+            "question": "Which directive is used to import packages within a JSP?",
+            "options": [
+                "<%@ page import=",
+                "%>",
+                "<%@ include file=",
+                "%>",
+                "<jsp:useBean id=",
+                "/>",
+                "<% page contentType=",
+                "%>"
+            ],
+            "correct": 0,
+            "explanation": "The `import` attribute of the `page` directive is used to import packages."
+        },
+        {
+            "id": "q13",
+            "question": "In the context of the JSP lifecycle, what does 'implicit object' refer to?",
+            "options": [
+                "Objects created by the developer.",
+                "Objects automatically created by the container, such as request, response, session.",
+                "Objects that are stored in the database.",
+                "Objects defined in the web.xml file."
+            ],
+            "correct": 1,
+            "explanation": "Implicit objects are created by the JSP container and are readily available for use within the JSP page without explicit declaration."
+        },
+        {
+            "id": "q14",
+            "question": "Which method is called when a JSP page is unloaded from the server?",
+            "options": [
+                "jspInit()",
+                "_jspService()",
+                "jspDestroy()",
+                "doGet()"
+            ],
+            "correct": 2,
+            "explanation": "jspDestroy() is invoked when the JSP page is about to be removed from the server and is the ideal place to release resources."
+        },
+        {
+            "id": "q15",
+            "question": "What is the order of execution in the JSP lifecycle (Simplified)?",
+            "options": [
+                "Translation -> Compilation -> Initialization -> Request Processing -> Destruction",
+                "Initialization -> Translation -> Compilation -> Request Processing -> Destruction",
+                "Translation -> Initialization -> Compilation -> Request Processing -> Destruction",
+                "Compilation -> Translation -> Initialization -> Request Processing -> Destruction"
+            ],
+            "correct": 0,
+            "explanation": "The order is translation (into a servlet), compilation (of the servlet), initialization (jspInit), request processing (_jspService), and finally destruction (jspDestroy)."
+        },
+        {
+            "id": "q16",
+            "question": "What is the advantage of using JSP over directly writing Servlets?",
+            "options": [
+                "JSP is faster.",
+                "JSP makes it easier to separate presentation (HTML) from business logic.",
+                "JSP can handle database connections more efficiently.",
+                "JSP is automatically compiled into JavaScript."
+            ],
+            "correct": 1,
+            "explanation": "JSP allows developers to embed HTML and other presentation elements directly into the page, making it simpler to create and maintain dynamic web pages."
+        },
+        {
+            "id": "q17",
+            "question": "True or False: The jspInit() method can be called multiple times during the lifetime of a JSP page.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "jspInit() is called only once, when the JSP is loaded."
+        },
+        {
+            "id": "q18",
+            "question": "What is the purpose of the `page` directive in JSP?",
+            "options": [
+                "To include another JSP file.",
+                "To specify page-specific attributes like import statements and content type.",
+                "To define custom tags.",
+                "To handle form submissions."
+            ],
+            "correct": 1,
+            "explanation": "The `page` directive is used to set page-specific attributes, such as the content type, import statements, and buffer size."
+        },
+        {
+            "id": "q19",
+            "question": "In which directory are JSP pages typically stored in a web application?",
+            "options": [
+                "WEB-INF",
+                "src",
+                "classes",
+                "lib"
+            ],
+            "correct": 0,
+            "explanation": "JSP pages are typically stored in the root directory or subdirectories alongside the application's other resources."
+        },
+        {
+            "id": "q20",
+            "question": "If a JSP page uses a large amount of resources and is not properly destroyed, what could be the potential problem?",
+            "options": [
+                "Increased server performance.",
+                "Memory leaks and resource exhaustion.",
+                "Faster page loading times.",
+                "Improved security."
+            ],
+            "correct": 1,
+            "explanation": "Failure to properly destroy resources can lead to memory leaks and resource exhaustion, potentially causing the server to crash or become unstable."
+        },
+        {
+            "id": "q21",
+            "question": "What is the function of `<%@ include file=",
+            "options": [
+                "Imports a Java package.",
+                "Includes the content of another file at the time the JSP is translated.",
+                "Defines a custom tag.",
+                "Defines a bean."
+            ],
+            "correct": 1,
+            "explanation": "`<%@ include %>` includes the content of another file (e.g., HTML, JSP, text) during the translation phase. This is a static include; the included file is incorporated into the original JSP page and translated and compiled as part of it."
+        },
+        {
+            "id": "q22",
+            "question": "What's the impact of making a JSP page thread-safe?",
+            "options": [
+                "Improves performance due to parallel processing.",
+                "Requires careful handling of shared resources to prevent race conditions.",
+                "Automatically increases the number of server threads.",
+                "Reduces the need for synchronization blocks."
+            ],
+            "correct": 1,
+            "explanation": "Thread-safe JSP pages need careful coding to manage shared data and resources correctly, using synchronization mechanisms like locks to prevent data corruption."
+        },
+        {
+            "id": "q23",
+            "question": "Which of the following is a characteristic of a JSP page that is cached?",
+            "options": [
+                "The page is recompiled on every request.",
+                "The page's generated servlet code is stored in memory to speed up subsequent requests.",
+                "The page always uses the same session.",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "Caching in JSP usually involves storing the generated servlet's output or the servlet itself in memory to prevent having to regenerate it from scratch with each incoming request."
+        },
+        {
+            "id": "q24",
+            "question": "What is the main difference between `include` directive and `<jsp:include>` action?",
+            "options": [
+                "Include directive is for static content, while the action is for dynamic content.",
+                "Include action is for static content, while the directive is for dynamic content.",
+                "Directive includes only JSP files.",
+                "They are the same thing."
+            ],
+            "correct": 0,
+            "explanation": "The `<%@ include %>` directive includes static content, like text or HTML, during translation. The `<jsp:include>` action includes the output of a dynamic resource, like another JSP or a servlet, at request time."
+        },
+        {
+            "id": "q25",
+            "question": "What is the role of the `web.xml` file in relation to JSP pages?",
+            "options": [
+                "To define the content of the JSP pages.",
+                "To configure the server environment.",
+                "To specify the URL patterns that map to JSP pages.",
+                "To store the compiled Java code of the JSP pages."
+            ],
+            "correct": 2,
+            "explanation": "The `web.xml` (or `web.xml` using Java EE) file is used to map URL patterns to servlets, including those generated from JSP pages.  It tells the server which requests should be handled by which JSP files."
+        },
+        {
+            "id": "q26",
+            "question": "When is the `jspDestroy()` method invoked?",
+            "options": [
+                "During the translation phase.",
+                "After the `jspInit()` method is called.",
+                "Before the `jspInit()` method is called.",
+                "When the JSP page is being removed from service."
+            ],
+            "correct": 3,
+            "explanation": "The `jspDestroy()` method is called by the container when the JSP page is being unloaded from the server, usually to release resources."
+        },
+        {
+            "id": "q27",
+            "question": "What type of programming is primarily used within JSP pages to generate dynamic content?",
+            "options": [
+                "C++",
+                "JavaScript",
+                "Java",
+                "HTML"
+            ],
+            "correct": 2,
+            "explanation": "JSP pages use Java code embedded in HTML to generate dynamic content. Java is the primary language used within a JSP."
+        },
+        {
+            "id": "q28",
+            "question": "True or False: The _jspService() method is automatically generated from the JSP code by the container.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "_jspService() is a crucial method that's generated by the JSP container as a part of the servlet that is created from your JSP."
+        },
+        {
+            "id": "q29",
+            "question": "Which object can be used to print content to the response in JSP?",
+            "options": [
+                "request",
+                "response",
+                "out",
+                "session"
+            ],
+            "correct": 2,
+            "explanation": "The `out` object is a `JspWriter` object that is used to print content to the response stream in JSP pages."
+        },
+        {
+            "id": "q30",
+            "question": "What does the JSP container do when a JSP page is first accessed?",
+            "options": [
+                "Executes the Java code.",
+                "Translates the JSP into a servlet, compiles it, and loads it.",
+                "Directly displays the content of the JSP page.",
+                "Downloads the JSP to the client's browser."
+            ],
+            "correct": 1,
+            "explanation": "The JSP container processes the JSP page to create its underlying servlet code, translating, compiling and loading into the server."
+        },
+        {
+            "id": "q31",
+            "question": "If a JSP page uses a custom tag, when does the container process and resolve that tag?",
+            "options": [
+                "During the client-side rendering.",
+                "During the translation phase.",
+                "During the request processing phase.",
+                "During the initialization phase."
+            ],
+            "correct": 1,
+            "explanation": "Custom tags are resolved during the translation phase, when the JSP is converted into a servlet."
+        },
+        {
+            "id": "q32",
+            "question": "Consider a scenario where a JSP page takes a long time to load. What are the possible reasons within the JSP lifecycle context?",
+            "options": [
+                "Slow database queries within the JSP.",
+                "Inefficient code within the _jspService() method.",
+                "Network latency.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Long-running database calls, inefficient servlet code, and network conditions can all negatively impact page load times."
+        },
+        {
+            "id": "q33",
+            "question": "Which directive is used to include a static HTML file into your JSP?",
+            "options": [
+                "<%@ page import=",
+                "%>",
+                "<jsp:include page=",
+                "/>",
+                "<%@ include file=",
+                "%>",
+                "<% page contentType=",
+                "%>"
+            ],
+            "correct": 2,
+            "explanation": "The `include` directive (`<%@ include file="
+        },
+        {
+            "id": "q34",
+            "question": "What is the consequence of not closing a database connection opened within the `_jspService()` method of a JSP page?",
+            "options": [
+                "It will slow down the page loading time.",
+                "It may lead to a resource leak and eventual exhaustion of database connections.",
+                "The JSP page will automatically close the connection when the user navigates to another page.",
+                "The connection will remain open indefinitely, causing no issues."
+            ],
+            "correct": 1,
+            "explanation": "Failure to close database connections within `_jspService()` leads to resource leaks. Connections are not closed automatically by the browser or other mechanisms."
+        },
+        {
+            "id": "q35",
+            "question": "In a scenario where your JSP throws an exception during the `_jspService()` method, which of the following is most likely to happen?",
+            "options": [
+                "The container will ignore the error.",
+                "The container will display a generic error message.",
+                "The container might forward the error to an error page defined in `web.xml` or display an error page directly.",
+                "The JSP page will automatically try to recover from the error."
+            ],
+            "correct": 2,
+            "explanation": "Exceptions thrown from `_jspService()` will often be caught and handled by the container (or by code you provide). Containers can be configured to display or forward to an error page."
+        }
+    ],
+    "jstl": [
+        {
+            "id": "q1",
+            "question": "Which JSTL core tag is used to iterate over a collection of objects?",
+            "options": [
+                "&lt;c:if&gt;",
+                "&lt;c:forEach&gt;",
+                "&lt;c:set&gt;",
+                "&lt;c:out&gt;"
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:forEach&gt; is specifically designed for iterating over collections like lists, arrays, and maps."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of the JSTL fmt tag library?",
+            "options": [
+                "To handle database connections",
+                "To format internationalization and localization",
+                "To manage user sessions",
+                "To perform arithmetic operations"
+            ],
+            "correct": 1,
+            "explanation": "The fmt library provides tags for formatting dates, numbers, and currencies based on locale."
+        },
+        {
+            "id": "q3",
+            "question": "Which attribute of the &lt;c:forEach&gt; tag specifies the starting index for iteration?",
+            "options": [
+                "end",
+                "begin",
+                "step",
+                "varStatus"
+            ],
+            "correct": 1,
+            "explanation": "The 'begin' attribute indicates the starting index (0-based) of the iteration."
+        },
+        {
+            "id": "q4",
+            "question": "What does the &lt;c:set&gt; tag primarily do?",
+            "options": [
+                "Prints output to the browser",
+                "Sets the value of a scoped variable",
+                "Iterates over a collection",
+                "Includes another JSP page"
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:set&gt; assigns a value to a variable, optionally setting its scope (page, request, session, application)."
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following is NOT a valid scope for the &lt;c:set&gt; tag?",
+            "options": [
+                "page",
+                "request",
+                "session",
+                "servlet"
+            ],
+            "correct": 3,
+            "explanation": "The valid scopes are page, request, session, and application. Servlet is not a valid scope."
+        },
+        {
+            "id": "q6",
+            "question": "What is the function of the &lt;c:url&gt; tag?",
+            "options": [
+                "To display an image",
+                "To create a URL with context path and parameters",
+                "To redirect to another page",
+                "To include another JSP page"
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:url&gt; constructs URLs, encoding them appropriately for the user's context."
+        },
+        {
+            "id": "q7",
+            "question": "What library needs to be included to use JSTL tags in a JSP page?",
+            "options": [
+                "Java Servlet API",
+                "JSTL library (e.g., jstl.jar)",
+                "Standard Tag Library",
+                "All of the above"
+            ],
+            "correct": 1,
+            "explanation": "You need to include the JSTL library in your project's classpath and declare the taglib directive in your JSP."
+        },
+        {
+            "id": "q8",
+            "question": "Which tag is used to conditionally include content in a JSP page?",
+            "options": [
+                "&lt;c:choose&gt;",
+                "&lt;c:when&gt;",
+                "&lt;c:if&gt;",
+                "&lt;c:otherwise&gt;"
+            ],
+            "correct": 2,
+            "explanation": "&lt;c:if&gt; allows you to conditionally include content based on a boolean expression."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the &lt;c:choose&gt; tag?",
+            "options": [
+                "To iterate over a map",
+                "To perform switch-like conditional logic",
+                "To define a variable",
+                "To format a date"
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:choose&gt; with &lt;c:when&gt; and &lt;c:otherwise&gt; provides a way to implement conditional logic similar to a switch statement."
+        },
+        {
+            "id": "q10",
+            "question": "Which tag allows you to evaluate an expression and output its value?",
+            "options": [
+                "&lt;c:set&gt;",
+                "&lt;c:out&gt;",
+                "&lt;c:if&gt;",
+                "&lt;c:forEach&gt;"
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:out&gt; is used to evaluate and output expressions, similar to <%= ... %> but safer."
+        },
+        {
+            "id": "q11",
+            "question": "What does the 'varStatus' attribute of &lt;c:forEach&gt; provide?",
+            "options": [
+                "The current iteration variable",
+                "Information about the current iteration, such as index and first/last status",
+                "The total number of iterations",
+                "The value of the current element in the collection"
+            ],
+            "correct": 1,
+            "explanation": "varStatus provides helpful information about the iteration status, such as index, count, first, last, and even/odd."
+        },
+        {
+            "id": "q12",
+            "question": "True or False: JSTL tags can be used to access request parameters.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "While not directly through a JSTL tag, EL expressions used within JSTL can access request parameters using the implicit object 'param'."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following is NOT a valid JSTL library?",
+            "options": [
+                "Core",
+                "SQL",
+                "XML",
+                "HTML"
+            ],
+            "correct": 3,
+            "explanation": "Core, SQL, and XML are standard JSTL libraries. There's no HTML library specifically."
+        },
+        {
+            "id": "q14",
+            "question": "Which JSTL tag is designed to work with database interactions?",
+            "options": [
+                "&lt;c:if&gt;",
+                "&lt;sql:query&gt;",
+                "&lt;c:out&gt;",
+                "&lt;fmt:formatNumber&gt;"
+            ],
+            "correct": 1,
+            "explanation": "The &lt;sql:query&gt; tag is part of the SQL JSTL library and is used to execute database queries."
+        },
+        {
+            "id": "q15",
+            "question": "How do you include the core JSTL library in your JSP page?",
+            "options": [
+                "&lt;%@ taglib uri=",
+                "prefix=",
+                "%&gt;",
+                "&lt;%@ include file=",
+                "%&gt;",
+                "&lt;%@ page import=",
+                "%&gt;",
+                "Include the jstl.jar file in your WEB-INF/lib folder, no taglib is needed"
+            ],
+            "correct": 0,
+            "explanation": "The taglib directive declares the library to use, specifying the URI and a prefix for the tags."
+        },
+        {
+            "id": "q16",
+            "question": "What is the difference between &lt;c:redirect&gt; and &lt;c:url&gt;?",
+            "options": [
+                "&lt;c:redirect&gt; generates a URL, &lt;c:url&gt; redirects to a URL.",
+                "&lt;c:url&gt; generates a URL, &lt;c:redirect&gt; redirects to a URL.",
+                "&lt;c:redirect&gt; only redirects to external URLs.",
+                "&lt;c:url&gt; doesn't handle parameters."
+            ],
+            "correct": 1,
+            "explanation": "&lt;c:url&gt; generates a URL, while &lt;c:redirect&gt; causes the browser to navigate to that URL."
+        },
+        {
+            "id": "q17",
+            "question": "What happens if you use an invalid URI in the &lt;%@ taglib %&gt; directive?",
+            "options": [
+                "The JSP will compile without errors.",
+                "The JSP will throw a runtime exception.",
+                "The JSP will fail to compile.",
+                "The application server will handle it gracefully."
+            ],
+            "correct": 2,
+            "explanation": "The JSP compiler will throw an error because it can't find the tag library definition for the invalid URI."
+        },
+        {
+            "id": "q18",
+            "question": "What is the default scope for a variable set using &lt;c:set&gt; if no scope is specified?",
+            "options": [
+                "application",
+                "request",
+                "session",
+                "page"
+            ],
+            "correct": 3,
+            "explanation": "If no scope is specified, the default scope for &lt;c:set&gt; is 'page'."
+        },
+        {
+            "id": "q19",
+            "question": "Consider the following code:\n&lt;c:set var=",
+            "options": [
+                "Only in the current JSP page.",
+                "In all JSP pages in the application.",
+                "In the current request and any JSP pages included or forwarded to in the same request.",
+                "In the current session."
+            ],
+            "correct": 2,
+            "explanation": "Since the scope is 'request', the variable is available during the processing of the current request."
+        },
+        {
+            "id": "q20",
+            "question": "Which JSTL tag is useful for escaping XML content?",
+            "options": [
+                "&lt;c:out&gt;",
+                "&lt;c:escapeXml&gt;",
+                "&lt;fmt:formatNumber&gt;",
+                "&lt;x:out&gt;"
+            ],
+            "correct": 0,
+            "explanation": "The &lt;c:out&gt; tag, by default, escapes XML special characters. This is controlled by the 'escapeXml' attribute, which defaults to true."
+        },
+        {
+            "id": "q21",
+            "question": "What is the purpose of the 'step' attribute in the &lt;c:forEach&gt; tag?",
+            "options": [
+                "To specify the number of times the loop runs.",
+                "To increment the index by the specified value.",
+                "To set the initial value of the iterator.",
+                "To filter elements based on a condition."
+            ],
+            "correct": 1,
+            "explanation": "The 'step' attribute controls the increment value of the loop counter in each iteration."
+        },
+        {
+            "id": "q22",
+            "question": "How can you access request parameters using JSTL and EL?",
+            "options": [
+                "&lt;c:param value=",
+                "/&gt;",
+                "${requestScope.parameterName}",
+                "${param.parameterName}",
+                "&lt;c:out value=",
+                "/&gt;"
+            ],
+            "correct": 2,
+            "explanation": "EL provides the implicit object 'param' to access request parameters: ${param.parameterName}."
+        },
+        {
+            "id": "q23",
+            "question": "What is the benefit of using JSTL over using scriptlets?",
+            "options": [
+                "JSTL promotes code readability and maintainability.",
+                "JSTL provides better security by escaping output.",
+                "JSTL separates presentation logic from Java code.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "JSTL offers several advantages, including improved readability, security, and separation of concerns."
+        },
+        {
+            "id": "q24",
+            "question": "Which JSTL tag is used to format a number according to a specific locale?",
+            "options": [
+                "&lt;c:formatNumber&gt;",
+                "&lt;fmt:formatNumber&gt;",
+                "&lt;c:out&gt;",
+                "&lt;fmt:numberFormat&gt;"
+            ],
+            "correct": 1,
+            "explanation": "&lt;fmt:formatNumber&gt; is part of the fmt library and used for localized number formatting."
+        },
+        {
+            "id": "q25",
+            "question": "Consider this code:\n&lt;c:set var=",
+            "options": [
+                "Count is greater than 10",
+                "Nothing",
+                "An error message",
+                "5"
+            ],
+            "correct": 1,
+            "explanation": "The condition (count > 10) is false; therefore, the content inside the &lt;c:if&gt; tag will not be displayed."
+        },
+        {
+            "id": "q26",
+            "question": "What is the significance of the 'var' attribute in JSTL tags like &lt;c:forEach&gt; and &lt;c:set&gt;?",
+            "options": [
+                "It specifies the name of the variable.",
+                "It defines the value of the variable.",
+                "It controls the loop's behavior.",
+                "It determines the scope of the variable."
+            ],
+            "correct": 0,
+            "explanation": "The 'var' attribute defines the name by which you will refer to the variable within the JSP page."
+        },
+        {
+            "id": "q27",
+            "question": "How would you correctly iterate through a list of Strings called 'names' using JSTL?",
+            "options": [
+                "&lt;c:forEach items=",
+                "var=",
+                "&gt; &lt;c:out value=",
+                "/&gt; &lt;/c:forEach&gt;",
+                "&lt;c:forEach item=",
+                "var=",
+                "&gt; &lt;c:out value=",
+                "/&gt; &lt;/c:forEach&gt;",
+                "&lt;forEach items=",
+                "var=",
+                "&gt; &lt;c:out value=",
+                "/&gt; &lt;/forEach&gt;",
+                "&lt;c:loop items=",
+                "var=",
+                "&gt; &lt;c:out value=",
+                "/&gt; &lt;/c:loop&gt;"
+            ],
+            "correct": 1,
+            "explanation": "The correct syntax involves using the &lt;c:forEach&gt; tag with 'items' referencing the collection via EL and 'var' specifying the iteration variable name."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following is a potential security benefit of using JSTL?",
+            "options": [
+                "Automatic session management",
+                "Input validation",
+                "Output escaping (if escapeXml is true)",
+                "Database connection pooling"
+            ],
+            "correct": 2,
+            "explanation": "JSTL's &lt;c:out&gt; tag, with escapeXml set to true, helps prevent cross-site scripting (XSS) vulnerabilities by escaping special characters in output."
+        },
+        {
+            "id": "q29",
+            "question": "Which JSTL tag is used to handle exception?",
+            "options": [
+                "&lt;c:try&gt;",
+                "&lt;c:catch&gt;",
+                "&lt;c:except&gt;",
+                "JSTL does not have exception handling tag"
+            ],
+            "correct": 1,
+            "explanation": "The &lt;c:catch&gt; tag is used to catch exceptions within a JSTL context."
+        },
+        {
+            "id": "q30",
+            "question": "What happens if you forget to include the JSTL library's jar file in the WEB-INF/lib folder?",
+            "options": [
+                "The JSP will compile and run without issues.",
+                "The JSP will fail at runtime with a NoClassDefFoundError.",
+                "The application server will automatically download the jar file.",
+                "JSTL tags will be ignored."
+            ],
+            "correct": 1,
+            "explanation": "Without the JSTL jar in WEB-INF/lib, the application server won't find the necessary classes, resulting in a NoClassDefFoundError."
+        },
+        {
+            "id": "q31",
+            "question": "How can you format a date using the fmt library to display the date as 'MM/dd/yyyy'?",
+            "options": [
+                "&lt;fmt:formatDate value=",
+                "pattern=",
+                "/&gt;",
+                "&lt;fmt:formatDate value=",
+                "pattern=",
+                "/&gt;",
+                "&lt;c:formatDate value=",
+                "format=",
+                "/&gt;",
+                "&lt;fmt:date value=",
+                "format=",
+                "/&gt;"
+            ],
+            "correct": 1,
+            "explanation": "The correct syntax uses the &lt;fmt:formatDate&gt; tag with the 'pattern' attribute set to the desired format string."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following is the correct way to use a nested choose-when-otherwise structure?",
+            "options": [
+                "&lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ... &lt;/c:when&gt; &lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ... &lt;/c:when&gt; &lt;c:otherwise&gt; ... &lt;/c:otherwise&gt; &lt;/c:choose&gt; &lt;/c:otherwise&gt; &lt;/c:choose&gt;",
+                "&lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ... &lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ... &lt;/c:when&gt; &lt;c:otherwise&gt; ... &lt;/c:otherwise&gt; &lt;/c:choose&gt; &lt;/c:when&gt; &lt;c:otherwise&gt; ... &lt;/c:otherwise&gt; &lt;/c:choose&gt;",
+                "&lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ... &lt;/c:when&gt; &lt;c:when test=",
+                "&gt; ... &lt;/c:when&gt; &lt;c:otherwise&gt; ... &lt;/c:otherwise&gt; &lt;/c:choose&gt;",
+                "&lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ...&lt;/c:when&gt; &lt;c:otherwise&gt;&lt;c:choose&gt; &lt;c:when test=",
+                "&gt; ...&lt;/c:when&gt;&lt;c:otherwise&gt; ...&lt;/c:otherwise&gt;&lt;/c:choose&gt; &lt;/c:otherwise&gt; &lt;/c:choose&gt;"
+            ],
+            "correct": 3,
+            "explanation": "The correct structure involves a nested choose-when-otherwise block inside another choose-when-otherwise block."
+        },
+        {
+            "id": "q33",
+            "question": "What is the purpose of the 'varStatus' attribute in a &lt;c:forEach&gt; loop's context?",
+            "options": [
+                "To track the overall status of the web application.",
+                "To provide information about the current iteration, such as index, first/last element.",
+                "To set a variable to hold the value of the current item in each iteration.",
+                "To define the number of times the loop will execute."
+            ],
+            "correct": 1,
+            "explanation": "The 'varStatus' attribute makes available a 'status' object that holds info about the loop execution state like index, count, isFirst, isLast, etc."
+        },
+        {
+            "id": "q34",
+            "question": "True or False: JSTL provides built-in support for database connection pooling.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "JSTL does not handle database connection pooling; this is typically managed by the application server or a dedicated connection pool library."
+        },
+        {
+            "id": "q35",
+            "question": "Given a variable called 'price' with a value of 1234.56, how would you format this to currency format using JSTL (assuming US locale)?",
+            "options": [
+                "&lt;fmt:formatNumber value=",
+                "type=",
+                "/&gt;",
+                "&lt;c:formatNumber value=",
+                "style=",
+                "/&gt;",
+                "&lt;fmt:formatNumber value=",
+                "style=",
+                "/&gt;",
+                "&lt;c:out value=",
+                "format=",
+                "/&gt;"
+            ],
+            "correct": 2,
+            "explanation": "The correct approach uses &lt;fmt:formatNumber&gt; with the 'style' attribute set to 'currency'."
+        }
+    ],
+    //JDBC and Hibernate
+    "jdbc": [
+        {
+            "id": "q1",
+            "question": "Which JDBC interface is used to execute a SQL query or update statement?",
+            "options": [
+                "Connection",
+                "Statement",
+                "ResultSet",
+                "Driver"
+            ],
+            "correct": 2,
+            "explanation": "The Statement interface is used to execute SQL statements."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of the JDBC Driver Manager?",
+            "options": [
+                "To execute SQL queries",
+                "To manage database connections",
+                "To define database schemas",
+                "To create ResultSets"
+            ],
+            "correct": 2,
+            "explanation": "The Driver Manager is responsible for managing JDBC drivers and establishing database connections."
+        },
+        {
+            "id": "q3",
+            "question": "Which method is used to establish a connection to a database in JDBC?",
+            "options": [
+                "DriverManager.getConnection()",
+                "Connection.connect()",
+                "Statement.getConnection()",
+                "ResultSet.connect()"
+            ],
+            "correct": 1,
+            "explanation": "DriverManager.getConnection() is the static method used to establish a database connection."
+        },
+        {
+            "id": "q4",
+            "question": "What does the 'PreparedStatement' interface in JDBC offer over the 'Statement' interface?",
+            "options": [
+                "Faster execution for one-time queries",
+                "Security against SQL injection vulnerabilities",
+                "Simplified syntax for complex queries",
+                "Automatic transaction management"
+            ],
+            "correct": 2,
+            "explanation": "PreparedStatement offers protection against SQL injection and often improves performance for repeatedly executed queries."
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following is NOT a valid JDBC driver type?",
+            "options": [
+                "Type 1: JDBC-ODBC bridge driver",
+                "Type 2: Native-API/Partly Java driver",
+                "Type 3: JDBC-Net pure Java driver",
+                "Type 5:  Network Protocol Driver"
+            ],
+            "correct": 4,
+            "explanation": "Type 4 is network protocol driver."
+        },
+        {
+            "id": "q6",
+            "question": "What interface is used to represent the result set of a query in JDBC?",
+            "options": [
+                "Connection",
+                "Statement",
+                "ResultSet",
+                "Driver"
+            ],
+            "correct": 3,
+            "explanation": "The ResultSet interface represents the data returned by a SQL query."
+        },
+        {
+            "id": "q7",
+            "question": "Which method is used to close a database connection in JDBC?",
+            "options": [
+                "close() on Connection",
+                "disconnect() on Connection",
+                "commit() on Connection",
+                "finalize() on Connection"
+            ],
+            "correct": 1,
+            "explanation": "The close() method of the Connection object closes the database connection."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of the 'setAutoCommit()' method in the Connection interface?",
+            "options": [
+                "To automatically commit transactions",
+                "To enable or disable automatic transaction management",
+                "To set the isolation level",
+                "To rollback transactions automatically"
+            ],
+            "correct": 2,
+            "explanation": "setAutoCommit() controls whether transactions are automatically committed or need to be managed explicitly."
+        },
+        {
+            "id": "q9",
+            "question": "Which exception is typically thrown when a database connection cannot be established?",
+            "options": [
+                "SQLException",
+                "IOException",
+                "ClassNotFoundException",
+                "NullPointerException"
+            ],
+            "correct": 1,
+            "explanation": "SQLException is the primary exception related to database operations, including connection errors."
+        },
+        {
+            "id": "q10",
+            "question": "What does the 'executeQuery()' method return?",
+            "options": [
+                "The number of rows affected",
+                "A boolean indicating success",
+                "A ResultSet object",
+                "Nothing"
+            ],
+            "correct": 3,
+            "explanation": "executeQuery() returns a ResultSet containing the results of the query."
+        },
+        {
+            "id": "q11",
+            "question": "What does the 'executeUpdate()' method return?",
+            "options": [
+                "A ResultSet object",
+                "The number of rows affected",
+                "A boolean indicating success",
+                "Nothing"
+            ],
+            "correct": 2,
+            "explanation": "executeUpdate() returns an integer representing the number of rows affected by the update or insert statement."
+        },
+        {
+            "id": "q12",
+            "question": "Which method is used to retrieve the metadata about a ResultSet?",
+            "options": [
+                "getMetadata() on ResultSet",
+                "getMetaData() on ResultSet",
+                "getColumns() on ResultSet",
+                "getDetails() on ResultSet"
+            ],
+            "correct": 2,
+            "explanation": "getMetaData() on ResultSet is used to retrieve information about the columns in the ResultSet."
+        },
+        {
+            "id": "q13",
+            "question": "What is the purpose of the 'BatchUpdate' feature in JDBC?",
+            "options": [
+                "To execute multiple SQL statements at once",
+                "To perform database backups",
+                "To manage database transactions",
+                "To handle large result sets"
+            ],
+            "correct": 1,
+            "explanation": "Batch updates allow you to group multiple SQL statements and execute them together, improving performance."
+        },
+        {
+            "id": "q14",
+            "question": "What is the role of a connection pool in JDBC?",
+            "options": [
+                "To store database schemas",
+                "To manage and reuse database connections",
+                "To execute SQL queries",
+                "To define database drivers"
+            ],
+            "correct": 2,
+            "explanation": "Connection pools improve performance by reusing existing database connections rather than creating new ones for each request."
+        },
+        {
+            "id": "q15",
+            "question": "Which interface is used to represent a transaction in JDBC?",
+            "options": [
+                "Statement",
+                "ResultSet",
+                "Connection",
+                "Driver"
+            ],
+            "correct": 3,
+            "explanation": "The Connection interface provides methods to manage transactions (commit, rollback)."
+        },
+        {
+            "id": "q16",
+            "question": "What is the purpose of the 'commit()' method in JDBC?",
+            "options": [
+                "To undo changes made in a transaction",
+                "To save the changes made in a transaction",
+                "To begin a new transaction",
+                "To close the connection"
+            ],
+            "correct": 2,
+            "explanation": "The commit() method permanently saves the changes made within a transaction to the database."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the 'rollback()' method in JDBC?",
+            "options": [
+                "To save changes",
+                "To undo changes",
+                "To start a new connection",
+                "To get metadata"
+            ],
+            "correct": 2,
+            "explanation": "The rollback() method undoes any changes made within the current transaction."
+        },
+        {
+            "id": "q18",
+            "question": "What does the 'setFetchSize()' method on a ResultSet do?",
+            "options": [
+                "Specifies the maximum size of a result set",
+                "Hints to the JDBC driver about the number of rows to fetch at a time",
+                "Sets the size of each column",
+                "Defines the maximum number of records returned"
+            ],
+            "correct": 2,
+            "explanation": "setFetchSize() provides a hint to the JDBC driver about the number of rows to fetch at a time from the database, optimizing for performance and memory usage."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following is true about using try-with-resources with JDBC?",
+            "options": [
+                "It automatically closes the Connection, Statement, and ResultSet objects.",
+                "It eliminates the need to handle SQLExceptions.",
+                "It only works with PreparedStatement objects.",
+                "It does not close resources properly in case of an exception."
+            ],
+            "correct": 1,
+            "explanation": "Try-with-resources automatically closes the Connection, Statement, and ResultSet objects, ensuring resources are released."
+        },
+        {
+            "id": "q20",
+            "question": "What is the purpose of the 'setQueryTimeout()' method?",
+            "options": [
+                "To set the maximum time allowed for a query to execute",
+                "To specify the number of rows to fetch",
+                "To configure connection pooling",
+                "To set the size of the result set"
+            ],
+            "correct": 1,
+            "explanation": "setQueryTimeout() sets the maximum time, in seconds, that a driver will wait for a Statement object to execute."
+        },
+        {
+            "id": "q21",
+            "question": "What is the difference between `statement.execute()` and `statement.executeQuery()`?",
+            "options": [
+                "`execute()` is for DML; `executeQuery()` is for DDL.",
+                "`execute()` can execute any SQL statement; `executeQuery()` is only for SELECT.",
+                "`executeQuery()` returns a ResultSet; `execute()` returns a boolean.",
+                "`execute()` requires a prepared statement; `executeQuery()` does not."
+            ],
+            "correct": 3,
+            "explanation": "`execute()` is a general method, and `executeQuery()` is specifically used for SELECT statements and returns a ResultSet, while `execute()` returns a boolean to indicate if a ResultSet or an update count is available."
+        },
+        {
+            "id": "q22",
+            "question": "What is the role of `setNull()` method in `PreparedStatement`?",
+            "options": [
+                "Sets the SQL NULL value for a given parameter.",
+                "Sets the default value for the parameter.",
+                "Sets a string value that represents NULL.",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "The `setNull()` method sets the SQL NULL value for a given parameter in a `PreparedStatement`."
+        },
+        {
+            "id": "q23",
+            "question": "Which method is used to retrieve the SQL warnings?",
+            "options": [
+                "getWarnings() on Connection, Statement, or ResultSet",
+                "getErrors() on Connection",
+                "getMessages() on ResultSet",
+                "getAlerts() on Driver"
+            ],
+            "correct": 1,
+            "explanation": "The getWarnings() method is used to get SQL warnings associated with a Connection, Statement, or ResultSet."
+        },
+        {
+            "id": "q24",
+            "question": "True or False: JDBC drivers are always provided by the database vendor.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 2,
+            "explanation": "While database vendors often provide JDBC drivers, there are also third-party drivers available. Thus, it's not always the case."
+        },
+        {
+            "id": "q25",
+            "question": "Which `Statement` method is used to add a SQL statement to a batch?",
+            "options": [
+                "addBatch()",
+                "executeBatch()",
+                "prepareStatement()",
+                "executeUpdate()"
+            ],
+            "correct": 1,
+            "explanation": "addBatch() method adds a SQL statement to the current batch of SQL statements."
+        },
+        {
+            "id": "q26",
+            "question": "What is the purpose of the `setTransactionIsolation()` method in the `Connection` interface?",
+            "options": [
+                "To set the isolation level for the current transaction.",
+                "To commit the current transaction.",
+                "To rollback the current transaction.",
+                "To define the connection pool size."
+            ],
+            "correct": 1,
+            "explanation": "This method is used to control how transactions are isolated from each other."
+        },
+        {
+            "id": "q27",
+            "question": "Which interface extends the `Statement` interface to provide methods for executing precompiled SQL statements?",
+            "options": [
+                "Connection",
+                "ResultSet",
+                "Driver",
+                "PreparedStatement"
+            ],
+            "correct": 4,
+            "explanation": "PreparedStatement extends Statement to allow precompilation and parameterization."
+        },
+        {
+            "id": "q28",
+            "question": "Consider the following code snippet:\n```java\nConnection conn = DriverManager.getConnection(url, user, password);\nStatement stmt = conn.createStatement();\nResultSet rs = stmt.executeQuery(",
+            "options": [
+                "Wrap the code with a `finally` block and close `ResultSet`, `Statement`, and `Connection` in the `finally` block.",
+                "Use try-catch blocks to handle the exceptions and close the resources immediately after the `rs = ...` statement.",
+                "Use try-with-resources, ensuring all resources are declared within the try block.",
+                "Close the resources at the end of the program."
+            ],
+            "correct": 3,
+            "explanation": "Try-with-resources ensures that resources are automatically closed regardless of whether an exception occurs."
+        },
+        {
+            "id": "q29",
+            "question": "How can you determine the number of columns in a `ResultSet`?",
+            "options": [
+                "By calling `ResultSet.getColumnCount()`",
+                "By calling `ResultSet.getMetadata().getColumnCount()`",
+                "By calling `Connection.getColumnCount()`",
+                "The number of columns is predefined and cannot be retrieved programmatically."
+            ],
+            "correct": 2,
+            "explanation": "getMetaData() on ResultSet returns a ResultSetMetaData object that provides information about the columns."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of using the `?` placeholder in a `PreparedStatement`?",
+            "options": [
+                "To specify the data type of a parameter.",
+                "To indicate the position of a parameter to be set.",
+                "To represent a literal value.",
+                "To escape special characters."
+            ],
+            "correct": 2,
+            "explanation": "? are placeholders for parameters to be set later, preventing SQL injection."
+        },
+        {
+            "id": "q31",
+            "question": "What will be the output of the following code snippet? Assume all necessary imports and connection establishment are correct.\n```java\nConnection conn = DriverManager.getConnection(url, user, password);\nStatement stmt = conn.createStatement();\nstmt.executeUpdate(",
+            "options": [
+                "0",
+                "1",
+                "2",
+                "An error will occur"
+            ],
+            "correct": 2,
+            "explanation": "The UPDATE statement will modify one row.  executeUpdate() returns the number of rows affected."
+        },
+        {
+            "id": "q32",
+            "question": "What will be the output of the following code snippet, assuming a default auto-commit mode? Assume all necessary imports and connection establishment are correct.\n```java\nConnection conn = DriverManager.getConnection(url, user, password);\nStatement stmt = conn.createStatement();\nstmt.executeUpdate(",
+            "options": [
+                "The table will be created.",
+                "The table will not be created.",
+                "An error will occur.",
+                "The table is created and the commit statement is not needed"
+            ],
+            "correct": 1,
+            "explanation": "With auto-commit enabled, each DDL statement is implicitly committed. The commit() here is unnecessary, but it will not prevent the table creation."
+        },
+        {
+            "id": "q33",
+            "question": "In JDBC, which method is typically used to retrieve data from the database as an array of `Object`?",
+            "options": [
+                "getArray()",
+                "getObject()",
+                "getBytes()",
+                "getObjects()"
+            ],
+            "correct": 2,
+            "explanation": "getObject() is used to retrieve the value of a column as a Java object."
+        },
+        {
+            "id": "q34",
+            "question": "What potential issue can arise when using a Type 1 JDBC driver (JDBC-ODBC bridge driver)?",
+            "options": [
+                "It provides the best performance.",
+                "It is fully portable across all operating systems.",
+                "It relies on the ODBC driver, which may not be installed on all systems.",
+                "It is the most secure type of driver."
+            ],
+            "correct": 3,
+            "explanation": "Type 1 drivers depend on the existence and proper configuration of an ODBC driver, making portability an issue."
+        },
+        {
+            "id": "q35",
+            "question": "When using batch updates, which method is used to execute all the statements added to the batch?",
+            "options": [
+                "executeQuery()",
+                "executeUpdate()",
+                "executeBatch()",
+                "commitBatch()"
+            ],
+            "correct": 3,
+            "explanation": "The executeBatch() method executes all the statements that have been added to the batch."
+        }
+    ],
+    "statements": [
+        {
+            "id": "q1",
+            "question": "Which JDBC interface is MOST suitable for executing a stored procedure with OUT parameters?",
+            "options": [
+                "Statement",
+                "PreparedStatement",
+                "CallableStatement",
+                "ResultSet"
+            ],
+            "correct": 2,
+            "explanation": "CallableStatement is specifically designed for calling stored procedures, including those with input, output, and return parameters."
+        },
+        {
+            "id": "q2",
+            "question": "Identify the primary advantage of using PreparedStatement over Statement.",
+            "options": [
+                "Simpler syntax",
+                "Dynamic query generation",
+                "Prepared statements are automatically closed by the JDBC driver",
+                "Protection against SQL injection vulnerabilities"
+            ],
+            "correct": 3,
+            "explanation": "PreparedStatement uses parameterized queries, preventing SQL injection attacks by treating user-supplied data as data rather than code."
+        }
+    ],
+    "connection-pool": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using connection pooling?",
+            "options": [
+                "Increased database storage capacity",
+                "Improved database security",
+                "Reduced overhead of establishing database connections",
+                "Faster query execution"
+            ],
+            "correct": 2,
+            "explanation": "Connection pooling reuses existing connections, avoiding the overhead of creating new connections for each database request."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following is NOT a typical configuration parameter for a connection pool?",
+            "options": [
+                "Maximum pool size",
+                "Minimum idle connections",
+                "Connection timeout",
+                "Query optimization level"
+            ],
+            "correct": 3,
+            "explanation": "Query optimization is handled by the database server, not the connection pool."
+        },
+        {
+            "id": "q3",
+            "question": "What happens when a connection pool reaches its maximum size and all connections are in use?",
+            "options": [
+                "New connection requests are rejected",
+                "The pool automatically increases its size",
+                "Requests are queued until a connection becomes available",
+                "The database server crashes"
+            ],
+            "correct": 2,
+            "explanation": "Requests are typically queued or timeout, depending on the connection pool configuration."
+        },
+        {
+            "id": "q4",
+            "question": "In a connection pool, what is the purpose of the 'idle timeout' setting?",
+            "options": [
+                "To close connections after a period of inactivity",
+                "To limit the maximum time a connection can be used",
+                "To define how long a connection can stay active",
+                "To set the time between database queries"
+            ],
+            "correct": 0,
+            "explanation": "Idle timeout closes unused connections to free resources."
+        },
+        {
+            "id": "q5",
+            "question": "What is the role of a 'connection validator' in a connection pool?",
+            "options": [
+                "To validate user credentials before a connection is established",
+                "To verify the database schema",
+                "To ensure connections are still valid before they are provided to a client",
+                "To optimize database queries"
+            ],
+            "correct": 2,
+            "explanation": "A validator checks if a connection is still alive and usable."
+        },
+        {
+            "id": "q6",
+            "question": "Which JDBC API element is typically used to obtain a connection from a connection pool?",
+            "options": [
+                "DriverManager.getConnection()",
+                "DataSource.getConnection()",
+                "Statement.executeQuery()",
+                "PreparedStatement.executeUpdate()"
+            ],
+            "correct": 1,
+            "explanation": "DataSource provides an interface for obtaining connections from a pool."
+        },
+        {
+            "id": "q7",
+            "question": "What problem can occur if the 'maximum pool size' is set too high?",
+            "options": [
+                "Increased database performance",
+                "Excessive memory consumption and resource contention",
+                "Faster connection acquisition",
+                "Reduced connection timeout"
+            ],
+            "correct": 1,
+            "explanation": "A large pool size can lead to resource exhaustion if not managed correctly."
+        },
+        {
+            "id": "q8",
+            "question": "What is connection pooling designed to primarily optimize?",
+            "options": [
+                "Database query execution speed",
+                "Database storage capacity",
+                "The time it takes to establish a database connection",
+                "Database security"
+            ],
+            "correct": 2,
+            "explanation": "Connection pooling minimizes the connection establishment time."
+        },
+        {
+            "id": "q9",
+            "question": "Consider a scenario where a connection pool is configured with a minimum size of 5 and a maximum size of 10. Initially, no connections are in use. What happens when a client requests a connection?",
+            "options": [
+                "The pool creates 10 connections immediately.",
+                "The pool creates 5 connections immediately.",
+                "The pool creates a single connection.",
+                "The pool returns an error."
+            ],
+            "correct": 2,
+            "explanation": "The pool typically creates connections on-demand up to the minimum size."
+        },
+        {
+            "id": "q10",
+            "question": "What is the purpose of the 'test on borrow' setting in a connection pool?",
+            "options": [
+                "To test the connection before returning it to the pool.",
+                "To test the connection before giving it to the application.",
+                "To validate the database schema.",
+                "To close the connection after it is used."
+            ],
+            "correct": 1,
+            "explanation": "It validates the connection's health before it's given to the application."
+        },
+        {
+            "id": "q11",
+            "question": "Which of these is NOT a benefit of connection pooling?",
+            "options": [
+                "Improved application performance",
+                "Reduced database server load",
+                "Enhanced security",
+                "Increased database storage space"
+            ],
+            "correct": 3,
+            "explanation": "Connection pooling does not directly increase database storage space."
+        },
+        {
+            "id": "q12",
+            "question": "What does 'autocommit=false' generally signify in the context of a database connection obtained from a pool?",
+            "options": [
+                "The connection is automatically committed after each transaction.",
+                "The connection is part of a transaction managed manually by the application.",
+                "The connection is not properly initialized.",
+                "The connection is automatically rolled back after an error."
+            ],
+            "correct": 1,
+            "explanation": "It allows for manual transaction control (begin, commit, rollback)."
+        },
+        {
+            "id": "q13",
+            "question": "If a connection pool is configured to handle dead connections, what might be a suitable mechanism?",
+            "options": [
+                "Disabling connection validation.",
+                "Decreasing the maximum pool size.",
+                "Implementing a 'test on return' feature.",
+                "Increasing the connection timeout indefinitely."
+            ],
+            "correct": 2,
+            "explanation": "Testing the connection upon return helps remove invalid connections from the pool."
+        },
+        {
+            "id": "q14",
+            "question": "Which setting should be adjusted to prevent the exhaustion of database resources when many short-lived database operations are performed?",
+            "options": [
+                "Maximum pool size",
+                "Minimum idle connections",
+                "Connection timeout",
+                "Query timeout"
+            ],
+            "correct": 2,
+            "explanation": "A short timeout prevents connections from hanging around indefinitely, releasing database resources."
+        },
+        {
+            "id": "q15",
+            "question": "Why is it important to properly close database connections when using a connection pool?",
+            "options": [
+                "To ensure connections are returned to the pool for reuse.",
+                "To immediately release the connection.",
+                "To increase the pool size.",
+                "To trigger database optimization."
+            ],
+            "correct": 0,
+            "explanation": "Connections must be closed to be returned to the pool."
+        },
+        {
+            "id": "q16",
+            "question": "What is the potential impact of a connection pool's 'maximum lifetime' parameter?",
+            "options": [
+                "Connections are automatically closed after the specified time.",
+                "Connections can be used forever.",
+                "Connections are only created when needed.",
+                "It defines the time between queries."
+            ],
+            "correct": 0,
+            "explanation": "Connections are closed after this lifetime to prevent potential issues such as resource leaks or driver problems."
+        },
+        {
+            "id": "q17",
+            "question": "True or False: Connection pooling always improves the performance of all database applications.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Performance improvement depends on factors such as application's connection frequency and database server load."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following is a common connection pooling library for Java applications?",
+            "options": [
+                "Gson",
+                "Log4j",
+                "HikariCP",
+                "Mockito"
+            ],
+            "correct": 2,
+            "explanation": "HikariCP is a popular and performant connection pooling library."
+        },
+        {
+            "id": "q19",
+            "question": "What can happen if the connection pool size is set too small?",
+            "options": [
+                "Reduced database server load",
+                "Increased application throughput",
+                "Application threads may block waiting for a connection",
+                "Faster query execution"
+            ],
+            "correct": 2,
+            "explanation": "Threads will wait, degrading performance."
+        },
+        {
+            "id": "q20",
+            "question": "What does the 'test on return' setting in a connection pool primarily address?",
+            "options": [
+                "Validating user credentials",
+                "Detecting dead or broken connections before they are returned to the pool",
+                "Optimizing database query execution",
+                "Setting the connection timeout value"
+            ],
+            "correct": 1,
+            "explanation": "It verifies that connections are usable before they are returned for potential reuse."
+        },
+        {
+            "id": "q21",
+            "question": "Consider a scenario where a connection pool is exhausted, and a request for a connection arrives. What behavior is most likely based on proper configuration?",
+            "options": [
+                "The request immediately fails.",
+                "The request blocks until a connection becomes available.",
+                "The pool increases its maximum size dynamically.",
+                "The database server is overloaded."
+            ],
+            "correct": 1,
+            "explanation": "The request typically blocks or waits to acquire a connection."
+        },
+        {
+            "id": "q22",
+            "question": "Why is it important to consider the database server's capacity when configuring a connection pool?",
+            "options": [
+                "To ensure the application can access the database regardless of the server's load.",
+                "To prevent the application from exceeding database connection limits.",
+                "To maximize the number of queries that can be executed concurrently.",
+                "To improve the network latency between the application and the database server."
+            ],
+            "correct": 1,
+            "explanation": "The connection pool size should be aligned with the database server's capacity, to avoid exceeding connection limits."
+        },
+        {
+            "id": "q23",
+            "question": "What is the role of `setAutoCommit(false)` in a JDBC connection obtained from a connection pool?",
+            "options": [
+                "Allows the pool to automatically commit transactions.",
+                "Enables the use of transactions by allowing manual commit/rollback calls.",
+                "Automatically rolls back any transaction.",
+                "Configures the database to automatically commit every query."
+            ],
+            "correct": 1,
+            "explanation": "Sets the connection's transaction mode to manual, allowing commit() or rollback() to be called."
+        },
+        {
+            "id": "q24",
+            "question": "What could lead to a 'connection leak' when using connection pooling?",
+            "options": [
+                "Closing connections in a 'finally' block",
+                "Always using try-with-resources",
+                "Failing to return a connection to the pool after usage",
+                "Setting a small connection timeout"
+            ],
+            "correct": 2,
+            "explanation": "If connections are not returned, they remain in use, which can eventually exhaust the pool's resources."
+        },
+        {
+            "id": "q25",
+            "question": "How does connection pooling contribute to enhanced scalability of a database application?",
+            "options": [
+                "By reducing the number of database connections created simultaneously.",
+                "By increasing the number of database connections available to the application.",
+                "By preventing multiple threads from accessing the same database connection concurrently.",
+                "By decreasing the overall database workload."
+            ],
+            "correct": 1,
+            "explanation": "It increases the number of connections and the ability of the application to efficiently manage them and serve more clients."
+        },
+        {
+            "id": "q26",
+            "question": "What is a potential consequence of using a connection pool without proper exception handling when acquiring a connection?",
+            "options": [
+                "Increased database performance",
+                "Application crashes due to unhandled exceptions.",
+                "Improved query execution speed",
+                "Reduced resource utilization"
+            ],
+            "correct": 1,
+            "explanation": "Without proper handling, the application could crash if it cannot acquire a connection."
+        },
+        {
+            "id": "q27",
+            "question": "True or False: A well-configured connection pool can completely eliminate database connection failures.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Connection failures can still occur (e.g., database server down). Connection pooling minimizes their impact."
+        },
+        {
+            "id": "q28",
+            "question": "What does the 'abandoned connection' detection mechanism in some connection pool implementations address?",
+            "options": [
+                "Connections that are returned to the pool prematurely.",
+                "Connections that are not properly closed and returned to the pool after use.",
+                "Connections that have been idle for too long.",
+                "Connections that are repeatedly used in a short period of time."
+            ],
+            "correct": 1,
+            "explanation": "It detects connections that were not closed by the application."
+        },
+        {
+            "id": "q29",
+            "question": "In the context of connection pooling, what is the purpose of a 'prepared statement cache'?",
+            "options": [
+                "To cache database schemas.",
+                "To pre-compile and cache prepared statements to improve query performance.",
+                "To store connection pool configurations.",
+                "To cache result sets."
+            ],
+            "correct": 1,
+            "explanation": "Pre-compiling and caching prepared statements optimizes query execution by reducing the overhead of parsing and planning the query repeatedly."
+        },
+        {
+            "id": "q30",
+            "question": "Which of these is NOT typically a configuration option found in a connection pooling library?",
+            "options": [
+                "Username",
+                "Password",
+                "Database Driver Class Name",
+                "Application Server Version"
+            ],
+            "correct": 3,
+            "explanation": "Connection pooling is not directly tied to application server version. User, password, and driver are required."
+        },
+        {
+            "id": "q31",
+            "question": "What's the primary advantage of a fast and lightweight connection pool like HikariCP, compared to using a basic DataSource?",
+            "options": [
+                "It includes its own embedded database.",
+                "Significantly reduces connection acquisition time.",
+                "Provides a GUI for database management.",
+                "Automatically optimizes SQL queries."
+            ],
+            "correct": 1,
+            "explanation": "HikariCP's performance comes from its optimized connection management."
+        },
+        {
+            "id": "q32",
+            "question": "What is the role of a 'validation query' within a connection pool?",
+            "options": [
+                "To execute a query to validate the connection's health",
+                "To fetch data from the database.",
+                "To define the database schema.",
+                "To control query execution timing."
+            ],
+            "correct": 0,
+            "explanation": "Validates connection before use"
+        },
+        {
+            "id": "q33",
+            "question": "Which setting is most critical in preventing connection pool exhaustion in a high-traffic application?",
+            "options": [
+                "Increasing the initial pool size.",
+                "Ensuring connections are always closed in a 'finally' block.",
+                "Decreasing the connection timeout.",
+                "Increasing the maximum pool size."
+            ],
+            "correct": 1,
+            "explanation": "Closing connections ensures they are returned to the pool, preventing leaks and exhaustion."
+        },
+        {
+            "id": "q34",
+            "question": "How can you monitor the health and performance of a connection pool?",
+            "options": [
+                "By examining the database server logs.",
+                "By using the application's logging framework to log connection pool statistics.",
+                "By monitoring the thread dumps of the application.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All of these mechanisms can offer insight into the connection pool's behavior."
+        },
+        {
+            "id": "q35",
+            "question": "In a multithreaded application, what happens if multiple threads try to acquire a connection from a connection pool concurrently, and the pool is exhausted?",
+            "options": [
+                "All threads will receive the same connection.",
+                "The threads will block or timeout, depending on the configuration.",
+                "The application will automatically create more connections.",
+                "The application will crash."
+            ],
+            "correct": 1,
+            "explanation": "Threads will typically block or timeout while waiting for connections."
+        }
+    ],
+    "hibernate-intro": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using Hibernate over directly using JDBC for database interaction?",
+            "options": [
+                "Faster execution speed",
+                "Simplified object-relational mapping (ORM)",
+                "Better support for stored procedures",
+                "More control over SQL queries"
+            ],
+            "correct": 1,
+            "explanation": "Hibernate provides ORM, reducing boilerplate code and simplifying database interactions by mapping Java objects to database tables."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following is NOT a core interface in Hibernate?",
+            "options": [
+                "Session",
+                "Configuration",
+                "Transaction",
+                "Connection"
+            ],
+            "correct": 3,
+            "explanation": "Connection is a JDBC interface, not a core Hibernate interface. Session, Configuration, and Transaction are all fundamental to Hibernate."
+        },
+        {
+            "id": "q3",
+            "question": "What is the purpose of the `Configuration` object in Hibernate?",
+            "options": [
+                "To manage database transactions",
+                "To store persistent objects",
+                "To load the Hibernate configuration file (hibernate.cfg.xml) and build the SessionFactory",
+                "To execute SQL queries"
+            ],
+            "correct": 2,
+            "explanation": "The Configuration object is responsible for loading and parsing the configuration file, which contains database connection details and mapping information, ultimately creating the SessionFactory."
+        },
+        {
+            "id": "q4",
+            "question": "Which method is typically used to obtain a `Session` object from a `SessionFactory`?",
+            "options": [
+                "getCurrentSession()",
+                "openSession()",
+                "getSession()",
+                "createSession()"
+            ],
+            "correct": 1,
+            "explanation": "openSession() is the standard method used to create a new Session instance. getCurrentSession() provides a session associated with the current thread (requires specific configuration)."
+        },
+        {
+            "id": "q5",
+            "question": "What is the role of the `hibernate.cfg.xml` file?",
+            "options": [
+                "To define the database schema",
+                "To store entity class definitions",
+                "To configure Hibernate settings, such as database connection details and mapping files",
+                "To manage the SessionFactory lifecycle"
+            ],
+            "correct": 2,
+            "explanation": "hibernate.cfg.xml configures Hibernate's settings, including database connection details, dialect, and mapping files."
+        },
+        {
+            "id": "q6",
+            "question": "Which annotation is commonly used to map a Java class to a database table in Hibernate?",
+            "options": [
+                "@Column",
+                "@Table",
+                "@Entity",
+                "@Id"
+            ],
+            "correct": 2,
+            "explanation": "@Entity annotation marks a class as a persistent entity, and @Table specifies the corresponding database table name."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `Transaction` interface in Hibernate?",
+            "options": [
+                "To execute SQL queries",
+                "To manage database transactions (commit, rollback)",
+                "To store persistent objects",
+                "To configure Hibernate settings"
+            ],
+            "correct": 1,
+            "explanation": "The Transaction interface handles database transactions, allowing for commit and rollback operations to ensure data integrity."
+        },
+        {
+            "id": "q8",
+            "question": "Which Hibernate configuration property is used to specify the database dialect?",
+            "options": [
+                "hibernate.connection.driver_class",
+                "hibernate.connection.url",
+                "hibernate.dialect",
+                "hibernate.hbm2ddl.auto"
+            ],
+            "correct": 2,
+            "explanation": "hibernate.dialect specifies the SQL dialect the database is using to optimize the generated queries."
+        },
+        {
+            "id": "q9",
+            "question": "What does the `hbm2ddl.auto` property in Hibernate configuration control?",
+            "options": [
+                "The automatic generation and updating of the database schema.",
+                "The logging level of Hibernate.",
+                "The connection pool size.",
+                "The cache configuration."
+            ],
+            "correct": 0,
+            "explanation": "`hbm2ddl.auto` controls whether Hibernate automatically creates, updates, or validates the database schema based on entity mappings."
+        },
+        {
+            "id": "q10",
+            "question": "What is the primary function of the `Session.save()` method in Hibernate?",
+            "options": [
+                "To retrieve an object from the database.",
+                "To update an existing object in the database.",
+                "To persist a new object to the database.",
+                "To delete an object from the database."
+            ],
+            "correct": 2,
+            "explanation": "The `save()` method persists a new object by assigning it a database-generated identifier and inserting it into the database."
+        },
+        {
+            "id": "q11",
+            "question": "What is the purpose of `Session.load()` in Hibernate?",
+            "options": [
+                "To immediately retrieve an object from the database, throwing an exception if it doesn't exist.",
+                "To retrieve an object from the database, possibly returning a proxy.",
+                "To delete an object from the database.",
+                "To update an object in the database."
+            ],
+            "correct": 1,
+            "explanation": "load() retrieves an object or a proxy; it may throw an exception if the object does not exist when its properties are accessed, not at retrieval time like `get()`."
+        },
+        {
+            "id": "q12",
+            "question": "What is the difference between `Session.get()` and `Session.load()`?",
+            "options": [
+                "`get()` always returns a proxy, `load()` returns an object immediately.",
+                "`load()` always returns a proxy, `get()` returns an object immediately.",
+                "`get()` throws an exception if the object is not found, `load()` returns null.",
+                "`get()` retrieves from the database immediately, while `load()` might return a proxy and load lazily."
+            ],
+            "correct": 3,
+            "explanation": "`get()` immediately fetches the object from the database or returns null if not found. `load()` returns a proxy which might load data lazily, potentially throwing an exception later if the object isn't available."
+        },
+        {
+            "id": "q13",
+            "question": "Which annotation is used to define a primary key in a Hibernate entity?",
+            "options": [
+                "@Column",
+                "@Table",
+                "@Id",
+                "@GeneratedValue"
+            ],
+            "correct": 2,
+            "explanation": "@Id indicates that a field is the primary key of the entity."
+        },
+        {
+            "id": "q14",
+            "question": "What is the function of the `@GeneratedValue` annotation?",
+            "options": [
+                "To specify the column type in the database.",
+                "To configure the primary key generation strategy.",
+                "To define the table name.",
+                "To define the relationship between two entities."
+            ],
+            "correct": 1,
+            "explanation": "`@GeneratedValue` specifies how the primary key values are generated (e.g., auto, identity, sequence)."
+        },
+        {
+            "id": "q15",
+            "question": "Which of the following is a valid `GenerationType` for `@GeneratedValue`?",
+            "options": [
+                "RANDOM",
+                "SEQUENCE",
+                "STRING",
+                "BOOLEAN"
+            ],
+            "correct": 1,
+            "explanation": "SEQUENCE is a valid `GenerationType`. AUTO, IDENTITY, and TABLE are also valid."
+        },
+        {
+            "id": "q16",
+            "question": "What does the term",
+            "options": [
+                "Object Runtime Mapping",
+                "Object Relational Model",
+                "Object Relational Mapping",
+                "Operating Relational Model"
+            ],
+            "correct": 2,
+            "explanation": "ORM stands for Object Relational Mapping, which is a technique for mapping object models to a relational database."
+        },
+        {
+            "id": "q17",
+            "question": "What is the role of the `SessionFactory` in Hibernate?",
+            "options": [
+                "To manage database transactions.",
+                "To create and manage `Session` objects.",
+                "To execute SQL queries.",
+                "To define entity mappings."
+            ],
+            "correct": 1,
+            "explanation": "The `SessionFactory` is a thread-safe, heavy-weight object that is responsible for creating `Session` objects. It's created once and shared."
+        },
+        {
+            "id": "q18",
+            "question": "What is the default transaction isolation level in Hibernate?",
+            "options": [
+                "READ_UNCOMMITTED",
+                "READ_COMMITTED",
+                "REPEATABLE_READ",
+                "SERIALIZABLE"
+            ],
+            "correct": 1,
+            "explanation": "The default transaction isolation level in Hibernate is READ_COMMITTED, ensuring that only committed data is read."
+        },
+        {
+            "id": "q19",
+            "question": "What happens if you forget to close a Hibernate `Session`?",
+            "options": [
+                "The application will crash immediately.",
+                "The session will automatically close after a short time.",
+                "Database resources may be leaked, leading to performance issues and potential connection exhaustion.",
+                "Nothing will happen."
+            ],
+            "correct": 2,
+            "explanation": "Failing to close a session can lead to resource leaks and performance problems because the database connection may not be released."
+        },
+        {
+            "id": "q20",
+            "question": "Which method is used to detach an object from the Hibernate session?",
+            "options": [
+                "evict()",
+                "detach()",
+                "clear()",
+                "refresh()"
+            ],
+            "correct": 0,
+            "explanation": "The `evict()` method detaches an object from the session. `detach()` is also used, but can operate on multiple objects, unlike evict. `clear()` detaches *all* objects."
+        },
+        {
+            "id": "q21",
+            "question": "What is the purpose of the `Session.flush()` method?",
+            "options": [
+                "To close the session.",
+                "To persist all changes made to persistent objects in the session to the database.",
+                "To clear the session's cache.",
+                "To rollback the current transaction."
+            ],
+            "correct": 1,
+            "explanation": "The flush() method synchronizes the persistent state of objects in the session with the database."
+        },
+        {
+            "id": "q22",
+            "question": "What is the benefit of using Hibernate's caching mechanisms?",
+            "options": [
+                "Reduced database load.",
+                "Improved application performance.",
+                "Faster data retrieval.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Caching in Hibernate optimizes performance by storing frequently accessed data in memory, reducing the need to query the database repeatedly."
+        },
+        {
+            "id": "q23",
+            "question": "Which annotation is used to define a one-to-many relationship in Hibernate?",
+            "options": [
+                "@OneToOne",
+                "@ManyToOne",
+                "@OneToMany",
+                "@ManyToMany"
+            ],
+            "correct": 2,
+            "explanation": "@OneToMany is used to define a one-to-many relationship, where one entity can be associated with multiple instances of another entity."
+        },
+        {
+            "id": "q24",
+            "question": "Which of the following is NOT a possible state of a persistent object in Hibernate?",
+            "options": [
+                "Transient",
+                "Persistent",
+                "Detached",
+                "Initialized"
+            ],
+            "correct": 3,
+            "explanation": "The three states are Transient (new, not associated with a session), Persistent (managed by a session), and Detached (previously persistent, now not associated with a session)."
+        },
+        {
+            "id": "q25",
+            "question": "What is lazy loading in Hibernate?",
+            "options": [
+                "Loading associated objects immediately when the parent object is retrieved.",
+                "Loading data only when it is accessed for the first time.",
+                "Loading all data into memory at the start of the application.",
+                "A technique to automatically generate SQL queries."
+            ],
+            "correct": 1,
+            "explanation": "Lazy loading defers the loading of associated objects until they are actually needed, improving performance by avoiding unnecessary database queries."
+        },
+        {
+            "id": "q26",
+            "question": "Which property in `hibernate.cfg.xml` is used to configure the connection pool size?",
+            "options": [
+                "hibernate.connection.pool_size",
+                "hibernate.c3p0.max_size",
+                "hibernate.dbcp.maxActive",
+                "hibernate.connection.provider_class"
+            ],
+            "correct": 2,
+            "explanation": "The appropriate connection pool configuration properties (e.g. hibernate.c3p0.* or hibernate.dbcp.*) are used to control pool settings.  `hibernate.connection.provider_class` specifies the connection provider."
+        },
+        {
+            "id": "q27",
+            "question": "Which interface in Hibernate provides a way to execute native SQL queries?",
+            "options": [
+                "Query",
+                "Criteria",
+                "NativeQuery",
+                "SQLQuery"
+            ],
+            "correct": 0,
+            "explanation": "The `Query` interface is the primary way to execute both HQL and native SQL queries in Hibernate."
+        },
+        {
+            "id": "q28",
+            "question": "What is the purpose of the Hibernate Criteria API?",
+            "options": [
+                "To execute native SQL queries.",
+                "To provide a type-safe way to build dynamic queries.",
+                "To manage database transactions.",
+                "To configure the database connection."
+            ],
+            "correct": 1,
+            "explanation": "The Criteria API allows developers to build queries programmatically, providing a more type-safe and object-oriented approach compared to raw SQL."
+        },
+        {
+            "id": "q29",
+            "question": "What is the main advantage of using HQL (Hibernate Query Language) over native SQL queries?",
+            "options": [
+                "Better performance.",
+                "More control over query optimization.",
+                "Platform independence.",
+                "Direct access to the database schema."
+            ],
+            "correct": 2,
+            "explanation": "HQL is a database-independent query language, so your code doesn't need to change if you switch databases. It operates on entity classes, not on tables directly."
+        },
+        {
+            "id": "q30",
+            "question": "If you are using a second-level cache in Hibernate, where is the cache data stored?",
+            "options": [
+                "In the Session.",
+                "In the application server memory.",
+                "In the database.",
+                "In the SessionFactory."
+            ],
+            "correct": 3,
+            "explanation": "The second-level cache is associated with the SessionFactory and is shared across all sessions.  It is typically implemented using a distributed cache provider."
+        },
+        {
+            "id": "q31",
+            "question": "Which setting in hibernate.cfg.xml, if set to `validate`, will cause Hibernate to perform what action?",
+            "options": [
+                "Create the database schema from the mappings.",
+                "Drop and create the schema.",
+                "Check the schema against the mappings.",
+                "Update the schema if necessary."
+            ],
+            "correct": 2,
+            "explanation": "`validate` checks the schema against the entity mappings without modifying the database."
+        },
+        {
+            "id": "q32",
+            "question": "What is a common cause of the `LazyInitializationException` in Hibernate?",
+            "options": [
+                "Forgetting to configure the database connection.",
+                "Trying to access a lazily-loaded association outside of an open session.",
+                "Incorrect mapping of primary keys.",
+                "An invalid dialect configuration."
+            ],
+            "correct": 1,
+            "explanation": "LazyInitializationException occurs when you attempt to access a lazily-loaded association (e.g., a related object loaded with fetch type LAZY) after the session has been closed."
+        },
+        {
+            "id": "q33",
+            "question": "Which annotation can be used to specify a join table for a many-to-many relationship?",
+            "options": [
+                "@JoinColumn",
+                "@JoinTable",
+                "@ManyToMany",
+                "Both @JoinColumn and @JoinTable"
+            ],
+            "correct": 1,
+            "explanation": "@JoinTable allows you to specify the name and columns of the join table that connects the two entities in a many-to-many relationship."
+        },
+        {
+            "id": "q34",
+            "question": "You are experiencing performance issues with Hibernate. Which of these is the LEAST likely area to investigate first?",
+            "options": [
+                "Incorrect use of eager loading.",
+                "Lack of second-level caching.",
+                "Poorly written HQL queries.",
+                "The database driver version."
+            ],
+            "correct": 3,
+            "explanation": "While the database driver *can* have an impact, it's less likely to be the *first* thing to investigate compared to lazy loading/eager loading, cache, and query performance."
+        },
+        {
+            "id": "q35",
+            "question": "Which of these is a responsibility of a Hibernate interceptor?",
+            "options": [
+                "Managing database connections.",
+                "Intercepting and modifying SQL queries.",
+                "Preventing transactions from committing.",
+                "Creating the SessionFactory."
+            ],
+            "correct": 1,
+            "explanation": "Interceptors allow you to intercept and modify operations like SQL generation, object loading, and persistence lifecycle events, providing custom behavior."
+        }
+    ],
+    "hibernate-config": [
+        {
+            "id": "q1",
+            "question": "Which element within the `hibernate.cfg.xml` file is used to configure the database connection details?",
+            "options": [
+                "`<session-factory>`",
+                "`  <property>`",
+                "`  <mapping>`",
+                "`  <class>`"
+            ],
+            "correct": 1,
+            "explanation": "`  <property>` elements are used to specify database connection parameters like URL, username, and password."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of the `<mapping>` element in `hibernate.cfg.xml`?",
+            "options": [
+                "To define the transaction isolation level.",
+                "To specify the database dialect.",
+                "To link the Hibernate configuration to the entity class mapping files (e.g., `.hbm.xml`).",
+                "To configure the caching strategy."
+            ],
+            "correct": 2,
+            "explanation": "The `<mapping>` element points Hibernate to the XML mapping files or annotated classes that describe how entities map to database tables."
+        },
+        {
+            "id": "q3",
+            "question": "Which annotation is used to specify the table name for an entity class in Hibernate?",
+            "options": [
+                "@Column",
+                "@Id",
+                "@Table",
+                "@Entity"
+            ],
+            "correct": 2,
+            "explanation": "@Table(name ="
+        },
+        {
+            "id": "q4",
+            "question": "What does the `cascade` attribute in a Hibernate mapping (e.g., `@OneToMany`, `@ManyToOne`) control?",
+            "options": [
+                "The order of object creation.",
+                "The lifecycle operations propagated from parent to child entities.",
+                "The type of database join used.",
+                "The data type of the relationship column."
+            ],
+            "correct": 1,
+            "explanation": "The `cascade` attribute determines which operations (e.g., persist, merge, delete) on the parent entity should also be applied to the related child entities."
+        },
+        {
+            "id": "q5",
+            "question": "What is the function of the `sessionFactory` in Hibernate?",
+            "options": [
+                "Manages database connections.",
+                "Creates Session objects.",
+                "Defines the mapping metadata.",
+                "Performs database transactions."
+            ],
+            "correct": 1,
+            "explanation": "The `SessionFactory` is a factory for `Session` instances. It's responsible for creating and managing them."
+        },
+        {
+            "id": "q6",
+            "question": "Which Hibernate configuration property specifies the database dialect to use?",
+            "options": [
+                "hibernate.connection.url",
+                "hibernate.dialect",
+                "hibernate.hbm2ddl.auto",
+                "hibernate.show_sql"
+            ],
+            "correct": 1,
+            "explanation": "hibernate.dialect specifies the SQL dialect for the target database."
+        },
+        {
+            "id": "q7",
+            "question": "In Hibernate, what is the purpose of `hbm2ddl.auto` configuration property?",
+            "options": [
+                "Automatically generates database schema from entity mappings.",
+                "Enables second-level caching.",
+                "Configures the connection pool size.",
+                "Specifies the transaction isolation level."
+            ],
+            "correct": 0,
+            "explanation": "hibernate.hbm2ddl.auto controls automatic schema generation and update based on entity mappings. Possible values are 'create', 'create-drop', 'update', 'validate', and 'none'."
+        },
+        {
+            "id": "q8",
+            "question": "What does the `@Id` annotation signify in Hibernate entity mapping?",
+            "options": [
+                "A foreign key.",
+                "A unique constraint.",
+                "The primary key of the entity.",
+                "A not-null constraint."
+            ],
+            "correct": 2,
+            "explanation": "@Id marks a field as the primary key for the entity."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the `<generator>` element in a Hibernate mapping file (`.hbm.xml`)?",
+            "options": [
+                "Specifies the database connection pool size.",
+                "Defines the strategy for generating primary key values.",
+                "Configures the second-level cache.",
+                "Logs SQL queries."
+            ],
+            "correct": 1,
+            "explanation": "The `<generator>` element defines how primary keys are generated (e.g., `identity`, `sequence`, `uuid`)."
+        },
+        {
+            "id": "q10",
+            "question": "Which of the following is NOT a valid value for the `cascade` attribute in a Hibernate relationship mapping?",
+            "options": [
+                "all",
+                "save-update",
+                "delete",
+                "readonly"
+            ],
+            "correct": 3,
+            "explanation": "read-only is not a valid value for cascade."
+        },
+        {
+            "id": "q11",
+            "question": "What is the significance of the `fetch` attribute in a Hibernate mapping (e.g., `@OneToMany`, `@ManyToOne`)?",
+            "options": [
+                "Defines the batch size for fetching related entities.",
+                "Specifies how related entities are loaded (e.g., eager or lazy).",
+                "Determines the order of columns in the database.",
+                "Configures the database join type (e.g., inner, outer)."
+            ],
+            "correct": 1,
+            "explanation": "The `fetch` attribute controls whether associated entities are loaded eagerly or lazily."
+        },
+        {
+            "id": "q12",
+            "question": "What is the default fetch type for a `@OneToMany` relationship in Hibernate?",
+            "options": [
+                "Eager",
+                "Lazy",
+                "Batch",
+                "Join"
+            ],
+            "correct": 1,
+            "explanation": "By default, `@OneToMany` relationships are lazily fetched."
+        },
+        {
+            "id": "q13",
+            "question": "How can you map a composite key in Hibernate using annotations?",
+            "options": [
+                "Using @IdClass or @EmbeddedId.",
+                "By using @Column with a specific name.",
+                "By declaring a foreign key.",
+                "Using @GeneratedValue(strategy = GenerationType.IDENTITY)."
+            ],
+            "correct": 0,
+            "explanation": "Composite keys can be mapped using @IdClass to refer to a separate class for the key fields or @EmbeddedId to embed the key class within the entity."
+        },
+        {
+            "id": "q14",
+            "question": "Which annotation is used to specify a column name that is different from the field name in an entity?",
+            "options": [
+                "@Id",
+                "@Table",
+                "@Column",
+                "@GeneratedValue"
+            ],
+            "correct": 2,
+            "explanation": "The @Column annotation allows you to specify the column name using the name attribute: @Column(name ="
+        },
+        {
+            "id": "q15",
+            "question": "What is the purpose of the `flushMode` setting in a Hibernate `Session`?",
+            "options": [
+                "To control when Hibernate synchronizes changes to the database.",
+                "To define the caching strategy.",
+                "To configure the database connection pool.",
+                "To enable or disable SQL logging."
+            ],
+            "correct": 0,
+            "explanation": "The `flushMode` determines when the `Session` synchronizes changes to the database (e.g., auto, commit, manual)."
+        },
+        {
+            "id": "q16",
+            "question": "In a Hibernate mapping file (`.hbm.xml`), what does the `<property>` element represent?",
+            "options": [
+                "A database table.",
+                "A foreign key relationship.",
+                "A column in a database table.",
+                "The primary key generator."
+            ],
+            "correct": 2,
+            "explanation": "The `<property>` element maps a property of the entity class to a column in the database table."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the `orphanRemoval` attribute in a `@OneToMany` mapping?",
+            "options": [
+                "To control the cascade operations.",
+                "To automatically delete child entities when they are no longer associated with the parent.",
+                "To specify the fetch type.",
+                "To configure the database join type."
+            ],
+            "correct": 1,
+            "explanation": "`orphanRemoval = true` automatically deletes child entities when they are no longer associated with the parent."
+        },
+        {
+            "id": "q18",
+            "question": "What is the difference between `Session.save()` and `Session.persist()` methods in Hibernate?",
+            "options": [
+                "`save()` returns an identifier immediately, while `persist()` returns void.",
+                " `persist()` is not part of JPA standard, and `save()` is.",
+                "They both perform the same function.",
+                " `save()` is preferred for new entities; `persist()` is preferred for updating existing entities."
+            ],
+            "correct": 0,
+            "explanation": "`save()` returns the generated identifier immediately. `persist()` is preferred for new entities and doesn't return a value, but ensures that the entity is managed in the current persistence context."
+        },
+        {
+            "id": "q19",
+            "question": "What is the role of a `Configuration` object in Hibernate?",
+            "options": [
+                "Manages transactions.",
+                "Creates `Session` objects.",
+                "Loads Hibernate configuration and mapping information.",
 
+                "Executes SQL queries."
+            ],
+            "correct": 2,
+            "explanation": "The `Configuration` object is used to load configuration settings from the `hibernate.cfg.xml` file and mapping information from the mapping files."
+        },
+        {
+            "id": "q20",
+            "question": "What is the purpose of the `Query` interface in Hibernate?",
+            "options": [
+                "To manage database connections.",
+                "To execute HQL (Hibernate Query Language) queries.",
+                "To define entity mappings.",
+                "To configure caching strategies."
+            ],
+            "correct": 1,
+            "explanation": "The `Query` interface is used to execute queries written in HQL or native SQL."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following statements is true about detached entities in Hibernate?",
+            "options": [
+                "Detached entities are managed by the current session.",
+                "Changes to detached entities are automatically synchronized to the database.",
+                "Detached entities are associated with a Session that has been closed.",
+                "Detached entities cannot be reattached to a session."
+            ],
+            "correct": 2,
+            "explanation": "Detached entities are associated with a closed session and are no longer managed by Hibernate, they must be reattached to persist their changes."
+        },
+        {
+            "id": "q22",
+            "question": "What is the purpose of the `<component>` element in a Hibernate mapping file?",
+            "options": [
+                "To define a relationship between entities.",
+                "To map a Java class that represents a component (embeddable object) within another entity.",
+                "To configure the database connection.",
+                "To define a primary key generator."
+            ],
+            "correct": 1,
+            "explanation": "The `<component>` element maps a Java class that represents a component, often an embeddable object, within another entity."
+        },
+        {
+            "id": "q23",
+            "question": "Which Hibernate annotation is used to mark a property as not nullable?",
+            "options": [
+                "@Id",
+                "@Column(nullable = false)",
+                "@NotNull",
+                "@Transient"
+            ],
+            "correct": 1,
+            "explanation": "Using @Column(nullable = false) ensures that the corresponding database column does not accept NULL values."
+        },
+        {
+            "id": "q24",
+            "question": "What happens when you call `Session.evict(entity)` in Hibernate?",
+            "options": [
+                "The entity is deleted from the database.",
+                "The entity is removed from the session's cache, and any changes are discarded.",
+                "The entity is merged with the database state.",
+                "The session is closed."
+            ],
+            "correct": 1,
+            "explanation": "`evict()` removes the entity from the session's cache. Subsequent changes will not be reflected to the database until the entity is managed again."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of the `@GeneratedValue` annotation?",
+            "options": [
+                "To define the table name.",
+                "To specify the primary key generation strategy.",
+                "To define a foreign key.",
+                "To specify the column type."
+            ],
+            "correct": 1,
+            "explanation": "@GeneratedValue is used to configure how the primary key value is generated (e.g., IDENTITY, SEQUENCE, TABLE, UUID, AUTO)."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is true about the Hibernate `Criteria` API?",
+            "options": [
+                "It is a type-safe way to build dynamic queries programmatically.",
+                "It is primarily used for executing native SQL queries.",
+                "It is the preferred way to perform bulk updates and deletes.",
+                "It provides more flexibility for static queries than HQL."
+            ],
+            "correct": 0,
+            "explanation": "The `Criteria` API allows building dynamic queries in a type-safe manner using Java code, avoiding the need to write HQL strings directly."
+        },
+        {
+            "id": "q27",
+            "question": "What is the effect of setting `hibernate.show_sql` to `true` in the configuration?",
+            "options": [
+                "Enables second-level caching.",
+                "Logs all SQL queries to the console or log file.",
+                "Automatically creates the database schema.",
+                "Configures the database dialect."
+            ],
+            "correct": 1,
+            "explanation": "Setting `hibernate.show_sql` to `true` causes Hibernate to log the SQL queries it executes to the console or the configured logging framework."
+        },
+        {
+            "id": "q28",
+            "question": "What is the purpose of the `transient` keyword in Hibernate?",
+            "options": [
+                "To indicate a field should not be persisted to the database.",
+                "To mark a field as a primary key.",
+                "To define a relationship between entities.",
+                "To specify the column type."
+            ],
+            "correct": 0,
+            "explanation": "The `transient` keyword marks a field that should not be persisted to the database.  It's not part of the entity's state managed by Hibernate."
+        },
+        {
+            "id": "q29",
+            "question": "If a `@OneToMany` relationship is set to `fetch = FetchType.EAGER`, what will happen?",
+            "options": [
+                "The associated entities will be loaded only when accessed.",
+                "The associated entities will be loaded immediately when the parent entity is loaded.",
+                "The associated entities will be loaded in batches.",
+                "The relationship will be ignored."
+            ],
+            "correct": 1,
+            "explanation": "With eager fetching, the related entities are loaded along with the parent entity in a single query or a series of queries, depending on the database and the Hibernate configuration."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of the `optimistic-lock` element in a Hibernate mapping file (.hbm.xml)?",
+            "options": [
+                "To enable pessimistic locking for concurrency control.",
+                "To configure Hibernate to use optimistic locking to detect concurrent modifications.",
+                "To enable second-level caching.",
+                "To define the database dialect."
+            ],
+            "correct": 1,
+            "explanation": "The `optimistic-lock` element configures optimistic locking, which prevents concurrent modifications from overwriting each other by checking a version number or timestamp before updating the database."
+        },
+        {
+            "id": "q31",
+            "question": "Consider the following HQL query: `FROM Employee WHERE salary > :salary`. What is the role of `:salary`?",
+            "options": [
+                "It represents a table name.",
+                "It's a named parameter.",
+                "It's a literal value.",
+                "It is a column name."
+            ],
+            "correct": 1,
+            "explanation": "`:salary` is a named parameter in the HQL query. Its value needs to be set using the `setParameter()` method of the `Query` object."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following is NOT a valid value for the `strategy` attribute in the `@GeneratedValue` annotation?",
+            "options": [
+                "IDENTITY",
+                "SEQUENCE",
+                "AUTO",
+                "STRING"
+            ],
+            "correct": 3,
+            "explanation": "STRING is not a valid value for the strategy attribute. Valid options are IDENTITY, SEQUENCE, TABLE, AUTO, and UUID."
+        },
+        {
+            "id": "q33",
+            "question": "You have a `@ManyToOne` relationship with `fetch = FetchType.LAZY`. What happens if you try to access the related entity after the session is closed?",
+            "options": [
+                "The related entity will be loaded from the database.",
+                "A `LazyInitializationException` will be thrown.",
+                "The related entity will be returned as null.",
+                "The relationship will be ignored."
+            ],
+            "correct": 1,
+            "explanation": "With lazy fetching, Hibernate does not load related entities until they are explicitly accessed. If the session is closed, an attempt to access a lazy-loaded entity will result in a `LazyInitializationException`."
+        },
+        {
+            "id": "q34",
+            "question": "What is the difference between `Session.merge()` and `Session.update()`?",
+            "options": [
+                "`update()` updates the entity, while `merge()` creates a new one.",
+                "Both perform the same operations.",
+                "`update()` updates a detached entity, while `merge()` merges the state of a detached entity into the current session.",
+                "`merge()` is JPA specific and update() is not"
+            ],
+            "correct": 2,
+            "explanation": "`update()` attempts to update a detached entity by associating it with the current session. `merge()` merges the state of a detached entity into a persistent instance in the session, and returns the persistent instance."
+        },
+        {
+            "id": "q35",
+            "question": "Consider an entity with a `@Version` field. What is the purpose of this field?",
+            "options": [
+                "To store the primary key value.",
+                "To enable optimistic locking.",
+                "To define the table name.",
+                "To store the creation timestamp."
+            ],
+            "correct": 1,
+            "explanation": "The `@Version` annotation is used for optimistic locking. Hibernate increments the version number each time the entity is updated, helping prevent concurrent modifications."
+        }
+    ],
+    "hibernate-annotations": [
+        {
+            "id": "q1",
+            "question": "Which Hibernate annotation is used to specify the table name for an entity?",
+            "options": [
+                "@Id",
+                "@Column",
+                "@Table",
+                "@Entity"
+            ],
+            "correct": 2,
+            "explanation": "@Table is used to specify the table name, while @Entity marks a class as a persistent entity."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of the @GeneratedValue annotation?",
+            "options": [
+                "To specify a foreign key",
+                "To define the primary key strategy",
+                "To create a new table",
+                "To map a one-to-many relationship"
+            ],
+            "correct": 1,
+            "explanation": "@GeneratedValue is used to define the strategy for generating primary key values (e.g., auto-increment, sequence)."
+        }
+    ],
+    "hql": [
+        {
+            "id": "q1",
+            "question": "Which of the following HQL queries is the most efficient for retrieving a single entity by its ID?",
+            "options": [
+                "SELECT e FROM Employee e WHERE e.id = :id",
+                "FROM Employee WHERE id = :id",
+                "SELECT * FROM Employee WHERE id = :id",
+                "Employee.get(id)"
+            ],
+            "correct": 1,
+            "explanation": "FROM Employee WHERE id = :id is the most concise and direct way to retrieve an entity by ID in HQL, as it leverages Hibernate's internal optimization for primary key lookups."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary difference between using `JOIN FETCH` and a regular `JOIN` in HQL?",
+            "options": [
+                "`JOIN FETCH` avoids the N+1 select problem by eagerly fetching associated entities, while `JOIN` does not.",
+                "`JOIN FETCH` is used for updating data, and `JOIN` is used for reading.",
+                "`JOIN FETCH` always returns a cartesian product, and `JOIN` does not.",
+                "`JOIN FETCH` supports only left joins, and `JOIN` supports all join types."
+            ],
+            "correct": 0,
+            "explanation": "`JOIN FETCH` eagerly fetches associated entities along with the main entity in a single query, preventing the N+1 select problem.  Regular `JOIN` loads associations lazily, potentially leading to multiple database round trips."
+        },
+        {
+            "id": "q3",
+            "question": "Consider the following HQL query: `SELECT e FROM Employee e LEFT JOIN FETCH e.department`. What does it primarily achieve?",
+            "options": [
+                "Retrieves all employees, fetching their departments if they exist, in a single query.",
+                "Deletes employees and their associated departments.",
+                "Updates employee data and department data.",
+                "Creates new employee records and department records."
+            ],
+            "correct": 0,
+            "explanation": "The `LEFT JOIN FETCH` fetches all employee records, and includes associated department information (if available) in the result set, avoiding potential lazy loading issues."
+        },
+        {
+            "id": "q4",
+            "question": "Which HQL clause is used for sorting the results of a query?",
+            "options": [
+                "`WHERE`",
+                "`GROUP BY`",
+                "`ORDER BY`",
+                "`HAVING`"
+            ],
+            "correct": 2,
+            "explanation": "`ORDER BY` is used to specify the sorting order of the results."
+        },
+        {
+            "id": "q5",
+            "question": "In HQL, how can you perform a case-insensitive search?",
+            "options": [
+                "Using `LIKE LOWER(e.name) LIKE LOWER(:name)`",
+                "Using `e.name = :name` (HQL is case-insensitive by default)",
+                "Using `e.name.toLowerCase() = :name.toLowerCase()`",
+                "Using `ILIKE` operator (which is not standard HQL)."
+            ],
+            "correct": 0,
+            "explanation": "The correct way to achieve case-insensitive search is by converting both the attribute and the parameter to lowercase using the `LOWER()` function."
+        },
+        {
+            "id": "q6",
+            "question": "What is the purpose of the `DISTINCT` keyword in HQL?",
+            "options": [
+                "To select all columns from the result set.",
+                "To remove duplicate rows from the result set.",
+                "To sort the result set in ascending order.",
+                "To group the result set based on a specific column."
+            ],
+            "correct": 1,
+            "explanation": "The `DISTINCT` keyword eliminates duplicate rows from the results of the query."
+        },
+        {
+            "id": "q7",
+            "question": "Which HQL function is used to calculate the average value of a numeric column?",
+            "options": [
+                "`SUM()`",
+                "`COUNT()`",
+                "`AVG()`",
+                "`MAX()`"
+            ],
+            "correct": 2,
+            "explanation": "The `AVG()` function calculates the average value of a numeric column."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following is a valid way to specify a parameter in HQL?",
+            "options": [
+                "`WHERE e.name = ?1`",
+                "`WHERE e.name = :name`",
+                "`WHERE e.name = 'name'`",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "The `:name` syntax uses a named parameter in HQL."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the `UPDATE` clause in HQL?",
+            "options": [
+                "To retrieve data from the database.",
+                "To insert new data into the database.",
+                "To modify existing data in the database.",
+                "To delete data from the database."
+            ],
+            "correct": 2,
+            "explanation": "The `UPDATE` clause is used to modify the values of columns in existing rows."
+        },
+        {
+            "id": "q10",
+            "question": "How can you delete data using HQL?",
+            "options": [
+                "Using the `SELECT` clause with a `DELETE` keyword.",
+                "Using the `DELETE` clause, specifying the entity and the `WHERE` condition.",
+                "Using `INSERT` with `DELETE` functionality.",
+                "HQL does not support deleting data."
+            ],
+            "correct": 1,
+            "explanation": "The `DELETE` clause is used to remove entities from the database based on criteria specified in the `WHERE` clause."
+        },
+        {
+            "id": "q11",
+            "question": "What does the `GROUP BY` clause in HQL do?",
+            "options": [
+                "Sorts the results.",
+                "Filters the results.",
+                "Groups rows that have the same values in specified columns.",
+                "Joins tables."
+            ],
+            "correct": 2,
+            "explanation": "The `GROUP BY` clause groups rows based on the specified columns for aggregate operations."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following is NOT a valid aggregate function in HQL?",
+            "options": [
+                "`SUM()`",
+                "`COUNT()`",
+                "`AVG()`",
+                "`CONCAT()`"
+            ],
+            "correct": 3,
+            "explanation": "`CONCAT()` is a string function, not an aggregate function, in HQL."
+        },
+        {
+            "id": "q13",
+            "question": "What is the difference between `WHERE` and `HAVING` clauses in HQL?",
+            "options": [
+                "`WHERE` filters before grouping; `HAVING` filters after grouping.",
+                "`WHERE` filters after grouping; `HAVING` filters before grouping.",
+                "Both are used for filtering the same way.",
+                "`HAVING` is used only for updating data, and `WHERE` is used for retrieving data."
+            ],
+            "correct": 0,
+            "explanation": "`WHERE` filters individual rows before they are grouped, whereas `HAVING` filters groups after they are formed by the `GROUP BY` clause."
+        },
+        {
+            "id": "q14",
+            "question": "Consider the following HQL query: `SELECT e.name, COUNT(e.id) FROM Employee e GROUP BY e.name HAVING COUNT(e.id) > 1`. What does it achieve?",
+            "options": [
+                "Counts the total number of employees.",
+                "Finds employee names that have more than one employee with the same name.",
+                "Lists all employees.",
+                "Updates employee names."
+            ],
+            "correct": 1,
+            "explanation": "This query groups employees by their names and then filters the groups to include only those names that appear more than once."
+        },
+        {
+            "id": "q15",
+            "question": "Which HQL keyword is used to select data from multiple tables?",
+            "options": [
+                "`SELECT`",
+                "`FROM`",
+                "`JOIN`",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All of these are required to perform a query that retrieves data from multiple tables."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is true about HQL and its relationship to the underlying database?",
+            "options": [
+                "HQL is database-specific and needs to be adjusted for each database.",
+                "HQL is database-independent and Hibernate translates it to the appropriate SQL dialect.",
+                "HQL only works with MySQL databases.",
+                "HQL is a replacement for SQL and doesn't interact with the database."
+            ],
+            "correct": 1,
+            "explanation": "HQL is database-independent. Hibernate converts the HQL to the appropriate SQL dialect supported by the database being used."
+        },
+        {
+            "id": "q17",
+            "question": "Which is a disadvantage of using HQL?",
+            "options": [
+                "It's easier to write than raw SQL.",
+                "It's database-independent.",
+                "It may be less performant than hand-tuned SQL in some cases.",
+                "It's less secure than using JDBC directly."
+            ],
+            "correct": 2,
+            "explanation": "While HQL offers database independence and ease of use, hand-tuned SQL queries can sometimes be more performant for complex scenarios, especially with very large datasets, but requires deep database knowledge."
+        },
+        {
+            "id": "q18",
+            "question": "How can you limit the number of results returned by an HQL query?",
+            "options": [
+                "Using the `LIMIT` keyword (though this is database-specific).",
+                "Using the `TOP` keyword.",
+                "Using the `SETMaxResults()` method on the `Query` object.",
+                "Using the `WHERE` clause to filter results."
+            ],
+            "correct": 2,
+            "explanation": "The `SETMaxResults()` method on the `Query` object sets the maximum number of results to be retrieved."
+        },
+        {
+            "id": "q19",
+            "question": "What does the `IS NULL` operator do in HQL?",
+            "options": [
+                "Checks if a value is equal to null.",
+                "Checks if a value is not null.",
+                "Checks if a column exists.",
+                "Throws an error."
+            ],
+            "correct": 0,
+            "explanation": "The `IS NULL` operator checks if a value is null."
+        },
+        {
+            "id": "q20",
+            "question": "What is the purpose of the `IN` operator in HQL?",
+            "options": [
+                "To compare a value with a list of values.",
+                "To perform a case-insensitive comparison.",
+                "To join two tables.",
+                "To group results."
+            ],
+            "correct": 0,
+            "explanation": "The `IN` operator allows you to check if a value is present within a specified list of values."
+        },
+        {
+            "id": "q21",
+            "question": "What is the purpose of the `NOT IN` operator in HQL?",
+            "options": [
+                "To compare a value with a list of values.",
+                "To perform a case-insensitive comparison.",
+                "To join two tables.",
+                "To exclude a value from a list of values."
+            ],
+            "correct": 3,
+            "explanation": "The `NOT IN` operator allows to exclude a value that are present in a specified list of values."
+        },
+        {
+            "id": "q22",
+            "question": "How can you use HQL to perform a subquery?",
+            "options": [
+                "Using a nested `SELECT` statement within a `WHERE` or `FROM` clause.",
+                "Using the `SUBQUERY` keyword.",
+                "Subqueries are not supported in HQL.",
+                "By creating a separate HQL query and using its results."
+            ],
+            "correct": 0,
+            "explanation": "Subqueries are supported in HQL using nested `SELECT` statements within the `WHERE` or `FROM` clause."
+        },
+        {
+            "id": "q23",
+            "question": "Which statement about HQL's support for inheritance is correct?",
+            "options": [
+                "HQL does not support queries that consider inheritance hierarchies.",
+                "HQL can query across inheritance hierarchies using polymorphic queries.",
+                "HQL only supports single-table inheritance.",
+                "HQL requires specific annotations to enable inheritance querying."
+            ],
+            "correct": 1,
+            "explanation": "HQL supports polymorphic queries, allowing you to query across inheritance hierarchies (e.g., retrieve all instances of a base class and its subclasses)."
+        },
+        {
+            "id": "q24",
+            "question": "What is the purpose of the `CASE` expression in HQL?",
+            "options": [
+                "To perform conditional logic within a query.",
+                "To create a new table.",
+                "To define the primary key.",
+                "To specify join conditions."
+            ],
+            "correct": 0,
+            "explanation": "The `CASE` expression allows you to define conditional logic within an HQL query, similar to a `switch` statement."
+        },
+        {
+            "id": "q25",
+            "question": "How can you define a variable for use in HQL?",
+            "options": [
+                "HQL does not support variables.",
+                "Using the `SET` keyword.",
+                "Using the `:name` parameter syntax and passing the value.",
+                "Using the `VAR` keyword."
+            ],
+            "correct": 2,
+            "explanation": "HQL uses named parameters (e.g., `:name`) to represent variables, and the values are supplied when the query is executed."
+        },
+        {
+            "id": "q26",
+            "question": "What is the purpose of the `EXISTS` operator in HQL?",
+            "options": [
+                "To check if a table exists.",
+                "To check if a subquery returns any rows.",
+                "To join tables.",
+                "To calculate the sum of values."
+            ],
+            "correct": 1,
+            "explanation": "The `EXISTS` operator checks whether a subquery returns any rows."
+        },
+        {
+            "id": "q27",
+            "question": "What is the difference between `HQL` and `JPQL`?",
+            "options": [
+                "HQL is database-specific, while JPQL is a standard.",
+                "JPQL is a specification; HQL is an implementation within Hibernate.",
+                "HQL is a subset of JPQL.",
+                "There is no difference, they are interchangeable terms."
+            ],
+            "correct": 1,
+            "explanation": "JPQL (Java Persistence Query Language) is the specification, and HQL (Hibernate Query Language) is the implementation of that specification within the Hibernate framework."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following is NOT an HQL supported Join type?",
+            "options": [
+                "INNER JOIN",
+                "LEFT JOIN",
+                "RIGHT JOIN",
+                "FULL JOIN"
+            ],
+            "correct": 3,
+            "explanation": "While HQL supports many join types, the standard does not have a direct `FULL JOIN` keyword but uses `LEFT JOIN` combined with `UNION` to achieve the same results."
+        },
+        {
+            "id": "q29",
+            "question": "Consider the following HQL:  `SELECT e FROM Employee e WHERE e.department.name = :deptName`.  What is required for this query to function correctly?",
+            "options": [
+                "A separate table for Department.",
+                "An association mapped between Employee and Department.",
+                "A database trigger on the Employee table.",
+                "The `deptName` parameter must be a numeric value."
+            ],
+            "correct": 1,
+            "explanation": "This query assumes an association (relationship) between the Employee and Department entities.  `e.department` accesses the related Department object."
+        },
+        {
+            "id": "q30",
+            "question": "Which HQL feature can improve performance by reducing the number of database queries?",
+            "options": [
+                "Using raw SQL queries.",
+                "Eager fetching using `JOIN FETCH`",
+                "Using the `WHERE` clause to filter results.",
+                "Deleting unused entities."
+            ],
+            "correct": 1,
+            "explanation": "`JOIN FETCH` reduces the number of database queries by eagerly fetching associated entities within the same query."
+        },
+        {
+            "id": "q31",
+            "question": "In a scenario where you have a large dataset and need to retrieve only a subset of records, which technique should you primarily employ in HQL for optimization?",
+            "options": [
+                "Using `SELECT *` to retrieve all columns.",
+                "Using pagination with `SETFirstResult()` and `setMaxResults()`.",
+                "Retrieving all records and filtering in application code.",
+                "Using `GROUP BY` to pre-aggregate data."
+            ],
+            "correct": 1,
+            "explanation": "Pagination, using `SETFirstResult()` and `setMaxResults()`, is the most suitable optimization strategy for handling large datasets and retrieving only a subset of records in a performant manner."
+        },
+        {
+            "id": "q32",
+            "question": "What is the recommended approach for handling database transactions when using HQL with Hibernate?",
+            "options": [
+                "Manually managing transactions using JDBC connections.",
+                "Using Hibernate's `Transaction` API.",
+                "Disabling transaction management to improve performance.",
+                "Relying on the database's auto-commit feature."
+            ],
+            "correct": 1,
+            "explanation": "Hibernate's `Transaction` API (e.g., `Session.beginTransaction()`, `Transaction.commit()`, `Transaction.rollback()`) provides a convenient and Hibernate-aware way to manage database transactions."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following best describes the role of `Criteria` API vs HQL?",
+            "options": [
+                "Criteria API is a more powerful and efficient way to construct dynamic queries compared to HQL.",
+                "HQL is a more verbose and type-safe alternative to Criteria API.",
+                "Criteria API provides a programmatic way to build queries; HQL uses a string-based approach.",
+                "They are completely unrelated and serve different purposes in Hibernate."
+            ],
+            "correct": 2,
+            "explanation": "Criteria API offers a programmatic way to build queries, leveraging Java code and avoiding string-based query construction, providing compile-time safety. HQL utilizes string-based queries."
+        },
+        {
+            "id": "q34",
+            "question": "What is the purpose of the `FLUSH` operation in Hibernate, and how does it relate to HQL?",
+            "options": [
+                "It synchronizes the database with the current state of the persistent objects in the session. HQL queries automatically trigger a flush before execution.",
+                "It executes HQL queries immediately, bypassing the session's caching mechanism.",
+                "It clears the session's cache and discards all managed entities.",
+                "It is used exclusively for deleting objects and has no relationship with HQL."
+            ],
+            "correct": 0,
+            "explanation": "The `FLUSH` operation synchronizes the database with the current state of the persistent objects. HQL queries, if they involve database operations, will often trigger a `FLUSH` before execution to ensure the latest data is used."
+        },
+        {
+            "id": "q35",
+            "question": "Consider a scenario where you have a `Customer` entity and an `Order` entity with a one-to-many relationship. You want to retrieve all `Customer` objects and their associated `Order` objects. Which is a potential problem if you use HQL without careful consideration?",
+            "options": [
+                "The query will only return the `Order` objects, not the `Customer` objects.",
+                "The N+1 select problem, where retrieving the orders will lead to multiple database queries for each customer.",
+                "You cannot query for both entities in the same HQL query.",
+                "The query will always be extremely fast regardless of the data size."
+            ],
+            "correct": 1,
+            "explanation": "Without proper handling, such as `JOIN FETCH`, the retrieval of associated `Order` objects might trigger the N+1 select problem. This means that for each `Customer` retrieved, a separate query will be issued to fetch its associated `Order`s, significantly impacting performance."
+        }
+    ],
+    "hibernate-cache": [
+        {
+            "id": "q1",
+            "question": "Which Hibernate cache is primarily designed for caching frequently accessed read-only data that rarely changes?",
+            "options": [
+                "Second-level cache",
+                "Query cache",
+                "First-level cache",
+                "Transaction cache"
+            ],
+            "correct": 0,
+            "explanation": "The second-level cache is ideal for caching data that doesn't change often, as it's shared across multiple sessions."
+        },
+        {
+            "id": "q2",
+            "question": "What is the default scope of Hibernate's first-level cache?",
+            "options": [
+                "Session",
+                "SessionFactory",
+                "Transaction",
+                "Application"
+            ],
+            "correct": 0,
+            "explanation": "The first-level cache is associated with a specific Session, meaning it's session-scoped."
+        },
+        {
+            "id": "q3",
+            "question": "When a database record changes, what is the typical eviction strategy for cached data in a second-level cache configured with 'transactional' strategy?",
+            "options": [
+                "Immediate eviction upon transaction commit or rollback",
+                "Eviction after a fixed timeout",
+                "Eviction only on application restart",
+                "No eviction, data remains cached until application shutdown"
+            ],
+            "correct": 0,
+            "explanation": "With the 'transactional' strategy, the cache is updated (evicted and reloaded) at the end of the transaction to ensure data consistency."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a common caching strategy for a second-level cache in Hibernate?",
+            "options": [
+                "Read-write",
+                "Nonstrict-read-write",
+                "Transactional",
+                "FIFO"
+            ],
+            "correct": 3,
+            "explanation": "FIFO (First-In, First-Out) is not a standard caching strategy offered by Hibernate. Read-write, nonstrict-read-write, and transactional are common strategies."
+        },
+        {
+            "id": "q5",
+            "question": "What is the primary purpose of using the Query Cache in Hibernate?",
+            "options": [
+                "To cache the result of a SQL query",
+                "To cache the SQL query itself",
+                "To cache the Hibernate configuration",
+                "To cache database connection objects"
+            ],
+            "correct": 0,
+            "explanation": "The query cache caches the result sets of queries, reducing database load."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following interfaces is crucial for integrating a second-level cache provider (e.g., Ehcache, Infinispan) with Hibernate?",
+            "options": [
+                "Cache",
+                "CacheRegion",
+                "CacheProvider",
+                "SessionFactory"
+            ],
+            "correct": 2,
+            "explanation": "The CacheProvider interface defines the contract for integrating a caching solution."
+        },
+        {
+            "id": "q7",
+            "question": "In Hibernate, which configuration property enables the second-level cache?",
+            "options": [
+                "hibernate.cache.use_second_level_cache",
+                "hibernate.cache.provider_class",
+                "hibernate.query.use_query_cache",
+                "hibernate.cache.region.factory_class"
+            ],
+            "correct": 0,
+            "explanation": "This property globally enables or disables the use of the second-level cache."
+        },
+        {
+            "id": "q8",
+            "question": "When would you typically use the 'nonstrict-read-write' caching strategy?",
+            "options": [
+                "When data rarely changes",
+                "When data is frequently updated by multiple users",
+                "When high data consistency is critical",
+                "When only read operations occur"
+            ],
+            "correct": 1,
+            "explanation": "This strategy is appropriate when updates are infrequent and eventual consistency is acceptable."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following correctly describes the interaction between first-level and second-level caches?",
+            "options": [
+                "The first-level cache always checks the second-level cache first.",
+                "The second-level cache always checks the first-level cache first.",
+                "If an entity isn't found in the first-level cache, Hibernate checks the second-level cache.",
+                "The caches are independent and don't interact directly."
+            ],
+            "correct": 2,
+            "explanation": "Hibernate first checks the session-level cache. If the entity isn't there, it consults the second-level cache (if enabled)."
+        },
+        {
+            "id": "q10",
+            "question": "What is the primary benefit of using a second-level cache for a many-to-one relationship?",
+            "options": [
+                "Caching the IDs of the related entities",
+                "Caching the entire related entities to avoid multiple database queries",
+                "Caching the queries themselves",
+                "Preventing cascading deletes"
+            ],
+            "correct": 1,
+            "explanation": "Caching related entities significantly reduces database round trips when navigating relationships."
+        },
+        {
+            "id": "q11",
+            "question": "Which method, used with `Query` or `Criteria`, must be called to enable query caching?",
+            "options": [
+                "setCacheable(true)",
+                "setCacheRegion(",
+                ")",
+                "setCacheMode(CacheMode.NORMAL)",
+                "setCache(true)"
+            ],
+            "correct": 0,
+            "explanation": "Enabling query caching requires setting the 'setCacheable' flag to true."
+        },
+        {
+            "id": "q12",
+            "question": "If a cached entity is updated directly in the database (outside of Hibernate), what potential issue could arise?",
+            "options": [
+                "Stale data in the second-level cache",
+                "Concurrent modification exceptions",
+                "Performance improvement due to prefetching",
+                "Deadlock situations"
+            ],
+            "correct": 0,
+            "explanation": "The cached entity in the second-level cache might be out of sync with the database, leading to stale data."
+        },
+        {
+            "id": "q13",
+            "question": "What is the purpose of the `@Cache` annotation in Hibernate?",
+            "options": [
+                "To specify the cache provider to use.",
+                "To configure the caching strategy and region for an entity or collection.",
+                "To enable query caching at the entity level.",
+                "To control the eviction policy of the cache."
+            ],
+            "correct": 1,
+            "explanation": "The @Cache annotation is used to define the caching behavior (strategy and region) for an entity."
+        },
+        {
+            "id": "q14",
+            "question": "Which of the following is NOT a valid caching strategy for collections (e.g., `List`, `Set`) when using the `@Cache` annotation?",
+            "options": [
+                "Read-write",
+                "Nonstrict-read-write",
+                "Transactional",
+                "All of these are valid"
+            ],
+            "correct": 3,
+            "explanation": "All strategies are valid for collections, allowing you to tailor caching behavior based on data access patterns."
+        },
+        {
+            "id": "q15",
+            "question": "What happens when you try to persist an entity that exists in the second-level cache?",
+            "options": [
+                "The entity is overwritten in the cache.",
+                "An exception is thrown.",
+                "The cache is invalidated and the entity is reloaded.",
+                "Nothing; the entity remains cached."
+            ],
+            "correct": 2,
+            "explanation": "Persisting an entity updates the cache (if present), ensuring data consistency."
+        },
+        {
+            "id": "q16",
+            "question": "What configuration parameter specifies the cache region factory class?",
+            "options": [
+                "hibernate.cache.provider_class",
+                "hibernate.cache.region.factory_class",
+                "hibernate.cache.use_second_level_cache",
+                "hibernate.cache.use_query_cache"
+            ],
+            "correct": 1,
+            "explanation": "This parameter specifies the class responsible for creating the cache regions (e.g., EhcacheRegionFactory, InfinispanRegionFactory)."
+        },
+        {
+            "id": "q17",
+            "question": "Which Hibernate cache is most useful for caching results of computationally expensive queries?",
+            "options": [
+                "First-level cache",
+                "Second-level cache",
+                "Query cache",
+                "Transaction cache"
+            ],
+            "correct": 2,
+            "explanation": "The Query Cache caches query results, thereby reducing database load for repeated queries."
+        },
+        {
+            "id": "q18",
+            "question": "If you are using a distributed cache provider like Infinispan, what is a key benefit?",
+            "options": [
+                "Improved performance for local caching only",
+                "Data can be replicated across multiple nodes for high availability.",
+                "Reduced memory usage on the server.",
+                "Simpler configuration compared to other providers"
+            ],
+            "correct": 1,
+            "explanation": "Distributed caches provide data redundancy, enabling high availability and fault tolerance."
+        },
+        {
+            "id": "q19",
+            "question": "Consider a scenario where multiple threads are reading and writing to the same cached entity using 'read-write' strategy.  What's a potential concern?",
+            "options": [
+                "Performance bottleneck due to locking mechanisms.",
+                "Data corruption due to concurrent modifications.",
+                "Cache is evicted frequently.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "The 'read-write' strategy uses locks to prevent data inconsistencies.  This can become a performance bottleneck, and if the data changes too often, it can cause frequent eviction, and may not prevent data corruption if implemented incorrectly."
+        },
+        {
+            "id": "q20",
+            "question": "Which cache invalidation strategy offers the strongest consistency, but potentially at the cost of performance?",
+            "options": [
+                "Nonstrict-read-write",
+                "Read-write",
+                "Transactional",
+                "None of the above"
+            ],
+            "correct": 2,
+            "explanation": "The 'transactional' strategy ensures cache updates (evictions) at the end of each transaction, guaranteeing consistency."
+        },
+        {
+            "id": "q21",
+            "question": "Which Hibernate setting is crucial for enabling the query cache's use?",
+            "options": [
+                "hibernate.cache.use_query_cache",
+                "hibernate.cache.provider_class",
+                "hibernate.cache.region.factory_class",
+                "hibernate.use_second_level_cache"
+            ],
+            "correct": 0,
+            "explanation": "This setting enables the query cache to function."
+        },
+        {
+            "id": "q22",
+            "question": "If you enable the second-level cache but omit a cache region name, what will happen?",
+            "options": [
+                "Hibernate will use a default region.",
+                "An exception will be thrown.",
+                "The cache will not work.",
+                "The application will run slower, but the cache will still function with a single region."
+            ],
+            "correct": 0,
+            "explanation": "Hibernate typically uses a default region if no region name is provided."
+        },
+        {
+            "id": "q23",
+            "question": "What is the purpose of the `evict()` method on the Hibernate `Session` object when related to the first-level cache?",
+            "options": [
+                "To remove an entity from the second-level cache.",
+                "To remove all entities from the session.",
+                "To remove a specific entity from the session's first-level cache.",
+                "To clear the query cache."
+            ],
+            "correct": 2,
+            "explanation": "The `evict()` method removes an entity from the Session's first-level cache. This is useful to refresh from the database."
+        },
+        {
+            "id": "q24",
+            "question": "How do you clear the entire second-level cache in Hibernate?",
+            "options": [
+                "session.clear()",
+                "sessionFactory.evict(entityClass)",
+                "sessionFactory.getCache().evictAll()",
+                "session.flush()"
+            ],
+            "correct": 2,
+            "explanation": "The `sessionFactory.getCache().evictAll()` is the appropriate method."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of a cache region in Hibernate?",
+            "options": [
+                "To define the scope of a transaction.",
+                "To organize cached data and control its behavior (e.g., eviction policy).",
+                "To store configuration settings for the cache provider.",
+                "To enable distributed caching."
+            ],
+            "correct": 1,
+            "explanation": "Cache regions allow for fine-grained control over caching behavior."
+        },
+        {
+            "id": "q26",
+            "question": "What can cause the Hibernate session's first-level cache to be cleared automatically?",
+            "options": [
+                "Calling `session.flush()`, Committing the transaction, Calling `session.clear()`, All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Flush, commit, and clear operations trigger clearing the first-level cache."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following factors influence a good caching strategy in hibernate?",
+            "options": [
+                "Data volatility",
+                "Data Size",
+                "Data access frequency",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All factors are key when designing caching strategies."
+        },
+        {
+            "id": "q28",
+            "question": "What happens if a cached entity changes outside the Hibernate context (e.g., directly in the database) when using a 'read-write' cache strategy?",
+            "options": [
+                "Hibernate automatically detects the change and updates the cache.",
+                "The cached entity may become stale, and you might encounter data inconsistencies.",
+                "Hibernate throws an exception.",
+                "Nothing happens, and the entity remains in the cache."
+            ],
+            "correct": 1,
+            "explanation": "The 'read-write' strategy can result in stale data if external changes occur, thus the correct response is 'The cached entity may become stale, and you might encounter data inconsistencies.'"
+        },
+        {
+            "id": "q29",
+            "question": "Which Hibernate Cache strategy provides the best performance, but at the risk of data inconsistency if not implemented correctly?",
+            "options": [
+                "Read-write",
+                "Nonstrict-read-write",
+                "Transactional",
+                "None of the above"
+            ],
+            "correct": 1,
+            "explanation": "Nonstrict-read-write prioritizes performance by avoiding strict locking, which can result in performance benefits, but increases the risk of stale data if the updates are not synchronized properly."
+        },
+        {
+            "id": "q30",
+            "question": "What's the purpose of the 'region-prefix' configuration property (e.g., `hibernate.cache.region_prefix`) in Hibernate?",
+            "options": [
+                "To define the cache provider to use.",
+                "To allow you to group similar cache regions under a single name.",
+                "To prefix cache region names, allowing for logical organization and isolation.",
+                "To set the cache eviction policy."
+            ],
+            "correct": 2,
+            "explanation": "The `region_prefix` property helps to organize cache regions and can be useful for modularization, particularly in complex applications or multi-tenant environments."
+        },
+        {
+            "id": "q31",
+            "question": "When using Hibernate's query cache, what type of data is typically stored in the cache?",
+            "options": [
+                "The actual SQL query itself.",
+                "The objects retrieved by the query, or a set of object ids.",
+                "The database connection details.",
+                "The Hibernate configuration."
+            ],
+            "correct": 1,
+            "explanation": "The query cache stores the results of the query (i.e., the entity objects or entity IDs) or the list of their IDs, depending on configuration, to reduce database load."
+        },
+        {
+            "id": "q32",
+            "question": "How does Hibernate handle caching when using a composite key?",
+            "options": [
+                "It doesn't support caching for entities with composite keys.",
+                "It caches the entire composite key object as the cache key.",
+                "It caches each part of the composite key separately.",
+                "It relies on the default caching strategy without any special handling."
+            ],
+            "correct": 1,
+            "explanation": "Hibernate uses the entire composite key object to generate a cache key."
+        },
+        {
+            "id": "q33",
+            "question": "What is the impact of disabling the second-level cache on performance?",
+            "options": [
+                "Always improves performance.",
+                "Always degrades performance.",
+                "Can improve or degrade performance, depending on the application's access patterns.",
+                "Has no impact on performance."
+            ],
+            "correct": 2,
+            "explanation": "Disabling the cache might hurt performance, if data is retrieved repeatedly."
+        },
+        {
+            "id": "q34",
+            "question": "Which of the following is a potential drawback of caching frequently updated data?",
+            "options": [
+                "Increased read performance.",
+                "Reduced database load.",
+                "Potential data staleness.",
+                "Faster application startup."
+            ],
+            "correct": 2,
+            "explanation": "Frequent updates can lead to stale data if the cache is not updated correctly."
+        },
+        {
+            "id": "q35",
+            "question": "In which scenario would disabling Hibernate's caching mechanism might be more beneficial?",
+            "options": [
+                "When dealing with predominantly static or read-only data.",
+                "When the application requires the highest possible data consistency and real-time updates are critical.",
+                "In an environment with a very large dataset with limited memory resources.",
+                "When the application performs complex, infrequently executed queries."
+            ],
+            "correct": 1,
+            "explanation": "When data consistency is paramount and real-time updates are essential, disabling caching is typically chosen to avoid potential data staleness or inconsistencies that might result from caching."
+        }
+    ],
+    //Spring Framework
+    "spring-overview": [
+        {
+            "id": "q1",
+            "question": "Which of the following is NOT a core module of the Spring Framework?",
+            "options": [
+                "Spring Core",
+                "Spring JDBC",
+                "Spring Web",
+                "Spring Batch"
+            ],
+            "correct": 3,
+            "explanation": "Spring Batch is a separate module, not a core module. Core modules are foundational and include Spring Core, Spring Context, and Spring Beans."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary responsibility of the Spring IoC container?",
+            "options": [
+                "Managing database connections",
+                "Managing bean lifecycle and dependencies",
+                "Handling HTTP requests",
+                "Performing unit testing"
+            ],
+            "correct": 1,
+            "explanation": "The IoC container is responsible for instantiating, configuring, and managing the lifecycle of beans, and injecting their dependencies."
+        },
+        {
+            "id": "q3",
+            "question": "Which annotation is used to mark a class as a Spring-managed bean?",
+            "options": [
+                "@Component",
+                "@Service",
+                "@Repository",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "@Component, @Service, and @Repository are all stereotypes that mark a class as a Spring-managed bean. They are specializations of @Component."
+        },
+        {
+            "id": "q4",
+            "question": "In Spring, what does the term 'bean' refer to?",
+            "options": [
+                "A data transfer object",
+                "An instance of a class managed by the Spring IoC container",
+                "A method within a class",
+                "A database table"
+            ],
+            "correct": 1,
+            "explanation": "A bean is an object instantiated, managed, and injected by the Spring IoC container."
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following best describes Spring's approach to dependency injection?",
+            "options": [
+                "Compile-time injection",
+                "Runtime injection",
+                "Static injection",
+                "Manual injection only"
+            ],
+            "correct": 1,
+            "explanation": "Spring performs dependency injection at runtime using reflection to create and wire objects."
+        },
+        {
+            "id": "q6",
+            "question": "What is the main advantage of using Spring's dependency injection?",
+            "options": [
+                "Increased code complexity",
+                "Reduced testability",
+                "Improved code maintainability and testability",
+                "Faster application startup time"
+            ],
+            "correct": 2,
+            "explanation": "Dependency injection promotes loose coupling, making code easier to test, maintain, and modify."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following is NOT a benefit of using the Spring Framework?",
+            "options": [
+                "Simplified application development",
+                "Reduced boilerplate code",
+                "Increased code coupling",
+                "Improved testability"
+            ],
+            "correct": 2,
+            "explanation": "Spring aims to reduce coupling, not increase it. Increased coupling is generally undesirable in software design."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of a Spring configuration file (e.g., applicationContext.xml)?",
+            "options": [
+                "To define the database schema",
+                "To configure Spring beans and their dependencies",
+                "To store application log messages",
+                "To define user interfaces"
+            ],
+            "correct": 1,
+            "explanation": "Spring configuration files provide instructions to the Spring container on how to create and assemble application components."
+        },
+        {
+            "id": "q9",
+            "question": "What is the primary difference between Spring's `@Autowired` annotation and XML-based dependency injection?",
+            "options": [
+                "`@Autowired` is less readable.",
+                "XML is more concise",
+                "`@Autowired` is annotation-based and requires less configuration",
+                "XML is more flexible for complex configurations."
+            ],
+            "correct": 2,
+            "explanation": "`@Autowired` provides a more concise way to inject dependencies, requiring less XML configuration, thereby reducing boilerplate code."
+        },
+        {
+            "id": "q10",
+            "question": "Which Spring module provides support for data access?",
+            "options": [
+                "Spring Web",
+                "Spring Core",
+                "Spring Data Access",
+                "Spring AOP"
+            ],
+            "correct": 2,
+            "explanation": "Spring Data Access module provides integration with various data access technologies (JDBC, JPA, etc.)."
+        },
+        {
+            "id": "q11",
+            "question": "True or False: Spring Framework supports only XML-based configuration.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "False: Spring supports XML, annotation-based, and Java-based configuration."
+        },
+        {
+            "id": "q12",
+            "question": "What design pattern does Spring extensively utilize?",
+            "options": [
+                "Factory pattern",
+                "Singleton pattern",
+                "Strategy pattern",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Spring leverages the Factory, Singleton, and Strategy patterns for managing beans, their lifecycles, and behaviors."
+        },
+        {
+            "id": "q13",
+            "question": "Which Spring module is responsible for transaction management?",
+            "options": [
+                "Spring Core",
+                "Spring JDBC",
+                "Spring Transaction",
+                "Spring Web MVC"
+            ],
+            "correct": 2,
+            "explanation": "Spring Transaction module provides declarative and programmatic transaction management capabilities."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of Spring's AOP module?",
+            "options": [
+                "To handle user interface interactions",
+                "To manage database connections",
+                "To implement cross-cutting concerns like logging and security",
+                "To handle HTTP requests"
+            ],
+            "correct": 2,
+            "explanation": "AOP allows developers to add functionality like logging, security, and transaction management to their code without modifying the core business logic."
+        },
+        {
+            "id": "q15",
+            "question": "Which annotation is used to inject dependencies using constructor injection in Spring?",
+            "options": [
+                "@Autowired",
+                "@Resource",
+                "@Inject",
+                "None of the above"
+            ],
+            "correct": 0,
+            "explanation": "@Autowired, @Resource, and @Inject can be used for dependency injection. @Autowired is the most common and can be used in constructors, setters, and fields."
+        },
+        {
+            "id": "q16",
+            "question": "What is the default scope of a Spring-managed bean?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 0,
+            "explanation": "The default scope for a Spring-managed bean is 'singleton'."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following is NOT a valid bean scope in Spring?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "global"
+            ],
+            "correct": 3,
+            "explanation": "There's no 'global' scope defined in the core Spring framework. Common scopes are singleton, prototype, request, session, and application."
+        },
+        {
+            "id": "q18",
+            "question": "What is the purpose of Spring MVC?",
+            "options": [
+                "To build web applications",
+                "To manage database transactions",
+                "To handle dependency injection",
+                "To configure security"
+            ],
+            "correct": 0,
+            "explanation": "Spring MVC is a module within Spring used to build web applications, providing features for request handling, view rendering, and more."
+        },
+        {
+            "id": "q19",
+            "question": "In Spring, what is a 'context'?",
+            "options": [
+                "A database connection",
+                "A Spring IoC container instance",
+                "A user session",
+                "A web server"
+            ],
+            "correct": 1,
+            "explanation": "A context (ApplicationContext) is the core interface of the Spring IoC container, which manages beans."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following is used to enable Aspect-Oriented Programming in Spring?",
+            "options": [
+                "@Service",
+                "@Repository",
+                "@Aspect",
+                "@Controller"
+            ],
+            "correct": 2,
+            "explanation": "@Aspect is used in conjunction with other annotations to define aspects."
+        },
+        {
+            "id": "q21",
+            "question": "What is the advantage of using Java-based configuration (instead of XML) in Spring?",
+            "options": [
+                "More verbose",
+                "More readable and type-safe",
+                "Less flexible",
+                "Requires more external dependencies"
+            ],
+            "correct": 1,
+            "explanation": "Java-based configuration allows for type safety, refactoring support, and better readability than XML."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following is NOT a Spring stereotype annotation?",
+            "options": [
+                "@Component",
+                "@Service",
+                "@Repository",
+                "@Bean"
+            ],
+            "correct": 3,
+            "explanation": "@Bean is used to declare a method that creates a bean, while @Component, @Service, and @Repository are stereotypes for class-level bean declaration."
+        },
+        {
+            "id": "q23",
+            "question": "What is the purpose of the `@Value` annotation in Spring?",
+            "options": [
+                "To inject dependencies",
+                "To configure bean scopes",
+                "To inject property values into fields",
+                "To define aspect-oriented programming aspects"
+            ],
+            "correct": 2,
+            "explanation": "`@Value` is used to inject values from properties files or directly into fields."
+        },
+        {
+            "id": "q24",
+            "question": "Which component is responsible for managing the lifecycle of Spring beans?",
+            "options": [
+                "Spring MVC",
+                "Spring IoC container",
+                "Spring AOP",
+                "Spring Data"
+            ],
+            "correct": 1,
+            "explanation": "The Spring IoC container manages the lifecycle of beans."
+        },
+        {
+            "id": "q25",
+            "question": "What is the difference between `@Autowired` and `@Resource` annotations in Spring?",
+            "options": [
+                "@Autowired is JSR-250, @Resource is Spring specific.",
+                "@Resource is JSR-250, @Autowired is Spring specific.",
+                "@Autowired uses byType, @Resource uses byName or byType.",
+                "There is no difference"
+            ],
+            "correct": 2,
+            "explanation": "@Autowired uses byType by default, while @Resource uses byName by default. @Resource is a part of the JSR-250 standard."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is an advantage of using Spring's `RestTemplate`?",
+            "options": [
+                "It is tightly coupled with other components",
+                "It simplifies making HTTP requests",
+                "It is only used for internal communication",
+                "It does not support JSON format"
+            ],
+            "correct": 1,
+            "explanation": "RestTemplate simplifies making HTTP requests by providing convenient methods for interacting with RESTful services."
+        },
+        {
+            "id": "q27",
+            "question": "Which of the following is NOT a part of the Spring Web MVC framework?",
+            "options": [
+                "DispatcherServlet",
+                "ViewResolver",
+                "Model",
+                "EntityManager"
+            ],
+            "correct": 3,
+            "explanation": "EntityManager is a JPA concept, not part of the Spring Web MVC framework."
+        },
+        {
+            "id": "q28",
+            "question": "Which annotation is used to define a method that produces a bean?",
+            "options": [
+                "@Component",
+                "@Service",
+                "@Bean",
+                "@Repository"
+            ],
+            "correct": 2,
+            "explanation": "@Bean is used within a @Configuration class to define a bean creation method."
+        },
+        {
+            "id": "q29",
+            "question": "True or False: Spring Framework supports only singleton scope for beans.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "False. Spring supports multiple scopes like singleton, prototype, request, session etc."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of `Spring Boot`?",
+            "options": [
+                "To provide security features",
+                "To simplify the setup and development of Spring applications",
+                "To handle database transactions",
+                "To create user interfaces"
+            ],
+            "correct": 1,
+            "explanation": "Spring Boot simplifies Spring application setup by providing auto-configuration and reduced configuration requirements."
+        },
+        {
+            "id": "q31",
+            "question": "Which interface is the root interface for Spring's IoC container?",
+            "options": [
+                "ApplicationContext",
+                "BeanFactory",
+                "ConfigurableApplicationContext",
+                "BeanDefinitionRegistry"
+            ],
+            "correct": 1,
+            "explanation": "BeanFactory is the root interface providing the fundamental functionality of a Spring IoC container."
+        },
+        {
+            "id": "q32",
+            "question": "What is a 'cross-cutting concern' in the context of AOP?",
+            "options": [
+                "A business logic",
+                "A functionality that affects multiple points in an application",
+                "A database connection",
+                "A user interface element"
+            ],
+            "correct": 1,
+            "explanation": "Cross-cutting concerns are functionalities that apply to multiple parts of an application, such as logging, security, and transaction management."
+        },
+        {
+            "id": "q33",
+            "question": "Which Spring module provides support for integration with messaging systems (e.g., JMS, AMQP)?",
+            "options": [
+                "Spring Web",
+                "Spring Core",
+                "Spring Messaging",
+                "Spring Data"
+            ],
+            "correct": 2,
+            "explanation": "Spring Messaging provides support for integration with messaging systems."
+        },
+        {
+            "id": "q34",
+            "question": "What is a 'proxy' in the context of Spring AOP?",
+            "options": [
+                "The original object",
+                "An object that intercepts method calls and applies aspects",
+                "A database connection",
+                "A web server"
+            ],
+            "correct": 1,
+            "explanation": "Spring AOP uses proxies to intercept method calls and apply aspects before, after, or around the original method execution."
+        },
+        {
+            "id": "q35",
+            "question": "Which annotation is used to specify the order in which aspects are applied?",
+            "options": [
+                "@Aspect",
+                "@Order",
+                "@Before",
+                "@After"
+            ],
+            "correct": 1,
+            "explanation": "@Order is used to define the precedence of aspects in Spring AOP when multiple aspects are applicable to the same pointcut."
+        }
+    ],
+    "spring-core": [
+        {
+            "id": "q1",
+            "question": "Which of the following best describes the purpose of Spring's IoC container?",
+            "options": [
+                "To manage database connections.",
+                "To handle user authentication and authorization.",
+                "To manage the creation and lifecycle of application objects (beans).",
+                "To provide a web framework for building RESTful APIs."
+            ],
+            "correct": 2,
+            "explanation": "The IoC container is responsible for creating, configuring, and managing the lifecycle of beans within a Spring application."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary benefit of using Dependency Injection (DI) in Spring?",
+            "options": [
+                "Improved performance.",
+                "Reduced coupling between classes.",
+                "Automatic garbage collection.",
+                "Simplified database interactions."
+            ],
+            "correct": 1,
+            "explanation": "DI promotes loose coupling, making code more maintainable, testable, and reusable."
+        },
+        {
+            "id": "q3",
+            "question": "Which annotation is commonly used to mark a class as a Spring bean?",
+            "options": [
+                "@Component",
+                "@Autowired",
+                "@Configuration",
+                "@Service"
+            ],
+            "correct": 0,
+            "explanation": "@Component (and its specialized forms like @Service, @Repository, @Controller) tells Spring to manage the class as a bean."
+        },
+        {
+            "id": "q4",
+            "question": "What are the main types of dependency injection supported by Spring?",
+            "options": [
+                "Constructor injection and Setter injection.",
+                "Getter injection and Setter injection.",
+                "Field injection and Method injection.",
+                "Interface injection and Abstract Class injection."
+            ],
+            "correct": 0,
+            "explanation": "Spring primarily supports constructor and setter injection, although field injection is also possible, but generally discouraged for testing and maintainability."
+        },
+        {
+            "id": "q5",
+            "question": "Which annotation is used to inject dependencies into a bean field?",
+            "options": [
+                "@Component",
+                "@Inject",
+                "@Autowired",
+                "@Configuration"
+            ],
+            "correct": 2,
+            "explanation": "@Autowired tells Spring to inject the required dependency at the specified location (field, constructor, or setter method)."
+        },
+        {
+            "id": "q6",
+            "question": "In Spring, what does the term 'bean' refer to?",
+            "options": [
+                "An interface definition.",
+                "An instance of a Java class managed by the Spring IoC container.",
+                "A database table.",
+                "A web controller's mapping."
+            ],
+            "correct": 1,
+            "explanation": "A bean is an object that is instantiated, configured, and managed by the Spring IoC container."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `BeanFactory` in Spring?",
+            "options": [
+                "To provide the web framework for building RESTful APIs.",
+                "To manage the lifecycle of web requests.",
+                "To act as the core IoC container, providing the basic functionalities of dependency injection.",
+                "To handle data access objects."
+            ],
+            "correct": 2,
+            "explanation": "The `BeanFactory` is the core of the Spring IoC container and provides basic DI functionalities."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following is a benefit of using Spring's IoC container?",
+            "options": [
+                "Reduced code complexity.",
+                "Increased dependency on third-party libraries.",
+                "Tight coupling between classes.",
+                "Difficulty in unit testing."
+            ],
+            "correct": 0,
+            "explanation": "IoC reduces code complexity by managing object creation and dependencies, leading to loosely coupled code."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following is a disadvantage of using field injection in Spring?",
+            "options": [
+                "It makes testing easier.",
+                "It promotes tight coupling.",
+                "It allows for easier refactoring.",
+                "It prevents circular dependencies."
+            ],
+            "correct": 1,
+            "explanation": "Field injection can make testing difficult and can introduce tight coupling, making it harder to change dependencies."
+        },
+        {
+            "id": "q10",
+            "question": "What is the difference between `BeanFactory` and `ApplicationContext`?",
+            "options": [
+                "ApplicationContext is a more advanced container that builds upon BeanFactory and offers additional features like event publishing and internationalization.",
+                "BeanFactory is a more advanced container than ApplicationContext.",
+                "They are essentially the same thing.",
+                "BeanFactory is used for web applications, while ApplicationContext is used for standalone applications."
+            ],
+            "correct": 0,
+            "explanation": "ApplicationContext extends BeanFactory and provides additional functionalities."
+        },
+        {
+            "id": "q11",
+            "question": "Which annotation is used to define a bean's scope?",
+            "options": [
+                "@Scope",
+                "@BeanScope",
+                "@ComponentScope",
+                "@ScopeDefinition"
+            ],
+            "correct": 0,
+            "explanation": "The `@Scope` annotation defines the scope of a bean (e.g., singleton, prototype, request, session)."
+        },
+        {
+            "id": "q12",
+            "question": "What is the default scope for a Spring bean?",
+            "options": [
+                "prototype",
+                "request",
+                "session",
+                "singleton"
+            ],
+            "correct": 3,
+            "explanation": "The default scope for a Spring bean is singleton."
+        }
+    ],
+    "bean-scope": [
+        {
+            "id": "q1",
+            "question": "Which Spring bean scope ensures that a single bean instance is shared across the entire application context and is the default if not specified?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 0,
+            "explanation": "The 'singleton' scope provides a single bean instance shared across the application context."
+        },
+        {
+            "id": "q2",
+            "question": "In which Spring bean scope is a new bean instance created for each request received by a web application?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "application"
+            ],
+            "correct": 2,
+            "explanation": "The 'request' scope creates a new bean instance for each HTTP request."
+        },
+        {
+            "id": "q3",
+            "question": "Which scope is most appropriate for a bean representing user-specific data in a web application?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 3,
+            "explanation": "The 'session' scope maintains bean instances scoped to an HTTP session."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a standard Spring bean scope?",
+            "options": [
+                "singleton",
+                "prototype",
+                "thread",
+                "application"
+            ],
+            "correct": 2,
+            "explanation": "While thread-local beans are possible, 'thread' is not a standard, built-in Spring bean scope."
+        },
+        {
+            "id": "q5",
+            "question": "What is the primary difference between 'prototype' and 'singleton' scopes?",
+            "options": [
+                "Prototype creates one instance per application, singleton creates multiple.",
+                "Prototype creates multiple instances, singleton creates one.",
+                "Prototype is for web applications, singleton is for desktop apps.",
+                "There is no difference, they are interchangeable."
+            ],
+            "correct": 1,
+            "explanation": "Prototype always creates a new bean instance when requested, whereas singleton uses a single instance."
+        },
+        {
+            "id": "q6",
+            "question": "Which annotation can be used to define a custom scope in Spring?",
+            "options": [
+                "@Scope",
+                "@BeanScope",
+                "@CustomScope",
+                "@ScopeDefinition"
+            ],
+            "correct": 0,
+            "explanation": "The @Scope annotation is used to define the scope of a Spring bean."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `init-method` attribute in Spring XML configuration?",
+            "options": [
+                "To specify the bean's scope.",
+                "To define a method to be executed after the bean is instantiated and dependencies are injected.",
+                "To destroy the bean.",
+                "To configure the bean's name."
+            ],
+            "correct": 1,
+            "explanation": "The 'init-method' is executed after bean instantiation and dependency injection."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of the `destroy-method` attribute in Spring XML configuration?",
+            "options": [
+                "To specify the bean's scope.",
+                "To define a method to be executed after the bean is instantiated and dependencies are injected.",
+                "To specify a method to be executed when the bean is removed from the context.",
+                "To configure the bean's name."
+            ],
+            "correct": 2,
+            "explanation": "The 'destroy-method' is executed when the bean is being destroyed."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following bean scopes is most likely to cause performance issues if not managed carefully?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "application"
+            ],
+            "correct": 1,
+            "explanation": "Prototype beans, by creating new instances every time they're requested, can lead to performance overhead if frequently requested."
+        },
+        {
+            "id": "q10",
+            "question": "What happens if you define both `init-method` and `@PostConstruct` on the same bean?",
+            "options": [
+                "Only `init-method` is executed.",
+                "Only `@PostConstruct` is executed.",
+                "Both are executed, and the order is not guaranteed.",
+                "Both are executed, with `@PostConstruct` executed first."
+            ],
+            "correct": 3,
+            "explanation": "Both are executed. `@PostConstruct` is executed before init-method"
+        },
+        {
+            "id": "q11",
+            "question": "In a web application using Spring, which scope is suitable for storing user login information?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 3,
+            "explanation": "Session scope is designed for storing session-specific data, like user login information."
+        },
+        {
+            "id": "q12",
+            "question": "Which scope creates a new instance for each HTTP Servlet Context?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "application"
+            ],
+            "correct": 3,
+            "explanation": "The 'application' scope is used to create a bean instance for each application (Servlet Context)."
+        },
+        {
+            "id": "q13",
+            "question": "Is it possible to inject a 'prototype' scoped bean into a 'singleton' scoped bean?",
+            "options": [
+                "Yes, directly",
+                "No",
+                "Yes, but only with the help of a proxy",
+                "Yes, but only via constructor injection"
+            ],
+            "correct": 2,
+            "explanation": "Yes, it's possible, but you need to use a proxy (e.g., ObjectFactory or ObjectProvider) to get a fresh instance each time."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of `ObjectFactory` or `ObjectProvider` when injecting a 'prototype' bean into a 'singleton' bean?",
+            "options": [
+                "To ensure only one instance of the prototype bean exists.",
+                "To provide a new instance of the prototype bean each time it's requested.",
+                "To cache the prototype bean.",
+                "To define the bean's lifecycle."
+            ],
+            "correct": 1,
+            "explanation": "They provide a mechanism to obtain a fresh prototype bean instance on each request."
+        },
+        {
+            "id": "q15",
+            "question": "Which interface, if implemented by a bean, allows for custom initialization logic *before* dependency injection?",
+            "options": [
+                "InitializingBean",
+                "DisposableBean",
+                "BeanPostProcessor",
+                "BeanFactoryPostProcessor"
+            ],
+            "correct": 2,
+            "explanation": "BeanPostProcessors allow for custom logic *before* and *after* initialization. They can modify the bean before it is made available."
+        },
+        {
+            "id": "q16",
+            "question": "Which interface, if implemented by a bean, allows for custom destruction logic *after* the application context is closed?",
+            "options": [
+                "InitializingBean",
+                "DisposableBean",
+                "BeanPostProcessor",
+                "BeanFactoryPostProcessor"
+            ],
+            "correct": 1,
+            "explanation": "DisposableBean defines a `destroy()` method to perform cleanup tasks when the bean is destroyed."
+        },
+        {
+            "id": "q17",
+            "question": "True or False: `BeanPostProcessors` can modify bean properties during the bean creation process.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "BeanPostProcessors are designed to modify bean properties before or after the initialization process."
+        },
+        {
+            "id": "q18",
+            "question": "True or False: Singleton beans are garbage collected when the application context shuts down.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Singleton beans live for the life of the application context. They are not directly garbage collected in the typical sense."
+        },
+        {
+            "id": "q19",
+            "question": "Which lifecycle callback is executed first, `@PostConstruct` or `InitializingBean.afterPropertiesSet()`?",
+            "options": [
+                "@PostConstruct",
+                "InitializingBean.afterPropertiesSet()",
+                "They execute simultaneously.",
+                "The order is unpredictable."
+            ],
+            "correct": 1,
+            "explanation": "InitializingBean.afterPropertiesSet() executes before @PostConstruct."
+        },
+        {
+            "id": "q20",
+            "question": "Consider a Spring application.  A bean is defined with scope 'request'.  How many instances of this bean will be created if a user makes 5 separate requests to the application?",
+            "options": [
+                "1",
+                "5",
+                "10",
+                "20"
+            ],
+            "correct": 1,
+            "explanation": "The request scope creates one instance per request. Hence, 5 requests = 5 instances."
+        },
+        {
+            "id": "q21",
+            "question": "You have a 'prototype' scoped bean and a 'singleton' scoped bean.  The singleton bean has a dependency on the prototype bean. How can you reliably obtain a *new* instance of the prototype bean each time the singleton bean's method is called?",
+            "options": [
+                "Directly inject the prototype bean.",
+                "Use the @Autowired annotation.",
+                "Use an ObjectProvider or ObjectFactory for the prototype bean dependency.",
+                "The prototype bean will automatically be instantiated with each call."
+            ],
+            "correct": 2,
+            "explanation": "ObjectProvider or ObjectFactory enables getting a fresh instance each time the singleton bean method is executed."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following is NOT a standard lifecycle callback method?",
+            "options": [
+                "@PostConstruct",
+                "afterPropertiesSet()",
+                "preDestroy()",
+                "destroy()"
+            ],
+            "correct": 2,
+            "explanation": "preDestroy() is a common naming convention but not a standard Spring lifecycle method (Spring uses @PreDestroy)."
+        },
+        {
+            "id": "q23",
+            "question": "What is the main disadvantage of relying solely on `init-method` and `destroy-method` for bean lifecycle management?",
+            "options": [
+                "They are less flexible than annotations.",
+                "They require changes to the bean class.",
+                "They are harder to read.",
+                "They offer no advantages over annotation based approaches."
+            ],
+            "correct": 1,
+            "explanation": "They require modifying the bean class, which tightens coupling. Annotations often offer a cleaner approach."
+        },
+        {
+            "id": "q24",
+            "question": "What is the key characteristic of a 'singleton' bean in Spring?",
+            "options": [
+                "A new instance is created for each request.",
+                "One instance is shared across the entire application context.",
+                "It is created only when needed (lazy loading).",
+                "It is destroyed immediately after use."
+            ],
+            "correct": 1,
+            "explanation": "Singleton beans have a single instance shared throughout the application."
+        },
+        {
+            "id": "q25",
+            "question": "Which scope allows beans to share data within a single browser tab?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 3,
+            "explanation": "Session scope is most closely tied to a browser tab, although the session scope typically is designed for all of the tabs for a single session (i.e. browser)."
+        },
+        {
+            "id": "q26",
+            "question": "What is the primary advantage of using `@PreDestroy` over `destroy-method`?",
+            "options": [
+                "It is executed before the bean is created.",
+                "It doesn't require any configuration.",
+                "It allows you to decouple the bean from the Spring container specific lifecycle management approach.",
+                "It is more efficient."
+            ],
+            "correct": 2,
+            "explanation": "@PreDestroy is an annotation that lets a bean class be independent of the spring container specific configuration."
+        },
+        {
+            "id": "q27",
+            "question": "If you have a large number of 'prototype' scoped beans, what potential issue could arise?",
+            "options": [
+                "Increased memory consumption.",
+                "Reduced performance due to frequent object creation.",
+                "Difficulty managing bean dependencies.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the options are correct and can happen because of a large number of prototype scoped beans."
+        },
+        {
+            "id": "q28",
+            "question": "How can you configure a Spring bean's scope using Java configuration (e.g., `@Configuration` and `@Bean`)?",
+            "options": [
+                "Using the @Scope annotation.",
+                "By setting the 'scope' attribute in the @Bean annotation.",
+                "Using the @BeanScope annotation.",
+                "Both 1 and 2"
+            ],
+            "correct": 3,
+            "explanation": "Both @Scope and the 'scope' attribute in the @Bean annotation are valid approaches."
+        },
+        {
+            "id": "q29",
+            "question": "What is the behavior if you specify both `init-method` and `@PostConstruct` and the `init-method` throws an exception?",
+            "options": [
+                "The application context will fail to start.",
+                "Only `@PostConstruct` will be executed.",
+                "The bean will be initialized regardless.",
+                "It depends on the exception type."
+            ],
+            "correct": 0,
+            "explanation": "Usually leads to a Spring startup failure because the initialization failed."
+        },
+        {
+            "id": "q30",
+            "question": "Which bean scope is most appropriate for a shopping cart object in a web application?",
+            "options": [
+                "singleton",
+                "prototype",
+                "request",
+                "session"
+            ],
+            "correct": 3,
+            "explanation": "Session scope is suitable for managing user-specific shopping cart information."
+        },
+        {
+            "id": "q31",
+            "question": "You have a bean that needs to perform a cleanup operation when the application shuts down. What is the recommended approach?",
+            "options": [
+                "Use the 'init-method'.",
+                "Use the 'destroy-method' or @PreDestroy.",
+                "Use the @BeanScope annotation.",
+                "Use a constructor."
+            ],
+            "correct": 1,
+            "explanation": "'destroy-method' and @PreDestroy are used for cleanup operations during shutdown."
+        },
+        {
+            "id": "q32",
+            "question": "What happens if a singleton bean has a dependency on a prototype bean, and the prototype bean throws an exception during its initialization?",
+            "options": [
+                "The application will fail to start.",
+                "The singleton bean will not be affected.",
+                "The prototype bean will be retried.",
+                "It depends on the exception type and the container's configuration."
+            ],
+            "correct": 0,
+            "explanation": "The application will generally fail to start if a bean's initialization fails."
+        },
+        {
+            "id": "q33",
+            "question": "If a bean is defined as 'application' scope, which context is the bean associated with?",
+            "options": [
+                "The entire application context.",
+                "Each HTTP request.",
+                "Each HTTP session.",
+                "The Servlet Context."
+            ],
+            "correct": 3,
+            "explanation": "Application scope means the bean lives for the life of the Servlet Context."
+        },
+        {
+            "id": "q34",
+            "question": "Which annotation would you use to define a method that should be invoked *before* a bean is destroyed?",
+            "options": [
+                "@PostConstruct",
+                "@PreDestroy",
+                "@Bean",
+                "@Scope"
+            ],
+            "correct": 1,
+            "explanation": "@PreDestroy annotates the method for pre-destruction logic."
+        },
+        {
+            "id": "q35",
+            "question": "Consider a scenario where you have a multi-threaded application using a 'request' scoped bean. What potential issue should you be aware of?",
+            "options": [
+                "Race conditions, because the bean is shared across threads.",
+                "Thread safety issues, as each thread might access different instances of the bean.",
+                "Increased memory usage due to multiple bean instances per thread.",
+                "None of the above."
+            ],
+            "correct": 1,
+            "explanation": "While 'request' scope is tied to the request, threads initiated within a request can potentially share state. If not handled correctly, this could lead to thread safety issues."
+        }
+    ],
+    "spring-aop": [
+        {
+            "id": "q1",
+            "question": "What is the primary difference between Spring AOP and AspectJ?",
+            "options": [
+                "Spring AOP uses proxies, AspectJ uses bytecode weaving",
+                "Spring AOP supports only method interception, AspectJ supports field interception",
+                "Spring AOP is declarative, AspectJ is programmatic",
+                "Spring AOP is runtime weaving, AspectJ is compile-time or load-time weaving"
+            ],
+            "correct": 3,
+            "explanation": "Spring AOP relies on runtime proxying, while AspectJ provides more powerful weaving capabilities at compile time or load time."
+        },
+        {
+            "id": "q2",
+            "question": "Which of the following is NOT a valid pointcut expression?",
+            "options": [
+                "execution(* com.example.service.*(..))",
+                "within(com.example.service.*)",
+                "args(String, int)",
+                "target(com.example.service.MyService)"
+            ],
+            "correct": 2,
+            "explanation": "args(String, int) specifies parameters, correct syntax would include `execution` keyword."
+        },
+        {
+            "id": "q3",
+            "question": "What does the `@Around` advice allow you to do?",
+            "options": [
+                "Run code before the method execution",
+                "Run code after the method execution",
+                "Run code before and after the method execution, controlling the method call",
+                "Define the pointcut expression"
+            ],
+            "correct": 2,
+            "explanation": "@Around advice intercepts method invocations and gives complete control, including preventing the method from executing."
+        }
+    ],
+    "spring-jdbc": [
+        {
+            "id": "q1",
+            "question": "Which Spring component is primarily responsible for simplifying JDBC operations?",
+            "options": [
+                "JdbcTemplate",
+                "DataSource",
+                "DriverManagerDataSource",
+                "SimpleJdbcInsert"
+            ],
+            "correct": 0,
+            "explanation": "JdbcTemplate provides methods for executing SQL queries, updates, and stored procedure calls, simplifying boilerplate JDBC code."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of a DataSource in Spring JDBC?",
+            "options": [
+                "To manage transactions",
+                "To establish database connections",
+                "To execute SQL queries",
+                "To map database results to Java objects"
+            ],
+            "correct": 1,
+            "explanation": "DataSource is an interface that represents a connection factory, providing database connections."
+        },
+        {
+            "id": "q3",
+            "question": "Which of the following is NOT a benefit of using Spring's JDBC support?",
+            "options": [
+                "Reduced boilerplate code",
+                "Exception handling",
+                "Increased database performance by default",
+                "Simplified transaction management"
+            ],
+            "correct": 2,
+            "explanation": "Spring JDBC doesn't automatically increase database performance; that depends on query optimization and database configuration. It offers other benefits though."
+        },
+        {
+            "id": "q4",
+            "question": "How does Spring JDBC handle exceptions?",
+            "options": [
+                "It propagates all exceptions to the calling code.",
+                "It translates JDBC exceptions into a more consistent, data-access-specific exception hierarchy.",
+                "It swallows all exceptions to avoid application crashes.",
+                "It provides a custom exception class for each database type."
+            ],
+            "correct": 1,
+            "explanation": "Spring's JDBC translates database-specific exceptions into a consistent exception hierarchy, such as DataAccessException, making exception handling easier."
+        },
+        {
+            "id": "q5",
+            "question": "Which Spring annotation is commonly used to mark a method that participates in a transaction?",
+            "options": [
+                "@Transactional",
+                "@Repository",
+                "@Component",
+                "@Autowired"
+            ],
+            "correct": 0,
+            "explanation": "@Transactional manages transactions for methods, ensuring data consistency."
+        },
+        {
+            "id": "q6",
+            "question": "What is the main advantage of using an ORM like Hibernate or MyBatis with Spring?",
+            "options": [
+                "Faster database connection speeds",
+                "Automatic query optimization",
+                "Simplified database interaction by mapping Java objects to database tables",
+                "Increased application scalability by default"
+            ],
+            "correct": 2,
+            "explanation": "ORMs abstract away the need to write raw SQL queries, allowing developers to work with objects."
+        },
+        {
+            "id": "q7",
+            "question": "Which interface in Spring JDBC provides a convenient way to perform batch updates?",
+            "options": [
+                "JdbcTemplate",
+                "SimpleJdbcInsert",
+                "NamedParameterJdbcTemplate",
+                "BatchPreparedStatementSetter"
+            ],
+            "correct": 3,
+            "explanation": "BatchPreparedStatementSetter allows you to efficiently execute multiple updates in a single database call."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of the `SimpleJdbcInsert` class in Spring JDBC?",
+            "options": [
+                "To execute complex SQL queries",
+                "To simplify the insertion of data into a database table",
+                "To manage transactions",
+                "To handle database connection pooling"
+            ],
+            "correct": 1,
+            "explanation": "SimpleJdbcInsert simplifies the creation of insert statements by providing a fluent API."
+        },
+        {
+            "id": "q9",
+            "question": "In Spring, what is the recommended way to configure a DataSource?",
+            "options": [
+                "By manually creating a DriverManagerDataSource object in code.",
+                "Through an XML configuration file.",
+                "Using Spring Boot's auto-configuration.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the listed options are valid methods. Spring Boot's auto-configuration is the easiest and most common way."
+        },
+        {
+            "id": "q10",
+            "question": "Which of the following is NOT a common ORM framework used with Spring?",
+            "options": [
+                "Hibernate",
+                "MyBatis",
+                "JPA",
+                "JDBC Template"
+            ],
+            "correct": 3,
+            "explanation": "JdbcTemplate is Spring's JDBC abstraction, not an ORM."
+        },
+        {
+            "id": "q11",
+            "question": "What is the benefit of using `NamedParameterJdbcTemplate` over `JdbcTemplate`?",
+            "options": [
+                "It is faster.",
+                "It allows using named parameters in SQL queries instead of question marks.",
+                "It handles transaction management automatically.",
+                "It automatically closes database connections."
+            ],
+            "correct": 1,
+            "explanation": "NamedParameterJdbcTemplate allows for more readable and maintainable SQL queries by using named parameters (e.g., :name) instead of positional parameters (?)."
+        },
+        {
+            "id": "q12",
+            "question": "What is the purpose of the `@Repository` annotation in Spring?",
+            "options": [
+                "To mark a class as a data access object (DAO).",
+                "To define a REST controller.",
+                "To configure database connections.",
+                "To manage transactions automatically."
+            ],
+            "correct": 0,
+            "explanation": "@Repository indicates that a class is responsible for data access logic, making it eligible for Spring's exception translation and other data access-related features."
+        },
+        {
+            "id": "q13",
+            "question": "Which Spring annotation is used to inject a DataSource?",
+            "options": [
+                "@Component",
+                "@Autowired",
+                "@Transactional",
+                "@Configuration"
+            ],
+            "correct": 1,
+            "explanation": "@Autowired is used to inject dependencies, including DataSource instances."
+        },
+        {
+            "id": "q14",
+            "question": "What is the role of the `Session` interface in Hibernate integration with Spring?",
+            "options": [
+                "Managing database connections",
+                "Representing a single unit of work with the database",
+                "Executing SQL queries directly",
+                "Configuring Hibernate's settings"
+            ],
+            "correct": 1,
+            "explanation": "The Hibernate Session is the core interface for interacting with the database, providing methods for saving, updating, deleting, and querying persistent objects."
+        },
+        {
+            "id": "q15",
+            "question": "In a Spring application using Hibernate, where is the `SessionFactory` typically configured?",
+            "options": [
+                "In the application.properties file.",
+                "In a separate Hibernate configuration file (e.g., hibernate.cfg.xml) and then integrated into the Spring context.",
+                "Within the JdbcTemplate bean.",
+                "Automatically managed by Spring Boot without explicit configuration."
+            ],
+            "correct": 1,
+            "explanation": "SessionFactory is the factory for Hibernate Sessions, and it's typically configured in a separate Hibernate configuration file and then integrated into Spring."
+        },
+        {
+            "id": "q16",
+            "question": "What is the advantage of using Spring's `JpaTemplate` or `JpaRepository` over directly using the JPA EntityManager?",
+            "options": [
+                "JpaTemplate is faster.",
+                "Spring provides transaction management and exception handling.",
+                "EntityManager is deprecated",
+                "JpaTemplate supports only read operations."
+            ],
+            "correct": 1,
+            "explanation": "Spring provides a layer of abstraction over the JPA API, simplifying common tasks and providing features like transaction management and exception handling."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following is a common problem when using lazy loading in ORM (e.g., Hibernate) with Spring?",
+            "options": [
+                "Performance degradation",
+                "Object-relational impedance mismatch",
+                "N+1 select problem",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Lazy loading can cause performance issues, especially with the N+1 select problem, and contributes to the object-relational impedance mismatch."
+        },
+        {
+            "id": "q18",
+            "question": "What is the function of `TransactionManager` in Spring?",
+            "options": [
+                "Manages database connections.",
+                "Manages transactions across multiple resources.",
+                "Executes SQL queries.",
+                "Maps database results to Java objects."
+            ],
+            "correct": 1,
+            "explanation": "TransactionManager provides a uniform way to manage transactions, whether they are database transactions, JMS transactions, or other types of transactions."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following statements best describes the purpose of `Spring Data JPA`?",
+            "options": [
+                "A framework for creating REST APIs.",
+                "A library for simplifying Spring JDBC operations.",
+                "A simplified approach to data access using JPA.",
+                "A tool for database schema creation."
+            ],
+            "correct": 2,
+            "explanation": "Spring Data JPA simplifies the creation of data access repositories by providing pre-built implementations for common CRUD operations and more."
+        },
+        {
+            "id": "q20",
+            "question": "What is the benefit of using `@EnableTransactionManagement` annotation?",
+            "options": [
+                "It enables Spring's declarative transaction management.",
+                "It automatically creates database tables.",
+                "It configures database connections.",
+                "It enables Spring's JDBC support."
+            ],
+            "correct": 0,
+            "explanation": "@EnableTransactionManagement is used to enable Spring's declarative transaction management capabilities."
+        },
+        {
+            "id": "q21",
+            "question": "Which interface in Spring JDBC provides functionality to execute stored procedures?",
+            "options": [
+                "JdbcTemplate",
+                "SimpleJdbcInsert",
+                "SimpleJdbcCall",
+                "NamedParameterJdbcTemplate"
+            ],
+            "correct": 2,
+            "explanation": "SimpleJdbcCall is designed to simplify the execution of stored procedures."
+        },
+        {
+            "id": "q22",
+            "question": "Consider a scenario where you are updating a large dataset using Spring JDBC.  Which approach would be most efficient?",
+            "options": [
+                "Using JdbcTemplate's `update()` method in a loop.",
+                "Using a `BatchPreparedStatementSetter` with `JdbcTemplate`.",
+                "Using `SimpleJdbcInsert`.",
+                "All are equally efficient."
+            ],
+            "correct": 1,
+            "explanation": "BatchPreparedStatementSetter allows for executing multiple updates in a single database round trip, resulting in improved performance."
+        },
+        {
+            "id": "q23",
+            "question": "What's the correct way to configure a transaction manager in a Spring application with Hibernate?",
+            "options": [
+                "Use `DriverManagerDataSource` with `HibernateTransactionManager`.",
+                "Use `LocalSessionFactoryBean` and `HibernateTransactionManager`.",
+                "Use `JdbcTemplate` and `DataSourceTransactionManager`.",
+                "Use `JpaTemplate` and `HibernateTransactionManager`."
+            ],
+            "correct": 1,
+            "explanation": "When working with Hibernate, a `LocalSessionFactoryBean` (or its equivalent in Spring Boot) and a `HibernateTransactionManager` are typically used to manage transactions."
+        },
+        {
+            "id": "q24",
+            "question": "If you want to read only from a database in a transaction, what transaction attribute should you use?",
+            "options": [
+                "PROPAGATION_REQUIRED",
+                "PROPAGATION_REQUIRES_NEW",
+                "READ_ONLY",
+                "PROPAGATION_SUPPORTS"
+            ],
+            "correct": 2,
+            "explanation": "The READ_ONLY transaction attribute optimizes the transaction for read operations, potentially improving performance."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following is NOT a valid transaction propagation behavior in Spring?",
+            "options": [
+                "REQUIRED",
+                "REQUIRES_NEW",
+                "MANDATORY",
+                "READ_WRITE"
+            ],
+            "correct": 3,
+            "explanation": "READ_WRITE is not a standard transaction propagation behavior. Valid behaviors include REQUIRED, REQUIRES_NEW, MANDATORY, SUPPORTS, NOT_SUPPORTED, NEVER, and NESTED."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is a common problem when integrating Spring with ORM and is a result of the application code incorrectly managing database session lifecycle?",
+            "options": [
+                "Connection pool exhaustion",
+                "Transaction timeout",
+                "LazyInitializationException",
+                "Insufficient memory"
+            ],
+            "correct": 2,
+            "explanation": "LazyInitializationException occurs when an attempt is made to access a lazily loaded association outside the scope of a database session."
+        },
+        {
+            "id": "q27",
+            "question": "In Spring, what is the difference between declarative and programmatic transaction management?",
+            "options": [
+                "Declarative is always more efficient.",
+                "Programmatic offers more control but requires more code.",
+                "Declarative is always more flexible.",
+                "There is no practical difference."
+            ],
+            "correct": 1,
+            "explanation": "Declarative transaction management (using annotations) is simpler to implement, but programmatic transaction management (using `TransactionTemplate`) provides more fine-grained control over the transaction behavior."
+        },
+        {
+            "id": "q28",
+            "question": "Which annotation would you use to explicitly commit a transaction in a Spring application?",
+            "options": [
+                "@Transactional",
+                "@Commit",
+                "@Rollback",
+                "There is no specific annotation for explicitly committing. The transaction is handled by the TransactionManager based on the absence of exceptions."
+            ],
+            "correct": 3,
+            "explanation": "Commit is implicitly handled by the transaction manager unless an exception is thrown, in which case it is rolled back."
+        },
+        {
+            "id": "q29",
+            "question": "You are using `JdbcTemplate` and a database connection is being closed, even though you didn't explicitly close it in your code. Where is this happening?",
+            "options": [
+                "In your code where you are calling `close()` on the `Connection`.",
+                "In the `JdbcTemplate`'s `afterPropertiesSet()` method.",
+                "In the `JdbcTemplate` itself after each operation.",
+                "In the `DataSource` implementation (e.g., a connection pool)"
+            ],
+            "correct": 3,
+            "explanation": "The `DataSource` (e.g., a connection pool like C3P0 or HikariCP) is responsible for managing the connection lifecycle, including closing connections when they are no longer needed."
+        },
+        {
+            "id": "q30",
+            "question": "You are getting an error stating",
+            "options": [
+                "The DataSource is correctly configured, but not autowired.",
+                "The DataSource is not correctly configured and a suitable DataSource bean isn't present in the application context.",
+                "A transaction manager is missing.",
+                "The application context hasn't been properly initialized."
+            ],
+            "correct": 1,
+            "explanation": "The error indicates that Spring cannot find a DataSource bean. This usually means you haven't configured a DataSource (e.g., through Spring Boot's auto-configuration, XML, or Java config)."
+        },
+        {
+            "id": "q31",
+            "question": "True or False: Spring Data JPA automatically handles exception translation for data access exceptions.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Spring Data JPA automatically translates database-specific exceptions into Spring's unified data access exception hierarchy."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following statements is most accurate regarding the usage of `@PersistenceContext` in Spring with JPA?",
+            "options": [
+                "It's used to inject an `EntityManager` into a managed bean.",
+                "It's used to create new database tables automatically.",
+                "It configures the Spring container.",
+                "It is used to commit a transaction."
+            ],
+            "correct": 0,
+            "explanation": "@PersistenceContext is used to inject an `EntityManager` (or `EntityManagerFactory`) into a managed bean, facilitating interaction with the database through JPA."
+        },
+        {
+            "id": "q33",
+            "question": "You are using Hibernate with Spring. You need to ensure that all data access operations within a particular method are executed within a transaction. Which is the most appropriate approach?",
+            "options": [
+                "Manually manage connections with `DriverManagerDataSource`.",
+                "Annotate the method with `@Transactional`.",
+                "Create a separate session and close it after each operation.",
+                "Use the `JpaTemplate` class for all data access operations."
+            ],
+            "correct": 1,
+            "explanation": "The `@Transactional` annotation is the simplest and most common way to declare that a method's execution should be managed within a transaction."
+        },
+        {
+            "id": "q34",
+            "question": "You are facing performance issues related to frequent database queries in a Spring application with Hibernate. What's a likely area to investigate?",
+            "options": [
+                "Using JdbcTemplate instead of Hibernate.",
+                "The use of caching mechanisms (e.g., L1 and L2 caches).",
+                "Increase the transaction timeout.",
+                "Removing the @Transactional annotation from all methods."
+            ],
+            "correct": 1,
+            "explanation": "Caching can significantly improve performance by reducing the number of database queries. L1 and L2 caches are integral parts of Hibernate and can greatly improve performance."
+        },
+        {
+            "id": "q35",
+            "question": "What is the purpose of `JpaRepository` in Spring Data JPA?",
+            "options": [
+                "To manage the database schema.",
+                "To provide a generic, pre-built implementation for common CRUD operations on a JPA entity.",
+                "To configure transaction managers.",
+                "To manage the lifecycle of JPA entity manager."
+            ],
+            "correct": 1,
+            "explanation": "JpaRepository provides a set of built-in methods for CRUD operations, making data access easier without writing custom implementation."
+        }
+    ],
+    "spring-mvc": [
+        {
+            "id": "q1",
+            "question": "Which of the following annotations is used to mark a class as a Spring MVC controller and indicate that it handles incoming requests?",
+            "options": [
+                "@Component",
+                "@Service",
+                "@Controller",
+                "@Repository"
+            ],
+            "correct": 2,
+            "explanation": "@Controller annotation is used to mark a class as a controller in Spring MVC."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary role of the DispatcherServlet in Spring MVC?",
+            "options": [
+                "To manage database connections.",
+                "To handle business logic.",
+                "To receive incoming requests and dispatch them to the appropriate handler.",
+                "To render the views."
+            ],
+            "correct": 2,
+            "explanation": "DispatcherServlet is the front controller in Spring MVC, responsible for receiving requests and routing them."
+        },
+        {
+            "id": "q3",
+            "question": "Which component in Spring MVC is responsible for handling user input and updating the model?",
+            "options": [
+                "View",
+                "Controller",
+                "Model",
+                "DispatcherServlet"
+            ],
+            "correct": 1,
+            "explanation": "The controller handles user input and updates the model."
+        },
+        {
+            "id": "q4",
+            "question": "What does the @RequestMapping annotation primarily do in Spring MVC?",
+            "options": [
+                "Maps HTTP requests to handler methods.",
+                "Defines database connection details.",
+                "Specifies the view technology.",
+                "Manages security configurations."
+            ],
+            "correct": 0,
+            "explanation": "@RequestMapping maps HTTP requests to handler methods."
+        },
+        {
+            "id": "q5",
+            "question": "In Spring MVC, what is a 'View' responsible for?",
+            "options": [
+                "Processing user input.",
+                "Displaying the model data to the user.",
+                "Handling business logic.",
+                "Connecting to the database."
+            ],
+            "correct": 1,
+            "explanation": "The view displays the model data to the user."
+        },
+        {
+            "id": "q6",
+            "question": "Which Spring MVC annotation is used to bind request parameters to a method parameter?",
+            "options": [
+                "@Autowired",
+                "@ModelAttribute",
+                "@RequestParam",
+                "@PathVariable"
+            ],
+            "correct": 2,
+            "explanation": "@RequestParam is used to bind request parameters to method parameters."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the ModelAndView object in Spring MVC?",
+            "options": [
+                "To define the view and the model data to be passed to it.",
+                "To handle exceptions.",
+                "To manage database transactions.",
+                "To store user session information."
+            ],
+            "correct": 0,
+            "explanation": "ModelAndView holds both the view name and the model data."
+        },
+        {
+            "id": "q8",
+            "question": "Which of the following is NOT a valid HTTP method that can be mapped using @RequestMapping?",
+            "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "EXECUTE"
+            ],
+            "correct": 3,
+            "explanation": "EXECUTE is not a standard HTTP method."
+        },
+        {
+            "id": "q9",
+            "question": "What is the role of the HandlerMapping in Spring MVC?",
+            "options": [
+                "To render the view.",
+                "To map incoming requests to the appropriate handler methods.",
+                "To handle database transactions.",
+                "To manage user sessions."
+            ],
+            "correct": 1,
+            "explanation": "HandlerMapping maps requests to handler methods."
+        },
+        {
+            "id": "q10",
+            "question": "Which annotation is used to extract a part of the URI as a variable in Spring MVC?",
+            "options": [
+                "@RequestParam",
+                "@PathVariable",
+                "@ModelAttribute",
+                "@RequestBody"
+            ],
+            "correct": 1,
+            "explanation": "@PathVariable is used to extract parts of the URI as variables."
+        },
+        {
+            "id": "q11",
+            "question": "What is the purpose of `@RequestBody` annotation?",
+            "options": [
+                "To map request parameters.",
+                "To bind the request body to a method parameter.",
+                "To specify the view name.",
+                "To handle exceptions."
+            ],
+            "correct": 1,
+            "explanation": "@RequestBody binds the request body to a method parameter."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following interfaces is implemented by the DispatcherServlet?",
+            "options": [
+                "Servlet",
+                "HttpServlet",
+                "ServletContext",
+                "Filter"
+            ],
+            "correct": 1,
+            "explanation": "DispatcherServlet extends HttpServlet."
+        },
+        {
+            "id": "q13",
+            "question": "In Spring MVC, what component is responsible for rendering the view?",
+            "options": [
+                "Controller",
+                "ViewResolver",
+                "Model",
+                "DispatcherServlet"
+            ],
+            "correct": 1,
+            "explanation": "The ViewResolver resolves the logical view name to a specific view technology."
+        },
+        {
+            "id": "q14",
+            "question": "Which annotation is used to bind data from the HTTP request to a model object in Spring MVC?",
+            "options": [
+                "@RequestParam",
+                "@PathVariable",
+                "@ModelAttribute",
+                "@RequestBody"
+            ],
+            "correct": 2,
+            "explanation": "@ModelAttribute is used to bind data from the HTTP request to a model object."
+        },
+        {
+            "id": "q15",
+            "question": "What is the purpose of the `WebMvcConfigurer` interface in Spring MVC?",
+            "options": [
+                "To configure database connections.",
+                "To customize Spring MVC's configuration.",
+                "To handle user authentication.",
+                "To define business logic."
+            ],
+            "correct": 1,
+            "explanation": "`WebMvcConfigurer` is used to customize Spring MVC's configuration."
+        },
+        {
+            "id": "q16",
+            "question": "Which of the following is the default view technology used by Spring MVC?",
+            "options": [
+                "JSP",
+                "Thymeleaf",
+                "FreeMarker",
+                "None, it's configurable"
+            ],
+            "correct": 3,
+            "explanation": "Spring MVC doesn't enforce a default view technology; it is configurable."
+        },
+        {
+            "id": "q17",
+            "question": "What is the function of `ContentNegotiatingViewResolver`?",
+            "options": [
+                "To resolve view names based on content type.",
+                "To handle exception.",
+                "To process request parameters.",
+                "To manage the model data."
+            ],
+            "correct": 0,
+            "explanation": "ContentNegotiatingViewResolver resolves view names based on the requested content type (e.g., JSON, XML)."
+        },
+        {
+            "id": "q18",
+            "question": "Which of the following annotations is used to enable Spring MVC in a Spring Boot application?",
+            "options": [
+                "@SpringBootApplication",
+                "@EnableMvc",
+                "@EnableWebMvc",
+                "@MVCConfiguration"
+            ],
+            "correct": 2,
+            "explanation": "@EnableWebMvc enables Spring MVC in a Spring Boot application."
+        },
+        {
+            "id": "q19",
+            "question": "What is the purpose of the `@RestController` annotation?",
+            "options": [
+                "To mark a class as a controller and return data directly in the response body.",
+                "To handle database transactions.",
+                "To define the view name.",
+                "To handle user input."
+            ],
+            "correct": 0,
+            "explanation": "@RestController is a convenience annotation that combines @Controller and @ResponseBody."
+        },
+        {
+            "id": "q20",
+            "question": "Which component in Spring MVC is responsible for handling exceptions?",
+            "options": [
+                "DispatcherServlet",
+                "HandlerInterceptor",
+                "ControllerAdvice",
+                "ViewResolver"
+            ],
+            "correct": 2,
+            "explanation": "ControllerAdvice and @ExceptionHandler handle exceptions in Spring MVC."
+        },
+        {
+            "id": "q21",
+            "question": "What is the role of `HandlerInterceptor` in Spring MVC?",
+            "options": [
+                "To intercept incoming requests and outgoing responses.",
+                "To handle database connections.",
+                "To define the view name.",
+                "To handle user authentication."
+            ],
+            "correct": 0,
+            "explanation": "HandlerInterceptors intercept requests and responses."
+        },
+        {
+            "id": "q22",
+            "question": "How can you specify a default value for a request parameter in Spring MVC?",
+            "options": [
+                "Using the @DefaultValue annotation.",
+                "By setting the 'defaultValue' attribute in @RequestParam.",
+                "Using a constant defined in the controller.",
+                "It is not possible."
+            ],
+            "correct": 1,
+            "explanation": "The 'defaultValue' attribute in @RequestParam is used to specify a default value."
+        },
+        {
+            "id": "q23",
+            "question": "What is the effect of setting `produces =",
+            "options": [
+                "Specifies that the controller method only accepts JSON requests.",
+                "Specifies that the controller method only produces JSON responses.",
+                "Specifies the view technology to be used.",
+                "Specifies the database connection details."
+            ],
+            "correct": 1,
+            "explanation": "`produces` specifies the media types that the method can produce in the response."
+        },
+        {
+            "id": "q24",
+            "question": "What happens if no handler is found for a specific request in Spring MVC?",
+            "options": [
+                "The application throws an exception.",
+                "The request is silently ignored.",
+                "The DispatcherServlet returns a 404 error (Not Found).",
+                "The request is redirected to the home page."
+            ],
+            "correct": 2,
+            "explanation": "A 404 error is typically returned if no handler is found."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of the `@CrossOrigin` annotation in Spring MVC?",
+            "options": [
+                "To enable cross-origin resource sharing (CORS).",
+                "To define the view name.",
+                "To handle database transactions.",
+                "To handle user authentication."
+            ],
+            "correct": 0,
+            "explanation": "@CrossOrigin enables CORS."
+        },
+        {
+            "id": "q26",
+            "question": "Which of the following is a valid way to access request headers in Spring MVC?",
+            "options": [
+                "Using @RequestHeader annotation.",
+                "Using request.getHeader() in a controller method.",
+                "Both of the above.",
+                "None of the above."
+            ],
+            "correct": 2,
+            "explanation": "Both @RequestHeader and request.getHeader() can be used to access headers."
+        },
+        {
+            "id": "q27",
+            "question": "What is the purpose of `@SessionAttributes` annotation?",
+            "options": [
+                "To store data in the session.",
+                "To specify which model attributes should be stored in the session.",
+                "To invalidate the session.",
+                "To configure the session timeout."
+            ],
+            "correct": 1,
+            "explanation": "@SessionAttributes defines which model attributes should be stored in the session."
+        },
+        {
+            "id": "q28",
+            "question": "What is the role of `HttpMessageConverter` in Spring MVC?",
+            "options": [
+                "To convert the request body to Java objects and Java objects to the response body.",
+                "To validate user input.",
+                "To handle database transactions.",
+                "To define the view name."
+            ],
+            "correct": 0,
+            "explanation": "HttpMessageConverters convert between HTTP requests/responses and Java objects."
+        }
+    ],
+    //Spring Boot
+    "springboot-intro": [
+        {
+            "id": "q1",
+            "question": "Which of the following is NOT a core feature of Spring Boot?",
+            "options": [
+                "Embedded servers",
+                "Auto-configuration",
+                "Dependency injection",
+                "Production-ready features"
+            ],
+            "correct": 2,
+            "explanation": "Dependency injection is a core feature of the Spring framework, but not exclusively Spring Boot. Spring Boot builds upon Spring's dependency injection."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary goal of Spring Boot's auto-configuration?",
+            "options": [
+                "To automatically configure all application dependencies.",
+                "To reduce the amount of boilerplate configuration.",
+                "To increase the application's performance.",
+                "To provide a graphical user interface for configuration."
+            ],
+            "correct": 1,
+            "explanation": "Auto-configuration aims to minimize manual configuration by intelligently configuring beans based on dependencies present in the classpath."
+        },
+        {
+            "id": "q3",
+            "question": "Which annotation is primarily used to enable auto-configuration in a Spring Boot application?",
+            "options": [
+                "@SpringBootApplication",
+                "@EnableAutoConfiguration",
+                "@Configuration",
+                "@ComponentScan"
+            ],
+            "correct": 0,
+            "explanation": "@SpringBootApplication is a convenience annotation that combines @Configuration, @EnableAutoConfiguration, and @ComponentScan."
+        },
+        {
+            "id": "q4",
+            "question": "What is the purpose of Spring Boot Starters?",
+            "options": [
+                "To define application entry points.",
+                "To manage application dependencies.",
+                "To provide pre-configured dependencies for specific functionalities.",
+                "To create RESTful APIs."
+            ],
+            "correct": 2,
+            "explanation": "Starters bundle common dependencies for a specific technology or functionality, simplifying dependency management."
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following is NOT a benefit of using Spring Boot?",
+            "options": [
+                "Reduced development time",
+                "Increased boilerplate code",
+                "Simplified dependency management",
+                "Production-ready features"
+            ],
+            "correct": 1,
+            "explanation": "Spring Boot's auto-configuration and starter dependencies reduce, not increase, boilerplate code."
+        },
+        {
+            "id": "q6",
+            "question": "What does the term 'convention over configuration' mean in the context of Spring Boot?",
+            "options": [
+                "Prioritizing code conventions over explicit configuration.",
+                "Providing configuration options before code conventions.",
+                "Allowing developers to override default configurations.",
+                "Encouraging developers to follow specific coding styles."
+            ],
+            "correct": 0,
+            "explanation": "It means Spring Boot provides sensible defaults, reducing the need for explicit configuration."
+        },
+        {
+            "id": "q7",
+            "question": "Where are application properties typically stored in a Spring Boot application?",
+            "options": [
+                "application.properties or application.yml",
+                "pom.xml",
+                "src/main/java",
+                "web.xml"
+            ],
+            "correct": 0,
+            "explanation": "Application properties are stored in application.properties or application.yml files in the resources directory."
+        },
+        {
+            "id": "q8",
+            "question": "Which embedded server is the default in Spring Boot?",
+            "options": [
+                "Tomcat",
+                "Jetty",
+                "Undertow",
+                "Netty"
+            ],
+            "correct": 0,
+            "explanation": "Tomcat is the default embedded server in Spring Boot."
+        },
+        {
+            "id": "q9",
+            "question": "Which command-line tool is used to create and manage Spring Boot projects?",
+            "options": [
+                "Maven",
+                "Gradle",
+                "Spring Initializr",
+                "Eclipse"
+            ],
+            "correct": 2,
+            "explanation": "Spring Initializr (either through a web interface or command-line) helps generate Spring Boot projects."
+        },
+        {
+            "id": "q10",
+            "question": "What is the role of the Spring Boot Actuator?",
+            "options": [
+                "To manage application dependencies.",
+                "To provide production-ready features and monitoring capabilities.",
+                "To automatically configure beans.",
+                "To handle user authentication."
+            ],
+            "correct": 1,
+            "explanation": "Actuator provides endpoints for monitoring and managing applications in production."
+        },
+        {
+            "id": "q11",
+            "question": "True or False: Spring Boot applications can only be deployed as WAR files.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Spring Boot applications can be deployed as executable JAR files or WAR files."
+        },
+        {
+            "id": "q12",
+            "question": "Which annotation is used to indicate a class as a Spring Boot configuration class?",
+            "options": [
+                "@Component",
+                "@Configuration",
+                "@Service",
+                "@Controller"
+            ],
+            "correct": 1,
+            "explanation": "@Configuration indicates that the class provides bean definitions."
+        },
+        {
+            "id": "q13",
+            "question": "What is the purpose of the Spring Boot DevTools?",
+            "options": [
+                "To provide debugging tools.",
+                "To automatically restart the application on code changes.",
+                "To manage dependencies.",
+                "To create REST APIs."
+            ],
+            "correct": 1,
+            "explanation": "DevTools provides features like automatic restart on code changes."
+        },
+        {
+            "id": "q14",
+            "question": "Which build tool is most commonly used with Spring Boot?",
+            "options": [
+                "Maven",
+                "Gradle",
+                "Ant",
+                "Both Maven and Gradle"
+            ],
+            "correct": 3,
+            "explanation": "Both Maven and Gradle are popular build tools, and Spring Boot supports both."
+        },
+        {
+            "id": "q15",
+            "question": "What is the default logging framework used in Spring Boot?",
+            "options": [
+                "Log4j",
+                "Logback",
+                "JUL (java.util.logging)",
+                "SLF4J"
+            ],
+            "correct": 3,
+            "explanation": "Spring Boot uses SLF4J as the logging facade, allowing flexibility in choosing a logging implementation like Logback or Log4j."
+        },
+        {
+            "id": "q16",
+            "question": "How does Spring Boot handle bean scanning?",
+            "options": [
+                "It automatically scans all packages in the classpath.",
+                "It scans only the package of the main application class and its sub-packages.",
+                "Bean scanning is disabled by default in Spring Boot.",
+                "It requires explicit configuration of package names to scan."
+            ],
+            "correct": 1,
+            "explanation": "By default, Spring Boot scans the package of the main application class and its sub-packages."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the `spring-boot-starter-web` dependency?",
+            "options": [
+                "To provide web server functionality.",
+                "To provide REST API capabilities.",
+                "To provide auto-configuration for web applications.",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "The `spring-boot-starter-web` dependency bundles all necessary dependencies for building web applications, including embedded server, REST support, and auto-configuration."
+        },
+        {
+            "id": "q18",
+            "question": "True or False: Spring Boot supports only one configuration file (application.properties or application.yml) in the resources directory.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Spring Boot supports loading properties from multiple locations and supports both application.properties and application.yml."
+        },
+        {
+            "id": "q19",
+            "question": "What is the effect of setting `spring.application.name` in the application properties?",
+            "options": [
+                "It changes the application's port.",
+                "It sets the name of the application for logging and other purposes.",
+                "It disables auto-configuration.",
+                "It changes the default context path."
+            ],
+            "correct": 1,
+            "explanation": "`spring.application.name` sets the application's name, which can be used in logging and other contexts."
+        },
+        {
+            "id": "q20",
+            "question": "Which Spring Boot feature allows overriding default settings?",
+            "options": [
+                "@EnableAutoConfiguration",
+                "Custom configuration properties",
+                "Spring Initializr",
+                "Embedded servers"
+            ],
+            "correct": 1,
+            "explanation": "Custom configuration properties (in application.properties or application.yml) can override default settings."
+        },
+        {
+            "id": "q21",
+            "question": "What is the primary function of `application.properties` and `application.yml` files?",
+            "options": [
+                "To define application dependencies",
+                "To configure logging levels",
+                "To set application properties such as database connection details and server port",
+                "To define REST API endpoints."
+            ],
+            "correct": 2,
+            "explanation": "These files store application configuration properties."
+        },
+        {
+            "id": "q22",
+            "question": "What is the significance of the `@RestController` annotation?",
+            "options": [
+                "It marks a class as a controller and combines @Controller and @ResponseBody.",
+                "It is used to enable dependency injection.",
+                "It configures the embedded server.",
+                "It provides access to production-ready features."
+            ],
+            "correct": 0,
+            "explanation": "@RestController is a convenience annotation for creating RESTful APIs."
+        },
+        {
+            "id": "q23",
+            "question": "How can you access a Spring Boot application's properties from within your application?",
+            "options": [
+                "Through dependency injection",
+                "Using the @Value annotation",
+                "Using the Environment interface",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All the listed methods are ways to access application properties."
+        },
+        {
+            "id": "q24",
+            "question": "What happens if both application.properties and application.yml files are present in the resources directory?",
+            "options": [
+                "application.properties takes precedence.",
+                "application.yml takes precedence.",
+                "The application fails to start.",
+                "Spring Boot loads properties from both files, with application.properties overriding any conflicting properties from application.yml."
+            ],
+            "correct": 3,
+            "explanation": "Properties from both files are loaded, but properties in application.properties override those in application.yml in case of conflicts."
+        },
+        {
+            "id": "q25",
+            "question": "What is the purpose of Spring Initializr's project generation?",
+            "options": [
+                "To automatically deploy the application.",
+                "To provide a basic project structure with selected dependencies.",
+                "To design the UI of the application.",
+                "To debug the application code."
+            ],
+            "correct": 1,
+            "explanation": "Spring Initializr helps create the basic project structure."
+        },
+        {
+            "id": "q26",
+            "question": "How can you disable auto-configuration for a specific bean?",
+            "options": [
+                "Use the @Configuration annotation.",
+                "Set the `spring.autoconfigure.exclude` property.",
+                "Remove the bean definition.",
+                "Use @ConditionalOnMissingBean."
+            ],
+            "correct": 1,
+            "explanation": "The `spring.autoconfigure.exclude` property, or more commonly, setting the respective property to `false`, disables specific auto-configurations."
+        },
+        {
+            "id": "q27",
+            "question": "Which annotation is used to create a Spring Boot application?",
+            "options": [
+                "@SpringBootApplication",
+                "@SpringApplication",
+                "@EnableAutoConfiguration",
+                "@Configuration"
+            ],
+            "correct": 0,
+            "explanation": "@SpringBootApplication is used to define Spring Boot applications"
+        },
+        {
+            "id": "q28",
+            "question": "Which command is used to run a Spring Boot application from the command line using Maven?",
+            "options": [
+                "mvn compile",
+                "mvn install",
+                "mvn spring-boot:run",
+                "mvn run"
+            ],
+            "correct": 2,
+            "explanation": "mvn spring-boot:run runs a Spring Boot application."
+        },
+        {
+            "id": "q29",
+            "question": "What is the default port for a Spring Boot application using embedded Tomcat?",
+            "options": [
+                "80",
+                "8080",
+                "8443",
+                "9000"
+            ],
+            "correct": 1,
+            "explanation": "The default port is 8080."
+        },
+        {
+            "id": "q30",
+            "question": "How can you configure the server port in a Spring Boot application?",
+            "options": [
+                "By setting the `server.port` property in application.properties or application.yml.",
+                "By using the @ServerPort annotation.",
+                "By modifying the pom.xml file.",
+                "Both A and C"
+            ],
+            "correct": 0,
+            "explanation": "The `server.port` property in application.properties/yml is the correct way."
+        },
+        {
+            "id": "q31",
+            "question": "What is the role of the `spring-boot-starter-test` dependency?",
+            "options": [
+                "To provide web server functionality.",
+                "To include testing-related dependencies, such as JUnit and Mockito.",
+                "To manage application dependencies.",
+                "To create RESTful APIs."
+            ],
+            "correct": 1,
+            "explanation": "This starter includes JUnit, Mockito, and other testing libraries."
+        },
+        {
+            "id": "q32",
+            "question": "True or False: Spring Boot automatically handles database connection pooling by default.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Spring Boot does not automatically configure database connection pooling by default, it requires relevant configuration, which may leverage auto-configuration of connection pools like HikariCP or DBCP2."
+        },
+        {
+            "id": "q33",
+            "question": "Which of the following is NOT a valid logging level supported by Spring Boot's default logging configuration?",
+            "options": [
+                "TRACE",
+                "DEBUG",
+                "INFO",
+                "FATAL"
+            ],
+            "correct": 3,
+            "explanation": "FATAL is not a default logging level, though it might be available in certain implementations, it is commonly replaced by ERROR. Default levels are TRACE, DEBUG, INFO, WARN, ERROR, and OFF."
+        },
+        {
+            "id": "q34",
+            "question": "What is the purpose of `spring.main.banner-mode` property?",
+            "options": [
+                "To control the server port.",
+                "To enable or disable the Spring Boot banner.",
+                "To set the application name.",
+                "To configure database connection details."
+            ],
+            "correct": 1,
+            "explanation": "This property manages the display of the Spring Boot banner during application startup."
+        },
+        {
+            "id": "q35",
+            "question": "How does Spring Boot support different profiles?",
+            "options": [
+                "By using different application.properties files for each profile (e.g., application-dev.properties).",
+                "By defining profiles in the pom.xml file.",
+                "By using environment variables.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Spring Boot supports profiles using multiple methods, including separate property files, environment variables, or system properties."
+        }
+    ],
+    "starter-autoconfig": [
+        {
+            "id": "q1",
+            "question": "Which annotation is primarily responsible for Spring Boot's auto-configuration mechanism?",
+            "options": [
+                "@Component",
+                "@Autowired",
+                "@Configuration",
+                "@SpringBootApplication"
+            ],
+            "correct": 3,
+            "explanation": "@SpringBootApplication combines @SpringBootConfiguration, @EnableAutoConfiguration, and @ComponentScan."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of a Spring Boot Starter project?",
+            "options": [
+                "To provide a ready-to-use Spring Boot application template.",
+                "To provide dependency management for a specific technology stack.",
+                "To automatically configure all dependencies in your project.",
+                "To generate RESTful APIs."
+            ],
+            "correct": 1,
+            "explanation": "Starters bundle commonly used dependencies and their default configurations for specific functionalities."
+        },
+        {
+            "id": "q3",
+            "question": "If you exclude a starter dependency from your `pom.xml`, what will happen?",
+            "options": [
+                "The corresponding functionality will be disabled.",
+                "The application will fail to compile.",
+                "The application will still function, but without the excluded features.",
+                "The auto-configuration for that starter will be disabled."
+            ],
+            "correct": 3,
+            "explanation": "Excluding a starter dependency removes its transitive dependencies, affecting related functionality."
+        },
+        {
+            "id": "q4",
+            "question": "Which starter would you typically use for building a web application with Spring MVC?",
+            "options": [
+                "spring-boot-starter-data-jpa",
+                "spring-boot-starter-web",
+                "spring-boot-starter-test",
+                "spring-boot-starter-security"
+            ],
+            "correct": 1,
+            "explanation": "spring-boot-starter-web includes Spring MVC, Tomcat (by default), and other web-related dependencies."
+        },
+        {
+            "id": "q5",
+            "question": "How does Spring Boot auto-configuration work with custom configurations?",
+            "options": [
+                "Custom configurations always override auto-configurations.",
+                "Auto-configurations always override custom configurations.",
+                "Auto-configuration provides default settings that can be overridden by custom configurations.",
+                "There is no interaction between the two."
+            ],
+            "correct": 2,
+            "explanation": "Custom configurations provide overrides, allowing for customization of auto-configured beans."
+        },
+        {
+            "id": "q6",
+            "question": "What is the benefit of using `spring-boot-starter-test`?",
+            "options": [
+                "It provides dependencies for testing, such as JUnit and Mockito.",
+                "It automatically runs all tests in your project.",
+                "It helps generate test data.",
+                "It provides a built-in testing web server."
+            ],
+            "correct": 0,
+            "explanation": "The test starter simplifies the inclusion of testing dependencies."
+        },
+        {
+            "id": "q7",
+            "question": "Which file is typically used to configure auto-configuration properties?",
+            "options": [
+                "application.properties",
+                "pom.xml",
+                "src/main/java",
+                "src/test/java"
+            ],
+            "correct": 0,
+            "explanation": "application.properties (or application.yml) allows you to customize auto-configured properties."
+        },
+        {
+            "id": "q8",
+            "question": "What is the role of `@ConditionalOnMissingBean`?",
+            "options": [
+                "It ensures a bean is only created if a bean of the same type doesn't already exist.",
+                "It creates a bean only when another bean is missing.",
+                "It prevents the creation of a bean if any other bean is present.",
+                "It marks a bean as optional."
+            ],
+            "correct": 0,
+            "explanation": "@ConditionalOnMissingBean is key in preventing conflicts and allowing custom configuration."
+        },
+        {
+            "id": "q9",
+            "question": "Which property can be used to disable specific auto-configuration classes?",
+            "options": [
+                "spring.autoconfigure.exclude",
+                "spring.disable-autoconfiguration",
+                "spring.auto-configuration.disabled",
+                "spring.exclude-starter"
+            ],
+            "correct": 0,
+            "explanation": "spring.autoconfigure.exclude allows for selectively disabling auto-configured classes."
+        },
+        {
+            "id": "q10",
+            "question": "True or False: Spring Boot auto-configuration can automatically configure a database connection if the necessary dependencies are on the classpath and appropriate configuration properties are provided.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Spring Boot's auto-configuration simplifies database setup with its features."
+        },
+        {
+            "id": "q11",
+            "question": "What is the purpose of `spring-boot-maven-plugin`?",
+            "options": [
+                "To package the application as an executable JAR or WAR.",
+                "To manage dependencies.",
+                "To run tests.",
+                "To build the project."
+            ],
+            "correct": 0,
+            "explanation": "This plugin streamlines the creation of self-contained executable archives."
+        },
+        {
+            "id": "q12",
+            "question": "Which annotation, when used with `@EnableAutoConfiguration`, would further customize the auto-configuration?",
+            "options": [
+                "@Configuration",
+                "@Bean",
+                "@Conditional",
+                "@ConditionalOnClass"
+            ],
+            "correct": 2,
+            "explanation": "@Conditional annotations refine the auto-configuration process based on specific conditions."
+        },
+        {
+            "id": "q13",
+            "question": "What happens if you include a dependency that conflicts with auto-configured beans?",
+            "options": [
+                "The application will automatically resolve the conflict.",
+                "The application will fail at runtime.",
+                "The auto-configuration will always take precedence.",
+                "You will need to manually resolve the conflict, possibly through custom configurations or excluding dependencies."
+            ],
+            "correct": 3,
+            "explanation": "Conflicts necessitate explicit handling, usually via custom configurations or excluding conflicting dependencies."
+        },
+        {
+            "id": "q14",
+            "question": "Which starter would you use for incorporating messaging using RabbitMQ?",
+            "options": [
+                "spring-boot-starter-web",
+                "spring-boot-starter-data-jpa",
+                "spring-boot-starter-amqp",
+                "spring-boot-starter-test"
+            ],
+            "correct": 2,
+            "explanation": "spring-boot-starter-amqp provides dependencies for RabbitMQ integration."
+        },
+        {
+            "id": "q15",
+            "question": "In the context of auto-configuration, what are 'starters'?",
+            "options": [
+                "Pre-configured Spring beans.",
+                "Dependencies that contain auto-configuration classes and related dependencies.",
+                "Utility classes for managing configuration properties.",
+                "The main entry point for Spring Boot applications."
+            ],
+            "correct": 1,
+            "explanation": "Starters are bundles of dependencies and their auto-configuration components."
+        },
+        {
+            "id": "q16",
+            "question": "What happens if you define a bean with the same type and name as an auto-configured bean and the auto-configuration has `@ConditionalOnMissingBean`?",
+            "options": [
+                "Your bean will replace the auto-configured bean.",
+                "Both beans will be created.",
+                "The auto-configured bean will be created, and your bean will be ignored.",
+                "An exception will be thrown at startup."
+            ],
+            "correct": 0,
+            "explanation": "Your bean overrides the auto-configured bean if the condition is met."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following is *not* a benefit of Spring Boot auto-configuration?",
+            "options": [
+                "Reduced boilerplate code.",
+                "Simplified dependency management.",
+                "Increased application startup time.",
+                "Convention-over-configuration"
+            ],
+            "correct": 2,
+            "explanation": "While auto-configuration simplifies development, it *can* marginally increase startup time as the framework assesses numerous configurations. However, this is usually a trade-off for the benefits."
+        },
+        {
+            "id": "q18",
+            "question": "What mechanism does Spring Boot use to discover and apply auto-configurations?",
+            "options": [
+                "Class scanning and annotations.",
+                "Reflection and bytecode manipulation.",
+                "Maven dependency management.",
+                "Manual configuration files."
+            ],
+            "correct": 0,
+            "explanation": "Spring Boot uses class path scanning to find and apply auto-configuration classes based on annotations (e.g., @Configuration)."
+        },
+        {
+            "id": "q19",
+            "question": "Which of these is typically *not* a property configurable within `application.properties` or `application.yml` to control auto-configuration?",
+            "options": [
+                "`spring.datasource.url`",
+                "`logging.level.root`",
+                "`server.port`",
+                "`spring.core.version`"
+            ],
+            "correct": 3,
+            "explanation": "`spring.core.version` is not directly configurable through properties as it is a core Spring dependency version managed by Spring Boot itself and typically does not need to be changed at runtime, though overriding the Spring version in the project can be done in pom.xml or gradle.build files."
+        },
+        {
+            "id": "q20",
+            "question": "If you want to customize the default `Tomcat` server settings provided by `spring-boot-starter-web`, where would you configure these?",
+            "options": [
+                "`pom.xml`",
+                "`src/main/java`",
+                "`application.properties` or `application.yml`",
+                "In a custom `@Configuration` class with `@Bean` definitions for `Tomcat`"
+            ],
+            "correct": 2,
+            "explanation": "Common configuration properties are placed in the properties or YAML configuration file."
+        },
+        {
+            "id": "q21",
+            "question": "What would happen if both `application.properties` and `application.yml` are present in the same directory?",
+            "options": [
+                "The application will fail to start.",
+                "`application.properties` will be used.",
+                "`application.yml` will be used.",
+                "The application will merge the configurations, with `.yml` properties overriding `.properties` if conflicts exist."
+            ],
+            "correct": 3,
+            "explanation": "Spring Boot automatically merges configurations, with the properties from `application.yml` having precedence in case of conflict."
+        },
+        {
+            "id": "q22",
+            "question": "Which Spring Boot feature allows you to manage different configurations for different environments (e.g., development, production)?",
+            "options": [
+                "Profiles",
+                "Starters",
+                "Auto-configuration",
+                "Dependencies"
+            ],
+            "correct": 0,
+            "explanation": "Profiles enable environment-specific configuration using properties and YAML files."
+        },
+        {
+            "id": "q23",
+            "question": "What is the purpose of `@ConditionalOnClass` annotation?",
+            "options": [
+                "To create a bean if a specific class is present on the classpath.",
+                "To exclude a bean if a class is present on the classpath.",
+                "To create a bean only when a particular class is missing from classpath.",
+                "To disable auto-configuration if a specific class is available."
+            ],
+            "correct": 0,
+            "explanation": "This condition checks for a class's presence on the classpath."
+        },
+        {
+            "id": "q24",
+            "question": "True or False: Spring Boot automatically handles the configuration of logging based on the dependencies present in your project.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Spring Boot auto-configures logging using Logback or other logging frameworks."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following can be used to define a custom `DataSource` in Spring Boot, overriding the auto-configured one?",
+            "options": [
+                "A `@Bean` annotated method that returns a `DataSource`.",
+                "Setting properties like `spring.datasource.url` and `spring.datasource.driver-class-name` in `application.properties` or `application.yml`",
+                "Both of the above.",
+                "Neither of the above."
+            ],
+            "correct": 2,
+            "explanation": "Both methods are viable ways to configure a custom `DataSource`."
+        },
+        {
+            "id": "q26",
+            "question": "What is the primary role of the `spring-boot-autoconfigure` module?",
+            "options": [
+                "Provides the main Spring Boot application entry point.",
+                "Contains all the auto-configuration classes.",
+                "Manages dependencies for Spring Boot.",
+                "Defines Spring Boot's testing utilities."
+            ],
+            "correct": 1,
+            "explanation": "This module houses all the auto-configuration classes used by Spring Boot."
+        },
+        {
+            "id": "q27",
+            "question": "If you encounter a problem where an auto-configured bean isn't behaving as expected, what's the first step you should take?",
+            "options": [
+                "Restart the application.",
+                "Check the Spring Boot documentation for that specific starter.",
+                "Manually configure the bean in your own `@Configuration` class, overriding the defaults.",
+                "Contact Spring Boot support."
+            ],
+            "correct": 1,
+            "explanation": "Documentation usually provides guidance on customization or troubleshooting."
+        },
+        {
+            "id": "q28",
+            "question": "How does Spring Boot decide which properties to configure for auto-configuration?",
+            "options": [
+                "It uses a fixed set of predefined properties.",
+                "It reads properties from `application.properties` or `application.yml`.",
+                "It uses reflection to determine the type of your beans.",
+                "It relies on annotations and class names to infer the configuration."
+            ],
+            "correct": 1,
+            "explanation": "Configuration is driven by properties provided to the application."
+        },
+        {
+            "id": "q29",
+            "question": "Which annotation is used to import a configuration class into your Spring Boot application?",
+            "options": [
+                "@Import",
+                "@ComponentScan",
+                "@Configuration",
+                "@SpringBootApplication"
+            ],
+            "correct": 0,
+            "explanation": "@Import is used to import one or more configuration classes."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of the `spring.main.banner-mode` property?",
+            "options": [
+                "To disable the banner at startup.",
+                "To change the banner text.",
+                "To set the application's name.",
+                "To select a different banner file."
+            ],
+            "correct": 0,
+            "explanation": "This property controls the display of the Spring Boot banner at startup."
+        },
+        {
+            "id": "q31",
+            "question": "Which Spring Boot feature simplifies the creation of production-ready applications?",
+            "options": [
+                "Starters",
+                "Auto-configuration",
+                "Actuator",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Starters, auto-configuration, and actuator together contribute to creating production-ready applications."
+        },
+        {
+            "id": "q32",
+            "question": "What is the effect of the `spring.application.name` property?",
+            "options": [
+                "Sets the application name for logging.",
+                "Sets the application name used in the banner.",
+                "Both of the above.",
+                "Neither of the above."
+            ],
+            "correct": 2,
+            "explanation": "This property sets the application name which can appear in logging and other places."
+        },
+        {
+            "id": "q33",
+            "question": "True or False: Spring Boot auto-configuration always uses sensible defaults, and you rarely need to change the default configurations.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "While it offers sensible defaults, customization through properties or custom configurations is frequently necessary."
+        },
+        {
+            "id": "q34",
+            "question": "What are the benefits of using Spring Boot Actuator?",
+            "options": [
+                "Monitoring and management of Spring Boot applications.",
+                "Provides production-ready features like health checks, metrics, and more.",
+                "Easily exposes application information, such as health and metrics, over HTTP or JMX.",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Actuator enhances Spring Boot applications with essential features for monitoring and managing them in production."
+        },
+        {
+            "id": "q35",
+            "question": "If you want to use a database connection pool, which starter do you implicitly rely on through auto-configuration (assuming you have a database dependency)?",
+            "options": [
+                "`spring-boot-starter-data-jpa`",
+                "`spring-boot-starter-web`",
+                "`spring-boot-starter-jdbc` or `spring-boot-starter-data-jpa`",
+                "None of the above"
+            ],
+            "correct": 2,
+            "explanation": "`spring-boot-starter-jdbc` or `spring-boot-starter-data-jpa` will autoconfigure a data source using connection pools."
+        }
+    ],
+    "rest-apis": [
+        {
+            "id": "q1",
+            "question": "Which annotation is used to map HTTP POST requests onto specific handler methods in Spring Boot?",
+            "options": [
+                "@GetMapping",
+                "@PostMapping",
+                "@PutMapping",
+                "@DeleteMapping"
+            ],
+            "correct": 1,
+            "explanation": "@PostMapping is specifically designed for handling HTTP POST requests."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary purpose of the `@RequestBody` annotation in a Spring Boot REST API?",
+            "options": [
+                "To bind the request body to a method parameter.",
+                "To specify the HTTP method.",
+                "To define the URL path.",
+                "To handle exceptions."
+            ],
+            "correct": 0,
+            "explanation": "The `@RequestBody` annotation maps the HTTP request body to a method parameter, allowing you to access the data sent in the body."
+        },
+        {
+            "id": "q3",
+            "question": "Which HTTP method is typically used to retrieve data from a REST API?",
+            "options": [
+                "POST",
+                "PUT",
+                "DELETE",
+                "GET"
+            ],
+            "correct": 3,
+            "explanation": "GET requests are used for retrieving data without modifying the server's state."
+        },
+        {
+            "id": "q4",
+            "question": "What is the default HTTP status code returned by a successful GET request in Spring Boot?",
+            "options": [
+                "200 OK",
+                "201 Created",
+                "400 Bad Request",
+                "500 Internal Server Error"
+            ],
+            "correct": 0,
+            "explanation": "200 OK indicates a successful GET request."
+        },
+        {
+            "id": "q5",
+            "question": "In Spring Boot, what annotation is used to create a REST controller?",
+            "options": [
+                "@Component",
+                "@Service",
+                "@RestController",
+                "@ControllerAdvice"
+            ],
+            "correct": 2,
+            "explanation": "@RestController is a combination of @Controller and @ResponseBody, making it suitable for REST API creation."
+        },
+        {
+            "id": "q6",
+            "question": "Which HTTP method is most appropriate for partially updating a resource?",
+            "options": [
+                "POST",
+                "PUT",
+                "PATCH",
+                "GET"
+            ],
+            "correct": 2,
+            "explanation": "PATCH is used for partial modifications, while PUT is used for replacing the entire resource."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of the `@PathVariable` annotation in Spring Boot REST APIs?",
+            "options": [
+                "To extract data from the request body.",
+                "To bind a method parameter to a URI template variable.",
+                "To handle exceptions.",
+                "To specify the HTTP method."
+            ],
+            "correct": 1,
+            "explanation": "It binds a method parameter to a URI template variable, allowing you to extract values from the URL."
+        },
+        {
+            "id": "q8",
+            "question": "Which Spring Boot annotation is used to map DELETE requests?",
+            "options": [
+                "@PostMapping",
+                "@PutMapping",
+                "@DeleteMapping",
+                "@GetMapping"
+            ],
+            "correct": 2,
+            "explanation": "@DeleteMapping is the annotation used for DELETE requests."
+        },
+        {
+            "id": "q9",
+            "question": "What is the role of the `@ResponseBody` annotation?",
+            "options": [
+                "To indicate a method should return data directly in the response body.",
+                "To handle exceptions.",
+                "To specify the URL path.",
+                "To define the HTTP method."
+            ],
+            "correct": 0,
+            "explanation": "@ResponseBody instructs Spring MVC to serialize the return value of a method directly into the HTTP response body."
+        },
+        {
+            "id": "q10",
+            "question": "What is the primary difference between PUT and POST in RESTful APIs?",
+            "options": [
+                "PUT is idempotent, POST is not; PUT is for resource creation, POST is for updates.",
+                "PUT is for resource creation, POST is for updates; PUT is not idempotent, POST is.",
+                "PUT is idempotent, POST is not; PUT is for updates, POST is for resource creation.",
+                "They are identical."
+            ],
+            "correct": 2,
+            "explanation": "PUT is idempotent (multiple identical requests have the same effect as one) and used for replacing a resource. POST is generally not idempotent and used for creating new resources or performing operations."
+        },
+        {
+            "id": "q11",
+            "question": "Which HTTP status code is typically returned after a successful POST request that creates a new resource?",
+            "options": [
+                "200 OK",
+                "201 Created",
+                "302 Found",
+                "400 Bad Request"
+            ],
+            "correct": 1,
+            "explanation": "201 Created indicates that the request has been fulfilled and has resulted in one or more new resources being created."
+        },
+        {
+            "id": "q12",
+            "question": "Which annotation allows you to customize the response status code?",
+            "options": [
+                "@RequestBody",
+                "@ResponseBody",
+                "@ResponseStatus",
+                "@PathVariable"
+            ],
+            "correct": 2,
+            "explanation": "@ResponseStatus allows to change the HTTP status code returned by a controller method."
+        },
+        {
+            "id": "q13",
+            "question": "What is the purpose of content negotiation in REST APIs?",
+            "options": [
+                "To determine the best format for the response based on the client's request.",
+                "To secure the API.",
+                "To handle exceptions.",
+                "To validate input data."
+            ],
+            "correct": 0,
+            "explanation": "Content negotiation helps the server determine the appropriate response format (e.g., JSON, XML) based on the client's `Accept` header."
+        },
+        {
+            "id": "q14",
+            "question": "Consider the following code:\n\n```java\n@GetMapping(",
+            "options": [
+                "/users",
+                "/users/get?id=123",
+                "/users/123",
+                "/users/id=123"
+            ],
+            "correct": 2,
+            "explanation": "The `@PathVariable` annotation and the URL mapping /users/{id} means that the parameter"
+        },
+        {
+            "id": "q15",
+            "question": "What is the role of the `@RequestMapping` annotation?",
+            "options": [
+                "To map web requests to handler methods.",
+                "To handle exceptions.",
+                "To inject dependencies.",
+                "To define data models."
+            ],
+            "correct": 0,
+            "explanation": "@RequestMapping is the base annotation for handling requests. It can be used at both the class and method level."
+        },
+        {
+            "id": "q16",
+            "question": "Which HTTP method is most suitable for replacing an existing resource completely?",
+            "options": [
+                "POST",
+                "PUT",
+                "PATCH",
+                "GET"
+            ],
+            "correct": 1,
+            "explanation": "PUT replaces the entire resource at the specified URI."
+        },
+        {
+            "id": "q17",
+            "question": "How can you handle exceptions globally in Spring Boot REST APIs?",
+            "options": [
+                "Use `@ExceptionHandler` at the controller level.",
+                "Use `@ControllerAdvice` and `@ExceptionHandler`",
+                "Throw exceptions within each controller method.",
+                "Use try-catch blocks within each controller method."
+            ],
+            "correct": 1,
+            "explanation": "@ControllerAdvice and @ExceptionHandler provides a way to handle exceptions across multiple controllers in a centralized manner."
+        },
+        {
+            "id": "q18",
+            "question": "What does idempotency mean in the context of REST APIs?",
+            "options": [
+                "The ability to handle multiple requests simultaneously.",
+                "The ability to execute a request without any side effects.",
+                "Executing the same request multiple times has the same effect as executing it once.",
+                "The ability to automatically retry failed requests."
+            ],
+            "correct": 2,
+            "explanation": "Idempotency means that applying the same operation multiple times has the same effect as applying it once."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following is NOT a valid HTTP method?",
+            "options": [
+                "GET",
+                "POST",
+                "UPDATE",
+                "DELETE"
+            ],
+            "correct": 2,
+            "explanation": "UPDATE is not a standard HTTP method. PUT and PATCH are used for updates."
+        },
+        {
+            "id": "q20",
+            "question": "Which annotation is used to bind request parameters from the URL (e.g., ?name=John) to method parameters?",
+            "options": [
+                "@RequestBody",
+                "@PathVariable",
+                "@RequestParam",
+                "@RequestHeader"
+            ],
+            "correct": 2,
+            "explanation": "@RequestParam is used to bind parameters from the URL query string to method parameters."
+        },
+        {
+            "id": "q21",
+            "question": "In Spring Boot, how can you specify the content type of the response?",
+            "options": [
+                "Using the `@ResponseHeader` annotation.",
+                "Using the `Content-Type` header in the response.",
+                "Using the `@Produces` annotation on the controller method (or the `produces` attribute in `@RequestMapping`, `@GetMapping`, etc.).",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All the given options are valid methods to control the content type of a REST API's response."
+        },
+        {
+            "id": "q22",
+            "question": "What is the purpose of the `produces` attribute in `@RequestMapping` (or related annotations like `@GetMapping`)?",
+            "options": [
+                "To specify the HTTP methods that the method handles.",
+                "To define the URL path.",
+                "To declare the content types that the method can produce.",
+                "To handle exceptions."
+            ],
+            "correct": 2,
+            "explanation": "The `produces` attribute specifies the media types (e.g., application/json, application/xml) that the method can produce."
+        },
+        {
+            "id": "q23",
+            "question": "Which annotation is typically used to validate request input in Spring Boot REST APIs?",
+            "options": [
+                "@Valid",
+                "@Validated",
+                "@AssertTrue",
+                "Both @Valid and @Validated"
+            ],
+            "correct": 3,
+            "explanation": "Both annotations, along with a validation implementation like Hibernate Validator, are used for input validation. `@Valid` usually uses the standard validation constraints, and `@Validated` lets you apply validation groups."
+        },
+        {
+            "id": "q24",
+            "question": "What is the benefit of using DTOs (Data Transfer Objects) in REST APIs?",
+            "options": [
+                "To directly expose entity objects to the client.",
+                "To encapsulate data for transfer and decoupling API from internal models.",
+                "To handle exception globally.",
+                "To automatically generate API documentation."
+            ],
+            "correct": 1,
+            "explanation": "DTOs help encapsulate data for transfer, decouple the API from the internal data models (e.g., database entities), and provide control over the exposed data."
+        },
+        {
+            "id": "q25",
+            "question": "Which header is often used to pass authentication tokens in REST APIs?",
+            "options": [
+                "Content-Type",
+                "Accept",
+                "Authorization",
+                "User-Agent"
+            ],
+            "correct": 2,
+            "explanation": "The `Authorization` header is commonly used to pass authentication tokens like Bearer tokens."
+        },
+        {
+            "id": "q26",
+            "question": "What is the purpose of CORS (Cross-Origin Resource Sharing)?",
+            "options": [
+                "To secure APIs against SQL injection.",
+                "To allow web pages from one origin to access resources from a different origin.",
+                "To validate user input.",
+                "To compress the response data."
+            ],
+            "correct": 1,
+            "explanation": "CORS allows web pages from one origin (domain, protocol, and port) to make requests to a different origin."
+        },
+        {
+            "id": "q27",
+            "question": "How can you enable CORS globally in a Spring Boot application?",
+            "options": [
+                "By adding the `@CrossOrigin` annotation to each controller.",
+                "By configuring a `WebMvcConfigurer` and setting up CORS mappings.",
+                "By using the `spring.mvc.cors.allowed-origins` property in `application.properties` or `application.yml`.",
+                "Options 2 and 3 are correct"
+            ],
+            "correct": 3,
+            "explanation": "Both `WebMvcConfigurer` configuration and the properties file configuration are used to enable CORS globally."
+        },
+        {
+            "id": "q28",
+            "question": "What is the difference between `@GetMapping(",
+            "options": [
+                "There's no difference; they are equivalent.",
+                "The second one is more efficient.",
+                "The first one is more concise and readable.",
+                "The first one supports more HTTP methods."
+            ],
+            "correct": 2,
+            "explanation": "The first one is more concise and directly expresses the intent for a GET request, while the second is more verbose."
+        },
+        {
+            "id": "q29",
+            "question": "How do you handle file uploads in a Spring Boot REST API?",
+            "options": [
+                "Use `@RequestParam` to receive the file as bytes.",
+                "Use `@RequestBody` to receive the file contents.",
+                "Use `MultipartFile` and `@RequestParam` or `@RequestPart`.",
+                "Use `File` and `@PathVariable`."
+            ],
+            "correct": 2,
+            "explanation": "You typically use `MultipartFile` and `@RequestParam` or `@RequestPart` to receive and process file uploads."
+        },
+        {
+            "id": "q30",
+            "question": "What is the benefit of using pagination in a REST API that returns a large dataset?",
+            "options": [
+                "To improve security.",
+                "To reduce the server's memory usage and improve performance.",
+                "To make the API more complex.",
+                "To prevent users from accessing all the data."
+            ],
+            "correct": 1,
+            "explanation": "Pagination reduces the amount of data returned in a single response, improving performance and reducing memory consumption."
+        },
+        {
+            "id": "q31",
+            "question": "Which annotation is typically used to specify the version of a REST API?",
+            "options": [
+                "@Version",
+                "@ApiVersion",
+                "@RequestMapping(value =",
+                ")",
+                "There is no standard annotation for this."
+            ],
+            "correct": 2,
+            "explanation": "While there isn't a specific annotation, using the URL path (e.g., `/api/v1`) is a common way to version REST APIs."
+        },
+        {
+            "id": "q32",
+            "question": "What is the best practice regarding the use of HTTP status codes in a REST API?",
+            "options": [
+                "Always use 200 OK for all successful responses.",
+                "Use only a few standard status codes to keep things simple.",
+                "Use the appropriate status codes to communicate the outcome of the request clearly.",
+                "Ignore status codes and always return a 200 OK with a response body."
+            ],
+            "correct": 2,
+            "explanation": "Using the appropriate status codes is essential to correctly convey the result of the API operation."
+        },
+        {
+            "id": "q33",
+            "question": "How can you serialize Java objects to JSON in Spring Boot?",
+            "options": [
+                "By using the `@JsonIgnore` annotation.",
+                "By using the Jackson library (or other JSON processing libraries) and having Jackson on the classpath.",
+                "By using the `@ResponseBody` annotation.",
+                "By default, Spring Boot automatically serializes to JSON if Jackson is on the classpath, and you can use the above annotations/attributes to customize the output."
+            ],
+            "correct": 3,
+            "explanation": "Spring Boot typically uses Jackson (or other JSON libraries like Gson) by default to serialize objects to JSON automatically. Annotations like `@JsonIgnore`, `@JsonProperty`, etc. enable customizing the JSON output."
+        },
+        {
+            "id": "q34",
+            "question": "If you are getting a 406 Not Acceptable error, what might be the issue?",
+            "options": [
+                "The server cannot find the requested resource.",
+                "The client has specified in its Accept header that it wants a format the server cannot provide.",
+                "There's a syntax error in the request body.",
+                "The server encountered an unexpected error."
+            ],
+            "correct": 1,
+            "explanation": "A 406 Not Acceptable error indicates that the server cannot produce a response matching the client's `Accept` header."
+        },
+        {
+            "id": "q35",
+            "question": "What would be the most appropriate HTTP method to create a new subresource under an existing resource?",
+            "options": [
+                "PUT",
+                "POST",
+                "PATCH",
+                "GET"
+            ],
+            "correct": 1,
+            "explanation": "POST is typically used to create new resources, including subresources under an existing one."
+        }
+    ],
+    "validation": [
+        {
+            "id": "q1",
+            "question": "Which annotation is used to enable validation in Spring Boot?",
+            "options": [
+                "@Validated",
+                "@Valid",
+                "@EnableValidation",
+                "@Validation"
+            ],
+            "correct": 1,
+            "explanation": "@Valid is the primary annotation used to trigger validation on an object, often used in conjunction with validation annotations like @NotNull, @Size, etc."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of the Hibernate Validator in Spring Boot validation?",
+            "options": [
+                "To handle database transactions",
+                "To provide the validation implementation",
+                "To manage dependency injection",
+                "To perform security checks"
+            ],
+            "correct": 1,
+            "explanation": "Hibernate Validator provides the concrete implementation for the Bean Validation API (JSR-380/JSR-303)."
+        },
+        {
+            "id": "q3",
+            "question": "If you want to validate a nested object within a larger object, what approach should you use?",
+            "options": [
+                "Use @Valid on the nested object field",
+                "Use @Validated on the nested object field",
+                "Use @NotNull on the parent object",
+                "Validation is not possible on nested objects"
+            ],
+            "correct": 0,
+            "explanation": "Using @Valid on the nested object field triggers validation for that object's properties."
+        },
+        {
+            "id": "q4",
+            "question": "Which dependency is typically needed in your pom.xml (or build.gradle) to enable Spring Boot validation?",
+            "options": [
+                "spring-boot-starter-data-jpa",
+                "spring-boot-starter-web",
+                "spring-boot-starter-validation",
+                "spring-boot-starter-security"
+            ],
+            "correct": 2,
+            "explanation": "The spring-boot-starter-validation dependency includes the necessary libraries for validation, including Hibernate Validator and Bean Validation API."
+        },
+        {
+            "id": "q5",
+            "question": "What is the behavior of Spring Boot validation if a validation fails?",
+            "options": [
+                "It throws a runtime exception",
+                "It returns a 400 Bad Request with validation errors",
+                "It logs the errors and continues processing",
+                "It ignores the errors and processes as usual"
+            ],
+            "correct": 1,
+            "explanation": "By default, validation failures typically result in a 400 Bad Request HTTP status code, with a response body containing the validation error messages."
+        },
+        {
+            "id": "q6",
+            "question": "Which annotation is suitable for validating the size of a string?",
+            "options": [
+                "@Pattern",
+                "@Min",
+                "@Size",
+                "@NotBlank"
+            ],
+            "correct": 2,
+            "explanation": "@Size validates the length of a string or the size of a collection."
+        },
+        {
+            "id": "q7",
+            "question": "Which annotation is used to validate that a field is not null and not empty (for strings)?",
+            "options": [
+                "@NotNull",
+                "@NotEmpty",
+                "@NotBlank",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "@NotNull checks for null, @NotEmpty checks for empty strings, and @NotBlank combines both checks."
+        },
+        {
+            "id": "q8",
+            "question": "How can you customize the validation error messages?",
+            "options": [
+                "By using the 'message' attribute in validation annotations",
+                "By creating a custom validation annotation",
+                "By using a message source (e.g., messages.properties)",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All the mentioned ways are applicable. You can override validation messages to customize the user experience."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the @Valid annotation on a method parameter?",
+            "options": [
+                "To enable validation of the method itself",
+                "To trigger validation of the parameter's properties",
+                "To mark the method as valid",
+                "To indicate that the parameter is optional"
+            ],
+            "correct": 1,
+            "explanation": "@Valid triggers the validation process on the properties of the parameter object."
+        },
+        {
+            "id": "q10",
+            "question": "Which interface is implemented to create custom validation annotations?",
+            "options": [
+                "Validator",
+                "ConstraintValidator",
+                "Validatable",
+                "ValidationHandler"
+            ],
+            "correct": 1,
+            "explanation": "ConstraintValidator is the interface used to create custom validation logic and is tied to a specific constraint annotation and a type."
+        }
+    ],
+    "Exception": [
+        {
+            "id": "q1",
+            "question": "Which annotation is used to handle exceptions globally in Spring Boot?",
+            "options": [
+                "@ExceptionHandler",
+                "@ControllerAdvice",
+                "@ResponseBody",
+                "@ResponseStatus"
+            ],
+            "correct": 1,
+            "explanation": "@ControllerAdvice is used for global exception handling across multiple controllers."
+        },
+        {
+            "id": "q2",
+            "question": "What is the purpose of the @ResponseStatus annotation?",
+            "options": [
+                "To define a custom HTTP status code for an exception.",
+                "To log exceptions to a file.",
+                "To automatically retry a failed request.",
+                "To define a custom error message for an exception."
+            ],
+            "correct": 0,
+            "explanation": "@ResponseStatus is used to specify the HTTP status code to be returned when a specific exception is thrown."
+        },
+        {
+            "id": "q3",
+            "question": "In Spring Boot, how can you handle specific exceptions within a single controller?",
+            "options": [
+                "Using @ControllerAdvice and @ExceptionHandler.",
+                "Using @ResponseBody and @ExceptionHandler.",
+                "Using @ResponseStatus and @ExceptionHandler.",
+                "Using @ExceptionHandler within the controller class."
+            ],
+            "correct": 3,
+            "explanation": "@ExceptionHandler is used inside a controller to handle exceptions thrown by methods within that controller."
+        },
+        {
+            "id": "q4",
+            "question": "What is the primary use of `ResponseEntity` in exception handling?",
+            "options": [
+                "To define custom HTTP headers and status codes along with the response body.",
+                "To automatically handle common exceptions.",
+                "To log exception details.",
+                "To serialize exceptions to JSON."
+            ],
+            "correct": 0,
+            "explanation": "ResponseEntity allows full control over the HTTP response, including status codes, headers, and the response body."
+        },
+        {
+            "id": "q5",
+            "question": "Which of the following is NOT a benefit of using global exception handling?",
+            "options": [
+                "Centralized exception management.",
+                "Improved code readability.",
+                "Reduced code duplication.",
+                "Increased code complexity."
+            ],
+            "correct": 3,
+            "explanation": "Global exception handling reduces code complexity."
+        }
+    ],
+    "mysql-postgres": [
+        {
+            "id": "q1",
+            "question": "Which annotation, when used with Spring Data JPA, automatically creates a table in the database based on the entity class?",
+            "options": [
+                "@Autowired",
+                "@Configuration",
+                "@Entity",
+                "@SpringBootApplication"
+            ],
+            "correct": 2,
+            "explanation": "@Entity marks a class as a JPA entity, and when combined with other configurations like `@Table` and a suitable persistence provider, will create a table in the database."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary function of the `spring.datasource.url` property in `application.properties` or `application.yml`?",
+            "options": [
+                "To specify the database driver class.",
+                "To define the connection pool size.",
+                "To provide the database connection string.",
+                "To set the database username and password."
+            ],
+            "correct": 2,
+            "explanation": "The `spring.datasource.url` property contains the JDBC URL used to connect to the database, including the database system, host, port, and database name."
+        },
+        {
+            "id": "q3",
+            "question": "Which dependency needs to be added to `pom.xml` or `build.gradle` to use Spring Data JPA with MySQL?",
+            "options": [
+                "spring-boot-starter-web",
+                "spring-boot-starter-data-jpa",
+                "mysql-connector-java",
+                "spring-boot-starter-test"
+            ],
+            "correct": 2,
+            "explanation": "The `spring-boot-starter-data-jpa` dependency includes Spring Data JPA and other related dependencies, making it the primary choice for JPA-based applications."
+        },
+        {
+            "id": "q4",
+            "question": "What is the purpose of the `@Transactional` annotation in Spring Boot with JPA?",
+            "options": [
+                "To define a Spring bean.",
+                "To enable database transaction management.",
+                "To create a new database connection.",
+                "To perform dependency injection."
+            ],
+            "correct": 1,
+            "explanation": "`@Transactional` manages database transactions, ensuring atomicity, consistency, isolation, and durability (ACID properties) for database operations."
+        }
+    ],
+    "security": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using JWT over Basic Authentication?",
+            "options": [
+                "Simpler implementation",
+                "Statelessness",
+                "Reduced code complexity",
+                "Built-in browser support"
+            ],
+            "correct": 1,
+            "explanation": "JWT's stateless nature allows servers to scale horizontally more easily because the server doesn't need to store session information."
+        },
+        {
+            "id": "q2",
+            "question": "In Spring Boot Security, which annotation is typically used to enable Basic Authentication?",
+            "options": [
+                "@EnableBasicAuth",
+                "@EnableWebSecurity",
+                "@EnableSecurity",
+                "@BasicAuthentication"
+            ],
+            "correct": 1,
+            "explanation": "@EnableWebSecurity enables Spring Security for the application.  Basic authentication is then configured within this framework, typically using a custom configuration."
+        },
+        {
+            "id": "q3",
+            "question": "What is the default hashing algorithm used by Spring Security for storing passwords?",
+            "options": [
+                "MD5",
+                "SHA-1",
+                "BCrypt",
+                "SHA-256"
+            ],
+            "correct": 2,
+            "explanation": "BCrypt is the default, and a good one, as it uses a work factor to slow down brute force attacks."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a component of a JWT?",
+            "options": [
+                "Header",
+                "Payload",
+                "Signature",
+                "Salt"
+            ],
+            "correct": 3,
+            "explanation": "A JWT consists of a header, payload, and signature.  Salt is used in password hashing, but not in JWT itself."
+        },
+        {
+            "id": "q5",
+            "question": "What is the purpose of the 'Subject' claim in a JWT payload?",
+            "options": [
+                "To store the user's roles",
+                "To identify the token issuer",
+                "To identify the user the token is about",
+                "To store the token's expiration time"
+            ],
+            "correct": 2,
+            "explanation": "The 'Subject' claim is used to identify the principal (usually the user) the JWT is about."
+        },
+        {
+            "id": "q6",
+            "question": "Which class in Spring Security is responsible for validating a JWT?",
+            "options": [
+                "JwtAuthenticationFilter",
+                "JwtTokenProvider",
+                "JwtAuthenticationEntryPoint",
+                "JwtDecoder"
+            ],
+            "correct": 3,
+            "explanation": "JwtDecoder is responsible for decoding and validating JWTs based on its configuration."
+        },
+        {
+            "id": "q7",
+            "question": "Consider a scenario where you need to implement JWT refresh tokens.  Where should you typically store the refresh token?",
+            "options": [
+                "In the JWT payload",
+                "In a cookie with HttpOnly flag",
+                "In local storage of the browser",
+                "In a database or cache"
+            ],
+            "correct": 3,
+            "explanation": "Refresh tokens are typically stored securely, such as in a database or cache, to enable their reuse and revocation functionality."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of `AuthenticationEntryPoint` in Spring Security?",
+            "options": [
+                "To handle successful authentication",
+                "To handle authentication failures and return appropriate HTTP responses",
+                "To configure the authentication manager",
+                "To validate user credentials"
+            ],
+            "correct": 1,
+            "explanation": "AuthenticationEntryPoint handles unauthenticated requests and returns appropriate HTTP responses (e.g., 401 Unauthorized) to the client."
+        },
+        {
+            "id": "q9",
+            "question": "Which property in `application.properties` is used to disable CSRF protection in Spring Security?",
+            "options": [
+                "security.csrf.enabled=false",
+                "spring.security.csrf.disable=true",
+                "spring.security.csrf.enabled=false",
+                "security.csrf=disable"
+            ],
+            "correct": 0,
+            "explanation": "security.csrf.enabled=false disables CSRF protection, however, this might not be the safest solution for all applications and should be considered carefully."
+        },
+        {
+            "id": "q10",
+            "question": "What is the recommended way to securely store the secret key used for signing JWTs in a Spring Boot application?",
+            "options": [
+                "Hardcode it in the source code",
+                "Store it in `application.properties`",
+                "Use environment variables",
+                "Check it into version control"
+            ],
+            "correct": 2,
+            "explanation": "Using environment variables is the recommended approach as it keeps the key separate from the code and allows changes without rebuilding the application."
+        },
+        {
+            "id": "q11",
+            "question": "In Spring Security, what is the primary function of `WebSecurityConfigurerAdapter`?",
+            "options": [
+                "To configure database connections",
+                "To configure web-based security",
+                "To handle user authentication",
+                "To manage JWT generation"
+            ],
+            "correct": 1,
+            "explanation": "WebSecurityConfigurerAdapter is used to configure global security settings, such as ignoring certain URL patterns and customizing the security filter chain."
+        },
+        {
+            "id": "q12",
+            "question": "Which HTTP method is typically used to retrieve a JWT?",
+            "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "correct": 1,
+            "explanation": "POST is typically used when exchanging credentials (username/password) for a token."
+        },
+        {
+            "id": "q13",
+            "question": "What is the role of `JwtAuthenticationFilter` in a Spring Boot JWT setup?",
+            "options": [
+                "To generate JWTs",
+                "To validate incoming JWTs and extract user information",
+                "To store user credentials",
+                "To handle the login process"
+            ],
+            "correct": 1,
+            "explanation": "JwtAuthenticationFilter validates the JWT in the request's Authorization header and sets the authentication in the SecurityContextHolder."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of `@PreAuthorize` annotation in Spring Security?",
+            "options": [
+                "To define a default authentication method",
+                "To restrict access to a method based on user roles or permissions",
+                "To handle exceptions during authentication",
+                "To encrypt passwords"
+            ],
+            "correct": 1,
+            "explanation": "@PreAuthorize allows you to control access to specific methods based on security expressions, such as roles."
+        },
+        {
+            "id": "q15",
+            "question": "Which security configuration would you typically use to configure CORS (Cross-Origin Resource Sharing) in Spring Boot?",
+            "options": [
+                "`@EnableWebSecurity` and `CorsConfigurationSource`",
+                "`@EnableCORS`",
+                "Default Spring Security config handles it automatically",
+                "You don't need CORS with JWT"
+            ],
+            "correct": 0,
+            "explanation": "You generally implement CORS by enabling web security (@EnableWebSecurity) and then configuring a CorsConfigurationSource bean to define the allowed origins, methods, and headers."
+        },
+        {
+            "id": "q16",
+            "question": "True or False: JWTs are automatically revoked when a user logs out.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "By default, JWTs are stateless.  Logout doesn't automatically revoke them; you typically need a refresh token strategy or server-side storage (e.g., a blacklist) to invalidate them explicitly."
+        },
+        {
+            "id": "q17",
+            "question": "Which of these is NOT a potential security concern when using JWTs?",
+            "options": [
+                "Token theft",
+                "Token expiration",
+                "CSRF attacks",
+                "Token replay attacks"
+            ],
+            "correct": 2,
+            "explanation": "While JWTs don't *prevent* CSRF, they mitigate the risk compared to sessions. CSRF is handled more at the server-side and is not directly related to JWT's core mechanism."
+        },
+        {
+            "id": "q18",
+            "question": "What is the best practice for storing user roles in a JWT payload?",
+            "options": [
+                "As a single string separated by commas.",
+                "As a JSON array.",
+                "As a base64 encoded string",
+                "As a custom header in the JWT"
+            ],
+            "correct": 1,
+            "explanation": "Using a JSON array is the best approach because it is well-defined and easily parsed when retrieving roles from the token."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following statements about JWTs is correct?",
+            "options": [
+                "JWTs are encrypted.",
+                "JWTs are digitally signed.",
+                "JWTs are primarily for authentication.",
+                "JWTs are typically stored in the server session."
+            ],
+            "correct": 1,
+            "explanation": "JWTs are digitally signed (or HMAC-SHA256), allowing the server to verify the token's integrity. They are used for both authentication and authorization.  JWTs aren't encrypted (by default)."
+        },
+        {
+            "id": "q20",
+            "question": "How can you configure Spring Security to allow access to a specific endpoint without requiring authentication?",
+            "options": [
+                "Using the `@Anonymous` annotation",
+                "By using `permitAll()` in the security configuration",
+                "By adding the endpoint to the `authenticated()` list",
+                "By disabling security entirely."
+            ],
+            "correct": 1,
+            "explanation": "`permitAll()` in your security configuration allows unauthenticated access to a specific URL pattern."
+        },
+        {
+            "id": "q21",
+            "question": "What is the purpose of a `JwtTokenProvider` class (or similar) in a Spring Boot JWT implementation?",
+            "options": [
+                "To store user credentials.",
+                "To generate and sign JWTs.",
+                "To store and manage the refresh tokens.",
+                "To validate the user's password."
+            ],
+            "correct": 1,
+            "explanation": "The JwtTokenProvider (or its equivalent) generates and signs the JWT based on the user information and the secret key."
+        },
+        {
+            "id": "q22",
+            "question": "Which dependency is essential for implementing Spring Security with JWT?",
+            "options": [
+                "spring-boot-starter-web",
+                "spring-boot-starter-security",
+                "jjwt",
+                "spring-boot-starter-data-jpa"
+            ],
+            "correct": 2,
+            "explanation": "The `jjwt` (Java JWT) library is a commonly used library for working with JWTs in Java, including generation, parsing, and validation."
+        },
+        {
+            "id": "q23",
+            "question": "Consider the following code snippet:\n```java\n@Override\nprotected void configure(HttpSecurity http) throws Exception {\n  http\n    .csrf().disable()\n    .authorizeRequests()\n    .antMatchers(",
+            "options": [
+                "Requires authentication for all requests.",
+                "Allows public access to `/public/**` and requires authentication for all other requests.",
+                "Allows public access to all requests.",
+                "Disables authentication entirely."
+            ],
+            "correct": 1,
+            "explanation": "This configuration allows access to all URLs starting with `/public/` without authentication (permitAll) and requires authentication for all other URLs (anyRequest().authenticated()). The csrf().disable() line is important to note as it disables the CSRF protection."
+        },
+        {
+            "id": "q24",
+            "question": "What happens if a user attempts to access a protected resource with an invalid or expired JWT?",
+            "options": [
+                "The server will return a 200 OK response.",
+                "The server will return a 401 Unauthorized response.",
+                "The server will automatically generate a new JWT for the user.",
+                "The user will be redirected to the login page (if applicable)."
+            ],
+            "correct": 1,
+            "explanation": "The server will typically return a 401 Unauthorized response, indicating that the user is not authenticated."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following best describes the 'Expiration' claim (exp) in a JWT?",
+            "options": [
+                "The date and time when the token was issued.",
+                "The time after which the token is considered invalid.",
+                "The user's last login time.",
+                "The time interval during which the token can be refreshed."
+            ],
+            "correct": 1,
+            "explanation": "The 'exp' claim specifies when the JWT expires, after which it should be considered invalid."
+        },
+        {
+            "id": "q26",
+            "question": "What is the function of the `Audience` claim (aud) in a JWT?",
+            "options": [
+                "To specify the user's role.",
+                "To identify the intended recipients of the JWT.",
+                "To store the token's issuer.",
+                "To provide the user's email address."
+            ],
+            "correct": 1,
+            "explanation": "The 'aud' claim identifies the intended recipients of the JWT (e.g., a specific API)."
+        },
+        {
+            "id": "q27",
+            "question": "How can you configure Spring Security to use JWT for authentication and authorization?",
+            "options": [
+                "Implement a custom `AuthenticationProvider` and a `JwtAuthenticationFilter`",
+                "Using the `@EnableJwt` annotation",
+                "Spring Security automatically handles JWT; no configuration needed.",
+                "Create a new `UserDetailsService` and integrate JWT into the existing security configuration."
+            ],
+            "correct": 0,
+            "explanation": "The typical approach involves a custom `AuthenticationProvider` to handle JWT validation, and a `JwtAuthenticationFilter` to intercept requests and authenticate users based on JWTs. You would also likely create a custom user details service. The other options are either incomplete or incorrect."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following statements about JWT best practices is correct?",
+            "options": [
+                "Store sensitive data like passwords directly in the payload.",
+                "Use short token expiration times to reduce the impact of compromised tokens.",
+                "Always store JWTs in local storage for easy access.",
+                "Do not implement a refresh token mechanism."
+            ],
+            "correct": 1,
+            "explanation": "Use short token expiration times to minimize the damage if a token is stolen. Never store passwords directly in JWTs. Do not store them in local storage unless properly protected with HttpOnly flags etc. Refresh tokens are generally a good idea to avoid frequent logins."
+        },
+        {
+            "id": "q29",
+            "question": "What is the function of `logout()` in Spring Security with JWT?",
+            "options": [
+                "Automatically revokes the JWT.",
+                "Redirects the user to the login page.",
+                "Clears the browser's cache.",
+                "Invalidates the JWT at the server, usually by blacklisting its JTI."
+            ],
+            "correct": 3,
+            "explanation": "When a user logs out, the JWT is generally invalidated at the server to stop unauthorized access. This can be done by blacklisting the token's identifier (JTI)."
+        },
+        {
+            "id": "q30",
+            "question": "If you receive a '403 Forbidden' error when accessing a secured endpoint with a valid JWT, what is the most likely cause?",
+            "options": [
+                "The JWT is expired.",
+                "The user doesn't have the required roles/permissions.",
+                "The JWT is invalidly signed.",
+                "The server is down."
+            ],
+            "correct": 1,
+            "explanation": "A 403 Forbidden error indicates the user is authenticated (JWT is valid) but does not have the necessary authorization (roles or permissions) to access the specific resource."
+        },
+        {
+            "id": "q31",
+            "question": "Consider a scenario where you need to limit the number of JWTs a user can have active. How can you achieve this?",
+            "options": [
+                "By setting the expiration time to 0",
+                "By implementing a blacklist or a database to track active JWTs",
+                "By disabling refresh tokens",
+                "It is not possible to limit the number of active JWTs."
+            ],
+            "correct": 1,
+            "explanation": "Using a database or cache to track active JWTs, and implementing a blacklist, provides a mechanism to track and control active sessions/tokens."
+        },
+        {
+            "id": "q32",
+            "question": "Which Spring Security class is typically used to extract user information from the JWT and create an `Authentication` object?",
+            "options": [
+                "JwtDecoder",
+                "JwtAuthenticationFilter",
+                "AuthenticationManager",
+                "UserDetailsService"
+            ],
+            "correct": 1,
+            "explanation": "The JwtAuthenticationFilter is the one that validates the JWT in the Authorization header and creates an Authentication object based on it."
+        },
+        {
+            "id": "q33",
+            "question": "How can you configure multiple roles/authorities to be granted to a user upon successful JWT authentication?",
+            "options": [
+                "By using the `roles` field directly in the JWT payload.",
+                "By splitting roles into separate JWT payloads.",
+                "By creating a custom `GrantedAuthority` implementation and populating the Authentication object with the roles.",
+                "Spring Security automatically maps roles from the `roles` claim in the JWT payload."
+            ],
+            "correct": 2,
+            "explanation": "You have to extract the roles (typically from the JWT payload) during the authentication process and map them to `GrantedAuthority` objects. The Authentication object is then constructed with these authorities."
+        },
+        {
+            "id": "q34",
+            "question": "True or False: Refresh tokens always have to be signed using the same secret key as access tokens.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "False.  Refresh tokens can be signed with a different secret key and can even be encrypted separately for added security, although not always a requirement. Using different keys improves security and flexibility."
+        },
+        {
+            "id": "q35",
+            "question": "Which of the following is a common attack vector that JWTs, when not implemented securely, can be vulnerable to?",
+            "options": [
+                "SQL Injection",
+                "Cross-Site Scripting (XSS)",
+                "JWT manipulation (e.g., signature forgery)",
+                "Denial of Service (DoS) attacks"
+            ],
+            "correct": 2,
+            "explanation": "JWTs can be vulnerable to signature forgery or other forms of tampering if not implemented properly, like using the correct signing algorithm and protecting the secret key."
+        }
+    ],
+    //Microservices and Deployment
+    "microservices": [
+        {
+            "id": "q1",
+            "question": "What is the primary goal of adopting a microservices architecture?",
+            "options": [
+                "To reduce the number of servers required.",
+                "To centralize all functionalities into a single application.",
+                "To increase the development team size.",
+                "To improve the agility and scalability of an application."
+            ],
+            "correct": 3,
+            "explanation": "Microservices aim to enhance agility (faster deployments) and scalability (independent scaling of services)."
+        },
+        {
+            "id": "q2",
+            "question": "Which characteristic is NOT a core principle of the microservices architectural style?",
+            "options": [
+                "Decentralized governance.",
+                "Business capability-oriented.",
+                "Centralized database management.",
+                "Automated deployments."
+            ],
+            "correct": 2,
+            "explanation": "Microservices typically favor decentralized data management to maintain service independence. Centralized databases introduce coupling."
+        },
+        {
+            "id": "q3",
+            "question": "What is the significance of 'bounded context' in microservices?",
+            "options": [
+                "It defines the limits of a service's functionality and responsibility.",
+                "It dictates the technology stack used by each service.",
+                "It represents the total number of services in an application.",
+                "It's used to determine the deployment strategy."
+            ],
+            "correct": 0,
+            "explanation": "Bounded context provides context and limits scope, ensuring that a microservice has a specific, well-defined area of responsibility."
+        },
+        {
+            "id": "q4",
+            "question": "In a microservices architecture, what is the role of an API Gateway?",
+            "options": [
+                "To handle internal service-to-service communication.",
+                "To manage the database connections for all services.",
+                "To serve as the single entry point for client requests and route them to appropriate services.",
+                "To monitor the health of individual microservices."
+            ],
+            "correct": 2,
+            "explanation": "API Gateway acts as a front door, abstracting the complexities of the microservices backend from the client."
+        },
+        {
+            "id": "q5",
+            "question": "What is the benefit of independent deployability in microservices?",
+            "options": [
+                "It allows for quicker deployments of individual service updates without affecting others.",
+                "It reduces the need for automated testing.",
+                "It increases the dependency between services.",
+                "It requires all services to be deployed simultaneously."
+            ],
+            "correct": 0,
+            "explanation": "Independent deployability is a key characteristic that facilitates faster release cycles."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following is a common challenge when implementing microservices?",
+            "options": [
+                "Reduced complexity in the overall system.",
+                "Simplified debugging and monitoring.",
+                "Increased operational complexity.",
+                "Easier data consistency management."
+            ],
+            "correct": 2,
+            "explanation": "Microservices introduce operational overhead in areas such as deployment, monitoring, and inter-service communication."
+        },
+        {
+            "id": "q7",
+            "question": "What is the primary purpose of a service mesh in a microservices architecture?",
+            "options": [
+                "To manage database connections.",
+                "To handle user authentication.",
+                "To provide a dedicated infrastructure layer for service-to-service communication, security, and observability.",
+                "To handle client-side load balancing."
+            ],
+            "correct": 2,
+            "explanation": "Service meshes like Istio and Linkerd provide features related to service discovery, traffic management, security, and observability."
+        },
+        {
+            "id": "q8",
+            "question": "How does microservices architecture typically impact the development team structure?",
+            "options": [
+                "It leads to a centralized, hierarchical team structure.",
+                "It promotes cross-functional, autonomous teams focused on specific business capabilities.",
+                "It reduces the need for communication between teams.",
+                "It requires all developers to work on all services."
+            ],
+            "correct": 1,
+            "explanation": "Microservices often promote the use of autonomous teams, each responsible for a specific service or set of related services."
+        },
+        {
+            "id": "q9",
+            "question": "What is meant by 'loose coupling' in the context of microservices?",
+            "options": [
+                "Services are tightly integrated and dependent on each other.",
+                "Services have minimal dependencies on each other and can evolve independently.",
+                "Services share a common database.",
+                "Services are managed by a single centralized team."
+            ],
+            "correct": 1,
+            "explanation": "Loose coupling allows services to change independently without significantly impacting other services."
+        },
+        {
+            "id": "q10",
+            "question": "Which communication pattern is most suitable for microservices that need to handle high volumes of asynchronous events?",
+            "options": [
+                "RESTful API calls.",
+                "Synchronous HTTP requests.",
+                "Message queues (e.g., Kafka, RabbitMQ).",
+                "Direct database access between services."
+            ],
+            "correct": 2,
+            "explanation": "Message queues provide a scalable and reliable mechanism for handling asynchronous communication and high event volumes."
+        },
+        {
+            "id": "q11",
+            "question": "In microservices, what is the role of 'service discovery'?",
+            "options": [
+                "To find the appropriate database for each service.",
+                "To identify the location (e.g., IP address and port) of service instances.",
+                "To distribute load across client applications.",
+                "To manage user authentication for the microservices."
+            ],
+            "correct": 1,
+            "explanation": "Service discovery enables services to find and communicate with each other dynamically, especially in dynamic environments where service instances may come and go."
+        },
+        {
+            "id": "q12",
+            "question": "What is the primary benefit of using 'polyglot persistence' in microservices?",
+            "options": [
+                "It forces all services to use the same database technology.",
+                "It allows each service to choose the database technology best suited to its needs.",
+                "It reduces the complexity of the overall system.",
+                "It makes data consistency easier to manage."
+            ],
+            "correct": 1,
+            "explanation": "Polyglot persistence enables flexibility by allowing each service to use the database technology that best fits its data model and performance requirements."
+        },
+        {
+            "id": "q13",
+            "question": "What is a potential drawback of using a microservices architecture?",
+            "options": [
+                "Reduced system complexity.",
+                "Easier debugging and monitoring.",
+                "Increased operational complexity.",
+                "Simplified data consistency management."
+            ],
+            "correct": 2,
+            "explanation": "Microservices often lead to increased operational complexity, including managing deployments, monitoring, and inter-service communication."
+        },
+        {
+            "id": "q14",
+            "question": "How does microservices architecture contribute to scalability?",
+            "options": [
+                "By making the entire application more difficult to scale.",
+                "By enabling independent scaling of individual services based on demand.",
+                "By reducing the need for scaling altogether.",
+                "By requiring all services to be scaled simultaneously."
+            ],
+            "correct": 1,
+            "explanation": "Microservices allow for targeted scaling; only the services experiencing load need to be scaled, which is more efficient."
+        },
+        {
+            "id": "q15",
+            "question": "What architectural pattern is often used to handle failures in microservices by allowing requests to be retried?",
+            "options": [
+                "Eventual Consistency",
+                "Circuit Breaker",
+                "CQRS",
+                "Strangler Fig"
+            ],
+            "correct": 1,
+            "explanation": "A Circuit Breaker pattern helps prevent cascading failures by detecting when a service is unavailable and preventing further requests to it."
+        },
+        {
+            "id": "q16",
+            "question": "What is the purpose of health checks in microservices?",
+            "options": [
+                "To test the performance of the database.",
+                "To determine if a service instance is running and able to handle requests.",
+                "To monitor user activity.",
+                "To measure the size of the service's code base."
+            ],
+            "correct": 1,
+            "explanation": "Health checks are crucial for monitoring the operational status of services and are used by load balancers and service discovery mechanisms."
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following is a key consideration when designing inter-service communication in microservices?",
+            "options": [
+                "Choosing the right communication protocol (e.g., HTTP, gRPC, message queues).",
+                "Ensuring high cohesion between services.",
+                "Minimizing the number of services.",
+                "Using a centralized database for all services."
+            ],
+            "correct": 0,
+            "explanation": "Selecting the appropriate protocol is critical for efficiency, performance, and reliability of communication between services."
+        },
+        {
+            "id": "q18",
+            "question": "What is 'distributed tracing' used for in a microservices environment?",
+            "options": [
+                "To track the location of each service instance.",
+                "To monitor user activity.",
+                "To follow the flow of requests across multiple services for debugging and performance analysis.",
+                "To manage the database transactions."
+            ],
+            "correct": 2,
+            "explanation": "Distributed tracing provides insight into the performance bottlenecks and dependencies within a microservices architecture."
+        },
+        {
+            "id": "q19",
+            "question": "What does the term 'idempotency' mean in the context of microservices?",
+            "options": [
+                "The ability of a service to handle multiple requests simultaneously.",
+                "The ability of a service to produce identical results when the same request is executed multiple times.",
+                "The ability of a service to handle large volumes of data.",
+                "The ability of a service to recover from failures quickly."
+            ],
+            "correct": 1,
+            "explanation": "Idempotent operations are crucial for handling potential failures and retries in distributed systems."
+        },
+        {
+            "id": "q20",
+            "question": "Which architectural pattern addresses eventual consistency in microservices?",
+            "options": [
+                "CQRS (Command Query Responsibility Segregation)",
+                "Circuit Breaker",
+                "Service Mesh",
+                "API Gateway"
+            ],
+            "correct": 0,
+            "explanation": "CQRS separates read and write operations, often leading to eventual consistency when writes update the read model."
+        },
+        {
+            "id": "q21",
+            "question": "What is the significance of 'Domain-Driven Design (DDD)' in microservices architecture?",
+            "options": [
+                "It helps in designing services based on business capabilities and bounded contexts.",
+                "It simplifies the deployment process.",
+                "It reduces the need for testing.",
+                "It standardizes the technology stack."
+            ],
+            "correct": 0,
+            "explanation": "DDD principles, such as bounded contexts and domain models, are helpful in structuring microservices around business domains."
+        },
+        {
+            "id": "q22",
+            "question": "What is the primary advantage of using containerization (e.g., Docker) in a microservices architecture?",
+            "options": [
+                "It reduces the need for service discovery.",
+                "It simplifies deployment and ensures consistent runtime environments.",
+                "It automatically scales services.",
+                "It handles inter-service communication."
+            ],
+            "correct": 1,
+            "explanation": "Containerization provides consistent execution environments across various deployment platforms, simplifying deployment and management."
+        },
+        {
+            "id": "q23",
+            "question": "In a microservices architecture, what is the role of 'observability'?",
+            "options": [
+                "To control the size of the database.",
+                "To monitor the health of the API Gateway.",
+                "To gain insights into the internal states of the services, enabling monitoring, tracing, and logging.",
+                "To handle user authentication."
+            ],
+            "correct": 2,
+            "explanation": "Observability is key to understanding the behavior and performance of a complex distributed system like microservices."
+        },
+        {
+            "id": "q24",
+            "question": "What is a common approach to handling data consistency across multiple microservices?",
+            "options": [
+                "Using a single, centralized database.",
+                "Implementing distributed transactions (e.g., two-phase commit).",
+                "Adopting eventual consistency patterns (e.g., event sourcing).",
+                "Directly updating the data in other microservices' databases."
+            ],
+            "correct": 2,
+            "explanation": "Eventual consistency patterns are often preferred for scalability and independence in microservices, as they avoid distributed transactions."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following is a disadvantage of using a microservices architecture?",
+            "options": [
+                "Easier to deploy and update individual features.",
+                "More difficult to debug and monitor.",
+                "Improved scalability and resilience.",
+                "Greater development team autonomy."
+            ],
+            "correct": 1,
+            "explanation": "Debugging distributed systems like microservices can be more complex than debugging monolithic applications due to the distributed nature of the system."
+        },
+        {
+            "id": "q26",
+            "question": "What is a 'monolith' in the context of software architecture?",
+            "options": [
+                "A single, large, and often tightly-coupled application.",
+                "A collection of independent microservices.",
+                "A set of APIs for communication.",
+                "A database management system."
+            ],
+            "correct": 0,
+            "explanation": "A monolithic application is a single, self-contained unit."
+        },
+        {
+            "id": "q27",
+            "question": "What is the purpose of a 'strangler fig pattern' when migrating from a monolith to microservices?",
+            "options": [
+                "To replace all of the monolithic application at once.",
+                "To gradually replace parts of the monolith with microservices.",
+                "To deploy the monolith and microservices side-by-side without integration.",
+                "To scale the monolith."
+            ],
+            "correct": 1,
+            "explanation": "The Strangler Fig pattern involves gradually extracting functionalities from the monolith and replacing them with independent microservices."
+        },
+        {
+            "id": "q28",
+            "question": "What is 'decentralized data management' in microservices architecture?",
+            "options": [
+                "Using a single database for all services.",
+                "Each service having its own database.",
+                "Sharing the same database schema for all services.",
+                "Using a NoSQL database for all services."
+            ],
+            "correct": 1,
+            "explanation": "Each microservice typically has its own database to ensure independence and prevent tight coupling between services."
+        },
+        {
+            "id": "q29",
+            "question": "Which architectural style promotes using a common data model between microservices?",
+            "options": [
+                "Loose coupling",
+                "Shared database pattern",
+                "Eventual consistency pattern",
+                "API Gateway pattern"
+            ],
+            "correct": 0,
+            "explanation": "Loose coupling between services allows each microservice to manage its own data model and schema independently."
+        },
+        {
+            "id": "q30",
+            "question": "What is the role of a load balancer in a microservices architecture?",
+            "options": [
+                "To manage database connections.",
+                "To distribute incoming network traffic across multiple instances of a service.",
+                "To provide authentication.",
+                "To handle asynchronous events."
+            ],
+            "correct": 1,
+            "explanation": "Load balancers are essential for distributing traffic and improving the availability and performance of microservices."
+        },
+        {
+            "id": "q31",
+            "question": "True or False: All microservices must use the same programming language.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Microservices architecture supports polyglot programming, where different services can be written in different languages."
+        },
+        {
+            "id": "q32",
+            "question": "Which pattern is used to decouple read and write operations in microservices?",
+            "options": [
+                "API Gateway",
+                "Circuit Breaker",
+                "CQRS",
+                "Service Mesh"
+            ],
+            "correct": 2,
+            "explanation": "CQRS pattern separates the read and write operations, often implemented to improve performance."
+        },
+        {
+            "id": "q33",
+            "question": "What is a 'distributed transaction'?",
+            "options": [
+                "A transaction that involves a single database.",
+                "A transaction that spans multiple services and databases.",
+                "A transaction executed by only one user.",
+                "A transaction that only involves reading data."
+            ],
+            "correct": 1,
+            "explanation": "Distributed transactions are complex in microservices, and eventual consistency patterns are generally preferred to avoid them."
+        },
+        {
+            "id": "q34",
+            "question": "What challenges arise when dealing with data consistency in a microservices architecture?",
+            "options": [
+                "Easier to manage because each service has its own database.",
+                "Managing data consistency becomes less important.",
+                "Ensuring data consistency across multiple services becomes more complex due to distributed nature.",
+                "Requires no coordination across services."
+            ],
+            "correct": 2,
+            "explanation": "Data consistency is a key concern due to the distributed nature of microservices."
+        },
+        {
+            "id": "q35",
+            "question": "Which of these is NOT a characteristic of a well-designed microservice?",
+            "options": [
+                "Highly cohesive",
+                "Loosely coupled",
+                "Large and complex functionality",
+                "Independently deployable"
+            ],
+            "correct": 2,
+            "explanation": "Well-designed microservices should be small and focused on a single responsibility."
+        }
+    ],
+    "spring-cloud": [
+        {
+            "id": "q1",
+            "question": "Which Spring Cloud component is primarily responsible for service discovery?",
+            "options": [
+                "Spring Cloud Gateway",
+                "Spring Cloud Config",
+                "Spring Cloud Eureka",
+                "Spring Cloud Stream"
+            ],
+            "correct": 2,
+            "explanation": "Eureka is the service discovery server in the Spring Cloud ecosystem."
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary function of Spring Cloud Config Server?",
+            "options": [
+                "Load balancing",
+                "Centralized configuration management",
+                "API gateway",
+                "Service discovery"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Config Server manages externalized configuration properties for distributed systems."
+        },
+        {
+            "id": "q3",
+            "question": "Which annotation enables a Spring Boot application to act as a service discovery client?",
+            "options": [
+                "@EnableDiscoveryClient",
+                "@EnableConfigClient",
+                "@EnableCircuitBreaker",
+                "@EnableZuulProxy"
+            ],
+            "correct": 0,
+            "explanation": "@EnableDiscoveryClient registers the application with a service discovery server like Eureka."
+        },
+        {
+            "id": "q4",
+            "question": "What is the purpose of the `@RefreshScope` annotation in Spring Cloud Config client applications?",
+            "options": [
+                "To automatically restart the application",
+                "To refresh the configuration properties",
+                "To cache configuration properties",
+                "To enable load balancing"
+            ],
+            "correct": 1,
+            "explanation": "@RefreshScope allows configuration properties to be refreshed at runtime without restarting the application."
+        },
+        {
+            "id": "q5",
+            "question": "Which Spring Cloud component provides a declarative way to manage configuration using Git as a backend?",
+            "options": [
+                "Spring Cloud Gateway",
+                "Spring Cloud Config Server",
+                "Spring Cloud Stream",
+                "Spring Cloud Sleuth"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Config Server can use Git for storing and serving configuration."
+        },
+        {
+            "id": "q6",
+            "question": "What is the role of Hystrix in Spring Cloud?",
+            "options": [
+                "API gateway",
+                "Service discovery",
+                "Circuit breaker",
+                "Message broker"
+            ],
+            "correct": 2,
+            "explanation": "Hystrix provides circuit breaker functionality for fault tolerance in microservices."
+        },
+        {
+            "id": "q7",
+            "question": "Which Spring Cloud component is used for routing requests in a microservices architecture?",
+            "options": [
+                "Spring Cloud Config",
+                "Spring Cloud Stream",
+                "Spring Cloud Gateway",
+                "Spring Cloud Eureka"
+            ],
+            "correct": 2,
+            "explanation": "Spring Cloud Gateway and Zuul provide routing and filtering capabilities."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of Spring Cloud Sleuth?",
+            "options": [
+                "Service discovery",
+                "Distributed tracing",
+                "API gateway",
+                "Configuration management"
+            ],
+            "correct": 1,
+            "explanation": "Sleuth provides distributed tracing capabilities for monitoring and debugging microservices."
+        },
+        {
+            "id": "q9",
+            "question": "Which of the following is NOT a standard backend for Spring Cloud Config Server?",
+            "options": [
+                "Git",
+                "Vault",
+                "File System",
+                "Redis"
+            ],
+            "correct": 3,
+            "explanation": "While it's possible, Redis is not a standard, directly supported backend like Git, Vault, and the File System are."
+        },
+        {
+            "id": "q10",
+            "question": "What is the default port for the Spring Cloud Config Server?",
+            "options": [
+                "8080",
+                "8888",
+                "8081",
+                "9000"
+            ],
+            "correct": 1,
+            "explanation": "The default port for Config Server is 8888."
+        },
+        {
+            "id": "q11",
+            "question": "Which of the following is NOT a typical Spring Cloud project?",
+            "options": [
+                "Spring Cloud Data Flow",
+                "Spring Cloud Function",
+                "Spring Cloud JDBC",
+                "Spring Cloud Kubernetes"
+            ],
+            "correct": 2,
+            "explanation": "Spring Cloud JDBC isn't a specific Spring Cloud project. Spring Cloud projects generally focus on microservices-related capabilities."
+        },
+        {
+            "id": "q12",
+            "question": "What is the purpose of a 'fallback' in the context of Hystrix?",
+            "options": [
+                "To retry failed requests",
+                "To provide an alternative response when a service call fails",
+                "To route requests to a different service",
+                "To cache responses"
+            ],
+            "correct": 1,
+            "explanation": "Fallbacks are used to provide an alternative response or behavior when a service call fails, preventing cascading failures."
+        },
+        {
+            "id": "q13",
+            "question": "How does Spring Cloud Gateway handle routing?",
+            "options": [
+                "Using annotations on controller methods",
+                "By configuring routes using a RouteLocator",
+                "Using Spring Cloud Config",
+                "Automatically, based on service discovery"
+            ],
+            "correct": 1,
+            "explanation": "Routes in Spring Cloud Gateway are defined through a RouteLocator bean configuration."
+        },
+        {
+            "id": "q14",
+            "question": "In Spring Cloud, what is the purpose of the `RestTemplate`?",
+            "options": [
+                "To provide service discovery",
+                "To make HTTP requests to other services",
+                "To manage configurations",
+                "To implement circuit breakers"
+            ],
+            "correct": 1,
+            "explanation": "`RestTemplate` is used to make HTTP requests to other services."
+        },
+        {
+            "id": "q15",
+            "question": "What is the primary benefit of using Spring Cloud for microservices development?",
+            "options": [
+                "Reduced code complexity",
+                "Simplified infrastructure management for common patterns",
+                "Increased application performance",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "Spring Cloud simplifies development by providing tools for common microservices patterns such as service discovery, configuration management, and circuit breakers."
+        },
+        {
+            "id": "q16",
+            "question": "Which Spring Cloud component is most suitable for asynchronous, event-driven communication between microservices?",
+            "options": [
+                "Spring Cloud Gateway",
+                "Spring Cloud Stream",
+                "Spring Cloud Config",
+                "Spring Cloud Netflix Eureka"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Stream facilitates communication using messaging systems (like Kafka or RabbitMQ)."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of a 'circuit breaker' in a microservices architecture?",
+            "options": [
+                "To balance the load across microservices",
+                "To protect against failures in dependent services",
+                "To cache responses from microservices",
+                "To discover available microservices"
+            ],
+            "correct": 1,
+            "explanation": "A circuit breaker prevents cascading failures by monitoring service calls and 'tripping' when a service is unhealthy."
+        },
+        {
+            "id": "q18",
+            "question": "True or False: Spring Cloud uses a centralized approach to manage configurations.",
+            "options": [
+                "True",
+                "False",
+                "Depends on the use case",
+                "Partially True"
+            ],
+            "correct": 0,
+            "explanation": "Spring Cloud Config Server promotes a centralized approach for configuration management."
+        },
+        {
+            "id": "q19",
+            "question": "Which component helps manage secrets in a Spring Cloud application?",
+            "options": [
+                "Spring Cloud Config",
+                "Spring Cloud Stream",
+                "Spring Cloud Vault",
+                "Spring Cloud Gateway"
+            ],
+            "correct": 2,
+            "explanation": "Spring Cloud Vault integrates with HashiCorp Vault to manage secrets."
+        },
+        {
+            "id": "q20",
+            "question": "What configuration property prefix is typically used for client-side configuration in Spring Cloud Config?",
+            "options": [
+                "spring.application",
+                "spring.cloud.config",
+                "config.client",
+                "cloud.config"
+            ],
+            "correct": 1,
+            "explanation": "Client-side configuration in Spring Cloud Config typically uses the `spring.cloud.config` prefix."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following is NOT a feature of Spring Cloud Gateway?",
+            "options": [
+                "Routing",
+                "Filtering",
+                "Service Discovery",
+                "Load Balancing (built-in)"
+            ],
+            "correct": 3,
+            "explanation": "While Spring Cloud Gateway integrates with service discovery and can forward requests to load balancers, it doesn't provide a built-in, direct load balancing mechanism. External load balancers or service discovery features perform the actual load balancing."
+        },
+        {
+            "id": "q22",
+            "question": "What is the purpose of Zipkin in the context of Spring Cloud Sleuth?",
+            "options": [
+                "Service discovery",
+                "Circuit breaking",
+                "Distributed tracing backend",
+                "API gateway"
+            ],
+            "correct": 2,
+            "explanation": "Zipkin is a distributed tracing system that collects and visualizes trace data generated by Sleuth."
+        },
+        {
+            "id": "q23",
+            "question": "How does Spring Cloud Stream abstract the underlying messaging middleware?",
+            "options": [
+                "Using annotations for message mapping",
+                "Through a binder abstraction",
+                "By providing its own message broker",
+                "Directly through Kafka or RabbitMQ clients"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Stream uses a binder abstraction to connect applications to message brokers, allowing switching between different brokers with minimal code changes."
+        },
+        {
+            "id": "q24",
+            "question": "What is the role of the 'bootstrap' context in Spring Cloud Config client applications?",
+            "options": [
+                "To load application properties",
+                "To fetch configuration from the Config Server",
+                "To handle circuit breaker logic",
+                "To manage service discovery"
+            ],
+            "correct": 1,
+            "explanation": "The bootstrap context is responsible for fetching configuration from the Config Server before the main application context is created."
+        },
+        {
+            "id": "q25",
+            "question": "In Spring Cloud Gateway, what is a 'predicate' used for?",
+            "options": [
+                "Defining routes",
+                "Filtering requests",
+                "Applying circuit breaker logic",
+                "Service discovery"
+            ],
+            "correct": 0,
+            "explanation": "Predicates in Spring Cloud Gateway determine whether a route should be matched based on various criteria."
+        },
+        {
+            "id": "q26",
+            "question": "What does the acronym 'REST' stand for in the context of RESTful APIs often used with Spring Cloud?",
+            "options": [
+                "Resource Efficient System Transfer",
+                "Representational State Transfer",
+                "Rapid Error Synchronization Technology",
+                "Reliable Event Stream Transport"
+            ],
+            "correct": 1,
+            "explanation": "REST stands for Representational State Transfer."
+        },
+        {
+            "id": "q27",
+            "question": "Which Spring Cloud component provides a way to bind application configurations to cloud providers like AWS or Azure?",
+            "options": [
+                "Spring Cloud Config",
+                "Spring Cloud Stream",
+                "Spring Cloud Gateway",
+                "Spring Cloud Cloud Foundry/Kubernetes (or related project)"
+            ],
+            "correct": 3,
+            "explanation": "Spring Cloud has subprojects or integrations with Cloud Foundry and Kubernetes to specifically address the needs of applications deployed to these cloud platforms. These are often integrated with Config and other features."
+        },
+        {
+            "id": "q28",
+            "question": "What is the primary function of a `FallbackFactory` in Hystrix?",
+            "options": [
+                "To create and manage fallback responses",
+                "To implement circuit breaker logic",
+                "To retry failed requests",
+                "To manage service discovery"
+            ],
+            "correct": 0,
+            "explanation": "`FallbackFactory` allows for creating fallback responses based on the exception that occurred, providing more control and context in handling failures than a simple fallback method."
+        },
+        {
+            "id": "q29",
+            "question": "How can you configure the retry attempts for a failed request using Spring Cloud? (Hint: Hystrix)",
+            "options": [
+                "Using the `@Retry` annotation directly",
+                "By configuring the `hystrix.command.<commandKey>.execution.isolation.thread.timeoutInMilliseconds` property",
+                "Using Spring Cloud Sleuth to automatically retry",
+                "Through the Hystrix configuration properties (e.g., `hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds`) combined with retry logic within the fallback or service call."
+            ],
+            "correct": 3,
+            "explanation": "Spring Cloud Hystrix doesn't provide a dedicated retry annotation. Retry logic should be integrated at the service level along with Hystrix configuration.  You'd typically use timeout configurations to control when fallback logic kicks in, potentially triggering a retry from the service caller."
+        },
+        {
+            "id": "q30",
+            "question": "What is the role of a `MessageChannel` in Spring Cloud Stream?",
+            "options": [
+                "To define the message broker",
+                "To connect input and output channels to binders",
+                "To manage circuit breaker functionality",
+                "To discover services"
+            ],
+            "correct": 1,
+            "explanation": "MessageChannels act as the intermediary between application code (input and output) and the Binder, which then connects to the underlying message broker."
+        },
+        {
+            "id": "q31",
+            "question": "Which annotation is typically used to configure the Spring Cloud Gateway?",
+            "options": [
+                "@EnableGateway",
+                "@EnableZuulProxy",
+                "@EnableDiscoveryClient",
+                "There is no single annotation, it uses Spring configuration and RouteLocator"
+            ],
+            "correct": 3,
+            "explanation": "Spring Cloud Gateway is configured using a `RouteLocator` bean, rather than an annotation."
+        },
+        {
+            "id": "q32",
+            "question": "In Spring Cloud, what is the purpose of the `@FeignClient` annotation?",
+            "options": [
+                "To create a service discovery client",
+                "To declare a REST client (declarative)",
+                "To implement a circuit breaker",
+                "To manage configuration properties"
+            ],
+            "correct": 1,
+            "explanation": "`@FeignClient` is used to define a declarative REST client, making it easier to call other microservices."
+        },
+        {
+            "id": "q33",
+            "question": "What is the main advantage of using Feign clients compared to RestTemplate?",
+            "options": [
+                "More flexibility for configuration",
+                "Declarative approach, reducing boilerplate",
+                "Faster request execution",
+                "Better fault tolerance features"
+            ],
+            "correct": 1,
+            "explanation": "Feign provides a declarative approach to defining REST clients, reducing boilerplate code compared to `RestTemplate`."
+        },
+        {
+            "id": "q34",
+            "question": "How can you customize the default retry behavior of a Feign client (Hint: Sleuth + Spring Retry)",
+            "options": [
+                "Using the `hystrix.command.<commandKey>.execution.isolation.thread.timeoutInMilliseconds` properties",
+                "By integrating Spring Retry with Feign and configuring Retryer and RequestInterceptor",
+                "Directly through the `@FeignClient` annotation",
+                "By enabling tracing in Spring Cloud Sleuth"
+            ],
+            "correct": 1,
+            "explanation": "You'd typically integrate Spring Retry with your Feign client using a custom `Retryer` implementation and potentially through a `RequestInterceptor` to handle retry attempts. This is separate from the timeout settings used for Hystrix."
+        },
+        {
+            "id": "q35",
+            "question": "True or False: Spring Cloud is a monolithic framework for building applications.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud is designed for building distributed systems and microservices architectures, not monolithic applications."
+        }
+    ],
+    "eureka": [
+        {
+            "id": "q1",
+            "question": "What is the primary function of the Eureka server in a microservices architecture?",
+            "options": [
+                "Load balancing incoming requests",
+                "Managing database connections",
+                "Registering and discovering service instances",
+                "Implementing API gateways"
+            ],
+            "correct": 2,
+            "explanation": "Eureka acts as a registry where service instances register themselves, enabling other services to discover and communicate with them."
+        },
+        {
+            "id": "q2",
+            "question": "Which component of Eureka is responsible for replicating service instance information across different Eureka servers?",
+            "options": [
+                "Eureka Client",
+                "Eureka Server",
+                "Peer-to-peer replication",
+                "Health Check Endpoint"
+            ],
+            "correct": 2,
+            "explanation": "Eureka servers use a peer-to-peer replication mechanism to share service instance data, ensuring high availability and fault tolerance."
+        },
+        {
+            "id": "q3",
+            "question": "What is the default interval (in seconds) at which Eureka clients send heartbeats to the Eureka server?",
+            "options": [
+                "30",
+                "60",
+                "90",
+                "120"
+            ],
+            "correct": 0,
+            "explanation": "Eureka clients, by default, send heartbeats every 30 seconds to notify the server of their health and availability."
+        },
+        {
+            "id": "q4",
+            "question": "If a service instance fails to send heartbeats within a certain time, what action does Eureka Server take?",
+            "options": [
+                "It immediately removes the instance from the registry.",
+                "It marks the instance as unavailable and waits for a longer timeout.",
+                "It increases the heartbeat interval for that instance.",
+                "It notifies the service instance to restart itself."
+            ],
+            "correct": 1,
+            "explanation": "Eureka marks the instance as unavailable and waits for a longer timeout before removing it from the registry, allowing for temporary network issues."
+        },
+        {
+            "id": "q5",
+            "question": "What is the purpose of the `instance-info` in Eureka?",
+            "options": [
+                "Stores the complete list of all registered instances.",
+                "Contains metadata about a specific service instance.",
+                "Defines the configuration of the Eureka server itself.",
+                "Handles API gateway routing rules."
+            ],
+            "correct": 1,
+            "explanation": "instance-info holds crucial details like hostname, port, status, and metadata about an individual service instance."
+        },
+        {
+            "id": "q6",
+            "question": "What is the role of Eureka's REST API?",
+            "options": [
+                "To perform load balancing among services.",
+                "To allow service instances to register, unregister, and retrieve service information.",
+                "To manage database connections.",
+                "To implement API security."
+            ],
+            "correct": 1,
+            "explanation": "The REST API enables dynamic service registration, discovery, and management by providing endpoints for essential operations."
+        },
+        {
+            "id": "q7",
+            "question": "What is the meaning of `UP`, `DOWN`, `STARTING`, `OUT_OF_SERVICE` states in Eureka?",
+            "options": [
+                "States related to resource usage metrics",
+                "Statuses of microservices indicating their health and availability.",
+                "Configuration states of the Eureka server itself.",
+                "Different user roles in the system."
+            ],
+            "correct": 1,
+            "explanation": "These are the statuses to indicate the healthiness of services"
+        },
+        {
+            "id": "q8",
+            "question": "How does Eureka handle service discovery in a multi-region setup?",
+            "options": [
+                "It doesn't support multi-region setups.",
+                "By using DNS.",
+                "By using a global Eureka server.",
+                "By replicating service registry information across regions."
+            ],
+            "correct": 3,
+            "explanation": "Eureka typically replicates service registry data across regions to provide service discovery in a multi-region environment."
+        },
+        {
+            "id": "q9",
+            "question": "What is the significance of the `lease expiration` setting in Eureka?",
+            "options": [
+                "It defines the time after which a service instance is removed if no heartbeat is received.",
+                "It determines the frequency of heartbeat messages sent by clients.",
+                "It configures the Eureka server's startup time.",
+                "It specifies the lifetime of a connection to the database."
+            ],
+            "correct": 0,
+            "explanation": "Lease expiration is the timeout after which the service is unregistered if heartbeats aren't received, controlling the system's responsiveness to failures."
+        },
+        {
+            "id": "q10",
+            "question": "What is the purpose of Eureka's self-preservation mode?",
+            "options": [
+                "To prevent the server from shutting down.",
+                "To automatically scale the Eureka server instances.",
+                "To protect the registry from accidental un-registrations due to network issues.",
+                "To improve performance of the Eureka server."
+            ],
+            "correct": 2,
+            "explanation": "Self-preservation mode protects the registry, especially during network problems, by avoiding premature deregistration."
+        },
+        {
+            "id": "q11",
+            "question": "In Eureka, what is the difference between a registered and a discovered service?",
+            "options": [
+                "There is no difference.",
+                "Registered services are those that have been explicitly registered with Eureka, while discovered services are retrieved via DNS.",
+                "Registered services actively participate in service discovery and are managed by the client application; discovered services are only known to the server.",
+                "Registered services have provided information to the Eureka server, and discovered services are those found by other services using Eureka."
+            ],
+            "correct": 3,
+            "explanation": "Registered services actively inform Eureka of their existence, while discovered services are found by other services querying Eureka."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following is NOT a common configuration property for a Eureka client?",
+            "options": [
+                "eureka.client.serviceUrl.defaultZone",
+                "eureka.instance.hostname",
+                "eureka.server.selfPreservationMode",
+                "eureka.instance.leaseRenewalIntervalInSeconds"
+            ],
+            "correct": 2,
+            "explanation": "eureka.server.selfPreservationMode is a server-side setting and not a client-side configuration."
+        },
+        {
+            "id": "q13",
+            "question": "How does Eureka handle updates to service instance metadata?",
+            "options": [
+                "Metadata is not supported in Eureka.",
+                "Metadata is only updated when the service instance restarts.",
+                "Metadata can be updated dynamically via API calls or through the service instance configuration.",
+                "Metadata updates require a full Eureka server restart."
+            ],
+            "correct": 2,
+            "explanation": "Eureka allows dynamic updates to service instance metadata, such as health check URLs or version information, without requiring restarts."
+        },
+        {
+            "id": "q14",
+            "question": "What is the purpose of Eureka's health check functionality?",
+            "options": [
+                "To monitor the health of the Eureka server itself.",
+                "To determine the health status of service instances and propagate that information.",
+                "To implement security checks on service calls.",
+                "To measure the CPU usage of the client applications."
+            ],
+            "correct": 1,
+            "explanation": "Health checks enable Eureka to determine the health of service instances, ensuring that only healthy instances are used for service discovery."
+        },
+        {
+            "id": "q15",
+            "question": "What is the main disadvantage of using Eureka for service discovery?",
+            "options": [
+                "It's too complex to set up.",
+                "It's not scalable.",
+                "It introduces a dependency on the Eureka server.",
+                "It only supports one programming language."
+            ],
+            "correct": 2,
+            "explanation": "The primary disadvantage is that microservices become dependent on Eureka being available for service discovery."
+        },
+        {
+            "id": "q16",
+            "question": "What is the role of the `eureka.instance.preferIpAddress` property?",
+            "options": [
+                "Determines if the client should use IP address instead of hostname.",
+                "Specifies the preferred port number for service registration.",
+                "Configures the Eureka server's IP address.",
+                "Affects the heartbeat frequency."
+            ],
+            "correct": 0,
+            "explanation": "If set to `true`, the client will use its IP address instead of its hostname in the registry."
+        },
+        {
+            "id": "q17",
+            "question": "What happens if a Eureka client fails to register with the Eureka server?",
+            "options": [
+                "The client will automatically shut down.",
+                "The client will continue to function and make its service available, but it won't be discoverable.",
+                "The Eureka server is likely down.",
+                "The client will try to register with another Eureka server."
+            ],
+            "correct": 1,
+            "explanation": "The client remains operational, however it is not discoverable because the client has not registered with eureka."
+        },
+        {
+            "id": "q18",
+            "question": "What is the purpose of Eureka's `metadataMap`?",
+            "options": [
+                "To store information about the Eureka server itself.",
+                "To store custom key-value pairs associated with a service instance.",
+                "To map service names to their respective database connections.",
+                "To store information about API endpoints."
+            ],
+            "correct": 1,
+            "explanation": "MetadataMap allows you to associate arbitrary key-value pairs with service instances, which is useful for things like versioning, environment details, or custom configuration."
+        },
+        {
+            "id": "q19",
+            "question": "How can you enable SSL/TLS communication between Eureka clients and the Eureka server?",
+            "options": [
+                "It is not possible to configure SSL with Eureka.",
+                "By setting the `eureka.client.ssl.enabled` property to true.",
+                "By configuring the server and client to use HTTPS endpoints and provide certificates.",
+                "SSL is automatically enabled and does not require configuration."
+            ],
+            "correct": 2,
+            "explanation": "SSL/TLS is configured by using HTTPS endpoints and providing the necessary certificates."
+        },
+        {
+            "id": "q20",
+            "question": "What is the impact of setting `eureka.server.evictionIntervalTimerInMs` to a low value?",
+            "options": [
+                "It increases the frequency with which instances are checked for eviction.",
+                "It decreases the frequency of service registration.",
+                "It reduces the memory footprint of the Eureka server.",
+                "It makes the system more susceptible to network instability."
+            ],
+            "correct": 0,
+            "explanation": "A low value increases the rate at which expired instances are removed from the registry."
+        },
+        {
+            "id": "q21",
+            "question": "How can you troubleshoot service discovery issues in a Eureka-based microservices application?",
+            "options": [
+                "Check Eureka server logs for errors.",
+                "Verify service instance registration status in the Eureka dashboard.",
+                "Ensure network connectivity between services and the Eureka server.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "These are the common troubleshooting steps."
+        },
+        {
+            "id": "q22",
+            "question": "What is the difference between Eureka's `UP` and `OUT_OF_SERVICE` health statuses?",
+            "options": [
+                "`UP` means the service is operational, while `OUT_OF_SERVICE` means it's temporarily unavailable for maintenance.",
+                "`UP` indicates a service is registered, while `OUT_OF_SERVICE` means the service is not reachable.",
+                "There is no difference.",
+                "`OUT_OF_SERVICE` status means it has been deregistered."
+            ],
+            "correct": 0,
+            "explanation": "`OUT_OF_SERVICE` can be used for maintenance."
+        },
+        {
+            "id": "q23",
+            "question": "What are the benefits of using Eureka over manually configuring service addresses?",
+            "options": [
+                "Dynamic service discovery and load balancing.",
+                "Fault tolerance.",
+                "Scalability.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Eureka allows dynamic registration and discovery of service instances."
+        },
+        {
+            "id": "q24",
+            "question": "If a Eureka client's lease expires, which of the following is likely to happen?",
+            "options": [
+                "The client automatically restarts.",
+                "The client's service is removed from the Eureka registry.",
+                "The client tries to reregister immediately.",
+                "The client goes into self-preservation mode."
+            ],
+            "correct": 1,
+            "explanation": "When a lease expires, the service is removed from the service registry."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following is a common pattern when integrating Eureka with a load balancer?",
+            "options": [
+                "The load balancer directly interacts with the Eureka server to discover services.",
+                "The load balancer acts as a Eureka client and registers its own instance.",
+                "The Eureka client only uses the load balancer to route its requests.",
+                "The load balancer uses Eureka's information to send request to available service instances."
+            ],
+            "correct": 3,
+            "explanation": "Load balancers leverage the registry information provided by Eureka to distribute traffic efficiently."
+        },
+        {
+            "id": "q26",
+            "question": "What is the purpose of Eureka's dashboard?",
+            "options": [
+                "To view all registered services and their instance information.",
+                "To configure the Eureka server.",
+                "To monitor the performance of registered services.",
+                "To implement security rules."
+            ],
+            "correct": 0,
+            "explanation": "Dashboard helps in viewing the instance details like hostname, port etc."
+        },
+        {
+            "id": "q27",
+            "question": "What is the effect of setting `eureka.client.fetchRegistry` to `false`?",
+            "options": [
+                "The client will not register with the Eureka server.",
+                "The client will not fetch the registry from the Eureka server.",
+                "The client will fetch the registry at a much higher frequency.",
+                "The client will automatically shut down."
+            ],
+            "correct": 1,
+            "explanation": "If fetchRegistry is set to false, the client will not fetch and maintain a local copy of the service registry."
+        },
+        {
+            "id": "q28",
+            "question": "What is the impact of a network partition on a Eureka cluster?",
+            "options": [
+                "All services immediately become unavailable.",
+                "Eureka's self-preservation mode kicks in to avoid premature deregistration.",
+                "The Eureka server automatically restarts.",
+                "The entire application shuts down to avoid issues."
+            ],
+            "correct": 1,
+            "explanation": "Network partitions can lead to false negatives. Self-preservation mode attempts to protect the registry during these partitions."
+        },
+        {
+            "id": "q29",
+            "question": "Which HTTP method is typically used by Eureka clients to send heartbeat signals?",
+            "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "correct": 3,
+            "explanation": "Heartbeats are sent using DELETE."
+        },
+        {
+            "id": "q30",
+            "question": "True or False: Eureka is a distributed consensus system.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Eureka uses peer-to-peer replication, but not a full-fledged consensus algorithm; its primary goal is eventually consistent service discovery."
+        },
+        {
+            "id": "q31",
+            "question": "What is the key difference between Eureka and other service discovery tools like Consul or Zookeeper?",
+            "options": [
+                "Eureka is more complex to set up",
+                "Eureka is specifically designed for the Spring ecosystem",
+                "Eureka is not as scalable as other service discovery tools.",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "Eureka is a product of Netflix that is a part of the Spring Cloud ecosystem."
+        },
+        {
+            "id": "q32",
+            "question": "If a service instance is registered with a hostname, what happens if the hostname cannot be resolved by the service trying to discover the service?",
+            "options": [
+                "The service discovery fails.",
+                "The service attempts to use the IP address of the instance.",
+                "The service will resolve the host by directly connecting to the eureka server.",
+                "The service tries to register with another eureka instance."
+            ],
+            "correct": 0,
+            "explanation": "If the hostname is not resolvable, the service discovery will likely fail because communication cannot be established with the instance."
+        },
+        {
+            "id": "q33",
+            "question": "What is the purpose of the `evictionTaskIntervalInSeconds` configuration in Eureka server?",
+            "options": [
+                "Determines how often to remove unavailable instances.",
+                "Defines how often the client should send heartbeats.",
+                "Configures the timeout for the service registration.",
+                "Specifies the interval for fetching the registry from other Eureka servers."
+            ],
+            "correct": 0,
+            "explanation": "This configuration dictates the periodicity of the task that evicts instances from the registry based on their lease expiry."
+        },
+        {
+            "id": "q34",
+            "question": "What is the relationship between a service instance's status and Eureka's health checks?",
+            "options": [
+                "The status always mirrors the result of the health check.",
+                "Eureka's health checks have no direct effect on service status.",
+                "The health check result is used to determine the instance's status (UP, DOWN, etc.).",
+                "The status determines whether health checks are performed."
+            ],
+            "correct": 2,
+            "explanation": "The health check result is used to determine and update the service instance's status."
+        },
+        {
+            "id": "q35",
+            "question": "Consider a scenario: A service instance sends a heartbeat to Eureka and then becomes unreachable.  What could cause it to remain in Eureka's registry for a period?",
+            "options": [
+                "The instance is in self-preservation mode.",
+                "The lease expiration time has not yet passed.",
+                "The instance had a short eviction time.",
+                "Both 1 and 2 are correct."
+            ],
+            "correct": 3,
+            "explanation": "The lease time is used to determine how long an instance's registration is valid for if heartbeats cease. Self-preservation also impacts this behavior."
+        }
+    ],
+    "api-gateway": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using an API gateway in a microservices architecture?",
+            "options": [
+                "Simplifying the client-side calls by providing a single entry point.",
+                "Reducing the number of microservices.",
+                "Increasing the database performance.",
+                "Replacing microservices with monolithic applications."
+            ],
+            "correct": 0,
+            "explanation": "An API gateway provides a single entry point, simplifying client interactions with multiple microservices."
+        },
+        {
+            "id": "q2",
+            "question": "Which component in Spring Cloud Gateway is responsible for matching incoming requests to routes?",
+            "options": [
+                "Filters",
+                "Predicates",
+                "Handlers",
+                "Load Balancers"
+            ],
+            "correct": 1,
+            "explanation": "Predicates evaluate the request attributes (path, headers, etc.) and determine if a route should be matched."
+        },
+        {
+            "id": "q3",
+            "question": "In Zuul, what is the primary responsibility of a 'pre' filter?",
+            "options": [
+                "To modify the response before sending it back to the client.",
+                "To execute logic after the request has been routed to a microservice.",
+                "To execute logic before the request is routed to a microservice.",
+                "To handle errors that occur during the routing process."
+            ],
+            "correct": 2,
+            "explanation": "Pre filters are executed before the request is forwarded to the backend service, commonly for tasks like authentication or request modification."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a common use case for an API gateway?",
+            "options": [
+                "Authentication and authorization",
+                "Load balancing and traffic shaping",
+                "Service discovery and routing",
+                "Direct database access"
+            ],
+            "correct": 3,
+            "explanation": "API gateways should not be used for direct database access, as this bypasses the microservices' intended boundaries."
+        },
+        {
+            "id": "q5",
+            "question": "What annotation is commonly used to enable Zuul in a Spring Boot application?",
+            "options": [
+                "@EnableZuulProxy",
+                "@EnableAPIGateway",
+                "@EnableDiscoveryClient",
+                "@SpringBootApplication"
+            ],
+            "correct": 0,
+            "explanation": "@EnableZuulProxy enables Zuul functionality within a Spring Boot application."
+        },
+        {
+            "id": "q6",
+            "question": "How does Spring Cloud Gateway handle circuit breaking?",
+            "options": [
+                "Through its own built-in circuit breaker implementation.",
+                "By integrating with a circuit breaker library like Hystrix or Resilience4j.",
+                "It does not support circuit breaking natively.",
+                "By using Zuul's circuit breaking features."
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Gateway integrates with libraries like Hystrix or Resilience4j for circuit breaking capabilities."
+        },
+        {
+            "id": "q7",
+            "question": "Which of the following is a key difference between Zuul 1.x and Spring Cloud Gateway?",
+            "options": [
+                "Zuul 1.x is built on blocking I/O, while Spring Cloud Gateway uses non-blocking, reactive programming.",
+                "Spring Cloud Gateway uses blocking I/O, while Zuul 1.x uses non-blocking I/O.",
+                "They both use blocking I/O.",
+                "They both use non-blocking I/O."
+            ],
+            "correct": 0,
+            "explanation": "Zuul 1.x relies on blocking I/O, whereas Spring Cloud Gateway leverages non-blocking, reactive programming for improved performance."
+        },
+        {
+            "id": "q8",
+            "question": "What is the purpose of a 'route' configuration in Spring Cloud Gateway?",
+            "options": [
+                "To define the load balancing strategy.",
+                "To map incoming requests to specific backend microservices.",
+                "To configure logging levels.",
+                "To define the security policies."
+            ],
+            "correct": 1,
+            "explanation": "Routes define the mapping between incoming requests and the target microservices, including path matching, filters, and URI information."
+        },
+        {
+            "id": "q9",
+            "question": "In Zuul, how can you customize the request before it's forwarded to the backend service?",
+            "options": [
+                "By creating a 'post' filter.",
+                "By configuring the route properties.",
+                "By creating a 'pre' filter.",
+                "By using Spring Cloud Config."
+            ],
+            "correct": 2,
+            "explanation": "Pre filters are designed to intercept requests before they reach the backend service and allow for modifications such as adding headers or modifying the payload."
+        },
+        {
+            "id": "q10",
+            "question": "What is the role of service discovery in the context of API gateways?",
+            "options": [
+                "To register new microservices.",
+                "To find the location (e.g., IP address and port) of microservices.",
+                "To define the routing rules.",
+                "To manage security policies."
+            ],
+            "correct": 1,
+            "explanation": "Service discovery helps the API gateway dynamically locate the instances of microservices by providing their network addresses."
+        },
+        {
+            "id": "q11",
+            "question": "How does Spring Cloud Gateway support load balancing?",
+            "options": [
+                "It has built-in load balancing capabilities using Ribbon.",
+                "It integrates with external load balancers only.",
+                "It uses only round-robin load balancing.",
+                "It does not support load balancing."
+            ],
+            "correct": 0,
+            "explanation": "Spring Cloud Gateway integrates with load-balancing clients like Ribbon or can be configured to integrate with external solutions."
+        },
+        {
+            "id": "q12",
+            "question": "Which filter type in Zuul would be used to modify the response from a backend service before it's sent to the client?",
+            "options": [
+                "Pre filter",
+                "Route filter",
+                "Post filter",
+                "Error filter"
+            ],
+            "correct": 2,
+            "explanation": "Post filters execute after the backend response is received, allowing modification before sending it to the client."
+        },
+        {
+            "id": "q13",
+            "question": "What is the purpose of using 'hystrix' in conjunction with Zuul or Spring Cloud Gateway?",
+            "options": [
+                "To provide load balancing.",
+                "To implement circuit breaking and fallback mechanisms.",
+                "To implement authentication and authorization.",
+                "To improve performance by caching responses."
+            ],
+            "correct": 1,
+            "explanation": "Hystrix is used to provide resilience by implementing circuit breaking and fallback mechanisms for calls to downstream services."
+        },
+        {
+            "id": "q14",
+            "question": "What is the primary benefit of using a reactive programming model in Spring Cloud Gateway?",
+            "options": [
+                "Improved scalability and resource utilization.",
+                "Easier debugging.",
+                "Simpler configuration.",
+                "Faster deployment times."
+            ],
+            "correct": 0,
+            "explanation": "Reactive programming allows for non-blocking operations, which improves scalability and resource utilization, particularly in high-concurrency scenarios."
+        },
+        {
+            "id": "q15",
+            "question": "How can you define a route in Spring Cloud Gateway to forward requests to a specific URI?",
+            "options": [
+                "Using the 'redirect' property.",
+                "Using the 'uri' property in the route configuration.",
+                "Using the 'forward' property.",
+                "Using the 'proxy' property."
+            ],
+            "correct": 1,
+            "explanation": "The 'uri' property specifies the target URI for the route, indicating where the requests should be forwarded."
+        },
+        {
+            "id": "q16",
+            "question": "What is the purpose of the `RouteLocator` in Spring Cloud Gateway?",
+            "options": [
+                "To configure security policies.",
+                "To discover available microservices.",
+                "To dynamically load and configure routes.",
+                "To handle errors during routing."
+            ],
+            "correct": 2,
+            "explanation": "The `RouteLocator` is responsible for providing a source of routes, loading and configuring them dynamically (e.g., from configuration files, service discovery). "
+        },
+        {
+            "id": "q17",
+            "question": "Which of the following is NOT a valid predicate in Spring Cloud Gateway?",
+            "options": [
+                "Path",
+                "Method",
+                "Header",
+                "BodySize"
+            ],
+            "correct": 3,
+            "explanation": "BodySize is not a standard predicate in Spring Cloud Gateway; others like 'Path', 'Method', and 'Header' are used to match request attributes."
+        },
+        {
+            "id": "q18",
+            "question": "How does Spring Cloud Gateway handle request timeouts?",
+            "options": [
+                "By using a built-in timeout mechanism.",
+                "Through integration with a reactive HTTP client like WebClient, where you can configure timeouts.",
+                "It does not support request timeouts.",
+                "Using Zuul's timeout configurations."
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Gateway leverages reactive HTTP clients to define timeouts, allowing for more fine-grained control."
+        },
+        {
+            "id": "q19",
+            "question": "What is the effect of the `StripPrefix` filter in Zuul?",
+            "options": [
+                "It adds a prefix to the request path.",
+                "It removes a specified number of path segments from the request URI before forwarding it.",
+                "It adds a suffix to the request path.",
+                "It modifies request headers."
+            ],
+            "correct": 1,
+            "explanation": "The `StripPrefix` filter removes specified path segments from the request URI, often to clean up the path before forwarding it to the backend."
+        },
+        {
+            "id": "q20",
+            "question": "In Spring Cloud Gateway, what component handles filtering of the requests/responses?",
+            "options": [
+                "Route",
+                "Predicate",
+                "Filter",
+                "Gateway"
+            ],
+            "correct": 2,
+            "explanation": "Filters are the components within the Spring Cloud Gateway responsible for intercepting and processing requests and responses."
+        },
+        {
+            "id": "q21",
+            "question": "What is the main function of the `Spring Cloud Config Server` in a microservices architecture when used with an API Gateway?",
+            "options": [
+                "To manage API gateway's routing rules and configurations.",
+                "To handle authentication for all the microservices.",
+                "To serve as a service registry for the microservices.",
+                "To provide centralized logging for all the services."
+            ],
+            "correct": 0,
+            "explanation": "Spring Cloud Config Server centralizes the externalized configuration of various microservices, including the API gateway routing rules and settings."
+        },
+        {
+            "id": "q22",
+            "question": "If you want to implement rate limiting in your API gateway, what is a typical approach?",
+            "options": [
+                "Use Spring Cloud Gateway's built-in rate limiting filter.",
+                "Create a custom filter to manage rate limiting.",
+                "Leverage third-party rate limiting services (e.g., Redis).",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Rate limiting is a common requirement for API gateways. Spring Cloud Gateway provides built-in filters as well as integration points for custom implementations and external services."
+        },
+        {
+            "id": "q23",
+            "question": "What would happen if you defined a route in Spring Cloud Gateway without a predicate?",
+            "options": [
+                "The route would never be matched.",
+                "The gateway would use a default predicate.",
+                "The gateway would throw an exception.",
+                "The route would match all incoming requests."
+            ],
+            "correct": 3,
+            "explanation": "Without a defined predicate, all incoming requests would match the route, effectively sending all traffic to the configured URI."
+        },
+        {
+            "id": "q24",
+            "question": "True or False: Zuul supports dynamic routing changes without needing to restart the application.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Zuul does not inherently support dynamic routing changes without a restart; however, you can utilize features like Spring Cloud Config to achieve some dynamic routing configurations (but would need a reload event). Spring Cloud Gateway is generally more flexible in this regard."
+        },
+        {
+            "id": "q25",
+            "question": "Which is NOT a consideration when choosing between Zuul and Spring Cloud Gateway?",
+            "options": [
+                "Performance requirements (reactive vs blocking)",
+                "Ease of configuration and maintenance",
+                "Support for specific features (e.g., request tracing)",
+                "The programming language used to write the backend services"
+            ],
+            "correct": 3,
+            "explanation": "The programming language of the backend services is not directly relevant to choosing an API gateway. The others are key considerations."
+        },
+        {
+            "id": "q26",
+            "question": "In the context of API gateways, what is the purpose of request validation?",
+            "options": [
+                "To ensure the request is properly routed.",
+                "To verify the client's identity.",
+                "To prevent malicious or invalid requests from reaching the backend services.",
+                "To cache the request for faster processing."
+            ],
+            "correct": 2,
+            "explanation": "Request validation helps protect backend services from security threats and data integrity issues by ensuring the request conforms to defined standards."
+        },
+        {
+            "id": "q27",
+            "question": "What is the advantage of using a non-blocking I/O model in Spring Cloud Gateway?",
+            "options": [
+                "Reduced memory footprint",
+                "Improved throughput and scalability",
+                "Simpler code design.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Non-blocking I/O improves resource utilization and performance characteristics that contribute to all those benefits."
+        },
+        {
+            "id": "q28",
+            "question": "What is the purpose of the `Service Discovery` plugin or integration with Service Discovery tools like Eureka, Consul, etc. in API Gateway?",
+            "options": [
+                "To manage the API gateway's security configurations.",
+                "To dynamically discover the locations of the backend services.",
+                "To cache responses from backend services.",
+                "To log the API gateway's activities."
+            ],
+            "correct": 1,
+            "explanation": "Service Discovery helps the gateway locate backend service instances that may be dynamically provisioned or changed (IP, Port) in a cloud environment."
+        },
+        {
+            "id": "q29",
+            "question": "How can you configure a global filter in Spring Cloud Gateway?",
+            "options": [
+                "By defining a filter in the application.yml file.",
+                "By creating a bean of type `GlobalFilter`.",
+                "By using a 'default' filter configuration.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Global filters apply to all requests that pass through the gateway, often used for cross-cutting concerns such as authentication, logging, and request modification."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of the `Circuit Breaker` in the context of the API gateway?",
+            "options": [
+                "To provide the load balancing.",
+                "To provide authentication.",
+                "To protect the backend services from cascading failures.",
+                "To implement rate limiting."
+            ],
+            "correct": 2,
+            "explanation": "A circuit breaker prevents cascading failures by stopping requests to a failing service. It provides fault tolerance."
+        },
+        {
+            "id": "q31",
+            "question": "Which HTTP method is NOT commonly used with API gateways?",
+            "options": [
+                "GET",
+                "POST",
+                "DELETE",
+                "HEAD",
+                "CONNECT"
+            ],
+            "correct": 4,
+            "explanation": "CONNECT is not a common method used to communicate with API gateway. The other methods are often used."
+        },
+        {
+            "id": "q32",
+            "question": "What is the best practice when it comes to securing the API gateway itself?",
+            "options": [
+                "Exposing the API gateway directly to the public internet.",
+                "Implementing authentication and authorization on the API gateway.",
+                "Skipping security considerations as it is an internal component.",
+                "Using only the default security configuration."
+            ],
+            "correct": 1,
+            "explanation": "The API gateway should be secured by implementing authentication and authorization to protect it from unauthorized access."
+        },
+        {
+            "id": "q33",
+            "question": "How can you apply different filters based on the request path in Spring Cloud Gateway?",
+            "options": [
+                "By creating separate global filters.",
+                "By defining filters within each route configuration.",
+                "By using the `RouteFilter` class.",
+                "Filters cannot be applied based on path."
+            ],
+            "correct": 1,
+            "explanation": "Filters are configured on a per-route basis, allowing different filters to be applied to different paths or requests based on predicate matching."
+        },
+        {
+            "id": "q34",
+            "question": "What does the `Retry` filter in Spring Cloud Gateway provide?",
+            "options": [
+                "Retries failing requests.",
+                "Rejects specific requests.",
+                "Routes the request to a different server.",
+                "None of the above."
+            ],
+            "correct": 0,
+            "explanation": "The retry filter attempts to resend failed requests a specified number of times, which can improve the resilience of the system."
+        },
+        {
+            "id": "q35",
+            "question": "In Spring Cloud Gateway, what is the primary reason for using a `WebClient`?",
+            "options": [
+                "To interact with the user interface.",
+                "To make HTTP requests to backend services in a non-blocking, reactive manner.",
+                "To manage the routes.",
+                "To implement authentication."
+            ],
+            "correct": 1,
+            "explanation": "WebClient is the reactive HTTP client provided by Spring WebFlux, enabling non-blocking communication, ideal for improving performance in the gateway."
+        }
+    ],
+    "communication": [
+        {
+            "id": "q1",
+            "question": "Which of the following is a key advantage of using Feign over RestTemplate for inter-service communication?",
+            "options": [
+                "Improved performance due to built-in connection pooling.",
+                "Automatic request retries and circuit breaker capabilities.",
+                "Declarative syntax, reducing boilerplate code.",
+                "Greater flexibility in configuring request headers and parameters."
+            ],
+            "correct": 2,
+            "explanation": "Feign uses declarative syntax, making the code more concise and readable compared to RestTemplate's imperative approach."
+        },
+        {
+            "id": "q2",
+            "question": "In Spring Cloud Feign, how is service discovery typically integrated?",
+            "options": [
+                "Manually specifying service URLs in the Feign client configuration.",
+                "Using Spring Cloud Eureka or Consul and the service's logical name.",
+                "Through hardcoded IP addresses of the target services.",
+                "By defining a custom load balancer within the Feign client."
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud integrates with service discovery tools like Eureka or Consul, allowing Feign clients to use service names instead of hardcoded URLs."
+        },
+        {
+            "id": "q3",
+            "question": "What is the primary purpose of `@FeignClient` annotation?",
+            "options": [
+                "To define a custom load balancer for a Feign client.",
+                "To register a service with a service registry.",
+                "To declare a Feign client interface and specify its target service.",
+                "To handle exceptions thrown by Feign clients."
+            ],
+            "correct": 2,
+            "explanation": "The `@FeignClient` annotation is used to declare an interface as a Feign client and link it to a specific service based on its name or URL."
+        },
+        {
+            "id": "q4",
+            "question": "Which of these is NOT a core feature provided by Spring Cloud Feign?",
+            "options": [
+                "Request encoding and decoding using HTTP message converters.",
+                "Automatic Retry and Circuit Breaker integration using resilience4j or Hystrix.",
+                "Asynchronous HTTP calls by default.",
+                "Service discovery integration."
+            ],
+            "correct": 2,
+            "explanation": "Feign does not inherently provide asynchronous calls by default. Developers have to configure asynchronous behaviour explicitly."
+        },
+        {
+            "id": "q5",
+            "question": "Consider a Feign client configured with a request timeout. What will happen if the target service doesn't respond within the timeout period?",
+            "options": [
+                "The request will be automatically retried multiple times.",
+                "A `ConnectException` will be thrown.",
+                "The Feign client will wait indefinitely.",
+                "A `FeignException` will be thrown, typically indicating a timeout."
+            ],
+            "correct": 3,
+            "explanation": "A `FeignException`, with a specific subtype like `RetryableException`, is commonly thrown to signal timeout issues."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following configurations in Feign can affect the retry behavior?",
+            "options": [
+                "`@Retryable` annotation.",
+                "Request timeout configuration.",
+                "Hystrix configuration (if integrated).",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Request timeout, Retryable annotations and Hystrix settings (if integrated) are all factors impacting Feign's retry behavior."
+        },
+        {
+            "id": "q7",
+            "question": "If you need to handle exceptions globally within a Feign client, where would you typically place the exception handling logic?",
+            "options": [
+                "Inside the Feign client interface methods.",
+                "Using a custom ErrorDecoder implementation.",
+                "Within the calling service that uses the Feign client.",
+                "In the `application.properties` or `application.yml` file."
+            ],
+            "correct": 1,
+            "explanation": "A custom ErrorDecoder implementation is used to handle error responses returned from the target service and translate them into custom exceptions in Feign clients."
+        },
+        {
+            "id": "q8",
+            "question": "When choosing between RestTemplate and Feign, which factor is LEAST important to consider?",
+            "options": [
+                "The need for concise and readable code.",
+                "The level of control over request/response handling.",
+                "The integration with service discovery and load balancing.",
+                "The specific HTTP library implementation underneath."
+            ],
+            "correct": 3,
+            "explanation": "The underlying HTTP client implementation is generally abstracted away. The key differences relate to the syntax, exception handling, and ease of integration with service discovery."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of the `Encoder` interface in Feign?",
+            "options": [
+                "To encode request bodies before sending them.",
+                "To decode response bodies after receiving them.",
+                "To retry failed requests.",
+                "To handle circuit breaker logic."
+            ],
+            "correct": 0,
+            "explanation": "The Encoder interface is used to encode request bodies before sending them to the target service. "
+        },
+        {
+            "id": "q10",
+            "question": "Which annotation is used to configure a specific HTTP method (e.g., GET, POST, PUT) in a Feign client interface?",
+            "options": [
+                "`@FeignClient`",
+                "`@RequestMapping` or `@GetMapping`, `@PostMapping`, `@PutMapping`",
+                "`@Headers`",
+                "`@PathVariable`"
+            ],
+            "correct": 1,
+            "explanation": "Annotations like `@RequestMapping`, `@GetMapping`, `@PostMapping`, and `@PutMapping` are used to map Feign client interface methods to HTTP methods and URIs."
+        },
+        {
+            "id": "q11",
+            "question": "How can you customize the request headers sent by a Feign client?",
+            "options": [
+                "Using the `@Headers` annotation.",
+                "By setting headers directly on the request object within the Feign client interface.",
+                "By configuring a custom `RequestInterceptor`.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the mentioned approaches can be used to customize request headers in Feign.  @Headers, RequestInterceptor and direct setting on request object."
+        },
+        {
+            "id": "q12",
+            "question": "In RestTemplate, which class is primarily responsible for handling HTTP requests and responses?",
+            "options": [
+                "`HttpClient`",
+                "`HttpEntity`",
+                "`RestTemplate`",
+                "`ResponseEntity`"
+            ],
+            "correct": 2,
+            "explanation": "`RestTemplate` is the central class in Spring for performing HTTP requests and interacting with HTTP services."
+        },
+        {
+            "id": "q13",
+            "question": "Which of the following best describes a disadvantage of using RestTemplate compared to Feign?",
+            "options": [
+                "Requires more manual configuration for service discovery.",
+                "Less flexibility in handling different HTTP methods.",
+                "Difficult to integrate with Spring Boot's auto-configuration features.",
+                "Limited support for JSON serialization and deserialization."
+            ],
+            "correct": 0,
+            "explanation": "RestTemplate requires manual configuration for service discovery using tools like `LoadBalancerClient` or by hardcoding service URLs."
+        },
+        {
+            "id": "q14",
+            "question": "What is the role of `ResponseEntity` in RestTemplate?",
+            "options": [
+                "Represents the request body to be sent.",
+                "Holds the response status code, headers, and body received from the server.",
+                "Defines the base URL for all requests.",
+                "Encodes the request parameters."
+            ],
+            "correct": 1,
+            "explanation": "`ResponseEntity` is a container that wraps the HTTP response, providing access to the status code, headers, and body."
+        },
+        {
+            "id": "q15",
+            "question": "What type of dependency injection does RestTemplate support for its configuration and usage?",
+            "options": [
+                "Constructor injection only.",
+                "Setter injection only.",
+                "Field injection only.",
+                "Constructor, setter, and field injection."
+            ],
+            "correct": 3,
+            "explanation": "RestTemplate can be configured using constructor, setter, or field injection, similar to other Spring beans."
+        },
+        {
+            "id": "q16",
+            "question": "How would you configure a RestTemplate to use a custom connection timeout?",
+            "options": [
+                "By setting the `connectTimeout` property directly on the `RestTemplate` instance.",
+                "By configuring `HttpComponentsClientHttpRequestFactory` or similar factories.",
+                "By using a custom `RestTemplateBuilder`.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All mentioned ways can be used to customize timeout in RestTemplate using suitable request factory."
+        },
+        {
+            "id": "q17",
+            "question": "In RestTemplate, what is the purpose of `HttpEntity`?",
+            "options": [
+                "To represent the HTTP response body.",
+                "To encapsulate the request body, headers, and other request-related information.",
+                "To handle error responses.",
+                "To define the service URL."
+            ],
+            "correct": 1,
+            "explanation": "`HttpEntity` is a wrapper class for representing the request or response, including the body and headers."
+        },
+        {
+            "id": "q18",
+            "question": "If you need to send a POST request with a JSON body using RestTemplate, which method is most appropriate?",
+            "options": [
+                "`getForObject()`",
+                "`postForObject()`",
+                "`exchange()` with `HttpMethod.POST`",
+                "Both b and c"
+            ],
+            "correct": 3,
+            "explanation": "Both `postForObject()` and `exchange()` with `HttpMethod.POST` are appropriate for sending POST requests."
+        },
+        {
+            "id": "q19",
+            "question": "What is the primary difference between `getForObject()` and `getForEntity()` methods in RestTemplate?",
+            "options": [
+                "`getForObject()` returns the response body directly, while `getForEntity()` returns the entire `ResponseEntity` object.",
+                "`getForEntity()` can handle exceptions, while `getForObject()` cannot.",
+                "`getForObject()` automatically handles serialization/deserialization, while `getForEntity()` requires manual handling.",
+                "There is no significant difference in functionality."
+            ],
+            "correct": 0,
+            "explanation": "`getForObject()` provides a simplified way to retrieve the response body as an object directly. `getForEntity()` lets you handle the entire response, including headers and status codes."
+        },
+        {
+            "id": "q20",
+            "question": "How can you set request headers when using the `exchange()` method in RestTemplate?",
+            "options": [
+                "By directly modifying the `RestTemplate` object.",
+                "By creating an `HttpEntity` object containing the request body and headers and passing it to `exchange()`.",
+                "Through custom `RequestInterceptor` implementations.",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "The `exchange()` method takes an `HttpEntity` object, allowing you to specify the request body, headers, and HTTP method."
+        },
+        {
+            "id": "q21",
+            "question": "Which class is often used in conjunction with RestTemplate to handle complex request configurations, including connection pooling and custom request factories?",
+            "options": [
+                "`HttpHeaders`",
+                "`HttpEntity`",
+                "`ClientHttpRequestFactory`",
+                "`ResponseEntity`"
+            ],
+            "correct": 2,
+            "explanation": "`ClientHttpRequestFactory` is used to configure the underlying HTTP client and its settings (connection pooling, timeouts, etc.)."
+        },
+        {
+            "id": "q22",
+            "question": "Which Spring Boot feature is NOT directly related to the usage of RestTemplate or Feign?",
+            "options": [
+                "Spring Cloud Sleuth",
+                "Spring Data JPA",
+                "Spring Cloud OpenFeign",
+                "Spring Boot Actuator"
+            ],
+            "correct": 1,
+            "explanation": "Spring Data JPA is used for database interactions and is unrelated to inter-service communication."
+        },
+        {
+            "id": "q23",
+            "question": "Which of the following is true about using RestTemplate and Feign together in the same application?",
+            "options": [
+                "It is not possible to use both in the same application.",
+                "It is possible but generally not recommended.",
+                "It can be useful if different requirements are met by each.",
+                "It is the standard practice in modern microservices."
+            ],
+            "correct": 2,
+            "explanation": "Sometimes using both is acceptable. For instance, Feign can handle most service calls, and RestTemplate can be used when the control is needed (e.g., custom HTTP clients, fine tuning)."
+        },
+        {
+            "id": "q24",
+            "question": "What is the main purpose of a circuit breaker in inter-service communication?",
+            "options": [
+                "To improve the performance of the service.",
+                "To automatically retry failed requests.",
+                "To prevent cascading failures and improve system resilience.",
+                "To automatically scale the service based on load."
+            ],
+            "correct": 2,
+            "explanation": "A circuit breaker prevents cascading failures by stopping requests to a failing service after a certain threshold and providing fallback mechanisms."
+        },
+        {
+            "id": "q25",
+            "question": "Which of the following is an example of a circuit breaker implementation that can be used with Spring Cloud Feign?",
+            "options": [
+                "Hystrix",
+                "Resilience4j",
+                "Both Hystrix and Resilience4j",
+                "Neither Hystrix nor Resilience4j"
+            ],
+            "correct": 2,
+            "explanation": "Hystrix and Resilience4j are popular circuit breaker implementations that can be integrated with Spring Cloud Feign."
+        },
+        {
+            "id": "q26",
+            "question": "True or False: Feign inherently provides load balancing capabilities by default when used with service discovery.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "When using service discovery (e.g., Eureka) with Feign, load balancing is handled automatically by the underlying service discovery client."
+        },
+        {
+            "id": "q27",
+            "question": "What is a potential drawback of using Feign clients extensively in a microservices architecture?",
+            "options": [
+                "Increased code complexity due to interface definitions.",
+                "Performance overhead due to serialization/deserialization.",
+                "Dependency on a service registry or discovery tool.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Although Feign simplifies communication, it introduces the need for service discovery, serialization/deserialization, and the definition of interfaces, potentially leading to these mentioned issues."
+        },
+        {
+            "id": "q28",
+            "question": "How does Spring Cloud Sleuth help with inter-service communication debugging?",
+            "options": [
+                "By automatically retrying failed requests.",
+                "By providing distributed tracing capabilities, allowing you to track requests across microservices.",
+                "By implementing circuit breakers.",
+                "By optimizing the performance of Feign clients."
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Sleuth provides distributed tracing, making it easier to track requests as they flow between microservices."
+        },
+        {
+            "id": "q29",
+            "question": "What is the main role of a `RequestInterceptor` in Feign?",
+            "options": [
+                "To retry failed requests.",
+                "To modify the request before it is sent.",
+                "To handle errors.",
+                "To define the target service URL."
+            ],
+            "correct": 1,
+            "explanation": "A `RequestInterceptor` allows you to intercept and modify a Feign request before it is sent, enabling tasks such as adding headers or authentication tokens."
+        },
+        {
+            "id": "q30",
+            "question": "Which of the following is NOT a typical use case for RestTemplate?",
+            "options": [
+                "Making simple GET and POST requests.",
+                "Implementing complex request configurations with custom factories.",
+                "Defining service interfaces with declarative syntax.",
+                "Integrating with third-party APIs that use HTTP."
+            ],
+            "correct": 2,
+            "explanation": "Defining service interfaces with declarative syntax is a key feature of Feign, not RestTemplate."
+        },
+        {
+            "id": "q31",
+            "question": "What are the benefits of using connection pooling when making HTTP requests?",
+            "options": [
+                "Reduced latency due to reuse of existing connections.",
+                "Improved resource utilization by limiting the number of open connections.",
+                "Enhanced throughput by enabling concurrent requests.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Connection pooling improves the efficiency of HTTP requests by reusing and managing connections."
+        },
+        {
+            "id": "q32",
+            "question": "Which of the following annotations would you use to inject a RestTemplate bean into a Spring component?",
+            "options": [
+                "`@Autowired`",
+                "`@Component`",
+                "`@Service`",
+                "`@FeignClient`"
+            ],
+            "correct": 0,
+            "explanation": "`@Autowired` is used for dependency injection of any bean, including `RestTemplate`."
+        },
+        {
+            "id": "q33",
+            "question": "What is a potential downside of using hardcoded URLs in RestTemplate instead of service discovery?",
+            "options": [
+                "Increased maintainability and code readability.",
+                "Improved fault tolerance in case of service failures.",
+                "Reduced flexibility when service locations change.",
+                "Simplified deployment and configuration."
+            ],
+            "correct": 2,
+            "explanation": "Hardcoded URLs make it difficult to update service locations, as any change requires code modifications and redeployment."
+        },
+        {
+            "id": "q34",
+            "question": "If you are experiencing performance issues with your Feign clients, which of the following might be a contributing factor?",
+            "options": [
+                "Inefficient serialization/deserialization of request/response bodies.",
+                "High request timeout values.",
+                "Lack of connection pooling.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Inefficient serialization, high timeouts, and lack of connection pooling can all contribute to performance problems."
+        },
+        {
+            "id": "q35",
+            "question": "Which of the following statement(s) is/are true regarding the use of both Feign and RestTemplate?",
+            "options": [
+                "Using both RestTemplate and Feign in a single application is never recommended.",
+                "Feign is always preferred for simpler inter-service communication due to its declarative nature, while RestTemplate may be employed for more complex scenarios where finer-grained control is required.",
+                "Both can be used interchangeably, with the choice depending on developer preference.",
+                "Feign is inherently superior to RestTemplate in all aspects of inter-service communication."
+            ],
+            "correct": 1,
+            "explanation": "While both can co-exist, Feign often suits simpler cases. RestTemplate provides more control when you need low-level configurations."
+        }
+    ],
+    "circuit-breaker": [
+        {
+            "id": "q1",
+            "question": "Which of the following best describes the primary function of a circuit breaker in microservices?",
+            "options": [
+                "To increase the throughput of a service.",
+                "To provide load balancing across multiple instances of a service.",
+                "To prevent cascading failures by stopping calls to a failing service.",
+                "To cache the responses of a service."
+            ],
+            "correct": 2,
+            "explanation": "Circuit breakers are designed to protect systems from cascading failures. They 'break' the circuit to a failing service, preventing further requests and allowing the calling service to fail fast or use a fallback."
+        },
+        {
+            "id": "q2",
+            "question": "In Hystrix, what is the purpose of the 'fallback' mechanism?",
+            "options": [
+                "To retry the request to the failing service.",
+                "To provide an alternative response when a service call fails.",
+                "To increase the timeout duration of the service call.",
+                "To log the error and discard the request."
+            ],
+            "correct": 1,
+            "explanation": "The fallback mechanism in Hystrix defines the alternative action or response that should be provided when the main service call fails, preventing the calling service from failing."
+        },
+        {
+            "id": "q3",
+            "question": "What is the default timeout value in milliseconds for a Hystrix command?",
+            "options": [
+                "1000",
+                "2000",
+                "3000",
+                "5000"
+            ],
+            "correct": 0,
+            "explanation": "The default timeout is 1000 ms (1 second) in Hystrix.  If a service call takes longer than this, Hystrix will consider it to have timed out."
+        },
+        {
+            "id": "q4",
+            "question": "Which of the following is NOT a valid state for a Hystrix circuit breaker?",
+            "options": [
+                "Closed",
+                "Open",
+                "Half-Open",
+                "Paused"
+            ],
+            "correct": 3,
+            "explanation": "Hystrix circuit breakers have three main states: Closed, Open, and Half-Open. Paused is not a valid state within Hystrix's lifecycle."
+        },
+        {
+            "id": "q5",
+            "question": "What triggers a Hystrix circuit breaker to transition from the Closed state to the Open state?",
+            "options": [
+                "A single failed request.",
+                "A certain percentage of requests failing within a defined time window.",
+                "The service becomes unavailable.",
+                "The timeout threshold is reached."
+            ],
+            "correct": 1,
+            "explanation": "The circuit breaker opens when a defined failure rate threshold (e.g., 50% of requests failing in a window) is exceeded, usually based on consecutive failures or a failure percentage."
+        },
+        {
+            "id": "q6",
+            "question": "In the Half-Open state, what does Hystrix do?",
+            "options": [
+                "It immediately rejects all incoming requests.",
+                "It allows a limited number of requests to pass through to test the service.",
+                "It retries the failed request.",
+                "It closes the circuit automatically."
+            ],
+            "correct": 1,
+            "explanation": "In the Half-Open state, Hystrix allows a limited number of requests to pass through to determine if the service has recovered. If these requests are successful, the circuit closes; otherwise, it reopens."
+        },
+        {
+            "id": "q7",
+            "question": "What is the primary difference between Hystrix and Resilience4j?",
+            "options": [
+                "Hystrix is written in Java, while Resilience4j supports multiple languages.",
+                "Hystrix is actively maintained, while Resilience4j is deprecated.",
+                "Hystrix is developed by Netflix, while Resilience4j is a more modern, lightweight library.",
+                "Hystrix provides more features than Resilience4j."
+            ],
+            "correct": 2,
+            "explanation": "Hystrix was developed by Netflix but is no longer actively maintained. Resilience4j is a newer, more lightweight, and actively maintained library for circuit breaking and other resilience patterns."
+        },
+        {
+            "id": "q8",
+            "question": "Which annotation is used to enable a circuit breaker in Resilience4j?",
+            "options": [
+                "@CircuitBreaker",
+                "@HystrixCommand",
+                "@Retry",
+                "@Bulkhead"
+            ],
+            "correct": 0,
+            "explanation": "The @CircuitBreaker annotation is used to decorate a method and enable circuit breaker functionality in Resilience4j."
+        },
+        {
+            "id": "q9",
+            "question": "What configuration parameter controls the time window for the failure rate calculation in Resilience4j?",
+            "options": [
+                "failureRateThreshold",
+                "waitDurationInOpenState",
+                "ringBufferSizeInHalfOpenState",
+                "slidingWindowSize"
+            ],
+            "correct": 3,
+            "explanation": "The `slidingWindowSize` parameter in Resilience4j defines the size of the time window used to calculate the failure rate."
+        },
+        {
+            "id": "q10",
+            "question": "What is the purpose of the 'waitDurationInOpenState' parameter in Resilience4j?",
+            "options": [
+                "The amount of time the circuit breaker remains open.",
+                "The time to wait before retrying a failed request.",
+                "The maximum time a request is allowed to execute.",
+                "The time window for failure rate calculation."
+            ],
+            "correct": 0,
+            "explanation": "The `waitDurationInOpenState` parameter specifies how long the circuit breaker should remain in the Open state before transitioning to the Half-Open state."
+        },
+        {
+            "id": "q11",
+            "question": "In Resilience4j, what is the role of the 'Retry' module in conjunction with the CircuitBreaker?",
+            "options": [
+                "To provide fallback logic.",
+                "To automatically retry failed requests before opening the circuit.",
+                "To manage the circuit breaker state.",
+                "To cache the responses of the service."
+            ],
+            "correct": 1,
+            "explanation": "The Retry module allows automatic retries of failed requests before the circuit breaker opens. This can mitigate transient errors."
+        },
+        {
+            "id": "q12",
+            "question": "Which of these is a benefit of using circuit breakers?",
+            "options": [
+                "Increased latency for all requests.",
+                "Prevents cascading failures.",
+                "Guarantees 100% availability.",
+                "Reduces the number of service calls."
+            ],
+            "correct": 1,
+            "explanation": "Circuit breakers prevent cascading failures by isolating failing services. They protect the calling service from being bogged down or overwhelmed by requests to a failing service."
+        },
+        {
+            "id": "q13",
+            "question": "What happens if a request fails in the Open state of a circuit breaker?",
+            "options": [
+                "The request is retried immediately.",
+                "The request is sent to a fallback method.",
+                "The request is rejected immediately.",
+                "The request is queued for later processing."
+            ],
+            "correct": 2,
+            "explanation": "In the Open state, the circuit breaker immediately rejects all incoming requests, preventing further calls to the failing service and allowing the calling service to fail fast or use its fallback logic."
+        },
+        {
+            "id": "q14",
+            "question": "What is a bulkhead in the context of microservices and Resilience4j?",
+            "options": [
+                "A mechanism to limit the number of concurrent calls to a service.",
+                "A type of circuit breaker.",
+                "A mechanism for retrying failed requests.",
+                "A means of caching service responses."
+            ],
+            "correct": 0,
+            "explanation": "A bulkhead in Resilience4j limits the number of concurrent calls to a service, preventing one failing service from exhausting the resources of another."
+        },
+        {
+            "id": "q15",
+            "question": "How can you configure a fallback method in Resilience4j?",
+            "options": [
+                "Using the @Fallback annotation.",
+                "By specifying a fallback method in the circuit breaker configuration.",
+                "Through a separate error handler.",
+                "Fallbacks are automatically handled by Resilience4j without configuration."
+            ],
+            "correct": 0,
+            "explanation": "You can configure a fallback method using the @Fallback annotation in Resilience4j to handle errors when a service call fails."
+        },
+        {
+            "id": "q16",
+            "question": "True or False: Hystrix provides built-in support for distributed tracing.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 1,
+            "explanation": "Hystrix does not provide built-in support for distributed tracing. You typically need to integrate it with other tracing systems."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the 'ringBufferSizeInHalfOpenState' configuration in Resilience4j?",
+            "options": [
+                "The size of the buffer used to store the results of calls in the Half-Open state.",
+                "The total number of requests allowed in the Half-Open state.",
+                "The time window for the Half-Open state.",
+                "The size of the ring buffer for measuring the failure rate in the Closed state."
+            ],
+            "correct": 0,
+            "explanation": "The `ringBufferSizeInHalfOpenState` determines the number of recent calls in the Half-Open state used to determine if the circuit should close or reopen."
+        },
+        {
+            "id": "q18",
+            "question": "Consider a scenario where a service A calls service B, and service B has a circuit breaker configured. If service B becomes unavailable, what happens to service A if no fallback is defined?",
+            "options": [
+                "Service A will continue to call Service B until it recovers.",
+                "Service A will receive a timeout error.",
+                "Service A will use the cached response of Service B.",
+                "Service A will enter the Open state."
+            ],
+            "correct": 1,
+            "explanation": "If no fallback is defined, Service A will eventually receive a timeout error when calling service B that is unavailable, if the circuit breaker is in the Open state or the call exceeds the timeout configured within the circuit breaker"
+        },
+        {
+            "id": "q19",
+            "question": "What is the recommended approach to handle exceptions in a Hystrix command or Resilience4j decorated method?",
+            "options": [
+                "Catch all exceptions in the command and handle them in the fallback.",
+                "Throw exceptions from the command and let Hystrix/Resilience4j handle them.",
+                "Use try-catch blocks inside the service methods, and let Hystrix/Resilience4j ignore the exceptions.",
+                "Ignore exceptions, and hope the service recovers."
+            ],
+            "correct": 0,
+            "explanation": "You should catch exceptions within the Hystrix command or the Resilience4j decorated method and handle them using your fallback mechanism. This ensures the fallback is invoked appropriately."
+        },
+        {
+            "id": "q20",
+            "question": "Which library is recommended if you are starting a new project and need circuit breaker functionality?",
+            "options": [
+                "Hystrix",
+                "Resilience4j",
+                "Spring Cloud Circuit Breaker",
+                "A custom implementation"
+            ],
+            "correct": 1,
+            "explanation": "Resilience4j is actively maintained and the recommended choice for new projects because Hystrix is not being actively developed. Spring Cloud Circuit Breaker is an abstraction and could use either Hystrix or Resilience4j internally."
+        },
+        {
+            "id": "q21",
+            "question": "How does a circuit breaker improve the overall availability of a microservices architecture?",
+            "options": [
+                "By increasing the request processing speed of individual services.",
+                "By preventing cascading failures that can take down the entire system.",
+                "By automatically scaling up services to handle increased load.",
+                "By caching responses to reduce the load on services."
+            ],
+            "correct": 1,
+            "explanation": "Circuit breakers prevent cascading failures, which are a major cause of system-wide unavailability.  They isolate failures to the specific service and allow other parts of the system to continue functioning."
+        },
+        {
+            "id": "q22",
+            "question": "True or False: Both Hystrix and Resilience4j can be easily integrated with Spring Boot applications.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Both Hystrix (although deprecated) and Resilience4j have straightforward Spring Boot integration with starter dependencies and auto-configuration."
+        },
+        {
+            "id": "q23",
+            "question": "What is the typical failure criteria used by a circuit breaker to transition from Closed to Open?",
+            "options": [
+                "Number of requests per second.",
+                "CPU usage of the service.",
+                "The percentage of failed requests within a certain time window.",
+                "The size of the response."
+            ],
+            "correct": 2,
+            "explanation": "Circuit breakers commonly use the percentage of failed requests within a time window as a primary indicator of a service's health. Once a threshold is crossed (e.g. 50% failure), the circuit opens."
+        },
+        {
+            "id": "q24",
+            "question": "Which of the following is NOT a configuration parameter for a circuit breaker?",
+            "options": [
+                "Timeout duration",
+                "Failure rate threshold",
+                "Wait duration in open state",
+                "Number of database connections"
+            ],
+            "correct": 3,
+            "explanation": "Number of database connections is not a circuit breaker configuration parameter, rather it might be related to database connection pool configuration."
+        },
+        {
+            "id": "q25",
+            "question": "What is the main benefit of using a circuit breaker in a microservices architecture when dealing with a dependent service that has become slow?",
+            "options": [
+                "It speeds up the slow service.",
+                "It allows the calling service to fail fast instead of waiting indefinitely.",
+                "It automatically scales up the slow service.",
+                "It increases the number of retries."
+            ],
+            "correct": 1,
+            "explanation": "A circuit breaker prevents the calling service from indefinitely waiting for a slow or unresponsive service, leading to thread exhaustion and potentially cascading failures. Instead, it allows the calling service to quickly recognize the issue and act (e.g., use a fallback)."
+        },
+        {
+            "id": "q26",
+            "question": "What is the recommended way to combine Resilience4j's CircuitBreaker and Retry modules?",
+            "options": [
+                "Configure the Retry module *before* the CircuitBreaker.",
+                "Configure the CircuitBreaker *before* the Retry module.",
+                "Configure both modules independently; the order does not matter.",
+                "Only use one module at a time."
+            ],
+            "correct": 1,
+            "explanation": "The CircuitBreaker should be configured *before* the Retry module so that retries are attempted *before* the circuit breaker opens. Retry attempts should be limited to avoid exhausting resources if the service is truly down."
+        },
+        {
+            "id": "q27",
+            "question": "Consider a microservice that calls another service. If the dependent service experiences transient issues, what is the most appropriate action to take using circuit breaker and related patterns?",
+            "options": [
+                "Immediately open the circuit.",
+                "Retry the request a limited number of times before opening the circuit.",
+                "Immediately use the fallback method.",
+                "Log the error and do nothing else."
+            ],
+            "correct": 1,
+            "explanation": "For transient issues, retrying the request a limited number of times is the most suitable approach, as it gives the dependent service time to recover. The circuit breaker is opened only if the retries fail consistently."
+        },
+        {
+            "id": "q28",
+            "question": "How does the `ringBufferSizeInClosedState` parameter in Resilience4j affect the circuit breaker's behavior?",
+            "options": [
+                "It defines the maximum number of requests allowed in the Closed state.",
+                "It determines the size of the sliding window for failure rate calculation in the Closed state.",
+                "It controls the time the circuit breaker remains in the Closed state.",
+                "It defines the number of retries allowed when the circuit is Closed."
+            ],
+            "correct": 1,
+            "explanation": "`ringBufferSizeInClosedState` determines the number of recent calls used to calculate the failure rate in the closed state, determining when to open the circuit."
+        },
+        {
+            "id": "q29",
+            "question": "What problem does the `Bulkhead` pattern address in Resilience4j and microservices?",
+            "options": [
+                "Preventing cascading failures by isolating failing services.",
+                "Limiting the number of concurrent calls to a specific service.",
+                "Automatically retrying failed requests.",
+                "Providing fallback functionality."
+            ],
+            "correct": 1,
+            "explanation": "The `Bulkhead` pattern is used to limit the number of concurrent calls to a specific service to prevent a failing service from exhausting the resources of another and to limit the blast radius of failures."
+        },
+        {
+            "id": "q30",
+            "question": "If a Hystrix circuit breaker is Open, and the timeout is set to 1000ms, what will be the behavior of the calling service?",
+            "options": [
+                "The calling service will wait for 1000ms and then retry the call.",
+                "The calling service will immediately call the fallback method.",
+                "The calling service will wait for the dependent service to recover.",
+                "The calling service will log an error and terminate the request."
+            ],
+            "correct": 1,
+            "explanation": "When a Hystrix circuit breaker is Open, all requests immediately go to the fallback method or result in an exception without waiting for the timeout period."
+        },
+        {
+            "id": "q31",
+            "question": "What's a common pitfall when using Hystrix or Resilience4j with asynchronous operations?",
+            "options": [
+                "Not defining a fallback method.",
+                "Not using the proper context propagation mechanisms.",
+                "Setting too short a timeout.",
+                "Configuring the circuit breaker to be too sensitive."
+            ],
+            "correct": 1,
+            "explanation": "With asynchronous operations, it's crucial to ensure proper context propagation (e.g., correlation IDs) so the fallback and circuit breaker logic can function correctly, especially if using reactive programming (RxJava, Project Reactor)."
+        },
+        {
+            "id": "q32",
+            "question": "In Resilience4j, which module can you use to rate-limit requests?",
+            "options": [
+                "CircuitBreaker",
+                "Retry",
+                "RateLimiter",
+                "Bulkhead"
+            ],
+            "correct": 2,
+            "explanation": "The RateLimiter module in Resilience4j is specifically designed for rate-limiting requests to a service."
+        },
+        {
+            "id": "q33",
+            "question": "What is the purpose of the `failureRateThreshold` in Resilience4j?",
+            "options": [
+                "The minimum number of calls required to trigger the circuit breaker.",
+                "The percentage of failed calls within a time window that triggers the circuit breaker to open.",
+                "The number of retries attempted before opening the circuit.",
+                "The time a request is allowed to execute before timing out."
+            ],
+            "correct": 1,
+            "explanation": "`failureRateThreshold` is the percentage of failed calls within a sliding window that causes the circuit breaker to open. For example, if set to 50, the circuit opens if more than 50% of requests in the window have failed."
+        },
+        {
+            "id": "q34",
+            "question": "True or False: Hystrix provides built-in support for monitoring metrics such as the number of successful and failed requests.",
+            "options": [
+                "True",
+                "False"
+            ],
+            "correct": 0,
+            "explanation": "Hystrix provides built-in metrics collection (e.g., using Turbine or through other integrations) to track statistics on circuit breaker behavior, such as the number of requests, successes, failures, and latency metrics."
+        },
+        {
+            "id": "q35",
+            "question": "What is the best practice for defining fallback logic in the context of Resilience4j?",
+            "options": [
+                "Use a generic fallback that returns an error message.",
+                "Implement a fallback that provides a degraded but usable response.",
+                "Avoid fallbacks to prevent service dependencies.",
+                "Use the same service call in the fallback."
+            ],
+            "correct": 1,
+            "explanation": "The best practice is to design fallbacks that provide a degraded but usable response. This helps maintain service availability and allows the calling service to continue functioning, albeit with potentially reduced functionality."
+        }
+    ],
+    "config-server": [
+        {
+            "id": "q1",
+            "question": "What is the primary purpose of Spring Cloud Config?",
+            "options": [
+                "To manage API gateways.",
+                "To centralize and manage application configuration.",
+                "To implement service discovery.",
+                "To handle circuit breaking."
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Config provides a centralized, version-controlled configuration server for distributed systems."
+        },
+        {
+            "id": "q2",
+            "question": "Which Spring Cloud Config server storage options are supported?",
+            "options": [
+                "Git, Vault, JDBC, and File System.",
+                "Only Git and Vault.",
+                "Only JDBC and File System.",
+                "Git, Redis, and S3."
+            ],
+            "correct": 0,
+            "explanation": "Spring Cloud Config supports Git, Vault, JDBC, and File System as backing stores for configuration properties."
+        },
+        {
+            "id": "q3",
+            "question": "In Spring Cloud Config, what is the role of a 'Config Server'?",
+            "options": [
+                "To act as an API gateway.",
+                "To serve configuration properties to client applications.",
+                "To register services for discovery.",
+                "To implement circuit breaking."
+            ],
+            "correct": 1,
+            "explanation": "The Config Server is responsible for retrieving and serving configuration data to client applications."
+        },
+        {
+            "id": "q4",
+            "question": "How do Spring Cloud Config clients typically retrieve configuration updates?",
+            "options": [
+                "They pull from the Config Server at startup only.",
+                "They use long-polling or webhooks to receive updates.",
+                "They are pushed updates every second.",
+                "They periodically poll the server, or receive updates through a refresh endpoint."
+            ],
+            "correct": 3,
+            "explanation": "Clients use polling or a refresh endpoint for receiving config updates.  Webhooks can also be used."
+        },
+        {
+            "id": "q5",
+            "question": "What is the purpose of the `@RefreshScope` annotation in Spring Cloud Config clients?",
+            "options": [
+                "To automatically restart the application when config changes.",
+                "To allow beans to be refreshed without a full application restart.",
+                "To enable caching of configuration properties.",
+                "To automatically propagate configuration changes to all services."
+            ],
+            "correct": 1,
+            "explanation": "`@RefreshScope` allows refreshing bean instances after a configuration change without restarting the app."
+        },
+        {
+            "id": "q6",
+            "question": "Which HTTP method is typically used to trigger a configuration refresh in a Spring Cloud Config client?",
+            "options": [
+                "GET",
+                "POST to the `/refresh` endpoint",
+                "PUT",
+                "DELETE"
+            ],
+            "correct": 1,
+            "explanation": "A POST request to `/refresh` triggers the refresh."
+        },
+        {
+            "id": "q7",
+            "question": "If a Spring Cloud Config client fails to connect to the Config Server, what is the default behavior?",
+            "options": [
+                "The application fails to start.",
+                "The application continues to use default values or environment variables.",
+                "The application retries indefinitely.",
+                "The application automatically shuts down."
+            ],
+            "correct": 1,
+            "explanation": "The application typically continues with defaults if the Config Server is unavailable initially, unless explicitly configured otherwise."
+        },
+        {
+            "id": "q8",
+            "question": "What file format is commonly used for storing configuration properties in Spring Cloud Config?",
+            "options": [
+                "XML",
+                "JSON, YAML, properties",
+                "CSV",
+                "TXT"
+            ],
+            "correct": 1,
+            "explanation": "JSON, YAML, and properties files are widely used."
+        },
+        {
+            "id": "q9",
+            "question": "How can you specify a specific configuration branch (e.g., 'develop', 'master') when using Git as a Spring Cloud Config backend?",
+            "options": [
+                "By setting the `spring.cloud.config.label` property.",
+                "By modifying the application name.",
+                "By changing the profile.",
+                "By providing a different configuration URL."
+            ],
+            "correct": 0,
+            "explanation": "`spring.cloud.config.label` specifies the Git branch."
+        },
+        {
+            "id": "q10",
+            "question": "What is the purpose of encrypting configuration properties in Spring Cloud Config?",
+            "options": [
+                "To improve performance.",
+                "To secure sensitive information.",
+                "To optimize storage space.",
+                "To allow for multiple config server instances."
+            ],
+            "correct": 1,
+            "explanation": "Encryption protects sensitive data like passwords and API keys."
+        },
+        {
+            "id": "q11",
+            "question": "Which Spring Cloud project provides encryption and decryption support for Spring Cloud Config?",
+            "options": [
+                "Spring Cloud Stream",
+                "Spring Cloud Sleuth",
+                "Spring Cloud Security",
+                "Spring Cloud Vault"
+            ],
+            "correct": 3,
+            "explanation": "Spring Cloud Vault provides encryption and decryption capabilities."
+        },
+        {
+            "id": "q12",
+            "question": "Which of the following is a potential drawback of using Spring Cloud Config?",
+            "options": [
+                "Increased complexity of the application.",
+                "Single point of failure (if the Config Server goes down).",
+                "Configuration drift (if not managed properly).",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All listed aspects are potential drawbacks or considerations for using Spring Cloud Config."
+        },
+        {
+            "id": "q13",
+            "question": "If you want to provide different configurations based on the environment (e.g., 'dev', 'prod'), how do you typically achieve this with Spring Cloud Config?",
+            "options": [
+                "By using separate configuration repositories for each environment.",
+                "By using profiles in the `application.yml` or `application.properties` file.",
+                "By creating different Config Server instances for each environment.",
+                "By using environment variables in the config files."
+            ],
+            "correct": 1,
+            "explanation": "Profiles in the configuration files enable environment-specific configurations."
+        },
+        {
+            "id": "q14",
+            "question": "Consider a Spring Cloud Config client with a default `spring.cloud.config.uri` value of `http://localhost:8888`. If the Config Server is unavailable during the initial startup, what's the expected behavior?",
+            "options": [
+                "The application fails to start.",
+                "The application logs an error and exits.",
+                "The application attempts to connect periodically, using default values or environment variables if it can't connect initially.",
+                "The application waits indefinitely until the server becomes available."
+            ],
+            "correct": 2,
+            "explanation": "Default behavior is to continue startup with default values or environment variables."
+        },
+        {
+            "id": "q15",
+            "question": "What is the use of `spring.cloud.config.name` in Spring Cloud Config client properties?",
+            "options": [
+                "To specify the name of the Git repository.",
+                "To specify the name of the config files to load (without extension).",
+                "To define the application's name for service discovery.",
+                "To configure the Config Server's URL."
+            ],
+            "correct": 1,
+            "explanation": "`spring.cloud.config.name` determines the name of the configuration files to load."
+        },
+        {
+            "id": "q16",
+            "question": "You are using a Git backend for your Config Server. Your application requires different properties based on the git branch. How do you achieve this?",
+            "options": [
+                "By setting the `spring.cloud.config.label` property.",
+                "By creating separate configuration files for each branch and naming them differently.",
+                "By using different application names.",
+                "It cannot be done without deploying separate config servers."
+            ],
+            "correct": 0,
+            "explanation": "`spring.cloud.config.label` is used to switch Git branch."
+        },
+        {
+            "id": "q17",
+            "question": "In a Spring Cloud Config client, what happens when you change a property value in your configuration file and refresh the application using the `/refresh` endpoint? (Assume `@RefreshScope` is used)",
+            "options": [
+                "The entire application restarts.",
+                "Only the beans annotated with `@RefreshScope` are re-initialized.",
+                "The Config Server automatically pushes the new configuration to all clients.",
+                "Nothing changes until the application is restarted."
+            ],
+            "correct": 1,
+            "explanation": "Only `@RefreshScope` beans are refreshed."
+        },
+        {
+            "id": "q18",
+            "question": "What is a 'composite configuration' in the context of Spring Cloud Config?",
+            "options": [
+                "A configuration that uses multiple property sources.",
+                "A configuration stored in a composite file format like YAML.",
+                "A configuration that combines multiple Config Servers.",
+                "A configuration using a database as a backend."
+            ],
+            "correct": 0,
+            "explanation": "A composite config uses multiple property sources."
+        },
+        {
+            "id": "q19",
+            "question": "How can you secure access to your Spring Cloud Config Server?",
+            "options": [
+                "By using Basic Authentication, OAuth 2.0, or other security mechanisms.",
+                "By restricting access to a specific IP address.",
+                "By deploying the Config Server behind a firewall.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All provided methods are valid security approaches."
+        },
+        {
+            "id": "q20",
+            "question": "Which of the following is *NOT* a common use case for Spring Cloud Config?",
+            "options": [
+                "Centralized management of externalized configuration.",
+                "Storing secrets and sensitive data.",
+                "Implementing a distributed transaction management system.",
+                "Providing different configurations for different environments."
+            ],
+            "correct": 2,
+            "explanation": "Spring Cloud Config is not primarily designed for transaction management."
+        },
+        {
+            "id": "q21",
+            "question": "You are using Spring Cloud Config with Vault for secrets management. You have configured your Config Server to fetch secrets from Vault. What happens if the Config Server fails to connect to Vault?",
+            "options": [
+                "The application using the config server will fail to start.",
+                "The application will continue to run using cached secrets (if available) or default values.",
+                "The Config Server will automatically shut down.",
+                "The application will repeatedly try to connect to Vault until successful."
+            ],
+            "correct": 1,
+            "explanation": "It depends on configuration, but often fallback occurs."
+        },
+        {
+            "id": "q22",
+            "question": "How can you disable the Spring Cloud Config client functionality in a Spring Boot application?",
+            "options": [
+                "By removing the `spring-cloud-config-client` dependency.",
+                "By setting `spring.cloud.config.enabled=false` in `application.properties` or `application.yml`.",
+                "By removing `@EnableConfigServer` annotation.",
+                "Both A and B."
+            ],
+            "correct": 3,
+            "explanation": "Removing the dependency or disabling the client are valid approaches."
+        },
+        {
+            "id": "q23",
+            "question": "Which of the following is a best practice when using Spring Cloud Config?",
+            "options": [
+                "Storing secrets directly in Git.",
+                "Avoiding version control for configuration files.",
+                "Implementing robust monitoring and alerting for the Config Server.",
+                "Making frequent and drastic changes to configuration files."
+            ],
+            "correct": 2,
+            "explanation": "Monitoring is crucial."
+        },
+        {
+            "id": "q24",
+            "question": "What is the role of a 'refresh endpoint' in a Spring Cloud Config client?",
+            "options": [
+                "To trigger a complete application restart.",
+                "To force the client to reload configuration from the Config Server.",
+                "To push configuration changes to all other services.",
+                "To monitor the health of the Config Server."
+            ],
+            "correct": 1,
+            "explanation": "The refresh endpoint triggers a reload of the configuration."
+        },
+        {
+            "id": "q25",
+            "question": "How can you test a Spring Cloud Config client locally without relying on the Config Server?",
+            "options": [
+                "By mocking the Config Server using tools like WireMock.",
+                "By using environment variables or system properties to simulate configuration.",
+                "By creating local configuration files that override the Config Server's properties.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the approaches are valid for local testing."
+        },
+        {
+            "id": "q26",
+            "question": "What is a common performance consideration when using Spring Cloud Config with a Git backend?",
+            "options": [
+                "The size of the Git repository, as larger repositories can impact Config Server startup time and refresh performance.",
+                "The number of Config Server instances, as more instances always leads to better performance.",
+                "The frequency of configuration updates, as frequent updates are always slow.",
+                "The file format used (JSON is slower than YAML)."
+            ],
+            "correct": 0,
+            "explanation": "Large Git repositories can impact performance."
+        },
+        {
+            "id": "q27",
+            "question": "You have a microservice that needs to read a configuration property from Spring Cloud Config. The property is named `my.service.timeout`. Where would you typically look for this property in a properties file if you're using the default Spring Cloud Config naming convention?",
+            "options": [
+                "`application.properties` (or equivalent).",
+                "`my-service.properties` (assuming the service is named 'my-service').",
+                "`my-service-dev.properties` (if the profile is 'dev').",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Config naming convention takes service name and profile into consideration."
+        },
+        {
+            "id": "q28",
+            "question": "What is the main advantage of using a centralized configuration management system like Spring Cloud Config?",
+            "options": [
+                "Improved performance of the application.",
+                "Simplified management and versioning of configuration across multiple services.",
+                "Reduced need for manual configuration updates.",
+                "All of the above."
+            ],
+            "correct": 1,
+            "explanation": "Simplified configuration management is the main benefit."
+        },
+        {
+            "id": "q29",
+            "question": "How does Spring Cloud Config handle caching of configuration properties?",
+            "options": [
+                "It doesn't cache properties.",
+                "It caches properties on the Config Server.",
+                "It caches properties on the client-side, with configurable refresh intervals.",
+                "It caches properties using Redis."
+            ],
+            "correct": 2,
+            "explanation": "Client-side caching is a common strategy."
+        },
+        {
+            "id": "q30",
+            "question": "What is the purpose of the `spring.cloud.config.profile` property?",
+            "options": [
+                "To specify the Git branch to use.",
+                "To activate specific configuration profiles (e.g., 'dev', 'prod').",
+                "To define the application name.",
+                "To configure the Config Server URL."
+            ],
+            "correct": 1,
+            "explanation": "`spring.cloud.config.profile` is used to enable specific profiles."
+        },
+        {
+            "id": "q31",
+            "question": "What potential problem does Spring Cloud Config solve when compared to managing configuration in individual microservices' codebases?",
+            "options": [
+                "Code duplication and inconsistent configuration across services.",
+                "Dependency management issues.",
+                "Slow startup times.",
+                "All of the above are potential issues it resolves."
+            ],
+            "correct": 3,
+            "explanation": "It solves all of the above mentioned problems."
+        },
+        {
+            "id": "q32",
+            "question": "You are using Spring Cloud Config with a Git backend and want to automatically refresh the configuration in your clients when changes are pushed to the Git repository. How can you achieve this?",
+            "options": [
+                "Configure a webhook on the Git repository to trigger the `/refresh` endpoint on the Config Server.",
+                "Configure a webhook on the Git repository to trigger the `/refresh` endpoint on your Spring Cloud Config client services.",
+                "Use long polling on the client-side to monitor the Git repository.",
+                "This cannot be done automatically."
+            ],
+            "correct": 1,
+            "explanation": "Webhooks are required to update client services."
+        },
+        {
+            "id": "q33",
+            "question": "Consider a scenario where a Spring Cloud Config client application's configuration is managed in Git. What happens if a configuration property is missing in the config server?",
+            "options": [
+                "The application will fail to start.",
+                "The application will use a default value, or throw an exception if the property is required and doesn't have a default value.",
+                "The application will try to connect to the Config Server and retrieve the missing property.",
+                "The application will automatically shut down."
+            ],
+            "correct": 1,
+            "explanation": "The behavior depends on whether defaults are available, and property requirements."
+        },
+        {
+            "id": "q34",
+            "question": "Which annotation is used to enable Spring Cloud Config server functionality in a Spring Boot application?",
+            "options": [
+                "@EnableConfigServer",
+                "@ConfigServer",
+                "@EnableConfigClient",
+                "@SpringBootApplication"
+            ],
+            "correct": 0,
+            "explanation": "The `@EnableConfigServer` annotation is used to enable Spring Cloud Config server capabilities."
+        },
+        {
+            "id": "q35",
+            "question": "In a Spring Cloud Config setup with multiple Config Server instances for high availability, what is a key consideration?",
+            "options": [
+                "Using a shared Git repository or backing store that all Config Servers can access.",
+                "Ensuring each Config Server uses a different port.",
+                "Configuring each Config Server with different application names.",
+                "Configuring a load balancer to distribute traffic across the Config Server instances."
+            ],
+            "correct": 3,
+            "explanation": "Load balancing is critical for HA."
+        }
+    ],
+    "docker": [
+        {
+            "id": "q1",
+            "question": "What is the primary advantage of using Docker for Spring Boot microservices?",
+            "options": [
+                "Simplified code compilation",
+                "Faster database queries",
+                "Consistent environment across different machines",
+                "Automatic code generation"
+            ],
+            "correct": 2,
+            "explanation": "Docker provides a consistent environment, ensuring your microservice behaves the same regardless of the underlying infrastructure."
+        },
+        {
+            "id": "q2",
+            "question": "Which Dockerfile instruction is used to expose a port for a Spring Boot application?",
+            "options": [
+                "RUN",
+                "CMD",
+                "EXPOSE",
+                "COPY"
+            ],
+            "correct": 2,
+            "explanation": "The EXPOSE instruction declares which port the container will listen on at runtime. It doesn't actually publish the port; port mapping during `docker run` is needed for access from outside the container."
+        },
+        {
+            "id": "q3",
+            "question": "What is the role of a Docker Compose file when deploying Spring Boot microservices?",
+            "options": [
+                "To define the application's source code",
+                "To manage the build process",
+                "To define and manage multi-container applications",
+                "To handle database migrations"
+            ],
+            "correct": 2,
+            "explanation": "Docker Compose is used to define and run multi-container Docker applications, such as a Spring Boot microservice with a database."
+        },
+        {
+            "id": "q4",
+            "question": "What command is used to build a Docker image from a Dockerfile?",
+            "options": [
+                "docker run",
+                "docker compose up",
+                "docker build",
+                "docker push"
+            ],
+            "correct": 2,
+            "explanation": "The `docker build` command is used to build an image from a Dockerfile and a context."
+        },
+        {
+            "id": "q5",
+            "question": "How can you specify the Java version in a Dockerfile for your Spring Boot application?",
+            "options": [
+                "By setting the JAVA_HOME environment variable.",
+                "By specifying the base image with the desired Java version (e.g., `FROM openjdk:17-jdk-slim`).",
+                "Using the `RUN java -version` command.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the options are valid ways to specify and configure the Java version within a Dockerfile. The base image is the most common method."
+        },
+        {
+            "id": "q6",
+            "question": "Which of the following is a best practice for managing application configuration in a Dockerized Spring Boot microservice?",
+            "options": [
+                "Hardcoding configuration values directly into the application code.",
+                "Using environment variables.",
+                "Storing configuration files directly inside the container.",
+                "Ignoring configuration management."
+            ],
+            "correct": 1,
+            "explanation": "Environment variables provide a flexible and secure way to configure applications in Docker, allowing you to change configurations without rebuilding the image."
+        },
+        {
+            "id": "q7",
+            "question": "What is the purpose of a `.dockerignore` file?",
+            "options": [
+                "To define the base image for the Dockerfile.",
+                "To specify files and directories to be excluded from the Docker build context.",
+                "To manage dependencies for the application.",
+                "To define the entry point for the container."
+            ],
+            "correct": 1,
+            "explanation": "The `.dockerignore` file helps to reduce the image size and build time by excluding unnecessary files and directories from being copied into the image context."
+        },
+        {
+            "id": "q8",
+            "question": "What is the difference between `CMD` and `ENTRYPOINT` in a Dockerfile?",
+            "options": [
+                "`CMD` provides default arguments for the entry point, while `ENTRYPOINT` defines the main executable.",
+                "`ENTRYPOINT` provides default arguments for the entry point, while `CMD` defines the main executable.",
+                "They are interchangeable.",
+                "They both define the main executable of the container."
+            ],
+            "correct": 0,
+            "explanation": "`ENTRYPOINT` defines the primary executable, and `CMD` provides the default arguments.  `CMD` can be overridden, while `ENTRYPOINT` can be modified but typically not fully replaced."
+        },
+        {
+            "id": "q9",
+            "question": "You are building a Docker image for a Spring Boot application. The application uses Maven to manage its dependencies. Which instruction should you use in your Dockerfile to copy the `pom.xml` file and the `src` directory?",
+            "options": [
+                "COPY pom.xml . && COPY src .",
+                "ADD pom.xml . && ADD src .",
+                "COPY . .",
+                "RUN mvn package"
+            ],
+            "correct": 0,
+            "explanation": "The `COPY` instruction copies files and directories from the build context into the image. The `pom.xml` is copied first so that dependencies can be cached. Then, the source code is copied."
+        },
+        {
+            "id": "q10",
+            "question": "What is the benefit of using multi-stage builds in Docker for Spring Boot applications?",
+            "options": [
+                "Improved code readability.",
+                "Reduced image size.",
+                "Faster build times.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Multi-stage builds allow you to create smaller and more efficient images by separating the build process from the runtime environment. This improves efficiency, image size, and build speed."
+        },
+        {
+            "id": "q11",
+            "question": "Which command would you use to list all running Docker containers?",
+            "options": [
+                "docker images",
+                "docker ps",
+                "docker build",
+                "docker run"
+            ],
+            "correct": 1,
+            "explanation": "The `docker ps` command lists running containers."
+        },
+        {
+            "id": "q12",
+            "question": "What does the `VOLUME` instruction do in a Dockerfile?",
+            "options": [
+                "Exposes a port for the container.",
+                "Defines a mount point for persistent storage.",
+                "Sets the working directory for the container.",
+                "Specifies the command to run when the container starts."
+            ],
+            "correct": 1,
+            "explanation": "The `VOLUME` instruction creates a mount point that can be connected to the host machine for persistent storage."
+        },
+        {
+            "id": "q13",
+            "question": "How can you scale a Spring Boot microservice deployed in Docker using Docker Compose?",
+            "options": [
+                "By increasing the CPU resources allocated to the container.",
+                "By modifying the `image` tag in the Docker Compose file.",
+                "By using the `scale` option in the `docker-compose` command.",
+                "By restarting the container multiple times."
+            ],
+            "correct": 2,
+            "explanation": "Docker Compose allows scaling services using the `docker-compose up --scale <service>=<number>` command."
+        },
+        {
+            "id": "q14",
+            "question": "You are facing an issue where your Spring Boot application in a Docker container is not connecting to the database.  What is the most likely cause?",
+            "options": [
+                "Incorrect database URL in the application.properties file.",
+                "Firewall rules blocking the connection.",
+                "Database not running or not accessible from the container.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All these factors can lead to connectivity issues.  Correct database URL, network connectivity, and the database's accessibility from the container are all important."
+        },
+        {
+            "id": "q15",
+            "question": "What is the recommended approach for logging from a Spring Boot application running in a Docker container?",
+            "options": [
+                "Directly writing logs to files inside the container.",
+                "Using a logging framework (like Logback or Log4j2) and sending logs to the standard output (stdout) and standard error (stderr).",
+                "Disabling logging entirely to improve performance.",
+                "Using a custom logging server inside the container."
+            ],
+            "correct": 1,
+            "explanation": "Docker can collect logs from stdout/stderr, making it easy to manage and view logs using `docker logs` or by integrating with a log aggregator like ELK Stack or Splunk."
+        },
+        {
+            "id": "q16",
+            "question": "What command is used to push a Docker image to a container registry (like Docker Hub or AWS ECR)?",
+            "options": [
+                "docker build",
+                "docker run",
+                "docker push",
+                "docker commit"
+            ],
+            "correct": 2,
+            "explanation": "The `docker push` command uploads a tagged image to a registry."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of health checks in a Docker container?",
+            "options": [
+                "To monitor the container's resource usage.",
+                "To determine if the container is running correctly and ready to serve traffic.",
+                "To automatically restart the container if it crashes.",
+                "To create a network for the container."
+            ],
+            "correct": 1,
+            "explanation": "Health checks periodically check the health of the application inside the container, and can be used by orchestration tools (like Kubernetes) to route traffic accordingly or restart unhealthy containers."
+        },
+        {
+            "id": "q18",
+            "question": "How can you run a Spring Boot application in a Docker container using a specific profile (e.g., `production`)?",
+            "options": [
+                "By setting the `SPRING_PROFILES_ACTIVE` environment variable.",
+                "By passing the profile as an argument to the `java -jar` command in the Dockerfile (e.g., `java -jar myapp.jar --spring.profiles.active=production`).",
+                "Both of the above.",
+                "It's not possible; you must build separate images for each profile."
+            ],
+            "correct": 2,
+            "explanation": "Both setting an environment variable and passing arguments to the Java command are common ways to specify Spring Boot profiles."
+        },
+        {
+            "id": "q19",
+            "question": "What happens if you run `docker stop <container_id>` on a Spring Boot application container?",
+            "options": [
+                "The container is immediately terminated, without any graceful shutdown.",
+                "The container receives a SIGTERM signal, allowing the application to shut down gracefully before being terminated.",
+                "The container's resources are limited.",
+                "The container is paused, but it continues to exist."
+            ],
+            "correct": 1,
+            "explanation": "The container receives a SIGTERM signal, giving the application time to shut down cleanly (e.g., close connections, save data) before the container is terminated."
+        },
+        {
+            "id": "q20",
+            "question": "Which statement about container orchestration is correct when dealing with Dockerized Spring Boot microservices?",
+            "options": [
+                "Container orchestration is not necessary when using Docker Compose.",
+                "Container orchestration simplifies the deployment and management of containers at scale.",
+                "Container orchestration is solely for the build process.",
+                "Container orchestration is only relevant for local development."
+            ],
+            "correct": 1,
+            "explanation": "Container orchestration tools like Kubernetes and Docker Swarm are critical for managing and scaling containerized microservices in production environments."
+        },
+        {
+            "id": "q21",
+            "question": "You have a Spring Boot application that requires access to secrets (e.g., API keys, database passwords). How should you securely manage these secrets when running in a Docker container?",
+            "options": [
+                "Hardcode the secrets directly into the application code.",
+                "Store the secrets in environment variables, configured during container creation.",
+                "Store the secrets in a configuration file within the container.",
+                "Use a secrets management service (e.g., HashiCorp Vault, AWS Secrets Manager)."
+            ],
+            "correct": 3,
+            "explanation": "Secrets management services provide secure storage and access control for sensitive information. Environment variables are also acceptable if used carefully (and never committed to a repository)."
+        },
+        {
+            "id": "q22",
+            "question": "What is the difference between `docker run -d` and `docker run`?",
+            "options": [
+                "`-d` runs the container in detached mode (background).",
+                "`docker run` creates a volume",
+                "`-d` will delete the image",
+                "There is no difference."
+            ],
+            "correct": 0,
+            "explanation": "The `-d` flag detaches the container and runs it in the background. Without it, the container runs in the foreground and attaches to the terminal."
+        },
+        {
+            "id": "q23",
+            "question": "Why is it important to optimize the size of your Docker images for Spring Boot microservices?",
+            "options": [
+                "Smaller images are faster to build and deploy.",
+                "Smaller images consume less storage space.",
+                "Smaller images can improve startup time.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Image size affects build/deployment speed, storage usage, and container startup time. Optimizing image size is crucial for efficiency."
+        },
+        {
+            "id": "q24",
+            "question": "Which of the following is the correct command to remove a Docker image?",
+            "options": [
+                "docker delete <image_id>",
+                "docker rm <image_id>",
+                "docker rmi <image_id>",
+                "docker remove <image_id>"
+            ],
+            "correct": 2,
+            "explanation": "The `docker rmi` command is used to remove a Docker image from your local machine."
+        },
+        {
+            "id": "q25",
+            "question": "What is the primary purpose of a `.dockerignore` file in the context of building Docker images for Spring Boot applications?",
+            "options": [
+                "To specify the base image to use.",
+                "To define the entry point for the container.",
+                "To exclude files and directories from the build context, reducing image size and build time.",
+                "To set environment variables for the container."
+            ],
+            "correct": 2,
+            "explanation": "`.dockerignore` helps to improve build efficiency by preventing unnecessary files from being included in the build context."
+        },
+        {
+            "id": "q26",
+            "question": "How does Docker help with the 'write once, run anywhere' concept for Spring Boot microservices?",
+            "options": [
+                "It compiles the Java code to native machine code.",
+                "It creates a virtual machine for each microservice.",
+                "It packages the application and its dependencies into a container that can run consistently on different operating systems and infrastructures.",
+                "It automatically optimizes the application's performance for each environment."
+            ],
+            "correct": 2,
+            "explanation": "Docker packages the application and its dependencies, ensuring consistent behavior across different environments."
+        },
+        {
+            "id": "q27",
+            "question": "What is the advantage of using a Docker image built from a base image like `openjdk:17-jdk-slim`?",
+            "options": [
+                "It includes a full JDK, allowing for dynamic code compilation.",
+                "It results in a smaller image size, reducing deployment time and storage.",
+                "It automatically manages the application's dependencies.",
+                "It provides a GUI for managing the Spring Boot application."
+            ],
+            "correct": 1,
+            "explanation": "Slim images are smaller than full JDK images, resulting in faster builds and smaller deployment sizes."
+        },
+        {
+            "id": "q28",
+            "question": "You are troubleshooting a Spring Boot application running in a Docker container and suspect a dependency issue. How can you access the dependencies declared in your `pom.xml` file?",
+            "options": [
+                "By examining the output of the `docker inspect` command for the container.",
+                "By using the `docker exec` command to run a shell inside the container and inspecting the Maven dependencies.",
+                "By looking in the `/opt/app/lib` directory within the container.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All options are valid ways to inspect dependencies. `docker exec` and inspecting the container's filesystem are common approaches."
+        },
+        {
+            "id": "q29",
+            "question": "Which Dockerfile instruction is generally *NOT* recommended for sensitive data or secrets?",
+            "options": [
+                "ENV",
+                "COPY",
+                "ADD",
+                "All of the above can be used, but with careful consideration."
+            ],
+            "correct": 3,
+            "explanation": "While ENV can be used, it’s not ideal for secrets due to their visibility in image history. COPY and ADD can also be problematic if the source file contains secrets and is inadvertently committed into the repository or the image history. Best practice is to use a secrets management service."
+        },
+        {
+            "id": "q30",
+            "question": "What is the primary benefit of using a container registry (like Docker Hub) for your Spring Boot microservice Docker images?",
+            "options": [
+                "It allows you to run the application without a Docker daemon.",
+                "It simplifies image storage, distribution, and versioning.",
+                "It automatically manages the application's scaling.",
+                "It provides a built-in load balancer."
+            ],
+            "correct": 1,
+            "explanation": "Container registries provide a central location to store, distribute, and version your Docker images, making them easily accessible for deployment on multiple machines."
+        }
+    ],
+    "deployment": [
+        {
+            "id": "q1",
+            "question": "Which Spring Boot annotation is crucial for Heroku deployment to specify the application's port?",
+            "options": [
+                "@SpringBootApplication",
+                "@Value",
+                "@Profile",
+                "@Configuration"
+            ],
+            "correct": 2,
+            "explanation": "@Value("
+        },
+        {
+            "id": "q2",
+            "question": "What is the primary mechanism used by Heroku to detect and build a Spring Boot application?",
+            "options": [
+                "Procfile",
+                "pom.xml",
+                "application.properties",
+                "build.gradle"
+            ],
+            "correct": 1,
+            "explanation": "Heroku's buildpack analyzes the pom.xml (Maven) or build.gradle (Gradle) file to determine the application type and build dependencies."
+        },
+        {
+            "id": "q3",
+            "question": "When deploying to AWS, which service is typically used to host a Spring Boot application as a containerized microservice?",
+            "options": [
+                "EC2",
+                "S3",
+                "RDS",
+                "Lambda"
+            ],
+            "correct": 0,
+            "explanation": "EC2 (Elastic Compute Cloud) is used to run virtual machines, on which container orchestration services like ECS or EKS can deploy containers."
+        },
+        {
+            "id": "q4",
+            "question": "What is the purpose of a `Procfile` in a Heroku deployment?",
+            "options": [
+                "Defines environment variables",
+                "Specifies the application's entry point and command",
+                "Manages database connections",
+                "Contains build configurations"
+            ],
+            "correct": 1,
+            "explanation": "The Procfile tells Heroku what command to execute to start your application."
+        },
+        {
+            "id": "q5",
+            "question": "Which AWS service provides a managed Kubernetes service for deploying Spring Boot microservices?",
+            "options": [
+                "ECS",
+                "EKS",
+                "Lambda",
+                "API Gateway"
+            ],
+            "correct": 1,
+            "explanation": "EKS (Elastic Kubernetes Service) simplifies deploying and managing Kubernetes clusters on AWS."
+        },
+        {
+            "id": "q6",
+            "question": "What is the role of `application.properties` or `application.yml` files in Spring Boot deployment to cloud platforms?",
+            "options": [
+                "To define the application's entry point",
+                "To configure database connections, external services and application properties",
+                "To build the application artifact",
+                "To manage infrastructure resources"
+            ],
+            "correct": 1,
+            "explanation": "These files are central to externalizing application configuration, including database URLs, service endpoints, and other deployment-specific parameters."
+        },
+        {
+            "id": "q7",
+            "question": "Which tool is commonly used for containerizing a Spring Boot application before deploying it to AWS ECS?",
+            "options": [
+                "Maven",
+                "Gradle",
+                "Docker",
+                "Kubernetes"
+            ],
+            "correct": 2,
+            "explanation": "Docker is the standard for creating container images."
+        },
+        {
+            "id": "q8",
+            "question": "What is the recommended way to handle sensitive information (like API keys) in a Spring Boot application deployed to Heroku or AWS?",
+            "options": [
+                "Hardcode the keys in the code",
+                "Store them directly in `application.properties`",
+                "Use environment variables",
+                "Commit them to version control"
+            ],
+            "correct": 2,
+            "explanation": "Environment variables provide a secure way to inject secrets without modifying the application's code."
+        },
+        {
+            "id": "q9",
+            "question": "What is the purpose of a health check endpoint in a Spring Boot microservice deployed on a cloud platform?",
+            "options": [
+                "To display application logs",
+                "To provide information about database schema",
+                "To monitor the application's operational status",
+                "To trigger redeployment of the application"
+            ],
+            "correct": 2,
+            "explanation": "Health checks allow monitoring services (like load balancers) to determine if an instance is healthy and ready to receive traffic."
+        },
+        {
+            "id": "q10",
+            "question": "In AWS, which service can be used to automatically scale the number of instances running a Spring Boot application?",
+            "options": [
+                "S3",
+                "CloudWatch",
+                "Auto Scaling Group",
+                "DynamoDB"
+            ],
+            "correct": 2,
+            "explanation": "Auto Scaling Groups dynamically adjust the number of EC2 instances based on defined metrics."
+        },
+        {
+            "id": "q11",
+            "question": "How does Spring Cloud Config help with deploying Spring Boot microservices on cloud platforms?",
+            "options": [
+                "Provides built-in autoscaling capabilities",
+                "Manages application configuration centrally",
+                "Handles database migrations automatically",
+                "Provides logging and monitoring integrations"
+            ],
+            "correct": 1,
+            "explanation": "Spring Cloud Config enables centralized management of application configurations, making deployments and updates easier."
+        },
+        {
+            "id": "q12",
+            "question": "Which HTTP status code should a health check endpoint return to indicate that the application is healthy and ready to accept traffic?",
+            "options": [
+                "200 OK",
+                "302 Found",
+                "400 Bad Request",
+                "500 Internal Server Error"
+            ],
+            "correct": 0,
+            "explanation": "200 OK indicates successful operation."
+        },
+        {
+            "id": "q13",
+            "question": "What is the advantage of using a container registry (like Docker Hub or AWS ECR) when deploying Spring Boot microservices?",
+            "options": [
+                "Automatic database schema creation",
+                "Centralized storage and versioning of container images",
+                "Automatic scaling of the application",
+                "Directly deploys the application to the cloud"
+            ],
+            "correct": 1,
+            "explanation": "Container registries provide a centralized repository for managing and versioning container images, streamlining deployments."
+        },
+        {
+            "id": "q14",
+            "question": "How does Spring Boot Actuator assist with cloud deployments?",
+            "options": [
+                "It provides built-in autoscaling features.",
+                "It simplifies database configuration.",
+                "It offers endpoints for monitoring, metrics, and health checks.",
+                "It manages the build process."
+            ],
+            "correct": 2,
+            "explanation": "Actuator exposes endpoints that provide insights into the application's internal state, crucial for monitoring in the cloud."
+        },
+        {
+            "id": "q15",
+            "question": "What command-line tool is typically used for deploying a Spring Boot application to Heroku?",
+            "options": [
+                "aws-cli",
+                "heroku-cli",
+                "docker",
+                "kubectl"
+            ],
+            "correct": 1,
+            "explanation": "The Heroku CLI (Command Line Interface) is used to interact with the Heroku platform."
+        },
+        {
+            "id": "q16",
+            "question": "Which Spring Boot dependency is often used for integrating with cloud providers like AWS and Heroku?",
+            "options": [
+                "spring-boot-starter-web",
+                "spring-boot-starter-data-jpa",
+                "spring-boot-starter-cloud-aws",
+                "spring-boot-starter-test"
+            ],
+            "correct": 2,
+            "explanation": "spring-boot-starter-cloud-aws facilitates easy integration with AWS services."
+        },
+        {
+            "id": "q17",
+            "question": "What is the purpose of the `.gitignore` file in the context of deploying Spring Boot applications to cloud platforms?",
+            "options": [
+                "To specify dependencies for the application",
+                "To define the application's entry point",
+                "To prevent certain files and directories from being tracked by Git",
+                "To configure the application's logging levels"
+            ],
+            "correct": 2,
+            "explanation": ".gitignore ensures that sensitive information (like API keys) and build artifacts are not committed to the repository."
+        },
+        {
+            "id": "q18",
+            "question": "What are the main advantages of using Kubernetes for deploying Spring Boot microservices?",
+            "options": [
+                "Simplified database management, Automatic Code Generation, High Availability, Scalability",
+                "Built-in security features, Improved UI development, Cloud-agnostic deployment, Container orchestration",
+                "High Availability, Scalability, Automation, Load Balancing, Container Orchestration",
+                "Enhanced testing frameworks, Database Schema Validation, Rapid prototyping, Cross-platform Compatibility"
+            ],
+            "correct": 2,
+            "explanation": "Kubernetes excels at orchestrating containers, ensuring high availability, and enabling easy scaling, load balancing and automation, essential for microservices."
+        },
+        {
+            "id": "q19",
+            "question": "Which of the following is NOT a benefit of using Docker with Spring Boot microservices?",
+            "options": [
+                "Consistent Environment",
+                "Simplified dependency management",
+                "Increased security posture",
+                "Reduced application size"
+            ],
+            "correct": 3,
+            "explanation": "Docker doesn't inherently reduce application size; however, it can enable efficient image layer reuse, which can improve image build times and reduce overall storage footprint."
+        },
+        {
+            "id": "q20",
+            "question": "When deploying to AWS ECS, what is an 'ECS Task Definition' primarily used for?",
+            "options": [
+                "Defining network configurations",
+                "Specifying the configuration for the application's load balancer",
+                "Describing the containerized application and its resource requirements",
+                "Managing database connections and schemas"
+            ],
+            "correct": 2,
+            "explanation": "The Task Definition tells ECS how to run your containers, including the Docker image to use, CPU and memory constraints, and other configuration details."
+        },
+        {
+            "id": "q21",
+            "question": "Which of the following is a common way to trigger deployments in a CI/CD pipeline when using Heroku?",
+            "options": [
+                "Manually via the Heroku dashboard",
+                "Using the Heroku CLI after a code commit to a connected Git repository",
+                "Automatically upon pushing code to a specific Git branch connected to Heroku",
+                "All of the above"
+            ],
+            "correct": 3,
+            "explanation": "All the above methods can be utilized to trigger deployments via manual triggering from Heroku's Dashboard, Using the Heroku CLI or through Automation via Git integration."
+        },
+        {
+            "id": "q22",
+            "question": "Which of the following AWS services is suitable for storing and serving static content, such as images and JavaScript files, for a Spring Boot application?",
+            "options": [
+                "EC2",
+                "S3",
+                "RDS",
+                "Lambda"
+            ],
+            "correct": 1,
+            "explanation": "S3 (Simple Storage Service) is designed for storing and serving static content."
+        },
+        {
+            "id": "q23",
+            "question": "What is the purpose of setting the `JAVA_OPTS` environment variable when deploying a Spring Boot application on Heroku?",
+            "options": [
+                "Specifying the application's entry point.",
+                "Configuring JVM options such as memory settings and garbage collection parameters.",
+                "Defining the database connection details.",
+                "Specifying the Heroku buildpack to use."
+            ],
+            "correct": 1,
+            "explanation": "`JAVA_OPTS` allows you to fine-tune the Java Virtual Machine settings for the application, which can be crucial for performance and stability."
+        },
+        {
+            "id": "q24",
+            "question": "In the context of Spring Boot microservices deployment on AWS, what is an 'ALB' used for?",
+            "options": [
+                "Storing application logs",
+                "Managing database migrations",
+                "Distributing incoming traffic across multiple instances of your application",
+                "Providing an API gateway for your application"
+            ],
+            "correct": 2,
+            "explanation": "ALB (Application Load Balancer) is an AWS service that distributes traffic across multiple targets (e.g., EC2 instances, containers) based on various criteria."
+        },
+        {
+            "id": "q25",
+            "question": "Which command in the Heroku CLI is used to view the logs of a deployed Spring Boot application?",
+            "options": [
+                "heroku deploy",
+                "heroku logs",
+                "heroku ps",
+                "heroku config"
+            ],
+            "correct": 1,
+            "explanation": "The `heroku logs` command displays the application's logs, which are critical for debugging and monitoring."
+        },
+        {
+            "id": "q26",
+            "question": "What is the key difference between deploying a Spring Boot application as a WAR file versus as a JAR file on cloud platforms?",
+            "options": [
+                "WAR files are smaller in size",
+                "WAR files require a separate application server, whereas JAR files can be self-contained.",
+                "JAR files are always deployed with containerization.",
+                "WAR files are specifically designed for Heroku and JAR files for AWS."
+            ],
+            "correct": 1,
+            "explanation": "WAR files need to be deployed within a servlet container like Tomcat or Jetty, while JAR files can be executed directly and bundled with an embedded server (e.g., Tomcat) within the JAR itself."
+        },
+        {
+            "id": "q27",
+            "question": "When using Docker, which command is typically used to build a Docker image from a `Dockerfile`?",
+            "options": [
+                "docker run",
+                "docker push",
+                "docker build",
+                "docker compose"
+            ],
+            "correct": 2,
+            "explanation": "The `docker build` command reads instructions from a `Dockerfile` and creates a Docker image."
+        },
+        {
+            "id": "q28",
+            "question": "Which of the following is the best practice for managing database connections in a Spring Boot microservice deployed on a cloud platform?",
+            "options": [
+                "Hardcoding database connection strings in the code.",
+                "Using connection pooling provided by the database or a connection pool library.",
+                "Creating a new database connection for each request.",
+                "Storing the connection string directly in the application.properties file without encryption."
+            ],
+            "correct": 1,
+            "explanation": "Connection pooling significantly improves database performance by reusing existing connections and reducing connection overhead."
+        },
+        {
+            "id": "q29",
+            "question": "What is the significance of the `spring.profiles.active` property in `application.properties` or `application.yml` files when deploying to cloud platforms?",
+            "options": [
+                "Specifies the application's entry point.",
+                "Activates different configuration profiles based on the deployment environment (e.g., development, production).",
+                "Determines the application's logging level.",
+                "Defines the application's name."
+            ],
+            "correct": 1,
+            "explanation": "This property enables you to load different configurations (e.g., database URLs, service endpoints) based on the environment, allowing for seamless deployments."
+        },
+        {
+            "id": "q30",
+            "question": "Which strategy is commonly employed for canary deployments with Spring Boot microservices on cloud platforms?",
+            "options": [
+                "Deploying the new version to all instances simultaneously.",
+                "Gradually shifting traffic to the new version while monitoring performance.",
+                "Completely shutting down the old version before deploying the new one.",
+                "Deploying the new version only to a specific user group."
+            ],
+            "correct": 1,
+            "explanation": "Canary deployments involve gradually routing traffic to the new version to minimize risk and allow for monitoring before a full rollout."
+        },
+        {
+            "id": "q31",
+            "question": "What is a 'buildpack' in the context of Heroku deployment?",
+            "options": [
+                "A file containing the application's dependencies.",
+                "A script that builds the application from source code and configures the environment for deployment.",
+                "A container image used for deployment.",
+                "A tool for managing database migrations."
+            ],
+            "correct": 1,
+            "explanation": "Buildpacks are used by Heroku to detect the application type and build it, handling dependencies and configuration automatically."
+        },
+        {
+            "id": "q32",
+            "question": "What is the primary purpose of an API gateway in a microservices architecture deployed on the cloud?",
+            "options": [
+                "To manage database connections.",
+                "To centralize application logging and monitoring.",
+                "To provide a single entry point for client applications, routing requests to the appropriate microservices.",
+                "To store and serve static assets."
+            ],
+            "correct": 2,
+            "explanation": "An API gateway acts as a central entry point, handling routing, authentication, authorization, and other cross-cutting concerns, simplifying client-side interactions."
+        },
+        {
+            "id": "q33",
+            "question": "Which AWS service could be used for implementing a service mesh for Spring Boot microservices to manage service-to-service communication?",
+            "options": [
+                "RDS",
+                "S3",
+                "CloudFront",
+                "App Mesh"
+            ],
+            "correct": 3,
+            "explanation": "App Mesh provides features like traffic management, service discovery, and failure injection to control and observe microservice interactions."
+        },
+        {
+            "id": "q34",
+            "question": "When deploying a Spring Boot application using Docker on Heroku, what is the recommended approach for building the Docker image?",
+            "options": [
+                "Using the Heroku CLI's built-in Docker build functionality.",
+                "Manually building the image locally and pushing it to a Docker registry.",
+                "Heroku automatically builds the image if a Dockerfile is present in the root directory of your project.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "Heroku supports multiple ways to build Docker images including automatically building images or manually deploying your pre-built images."
+        },
+        {
+            "id": "q35",
+            "question": "If a Spring Boot application deployed on Heroku unexpectedly crashes, which steps can be used to troubleshoot the issue?",
+            "options": [
+                "Check the application logs using `heroku logs` and investigate any error messages or stack traces.",
+                "Examine the Heroku dashboard for application health metrics and recent events.",
+                "Inspect the application's configuration and dependencies for potential issues.",
+                "All of the above."
+            ],
+            "correct": 3,
+            "explanation": "All the above options are relevant steps to diagnose an application failure in Heroku environment."
+        }
+    ]
 
 };
